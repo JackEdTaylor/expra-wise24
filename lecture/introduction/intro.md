@@ -1,4 +1,4 @@
-# Intro 
+# Introduction 
 
 
 In the first block of this course we will focus on X
