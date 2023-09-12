@@ -129,7 +129,7 @@ You will be invited to the course channel via e-mail.
 
 ````
 
-<hr>
+***
 
 **Note**: If the instructions aren't working and you have spent more than 15-20 minutes troubleshooting on your own, reach out on the `#help-installation` channel on the Discord channel with the exact problems you're having.
 One of the instructors will try and get back to you quickly to help resolve the situation.
