@@ -27,7 +27,7 @@ We ask that you install the following software before arriving to the second ses
 
 Select the tab that corresponds to your operating system and follow the instructions therein.
 
-```{tabbed} Windows
+````{tab} Windows
 
 **R and RStudio**
 
@@ -59,9 +59,9 @@ Go to https://discord.com/download and download and install Discord for Windows.
 
 You will be invited to the course channel via e-mail.
 
-```
+````
 
-```{tabbed} Linux
+````{tab} Linux
 
 **R and RStudio**
 
@@ -93,9 +93,9 @@ Go to https://discord.com/download and download and install Discord for Linux. I
 
 You will be invited to the course channel via e-mail.
 
-```
+````
 
-```{tabbed} macOS
+````{tab} macOS
 
 **R and RStudio**
 
@@ -127,7 +127,7 @@ Go to https://discord.com/download and download and install Discord for Mac. If 
 
 You will be invited to the course channel via e-mail.
 
-```
+````
 
 **Note**: If the instructions aren't working and you have spent more than 15-20 minutes troubleshooting on your own, reach out on the `#help-installation` channel on the Discord channel with the exact problems you're having.
 One of the instructors will try and get back to you quickly to help resolve the situation.
