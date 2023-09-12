@@ -88,3 +88,5 @@ sphinx:
       sphinx-panels:
         - https://sphinx-panels.readthedocs.io/en/sphinx-book-theme/
         - null
+  extra_extensions:
+    - sphinx_inline_tabs
