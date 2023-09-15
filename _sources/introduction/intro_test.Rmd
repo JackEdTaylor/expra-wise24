@@ -1,5 +1,5 @@
 # Testing R Chunks
 
 ```{r}
-iris
+print(3 + 5)
 ```
