@@ -7,3 +7,6 @@ sphinx-book-theme
 myst-nb
 ghp-import
 jupytext
+
+r-base
+r-essentials

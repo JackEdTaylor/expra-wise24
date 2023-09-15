@@ -5,10 +5,11 @@ chapters:
 - file: general_information/procedure
 - file: general_information/outline
 - file: general_information/setup
-- file: introduction/intro
+- file: introduction/intro_00
   sections:
-  - file: introduction/static_content
+  - file: introduction/intro_01
   - file: introduction/interactive_notebook
+  - file: introduction/intro_test
 - file: content/intro_content
   sections:
   - file: content/static_content.md
