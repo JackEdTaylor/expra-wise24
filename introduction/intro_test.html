@@ -447,8 +447,10 @@ document.write(`
 
 library(ggplot2)
 
-ggplot(iris, aes(Sepal.Length, Sepal.Width, colour=Species)) +
+pl &lt;- ggplot(iris, aes(Sepal.Length, Sepal.Width, colour=Species)) +
     geom_point()
+
+print(pl)
 </pre></div>
 </div>
 </div>
