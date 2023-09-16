@@ -437,8 +437,8 @@ document.write(`
 <p>Let’s test rpy2</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;R_HOME&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;CONDA_PREFIX&#39;</span><span class="p">]</span><span class="si">}</span><span class="se">\\</span><span class="s2">Lib</span><span class="se">\\</span><span class="s2">R&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import os</span>
+<span class="c1"># os.environ[&quot;R_HOME&quot;] = f&quot;{os.environ[&#39;CONDA_PREFIX&#39;]}\\Lib\\R&quot;</span>
 <span class="o">%</span><span class="k">load_ext</span> rpy2.ipython
 </pre></div>
 </div>
