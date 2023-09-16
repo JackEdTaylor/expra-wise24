@@ -9,7 +9,7 @@ chapters:
   sections:
   - file: introduction/intro_01
   - file: introduction/intro_test
-  - file: introduction/intro_rmd_test.Rmd
+  - file: introduction/intro_rmd_test.md
 - file: content/intro_content
   sections:
   - file: content/static_content.md
