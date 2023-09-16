@@ -1,0 +1,18 @@
+---
+jupyter:
+  kernelspec:
+    display_name: R
+    language: R
+    name: ir
+---
+
+Here is a test
+
+```{r}
+library(ggplot2)
+
+pl <- ggplot(iris, aes(Sepal.Length, Sepal.Width, colour=Species)) +
+    geom_point()
+
+pl
+```
