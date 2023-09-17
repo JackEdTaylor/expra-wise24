@@ -35,11 +35,6 @@ jobs:
     - name: Install R dependencies
       run: |
         Rscript install.R
-
-    - name: Set up IRkernel for R in jupyter
-      run: |
-        IRkernel::installspec()
-      shell: Rscript {0}
     
     - name: Set up graphics settings in Rprofile
       run: |
