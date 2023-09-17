@@ -431,8 +431,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-nonlinear-relationships">Bonus: Nonlinear Relationships</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-sine-wave-with-some-noise">Example 1: Sine Wave with some noise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-model-appropriateness">Introduction to Model Appropriateness</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-the-data">1: Generate the Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#try-a-simple-linear-model-pearson-correlation">2: Try a Simple Linear Model / Pearson Correlation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-a-more-appropriate-model">3: Fit a more Appropriate Model</a></li>
 </ul>
 </li>
 </ul>
@@ -448,10 +450,13 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="introduction-2">
 <h1>Introduction 2<a class="headerlink" href="#introduction-2" title="Permalink to this heading">#</a></h1>
-<section id="bonus-nonlinear-relationships">
-<h2>Bonus: Nonlinear Relationships<a class="headerlink" href="#bonus-nonlinear-relationships" title="Permalink to this heading">#</a></h2>
-<p>Here is some R code showing some nonlinear relationships that cannot be described using a simple Pearson’s correlation.</p>
-<p>First of all, these examples will all be using <code class="docutils literal notranslate"><span class="pre">tibble</span></code> and <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code>, so make sure these libraries are loaded!</p>
+<section id="introduction-to-model-appropriateness">
+<h2>Introduction to Model Appropriateness<a class="headerlink" href="#introduction-to-model-appropriateness" title="Permalink to this heading">#</a></h2>
+<p>One of the key themes of this ExPra will be the idea of <strong>model appropriateness</strong>. In this example, we briefly consider sine waves. Sine waves are very relevant to much of Psychology and Neuroscience - for example in describing neural oscillations.</p>
+<p>We’ll show that a simple linear model is inappropriate for describing the data, but that a more appropriate model can describe these data much better.</p>
+<section id="generate-the-data">
+<h3>1: Generate the Data<a class="headerlink" href="#generate-the-data" title="Permalink to this heading">#</a></h3>
+<p>First of all, we need to generate the data we will use. We will also be using the packages <code class="docutils literal notranslate"><span class="pre">tibble</span></code> and <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code>, so make sure these are loaded!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># load libraries used in the examples</span>
@@ -460,60 +465,141 @@ document.write(`
 
 <span class="c1"># set the ggplot2 theme</span>
 <span class="nf">theme_set</span><span class="p">(</span><span class="nf">theme_classic</span><span class="p">())</span>
+
+<span class="c1"># set a seed for reproducibility</span>
+<span class="nf">set.seed</span><span class="p">(</span><span class="m">999</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<section id="example-1-sine-wave-with-some-noise">
-<h3>Example 1: Sine Wave with some noise<a class="headerlink" href="#example-1-sine-wave-with-some-noise" title="Permalink to this heading">#</a></h3>
-<p>Here we generate 250 observations from a Sine wave, with normally distributed noise of SD=.25</p>
+<p>Here we generate 250 observations from a Sine wave, with amplitude of 3.7 and with normally distributed noise of SD=1. We’ll also offset the sine wave from 0, by 2.3.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">example_1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">tibble</span><span class="p">(</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">250</span><span class="w">  </span><span class="c1"># number of observations</span>
+<span class="n">amplitude</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">3.7</span><span class="w">  </span><span class="c1"># amplitude of the sine wave</span>
+<span class="n">offset</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">2.3</span><span class="w">  </span><span class="c1"># offset from 0</span>
+<span class="n">noise_sd</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w">  </span><span class="c1"># SD of noise</span>
+
+<span class="n">data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">tibble</span><span class="p">(</span>
 <span class="w">  </span><span class="c1"># randomly sample x values from 0 to 25</span>
-<span class="w">  </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">runif</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="m">250</span><span class="p">,</span><span class="w"> </span><span class="n">min</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">max</span><span class="o">=</span><span class="m">25</span><span class="p">),</span>
-<span class="w">  </span><span class="c1"># get the sine of x</span>
-<span class="w">  </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span>
-<span class="w">  </span><span class="c1"># generate random noise of sd=.25</span>
-<span class="w">  </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rnorm</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="m">250</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">sd</span><span class="o">=</span><span class="m">0.25</span><span class="p">),</span>
-<span class="w">  </span><span class="c1"># add the sine wave to the noise to get the observations</span>
+<span class="w">  </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">runif</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">min</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">max</span><span class="o">=</span><span class="m">25</span><span class="p">),</span>
+<span class="w">  </span><span class="c1"># generate the perfect sine wave</span>
+<span class="w">  </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">offset</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">amplitude</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span>
+<span class="w">  </span><span class="c1"># generate random noise of desired sd</span>
+<span class="w">  </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rnorm</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">sd</span><span class="o">=</span><span class="n">noise_sd</span><span class="p">),</span>
+<span class="w">  </span><span class="c1"># add the sine wave to the noise to simulate observations</span>
 <span class="w">  </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span>
 <span class="p">)</span>
 
 <span class="c1"># plot the observations</span>
-<span class="nf">ggplot</span><span class="p">(</span><span class="n">example_1</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
 <span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/df32df91838bde95b36ca388dc78c370a4af2e0432502717084d321353e78f30.png" src="../_images/df32df91838bde95b36ca388dc78c370a4af2e0432502717084d321353e78f30.png" />
+<img alt="../_images/76997a08b5bf6cc110901ff69b42af5562f3cb404ed0a4010c4811f527cc49f5.png" src="../_images/76997a08b5bf6cc110901ff69b42af5562f3cb404ed0a4010c4811f527cc49f5.png" />
 </div>
 </div>
-<p>But as you can see, the Pearson’s correlation is very close to zero - why do you think that is?</p>
+<p>This shows that the pattern is clearly non-random - there is an obvious relationship between x and y.</p>
+</section>
+<section id="try-a-simple-linear-model-pearson-correlation">
+<h3>2: Try a Simple Linear Model / Pearson Correlation<a class="headerlink" href="#try-a-simple-linear-model-pearson-correlation" title="Permalink to this heading">#</a></h3>
+<p>Let’s get the Pearson correlation coefficient for our data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># get the Pearson&#39;s correlation</span>
-<span class="nf">cor</span><span class="p">(</span><span class="n">example_1</span><span class="o">$</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">example_1</span><span class="o">$</span><span class="n">y</span><span class="p">)</span>
+<span class="nf">cor</span><span class="p">(</span><span class="n">data</span><span class="o">$</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">$</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">-0.135337087611276</div></div>
+<div class="output text_html">-0.0921077194806694</div></div>
 </div>
-<p>We can also visualise the linear trend that the Pearson’s correlation is evaluating - clearly, the linear model is inappropriate!</p>
+<p>The Pearson’s correlation is very close to zero - why do you think that is?</p>
+<p>The Pearson’s correlation is based on a linear model. Here is what that looks like using the <code class="docutils literal notranslate"><span class="pre">lm()</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">lm</span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Call:
+lm(formula = y ~ x, data = data)
+
+Coefficients:
+(Intercept)            x  
+    2.99752     -0.03492  
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">Intercept</span></code> has very roughly estimated our <code class="docutils literal notranslate"><span class="pre">offset</span></code> of 3.7, estimating it equal about 3. <code class="docutils literal notranslate"><span class="pre">x</span></code> is an estimate for a linear slope.</p>
+<p>To better understand this, we can also visualise the linear relationship that the Pearson’s correlation is based on…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># superimpose the simple linear model</span>
-<span class="nf">ggplot</span><span class="p">(</span><span class="n">example_1</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
 <span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
 <span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">&quot;lm&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">formula</span><span class="o">=</span><span class="n">y</span><span class="o">~</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/9327550b2544b57c522e6113d3276eda93ded9ce15242521ad401c504b422a9e.png" src="../_images/9327550b2544b57c522e6113d3276eda93ded9ce15242521ad401c504b422a9e.png" />
+<img alt="../_images/abb22d87f03316ff01f0d4b696d7a6bc921d7bd10714168e2845688e62b23b7b.png" src="../_images/abb22d87f03316ff01f0d4b696d7a6bc921d7bd10714168e2845688e62b23b7b.png" />
 </div>
+</div>
+<p>Clearly, a simple Pearson’s correlation, and the associated simple linear model, are completely inappropriate in this case! It’s missing important information that we know about the data.</p>
+</section>
+<section id="fit-a-more-appropriate-model">
+<h3>3: Fit a more Appropriate Model<a class="headerlink" href="#fit-a-more-appropriate-model" title="Permalink to this heading">#</a></h3>
+<p>If we happen know that a the data is generated from a sine wave with a certain amplitude (and zero phase), we could fit a model that accounts for this. Here, instead of <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">~</span> <span class="pre">x</span></code>, our formula would be <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">~</span> <span class="pre">sin(x)</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">&quot;lm&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">formula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="nf">sin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/f1d0ff9ec3ea1c5397b41670306ac16a9ac0c6b63da71f6dc28ee5bf24e86ca6.png" src="../_images/f1d0ff9ec3ea1c5397b41670306ac16a9ac0c6b63da71f6dc28ee5bf24e86ca6.png" />
+</div>
+</div>
+<p>This is looking like a much better description of the data!</p>
+<p>Here is what the <code class="docutils literal notranslate"><span class="pre">lm()</span></code> output looks like.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">lm</span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="nf">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Call:
+lm(formula = y ~ sin(x), data = data)
+
+Coefficients:
+(Intercept)       sin(x)  
+      2.278        3.711  
+</pre></div>
+</div>
+</div>
+</div>
+<p>How cool! Notice that this model is now able to estimate our parameters from before!</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Intercept</span></code> estimates our offset parameter of 2.3</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">sin(x)</span></code> part estimates our amplitude of 3.7</p></li>
+</ul>
+<p>If we wanted to, we could also calculate an equivalent of the Pearson’s correlation for this more appropriate model, which is much better at capturing the strength of the clear relationship that we can see in the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">cor</span><span class="p">(</span><span class="nf">sin</span><span class="p">(</span><span class="n">data</span><span class="o">$</span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="n">data</span><span class="o">$</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">0.940673515786082</div></div>
 </div>
 </section>
 </section>
@@ -582,8 +668,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-nonlinear-relationships">Bonus: Nonlinear Relationships</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-sine-wave-with-some-noise">Example 1: Sine Wave with some noise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-model-appropriateness">Introduction to Model Appropriateness</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-the-data">1: Generate the Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#try-a-simple-linear-model-pearson-correlation">2: Try a Simple Linear Model / Pearson Correlation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-a-more-appropriate-model">3: Fit a more Appropriate Model</a></li>
 </ul>
 </li>
 </ul>
