@@ -34,7 +34,7 @@ jobs:
 
     - name: Set up IRkernel for R in jupyter
       run: |
-        if (!requireNamespace("IRkernel", quietly=TRUE)) install.packages("IRkernel")
+        if (!requireNamespace("IRkernel", quietly=TRUE)) install.packages("IRkernel", repos="https://cloud.r-project.org/")
         IRkernel::installspec()
       shell: Rscript {0}
 
@@ -42,7 +42,7 @@ jobs:
       run: |
         reqs <- readLines("requirements_r.txt")
         for (r in reqs) {
-          if (!requireNamespace(r, quietly=TRUE)) install.packages(r)
+          if (!requireNamespace(r, quietly=TRUE)) install.packages(r, repos="https://cloud.r-project.org/")
         }
       shell: Rscript {0}
 
