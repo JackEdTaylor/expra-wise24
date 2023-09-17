@@ -45,6 +45,13 @@ jobs:
           if (!requireNamespace(r, quietly=TRUE)) install.packages(r, repos="https://cloud.r-project.org/")
         }
       shell: Rscript {0}
+    
+    - name: Set up Rprofile
+      run: |
+        opt <- c("", "options(repr.plot.width=5, repr.plot.height=4)")
+        profile_loc <- file.path(R.home(component="etc"), "Rprofile.site")
+        writeLines(opt, profile_loc)
+      shell: Rscript {0}
 
     # Build the page
     - name: Build the book
