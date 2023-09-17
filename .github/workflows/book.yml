@@ -50,7 +50,7 @@ jobs:
       run: |
         opt <- c(
           "",
-          "options(repr.plot.width=4, repr.plot.height=3.25)",
+          "options(repr.plot.width=3.5, repr.plot.height=3)",
           "",
           ".First <- function() {",
           "  require(Cairo)",
