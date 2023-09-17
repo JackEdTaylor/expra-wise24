@@ -54,7 +54,7 @@ jobs:
           "",
           ".First <- function() {",
           "  require(Cairo)",
-          "  CairoX11()",
+          "  CairoPNG()",
           "}"
         )
         profile_loc <- file.path(R.home(component="etc"), "Rprofile.site")
