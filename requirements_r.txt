@@ -1,5 +1,0 @@
-tibble
-dplyr
-Cairo
-ggplot2
-lme4
