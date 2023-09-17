@@ -453,7 +453,17 @@ document.write(`
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vST0mRDk9QejdjRYvqRGhnf3DxDmnsNKwcVh8mVkG1YRrNACqvCWgR1gL9zLj5ic6jULAm1b8kicdDC/embed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe><section id="introduction-to-model-appropriateness">
 <h2>Introduction to Model Appropriateness<a class="headerlink" href="#introduction-to-model-appropriateness" title="Permalink to this heading">#</a></h2>
 <p>One of the key themes of this ExPra will be the idea of <strong>model appropriateness</strong>. In this example, we briefly consider sine waves. Sine waves are very relevant to much of Psychology and Neuroscience - for example in describing <a class="reference external" href="https://en.wikipedia.org/wiki/Neural_oscillation">neural oscillations</a>.</p>
-<p>We’ll show that a simple linear model is inappropriate for describing the data, but that a more appropriate model can describe these data much better.</p>
+<p>Sine waves are described by three main parameters:</p>
+<ul class="simple">
+<li><p><em>Amplitude (or “Power”)</em> - you could think of this as “loudness”</p></li>
+<li><p><em>Frequency</em> - you could think of this as”pitch”</p></li>
+<li><p><em>Phase</em> - you could think of this as time of onset</p></li>
+</ul>
+<img src="img/power.gif" width=250 align="left"/>
+<img src="img/frequency.gif" width=250 align="left"/>
+<img src="img/phase.gif" width=250 align="left"/>
+<p>Don’t worry if this is all new - we’re just using this as a working example. In fact, in this example we’ll just focus on amplitude (power).</p>
+<p>We’ll show that a simple linear model is inappropriate for describing data that records an oscillation, but that a more appropriate model can describe these data much better.</p>
 <section id="generate-the-data">
 <h3>1: Generate the Data<a class="headerlink" href="#generate-the-data" title="Permalink to this heading">#</a></h3>
 <p>First of all, we need to generate the data we will use. We will also be using the packages <code class="docutils literal notranslate"><span class="pre">tibble</span></code> and <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code>, so make sure these are loaded!</p>
@@ -556,7 +566,7 @@ Coefficients:
 </section>
 <section id="fit-a-more-appropriate-model">
 <h3>3: Fit a more Appropriate Model<a class="headerlink" href="#fit-a-more-appropriate-model" title="Permalink to this heading">#</a></h3>
-<p>If we happen know that a the data is generated from a sine function with a certain amplitude (and zero phase), we could fit a model that accounts for this. Here, instead of <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">~</span> <span class="pre">x</span></code>, our formula would be <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">~</span> <span class="pre">sin(x)</span></code></p>
+<p>If we happen know that a the data is generated from a sine function with a certain amplitude, we could fit a model that accounts for this. Here, instead of <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">~</span> <span class="pre">x</span></code>, our formula would be <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">~</span> <span class="pre">sin(x)</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
