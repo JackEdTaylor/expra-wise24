@@ -46,9 +46,17 @@ jobs:
         }
       shell: Rscript {0}
     
-    - name: Set up Rprofile
+    - name: Set up graphics settings in Rprofile
       run: |
-        opt <- c("", "options(repr.plot.width=4, repr.plot.height=3.25)")
+        opt <- c(
+          "",
+          "options(repr.plot.width=4, repr.plot.height=3.25)",
+          "",
+          ".First <- function() {",
+          "  require(Cairo)",
+          "  CairoX11()",
+          "}"
+        )
         profile_loc <- file.path(R.home(component="etc"), "Rprofile.site")
         writeLines(opt, profile_loc)
       shell: sudo Rscript {0}
