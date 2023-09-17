@@ -1,2 +1,4 @@
+tibble
+dplyr
 ggplot2
 lme4
