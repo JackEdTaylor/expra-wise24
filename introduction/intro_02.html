@@ -450,7 +450,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="introduction-2">
 <h1>Introduction 2<a class="headerlink" href="#introduction-2" title="Permalink to this heading">#</a></h1>
-<section id="introduction-to-model-appropriateness">
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vST0mRDk9QejdjRYvqRGhnf3DxDmnsNKwcVh8mVkG1YRrNACqvCWgR1gL9zLj5ic6jULAm1b8kicdDC/embed?start=false&loop=false&delayms=60000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe><section id="introduction-to-model-appropriateness">
 <h2>Introduction to Model Appropriateness<a class="headerlink" href="#introduction-to-model-appropriateness" title="Permalink to this heading">#</a></h2>
 <p>One of the key themes of this ExPra will be the idea of <strong>model appropriateness</strong>. In this example, we briefly consider sine waves. Sine waves are very relevant to much of Psychology and Neuroscience - for example in describing <a class="reference external" href="https://en.wikipedia.org/wiki/Neural_oscillation">neural oscillations</a>.</p>
 <p>We’ll show that a simple linear model is inappropriate for describing the data, but that a more appropriate model can describe these data much better.</p>
@@ -551,7 +551,7 @@ Coefficients:
 </div>
 </div>
 <p>Clearly, a simple Pearson’s correlation, and the associated simple linear model, are completely inappropriate in this case! It’s missing important information that we know about the data.</p>
-<p>One solution could be to use a measure of association that makes fewer assumptions about the nature of the relationship. For example, we could use <a class="reference external" href="https://en.wikipedia.org/wiki/Mutual_information">mutual information</a> to quantify the degree to which we learn information about one variable by observing the other. If you’re interested in trying out mutual information, you might want to try the R package <a class="reference external" href="https://cran.r-project.org/web/packages/infotheo/index.html"><code class="docutils literal notranslate"><span class="pre">infotheo</span></code></a>.</p>
+<p>One solution could be to use a measure of association that makes minimal assumptions about the nature of the relationship. For example, we could use <a class="reference external" href="https://en.wikipedia.org/wiki/Mutual_information">mutual information</a> to quantify the degree to which we learn information about one variable by observing the other. If you’re interested in trying out mutual information, you might want to try the R package <a class="reference external" href="https://cran.r-project.org/web/packages/infotheo/index.html"><code class="docutils literal notranslate"><span class="pre">infotheo</span></code></a>.</p>
 <p><strong>However, a better approach may be to fit a more specific model</strong>, which allows us to incorporate our knowledge about how the data were generated - via a sine function.</p>
 </section>
 <section id="fit-a-more-appropriate-model">
