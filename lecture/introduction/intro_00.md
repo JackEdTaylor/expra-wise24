@@ -10,14 +10,10 @@ In the first block of this course we will focus on X
 - get the necessary software  
 - Ask and answer questions
 
-
 ## Prerequisities
 
 - list prerequisities
 - refer back to setup page
-
-## Materials 
-
 
 ## Schedule
 
@@ -28,3 +24,7 @@ Please see below for our current optimistic schedule. Depending on our progress,
 | Date (day/month/year) 🗓         | Topic   | Assignment / deadline |
 |--------------|-----------|------------|
 | 28/10/2022 | Introduction I - course information & setup  | /not applicable |
+
+## Reading
+
+
