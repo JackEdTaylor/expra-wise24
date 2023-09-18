@@ -31,7 +31,7 @@ Select the tab that corresponds to your operating system and follow the instruct
 
 **R and RStudio**
 
-_Please note_: If you already have `R` installed, please check that you have version `4.3.1` and if that's not the case then please install the this version.
+_Please note_: If you already have `R` installed, please check that you have version `4.3.1` and if that's not the case then please install this version.
 
 1. Pick a mirror to install R from: https://cran.r-project.org/mirrors.html
 
@@ -65,7 +65,7 @@ You will be invited to the course channel via e-mail.
 
 **R and RStudio**
 
-_Please note_: If you already have `R` installed, please check that you have version `4.3.1` and if that's not the case then please install the this version.
+_Please note_: If you already have `R` installed, please check that you have version `4.3.1` and if that's not the case then please install this version.
 
 1. Pick a mirror to install R from: https://cran.r-project.org/mirrors.html
 
@@ -99,7 +99,7 @@ You will be invited to the course channel via e-mail.
 
 **R and RStudio**
 
-_Please note_: If you already have `R` installed, please check that you have version `4.3.1` and if that's not the case then please install the this version.
+_Please note_: If you already have `R` installed, please check that you have version `4.3.1` and if that's not the case then please install this version.
 
 1. Pick a mirror to install R from: https://cran.r-project.org/mirrors.html
 

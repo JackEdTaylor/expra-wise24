@@ -70,8 +70,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/intro_02';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction to content X" href="../content/intro_content.html" />
-    <link rel="prev" title="Introduction I" href="intro_01.html" />
+    <link rel="next" title="Introduction to content X" href="../experimentation/exp_00.html" />
+    <link rel="prev" title="Introduction 1" href="intro_01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -173,19 +173,15 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../general_information/overview.html">Course overview &amp; procedure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../general_information/procedure.html">General procedure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../general_information/outline.html">General outline</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../general_information/setup.html">Setup for the course</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="intro_00.html">Introduction</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="intro_01.html">Introduction I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro_01.html">Introduction 1</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Introduction 2</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../content/intro_content.html">Introduction to content X</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../content/interactive_notebook.html">Content II</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../content/creating_content_example.html">Example Content</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../experimentation/exp_00.html">Introduction to content X</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../finalisation/fin_00.html">Introduction to content X</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../general_information/results_communication.html">Results communication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../general_information/symposium.html">Symposium</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../general_information/CoC.html">Code of Conduct</a></li>
@@ -625,12 +621,7 @@ Coefficients:
 <p><strong>a</strong>) Try changing the <code class="docutils literal notranslate"><span class="pre">noise_sd</span></code> parameter - what happens to your estimates in the last section as you increase and decrease this parameter? What happens when you change the <code class="docutils literal notranslate"><span class="pre">amplitude</span></code> parameter?</p>
 <p><strong>b</strong>) Would this work for a cosine too? Try to change the code above to simulate and estimate data from a cosine function.</p>
 <p><strong>c</strong>) Can you rewrite the code to use the following transformations? <code class="docutils literal notranslate"><span class="pre">log()</span></code>, <code class="docutils literal notranslate"><span class="pre">exp()</span></code>, exponentiation using <code class="docutils literal notranslate"><span class="pre">^</span></code>. Any more transformations can think of?</p>
-<p><strong>d</strong>) <strong>Tricky</strong>: Try to include another independent variable in the simulation. Like <code class="docutils literal notranslate"><span class="pre">x</span></code>, this should be sampled using <code class="docutils literal notranslate"><span class="pre">runif()</span></code>, except this predictor should be linear (e.g., not using <code class="docutils literal notranslate"><span class="pre">sin()</span></code>).</p>
-<p>Here are two new variables you might need to create and include in the <code class="docutils literal notranslate"><span class="pre">tibble()</span></code> at the top:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">z</span></code> - simulated using <a class="reference external" href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/Uniform"><code class="docutils literal notranslate"><span class="pre">runif()</span></code></a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">z_slope</span></code> - a single number, comparable to <code class="docutils literal notranslate"><span class="pre">amplitude</span></code> and <code class="docutils literal notranslate"><span class="pre">offset</span></code>, that should be multiplied by <code class="docutils literal notranslate"><span class="pre">z</span></code> in the formula</p></li>
-</ul>
+<p><strong>d</strong>) <strong>Tricky</strong>: Create a new variable in <em>Step 1.</em>, called <code class="docutils literal notranslate"><span class="pre">ls</span></code> (standing for linear slope), and set it to a value of your choice (I recommend picking a number between -2 and 2). Now, change the formula in the simulation in <em>Step 1.</em> from <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">s</span> <span class="pre">+</span> <span class="pre">e</span></code> to <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">s</span> <span class="pre">+</span> <span class="pre">ls</span> <span class="pre">*</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">e</span></code>. Try running the code in the later sections. Can you figure out a way to alter the code in <em>Step 3.</em> to estimate all the values for <code class="docutils literal notranslate"><span class="pre">offset</span></code>, <code class="docutils literal notranslate"><span class="pre">amplitude</span></code>, and <code class="docutils literal notranslate"><span class="pre">ls</span></code>?</p>
 </section>
 </section>
 </section>
@@ -671,11 +662,11 @@ Coefficients:
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Introduction I</p>
+        <p class="prev-next-title">Introduction 1</p>
       </div>
     </a>
     <a class="right-next"
-       href="../content/intro_content.html"
+       href="../experimentation/exp_00.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
