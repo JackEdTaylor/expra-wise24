@@ -27,4 +27,5 @@ Please see below for our current optimistic schedule. Depending on our progress,
 
 ## Reading
 
-
+| Date of Presentation (dd/mm/yyyy) | Title | Authors | Topic | link |
+|-----------------------------------|-------|---------|-------|------|
