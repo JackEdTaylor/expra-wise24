@@ -2,18 +2,14 @@ root: general_information/index
 format: jb-book
 chapters:
 - file: general_information/overview
-- file: general_information/procedure
 - file: general_information/outline
 - file: general_information/setup
 - file: introduction/intro_00
   sections:
   - file: introduction/intro_01
   - file: introduction/intro_02
-- file: content/intro_content
-  sections:
-  - file: content/static_content.md
-  - file: content/interactive_notebook.md
-  - file: content/creating_content_example.ipynb
+- file: experimentation/exp_00
+- file: finalisation/fin_00
 - file: general_information/results_communication
 - file: general_information/symposium
 - file: general_information/CoC
