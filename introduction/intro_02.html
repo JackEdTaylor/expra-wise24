@@ -436,6 +436,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-the-data">1: Generate the Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#try-a-simple-linear-model-pearson-correlation">2: Try a Simple Linear Model / Pearson Correlation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-a-more-appropriate-model">3: Fit a more Appropriate Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-understanding">4: Test your Understanding!</a></li>
 </ul>
 </li>
 </ul>
@@ -458,16 +459,16 @@ document.write(`
 <section id="introduction-to-model-appropriateness">
 <h2>Introduction to Model Appropriateness<a class="headerlink" href="#introduction-to-model-appropriateness" title="Permalink to this heading">#</a></h2>
 <p>One of the key themes of this ExPra will be the idea of <strong>model appropriateness</strong>. In this example, we briefly consider sine waves. Sine waves are very relevant to much of Psychology and Neuroscience - for example in describing <a class="reference external" href="https://en.wikipedia.org/wiki/Neural_oscillation">neural oscillations</a>.</p>
-<img src="power.gif" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/power.gif';" class=".float-right" width="250px">
-<img src="frequency.gif" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/frequency.gif';" class=".float-right" width="250px">
-<img src="phase.gif" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/phase.gif';" class=".float-right" width="250px">
 <p>Sine waves are described by three main parameters:</p>
 <ul class="simple">
 <li><p><em>Amplitude (or “Power”)</em> - you could think of this as “loudness”</p></li>
-<li><p><em>Frequency</em> - you could think of this as “pitch”</p></li>
-<li><p><em>Phase</em> - you could think of this as shift in the timing of beats</p></li>
+<li><p><em>Frequency</em> - you could think of this as “pitch”, or the tempo of a repetitive beat</p></li>
+<li><p><em>Phase</em> - you could think of this as shift in the timing of beats (how soon after 0 is the first beat?)</p></li>
 </ul>
-<p>Don’t worry if this is all new - we’re just using this as a working example. In fact, in this example we’ll just focus on amplitude (power).</p>
+<img src="power.gif" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/power.gif';" class=".float-right" width="250px">
+<img src="frequency.gif" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/frequency.gif';" class=".float-right" width="250px">
+<img src="phase.gif" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/phase.gif';" class=".float-right" width="250px">
+<p>Don’t worry if this is all new! We’re just using this as a working example. In fact, in this example we’ll just focus on amplitude (power).</p>
 <p>We’ll show that a simple linear model is inappropriate for describing data that records an oscillation, but that a more appropriate model can describe these data much better.</p>
 <section id="generate-the-data">
 <h3>1: Generate the Data<a class="headerlink" href="#generate-the-data" title="Permalink to this heading">#</a></h3>
@@ -619,6 +620,18 @@ Coefficients:
 <div class="output text_html">0.940673515786082</div></div>
 </div>
 </section>
+<section id="test-your-understanding">
+<h3>4: Test your Understanding!<a class="headerlink" href="#test-your-understanding" title="Permalink to this heading">#</a></h3>
+<p><strong>a</strong>) Try changing the <code class="docutils literal notranslate"><span class="pre">noise_sd</span></code> parameter - what happens to your estimates in the last section as you increase and decrease this parameter? What happens when you change the <code class="docutils literal notranslate"><span class="pre">amplitude</span></code> parameter?</p>
+<p><strong>b</strong>) Would this work for a cosine too? Try to change the code above to simulate and estimate data from a cosine function.</p>
+<p><strong>c</strong>) Can you rewrite the code to use the following transformations? <code class="docutils literal notranslate"><span class="pre">log()</span></code>, <code class="docutils literal notranslate"><span class="pre">exp()</span></code>, exponentiation using <code class="docutils literal notranslate"><span class="pre">^</span></code>. Any more transformations can think of?</p>
+<p><strong>d</strong>) <strong>Tricky</strong>: Try to include another independent variable in the simulation. Like <code class="docutils literal notranslate"><span class="pre">x</span></code>, this should be sampled using <code class="docutils literal notranslate"><span class="pre">runif()</span></code>, except this predictor should be linear (e.g., not using <code class="docutils literal notranslate"><span class="pre">sin()</span></code>).</p>
+<p>Here are two new variables you might need to create and include in the <code class="docutils literal notranslate"><span class="pre">tibble()</span></code> at the top:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">z</span></code> - simulated using <a class="reference external" href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/Uniform"><code class="docutils literal notranslate"><span class="pre">runif()</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">z_slope</span></code> - a single number, comparable to <code class="docutils literal notranslate"><span class="pre">amplitude</span></code> and <code class="docutils literal notranslate"><span class="pre">offset</span></code>, that should be multiplied by <code class="docutils literal notranslate"><span class="pre">z</span></code> in the formula</p></li>
+</ul>
+</section>
 </section>
 </section>
 
@@ -690,6 +703,7 @@ Coefficients:
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-the-data">1: Generate the Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#try-a-simple-linear-model-pearson-correlation">2: Try a Simple Linear Model / Pearson Correlation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-a-more-appropriate-model">3: Fit a more Appropriate Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-understanding">4: Test your Understanding!</a></li>
 </ul>
 </li>
 </ul>
