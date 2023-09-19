@@ -9,7 +9,8 @@ chapters:
   sections:
   - file: introduction/general_intro
   - file: introduction/setup
-  - file: introduction/intro_03
+  - file: introduction/empirical_research
+  - file: introduction/model_appropriateness
 - file: demo/demo_00
 - file: experimentation/exp_00
 - file: finalisation/fin_00
