@@ -1,16 +1,16 @@
 # Course overview & procedure
 
-Detailed explanation of what the course is about,
+In this ExPra (Empirisch-Experimentelles Praktikum), you will get hands-on experience in Psychological research. We will progress through the stages of a research project, from theoretical background and methodological understanding, to experiment design, data collection, analysis, and presentation of results in a poster, presentation, and report.
 
-list of content chapter
-- 
-- 
+Sections on this website:
 
-How you want to go about teaching.
+- Introduction: we will cover the theoretical background of the research topic
 
-### TL;DR
+- Demo: We will run a simple demo experiment, going through the analysis, and submitting a demo report
 
-Within this course we will explore X, specifically how it can and why it should be utilized within X. To do so, we will follow a "learning by doing" approach X. The steps will be the following: X, X, X. For a rather precise outline of the course, please consult the [respective section]().
+- Experimentation: You will design your experiments and preregister them. You will collect data, and then analyse it.
+
+- Finalisation: You will produce and present posters and presentations on your findings. Finally, you will submit your final reports.
 
 ### How to reach the folks in the front
 
@@ -18,26 +18,22 @@ Within this course we will explore X, specifically how it can and why it should 
 
 The contact information of the instructors are as follows:
 
-[Name](Webseite)
+[Jack Taylor](https://jackedtaylor.github.io/)
 
 - Office hours: upon request
-- E-mail: `e-mail@psych.uni-frankfurt.de`
-- preferred mode of contact: vie e-mail
-
-```{admonition} How to address one another?
-:class: dropdown
-He/Him. When contacting me, please refrain from using honoraries and formal language, "Michael" or "you" is fine as long as the content is respectful, fair and constructive (I aim for the same when I reply).
-However, please let me know if you have a preferred way of interacting with other folks, including how you would liked to be addressed, your pronouns and the level of formality.
-```
+- E-mail: `Taylor(at)psych.uni-frankfurt.de`
+- Preferred mode of contact: vie `discord` or e-mail
 
 
 ### Gimme the details
 
-Below you will find important details regarding the course summarized in a compact form. Please consult and familiarize yourself with the information presented there prior to and/or within the first few days of the course. 
+Below you will find important details regarding the course summarized in a compact form. Please consult and familiarize yourself with the information presented there prior to and/or within the first few days of the course.
 
-#### When and where
+### When and where do we meet?
 
-<iframe src="https://giphy.com/embed/opPuISKbzCXAFHhZFJ" width="280" height="280" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/opPuISKbzCXAFHhZFJ">via GIPHY</a></p>
+The course will be held at 08:00 - 12:00 on Wednesdays, in Seminarhaus - SH 5.103. If it's useful, you can [download this `.ics` file](https://qis.server.uni-frankfurt.de/qisserver/rds?state=verpublish&status=transform&vmfile=no&publishid=843297&moduleCall=iCalendar&publishConfFile=reports&publishSubDir=veranstaltung) for your calendar app.
+
+<iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=8.667059540748598%2C50.12849695078025%2C8.669570088386537%2C50.129838125095446&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=19/50.12917/8.66831">View Larger Map</a></small>
 
 
 #### How do I get all the software and do I have to apply for a loan to get it?
@@ -49,17 +45,9 @@ In order to help you get all the software required for the course, a [comprehens
 
 #### Where is everything?
 
-All course materials (lecture slides, lecture demo notebooks, lab notebooks, homework assignments, etc.) will be available on the [course website](https://jackedtaylor.github.io/expra-wise23/), i.e. the one you're looking at right now. Everything will be completely open and free to use, thus constituting an [open educational resource](https://en.wikipedia.org/wiki/Open_educational_resources) you are **free to explore, enhance and share**. Thus, this website and all materials will also remain up for the entire duration of the course and beyond, ideally to end of the internet. The usage of this resource and the materials therein will be explained at the beginning and throughout the course.  
-
-#### Syllabus and Text
-
-As noted above, this page serves as the syllabus for this course, with the precise outline indicated in the [respective section](link-to-outline.html). This syllabus is subject to change; students who miss class are responsible for learning about any changes to the syllabus.
-
-Additional reading material might be added but will always be open & free with students being informed about any addition.
-
+All course materials (lecture slides, lecture demo notebooks, lab notebooks, homework assignments, etc.) will be available on the [course website](https://jackedtaylor.github.io/expra-wise23/), i.e. the one you're looking at right now. Everything will be completely open and free to use, thus constituting an [open educational resource](https://en.wikipedia.org/wiki/Open_educational_resources) you are **free to explore, enhance and share**. Thus, this website and all materials will also remain up for the entire duration of the course and beyond, ideally to end of the internet. The usage of this resource and the materials therein will be explained at the beginning and throughout the course.
 
 #### How to get those credits?
-
 
 
 ##### Exams and Assignments
@@ -118,7 +106,7 @@ If you have:
 
 **- something super cool to share related to class or want to talk about a topic in further depth** - feel free to post on `discord`, contact the instructors or come to office hours. 
 
-**- some feedback about the course you want to share anonymously** - If you’ve been offended by an example in class, really liked or disliked a lesson, or wish there were something covered in class that wasn’t but would rather not share this publicly, etc., please fill out the anonymous [Google Form](link-to-your-form)*
+**- some feedback about the course you want to share anonymously** - If you’ve been offended by an example in class, really liked or disliked a lesson, or wish there were something covered in class that wasn’t but would rather not share this publicly, etc., please fill out the anonymous [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSerOu3sqdSZ5SJufa2qgg1yFb4_IMbos4TaYPSWiWbqXESYSQ/viewform?usp=sf_link)*
 
 *This form can be taken down at any time if it’s not being used for its intended purpose; however, you all will be notified should that happen.
 
