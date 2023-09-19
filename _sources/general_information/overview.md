@@ -37,15 +37,7 @@ Below you will find important details regarding the course summarized in a compa
 
 #### When and where
 
-
-#### What about the pandemic? 
-
-Until further notice, it is assumed that the course will take place in person. This may be subject to change given everything we experienced and learned in the last years. Therefore the course is setup in a way that would allow both in person and virtual meetings. Should changes to the course format be mandated, you'll be notified ASAP.
-If you feel uncomfortable doing a busy commute to sit in a room with several other people, please let me know and I'll give my best to come up with a hybrid format. However, based on current regulations there won't be any recordings. Just in case: yes, everyone should wear a mask at all times (although this is not to be understood as an official regulation, as is not permitted by the university)!
-
 <iframe src="https://giphy.com/embed/opPuISKbzCXAFHhZFJ" width="280" height="280" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/opPuISKbzCXAFHhZFJ">via GIPHY</a></p>
-
-
 
 
 #### How do I get all the software and do I have to apply for a loan to get it?
@@ -57,8 +49,7 @@ In order to help you get all the software required for the course, a [comprehens
 
 #### Where is everything?
 
-All course materials (lecture slides, lecture demo notebooks, lab notebooks, homework assignments, etc.) will be available on the [course website](link-to-index.html), i.e. the one you're looking at right now. Everything will be completely open and free to use, thus constituting an [open educational resource](https://en.wikipedia.org/wiki/Open_educational_resources) you are **free to explore, enhance and share**. Thus, this website and all materials will also remain up for the entire duration of the course and beyond, ideally to end of the internet. The usage of this resource and the materials therein will be explained at the beginning and throughout the course.  
-
+All course materials (lecture slides, lecture demo notebooks, lab notebooks, homework assignments, etc.) will be available on the [course website](https://jackedtaylor.github.io/expra-wise23/), i.e. the one you're looking at right now. Everything will be completely open and free to use, thus constituting an [open educational resource](https://en.wikipedia.org/wiki/Open_educational_resources) you are **free to explore, enhance and share**. Thus, this website and all materials will also remain up for the entire duration of the course and beyond, ideally to end of the internet. The usage of this resource and the materials therein will be explained at the beginning and throughout the course.  
 
 #### Syllabus and Text
 
@@ -115,7 +106,7 @@ It’s great that we have so many ways to communicate, but it can get tricky to 
 
 If you have:
 
-**- questions about course content** - these are awesome! We want everyone to see them and have their questions answered too, so either use the [hypothes.is](https://web.hypothes.is/) plugin, the `discord` channel, `e-mail` or the [GitHub repository](https://github.com/name_of_repo/issues).
+**- questions about course content** - these are awesome! We want everyone to see them and have their questions answered too, so either use the `discord` channel, `e-mail` or the [GitHub repository](https://github.com/JackEdTaylor/expra-wise23/issues).
 
 **- a technical assignment question** - come to office hours (after making an appointment) or use the provided communication platform to reach out (e.g. discord, slack etc.). Answering technical questions is often best accomplished ‘in person’ where we can discuss the question and talk through ideas. Be as specific as you can in the question you ask (and include error messages when appropriate!). And, for those answering, help your classmates as much as you can without just giving the answer. Help guide them, point them in a direction, provide pseudo code, but do not provide code that answers assignment questions.
 
