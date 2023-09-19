@@ -8,6 +8,7 @@ chapters:
   sections:
   - file: introduction/intro_01
   - file: introduction/intro_02
+  - file: introduction/intro_03
 - file: experimentation/exp_00
 - file: finalisation/fin_00
 - file: general_information/results_communication
