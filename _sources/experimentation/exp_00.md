@@ -1,4 +1,4 @@
-# Introduction to content X
+# Experimentation
 
 Within the first session we'll spend a fair amount of time on X
 
