@@ -19,6 +19,8 @@ We ask that you install the following software before arriving to the second ses
 
 - [R](https://www.r-project.org/) (version `4.3.1`) and [RStudio](https://posit.co/download/rstudio-desktop/)
 
+- [`Psychopy`](https://www.psychopy.org/) (Standalone installation) for running the demo experiment and your projects
+
 - A modern browser: [Chrome](https://www.google.com/chrome/index.html), [Firefox](https://www.mozilla.org/en-GB/firefox/), [Opera](https://www.opera.com/)
 
 - A literature & reference manager: [Zotero](https://www.zotero.org/) (recommended), or an alternative like  Citavi (possible but not recommended)
@@ -42,6 +44,14 @@ _Please note_: If you already have `R` installed, please check that you have ver
 4. Download the RStudio installer, ensuring you select an installer for Windows: https://posit.co/download/rstudio-desktop/
 
 5. Open the installer and allow it to install RStudio.
+
+**Psychopy**
+
+1. Go to https://github.com/psychopy/psychopy/releases
+
+2. From the latest release (at the top), scroll to assets, and download the StandalonePsychoPy file that ends with `-win64.exe`.
+
+3. Once downloaded, open the installer and allow it to install Psychopy.
 
 **Zotero**
 
@@ -77,6 +87,14 @@ _Please note_: If you already have `R` installed, please check that you have ver
 
 5. Install from the tarball, as you normally do for your distribution.
 
+**Psychopy**
+
+1. Go to https://github.com/psychopy/psychopy/releases
+
+2. Download the tarball for the latest release.
+
+3. Install from the tarball as you usually do for your distribution.
+
 **Zotero**
 
 1. Go to https://www.zotero.org/ and click the “Log in” button followed by the “Register for a free account” button on the subsequent page.
@@ -110,6 +128,14 @@ _Please note_: If you already have `R` installed, please check that you have ver
 4. Download the RStudio installer, ensuring you select the `.dmg` installer for macOS: https://posit.co/download/rstudio-desktop/
 
 5. Open the installer and allow it to install RStudio.
+
+**Psychopy**
+
+1. Go to https://github.com/psychopy/psychopy/releases
+
+2. From the latest release (at the top), scroll to assets, and download the StandalonePsychoPy file that ends with `-macOS.dmg`.
+
+3. Once downloaded, open the installer and allow it to install Psychopy.
 
 **Zotero**
 
