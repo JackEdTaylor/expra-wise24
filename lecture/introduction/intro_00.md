@@ -24,7 +24,7 @@ Please see below for our current optimistic schedule. Depending on our progress,
 | Date (day/month/year) 🗓         | Topic | Tasks |
 |--------------|-----------|------------|
 | 18/10/2023 | [Introduction 1 - Course Information & Setup](https://jackedtaylor.github.io/expra-wise23/introduction/intro_01)  | /not applicable |
-| 25/10/2023 | [Introduction 2 - R Refresher](https://jackedtaylor.github.io/expra-wise23/introduction/intro_02)
+| 25/10/2023 | [Introduction 2 - R Refresher](https://jackedtaylor.github.io/expra-wise23/introduction/intro_02)  | /not applicable |
 | 01/11/2023 | [Introduction 3 - Empirical Research & Model Appropriateness](https://jackedtaylor.github.io/expra-wise23/introduction/intro_03)  | /not applicable |
 | 08/11/2023 |
 | 15/11/2023 |
@@ -38,7 +38,6 @@ Please see below for our current optimistic schedule. Depending on our progress,
 | 24/01/2024 |
 | 31/01/2024 |
 | 07/02/2024 |
-|--------------|-----------|------------|
 
 ## Assigned Reading
 
@@ -53,5 +52,4 @@ Please see below for our current optimistic schedule. Depending on our progress,
 | 06/12/2023 | The past, present and future of Registered Reports | Chambers et al. | 2022 | [*Nature Human Behavior*, *6*, 29-42](https://doi.org/10.1038/s41562-021-01193-7) |
 | 13/12/2023 | 
 | 20/12/2023 |
-|-----------------------------------|-------|---------|-------|------|
 
