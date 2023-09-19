@@ -4,11 +4,13 @@ chapters:
 - file: general_information/overview
 - file: general_information/outline
 - file: general_information/setup
+- file: general_information/reading
 - file: introduction/intro_00
   sections:
   - file: introduction/intro_01
   - file: introduction/intro_02
   - file: introduction/intro_03
+- file: demo/demo_00
 - file: experimentation/exp_00
 - file: finalisation/fin_00
 - file: general_information/results_communication
