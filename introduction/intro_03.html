@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Finalisation" href="../demo/demo_00.html" />
-    <link rel="prev" title="Introduction 1" href="intro_01.html" />
+    <link rel="prev" title="Setup for the course" href="setup.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -174,10 +174,10 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../general_information/overview.html">Course overview &amp; procedure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../general_information/outline.html">General outline</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../general_information/setup.html">Setup for the course</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../general_information/reading.html">Reading</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="intro_00.html">Introduction</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="intro_01.html">Introduction 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general_intro.html">Course Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup.html">Setup for the course</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Introduction 3</a></li>
 </ul>
 </li>
@@ -255,6 +255,24 @@ const thebe_selector_output = ".output, .cell_output"
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
 </li>
       
   </ul>
@@ -632,7 +650,7 @@ Coefficients:
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "JackEdTaylor/expra-wise23",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -659,12 +677,12 @@ Coefficients:
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro_01.html"
+       href="setup.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Introduction 1</p>
+        <p class="prev-next-title">Setup for the course</p>
       </div>
     </a>
     <a class="right-next"
@@ -713,7 +731,7 @@ Coefficients:
   <div class="footer-item">
     
 <p class="component-author">
-By Jack Taylor, built on the DiLER template from Michael Ernst and Felix Körber, based on the Gorella template by Peer Herholz, José C. García Alanis, Christoph Vogelbacher
+By Jack Taylor, built on templates by Michael Ernst, Felix Körber, Peer Herholz, José C. García Alanis, Christoph Vogelbacher
 </p>
 
   </div>
