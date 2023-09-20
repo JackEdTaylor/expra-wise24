@@ -2,10 +2,12 @@ root: general_information/index
 format: jb-book
 
 parts:
-  - file: general_information/overview
-  - file: general_information/outline
-  - file: general_information/setup
-  - file: general_information/reading
+  - caption: General
+    chapters:
+    - file: general_information/overview
+    - file: general_information/outline
+    - file: general_information/setup
+    - file: general_information/reading
   
   - caption: Introduction
     chapters:
@@ -14,13 +16,15 @@ parts:
       - file: introduction/empirical_research
       - file: introduction/model_appropriateness
 
-  - caption: Demo Project
+  # - caption: Demo Project
 
-  - caption: Research Projects
+  # - caption: Research Projects
 
-  - caption: Finalisation
+  # - caption: Finalisation
 
-  - file: general_information/results_communication
-  - file: general_information/symposium
-  - file: general_information/CoC
-  - file: general_information/dei
+  - caption: test
+    chapters:
+    - file: general_information/results_communication
+    - file: general_information/symposium
+    - file: general_information/CoC
+    - file: general_information/dei
