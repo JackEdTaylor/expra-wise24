@@ -160,13 +160,3 @@ You will be invited to the course channel via e-mail.
 **Note**: If the instructions aren't working and you have spent more than 15-20 minutes troubleshooting on your own, reach out on the `#help-installation` channel on the Discord channel with the exact problems you're having.
 One of the instructors will try and get back to you quickly to help resolve the situation.
 If they're unable to help via `Discord`, you may be directed to attend one of the installation office hours.
-
-## Getting the course content
-
-Now that you have installed the required software (or not) to follow the course, it's time to gather the respective materials.
-
-To get things up and running, please follow these steps:
-
-1. Download the notebooks in this book from the [`.zip` of the repository](https://github.com/JackEdTaylor/expra-wise23/archive/refs/heads/master.zip).
-
-2. Unzip the files from the `.zip` to your preferred location, e.g. `Desktop/X`.
