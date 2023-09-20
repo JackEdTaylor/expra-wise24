@@ -4,7 +4,8 @@ packages <- c(
   "tibble",
   "dplyr",
   "Cairo",
-  "ggplot2"
+  "ggplot2",
+  "usethis"
 )
 
 install.packages(packages, repos="https://cloud.r-project.org/")
@@ -22,5 +23,6 @@ opt <- c(
   "  CairoPNG()",
   "}"
 )
-profile_loc <- file.path(R.home(component="etc"), "Rprofile.site")
+# profile_loc <- file.path(R.home(component="etc"), "Rprofile.site")
+profile_loc <- file.path(path.expand("~"), ".Rprofile")
 writeLines(opt, profile_loc)
