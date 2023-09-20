@@ -24,5 +24,31 @@
                 "feedback": "Correct: Scientific grant proposals are typically reviewed by scientists in related fields"
             }
         ]
+    },
+    {
+        "question": "Select the best description of a 'Conceptual Replication'",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "a new study is run, conceptually similar to the original",
+                "correct": true,
+                "feedback": "Correct"
+            },
+            {
+                "answer": "the idea is rephrased, but no experiments are run",
+                "correct": false,
+                "feedback": "conceptual replications collect new data"
+            },
+            {
+                "answer": "the original analysis is reproduced by separate authors",
+                "correct": false,
+                "feedback": "this describes reproduction of findings, not replication"
+            },
+            {
+                "answer": "the exact same study is re-run, but on a new sample",
+                "correct": false,
+                "feedback": "this describes an *exact* replication"
+            }
+        ]
     }
 ]
