@@ -492,6 +492,9 @@ document.write(`
 
 <span class="c1"># set ggplot2 theme</span>
 <span class="nf">theme_set</span><span class="p">(</span><span class="nf">theme_classic</span><span class="p">())</span>
+
+<span class="c1"># set a seed for reproducibility</span>
+<span class="nf">set.seed</span><span class="p">(</span><span class="m">999</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -522,7 +525,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4b4965ae41b6cc1b6d32e49e8d31a7ddf0ef86875338943e77ba7a04941f062e.png" src="../_images/4b4965ae41b6cc1b6d32e49e8d31a7ddf0ef86875338943e77ba7a04941f062e.png" />
+<img alt="../_images/aa155a6c810176341a44148d04d6d83156e870895c58ba2da67cad65c5523b2c.png" src="../_images/aa155a6c810176341a44148d04d6d83156e870895c58ba2da67cad65c5523b2c.png" />
 </div>
 </div>
 <p>This shows that the pattern is clearly non-random - there is an obvious relationship between x and y.</p>
@@ -538,7 +541,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">-0.0926957074401965</div></div>
+<div class="output text_html">-0.0921077194806694</div></div>
 </div>
 <p>The Pearson’s correlation is very close to zero - why do you think that is?</p>
 <p>The Pearson’s correlation is based on a linear model. Here is what that looks like using the <code class="docutils literal notranslate"><span class="pre">lm()</span></code> function:</p>
@@ -554,7 +557,7 @@ lm(formula = y ~ x, data = data)
 
 Coefficients:
 (Intercept)            x  
-    2.80971     -0.03557  
+    2.99752     -0.03492  
 </pre></div>
 </div>
 </div>
@@ -571,7 +574,7 @@ Coefficients:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/664660ca81dd33adf032a75de8e14f89d96510d10cf4f6d7fa42e862af0a4878.png" src="../_images/664660ca81dd33adf032a75de8e14f89d96510d10cf4f6d7fa42e862af0a4878.png" />
+<img alt="../_images/1536a12efc39ceadf2401bc4f5a0e9bd9140353220e93af08f269d70c025acfe.png" src="../_images/1536a12efc39ceadf2401bc4f5a0e9bd9140353220e93af08f269d70c025acfe.png" />
 </div>
 </div>
 <p>Clearly, a simple Pearson’s correlation, and the associated simple linear model, are completely inappropriate in this case! It’s missing important information that we know about the data.</p>
@@ -590,7 +593,7 @@ Coefficients:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5300c476fa49f590344104ed352a805e8a335191d26f5879a22776402b856204.png" src="../_images/5300c476fa49f590344104ed352a805e8a335191d26f5879a22776402b856204.png" />
+<img alt="../_images/1f2ea9937d50d382aabb0631e73a33d07ddf751b477ce2c80803f96e3a4b1eb7.png" src="../_images/1f2ea9937d50d382aabb0631e73a33d07ddf751b477ce2c80803f96e3a4b1eb7.png" />
 </div>
 </div>
 <p>This is looking like a much better description of the data!</p>
@@ -607,7 +610,7 @@ lm(formula = y ~ sin(x), data = data)
 
 Coefficients:
 (Intercept)       sin(x)  
-      2.260        3.673  
+      2.278        3.711  
 </pre></div>
 </div>
 </div>
@@ -625,7 +628,7 @@ Coefficients:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">0.928184943317127</div></div>
+<div class="output text_html">0.940673515786082</div></div>
 </div>
 </section>
 <section id="test-your-understanding">
