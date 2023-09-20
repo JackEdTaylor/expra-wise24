@@ -36,20 +36,20 @@ jobs:
       run: |
         Rscript install.R
     
-    - name: Set up graphics settings in Rprofile at admin level
-      run: |
-        opt <- c(
-          "",
-          "options(repr.plot.width=3.5, repr.plot.height=3)",
-          "",
-          ".First <- function() {",
-          "  require(Cairo)",
-          "  CairoPNG()",
-          "}"
-        )
-        profile_loc <- file.path(R.home(component="etc"), "Rprofile.site")
-        writeLines(opt, profile_loc)
-      shell: sudo Rscript {0}
+    # - name: Set up graphics settings in Rprofile at admin level
+    #   run: |
+    #     opt <- c(
+    #       "",
+    #       "options(repr.plot.width=3.5, repr.plot.height=3)",
+    #       "",
+    #       ".First <- function() {",
+    #       "  require(Cairo)",
+    #       "  Cairo::CairoPNG()",
+    #       "}"
+    #     )
+    #     profile_loc <- file.path(R.home(component="etc"), "Rprofile.site")
+    #     writeLines(opt, profile_loc)
+    #   shell: sudo Rscript {0}
 
     # Build the book
     - name: Build the book

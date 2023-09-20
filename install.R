@@ -20,7 +20,7 @@ opt <- c(
   "",
   ".First <- function() {",
   "  require(Cairo)",
-  "  CairoPNG()",
+  "  Cairo::CairoPNG()",
   "}"
 )
 # profile_loc <- file.path(R.home(component="etc"), "Rprofile.site")
