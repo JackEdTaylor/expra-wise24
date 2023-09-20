@@ -452,24 +452,15 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="open-science">
 <h1>Open Science<a class="headerlink" href="#open-science" title="Permalink to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jupyterquiz</span> <span class="kn">import</span> <span class="n">display_quiz</span>
-
-<span class="n">github_url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/&#39;</span>
-<span class="n">quiz_json</span> <span class="o">=</span> <span class="s1">&#39;lecture/introduction/open_science_quiz.json&#39;</span>
-<span class="n">display_quiz</span><span class="p">(</span><span class="n">github_url</span> <span class="o">+</span> <span class="n">quiz_json</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="QhGGcwDlyevC" data-shufflequestions="False"
+<div class="output text_html"><div id="sIGtLqupjQXH" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#QhGGcwDlyevC {
+#sIGtLqupjQXH {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -639,7 +630,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsQhGGcwDlyevC=[
+</style></div><script type="application/javascript">var questionssIGtLqupjQXH=[
     {
         "question": "Which of the following scientific outputs requires peer-review approval prior to *publication*?",
         "type": "many_choice",
@@ -1441,8 +1432,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("QhGGcwDlyevC")) {
-            show_questions(questionsQhGGcwDlyevC,  QhGGcwDlyevC); 
+          if(document.getElementById("sIGtLqupjQXH")) {
+            show_questions(questionssIGtLqupjQXH,  sIGtLqupjQXH); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1457,10 +1448,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/open_science_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, QhGGcwDlyevC))
+        .then(json => show_questions(json, sIGtLqupjQXH))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsQhGGcwDlyevC, QhGGcwDlyevC);
+        show_questions(questionssIGtLqupjQXH, sIGtLqupjQXH);
         });
         }
         </script></div>
