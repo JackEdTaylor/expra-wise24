@@ -24,5 +24,5 @@ opt <- c(
   "}"
 )
 # profile_loc <- file.path(R.home(component="etc"), "Rprofile.site")
-profile_loc <- file.path(path.expand("~"), ".Rprofile")
+profile_loc <- file.path(".Rprofile")
 writeLines(opt, profile_loc)
