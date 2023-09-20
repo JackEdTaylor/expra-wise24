@@ -1,20 +1,30 @@
 root: general_information/index
 format: jb-book
-chapters:
-- file: general_information/overview
-- file: general_information/outline
-- file: general_information/setup
-- file: general_information/reading
-- file: introduction/intro_00
-  sections:
-  - file: introduction/general_intro
-  - file: introduction/setup
-  - file: introduction/empirical_research
-  - file: introduction/model_appropriateness
-- file: demo/demo_00
-- file: experimentation/exp_00
-- file: finalisation/fin_00
-- file: general_information/results_communication
-- file: general_information/symposium
-- file: general_information/CoC
-- file: general_information/dei
+
+parts:
+  - caption: 
+    chapters:
+    - file: general_information/overview
+    - file: general_information/outline
+    - file: general_information/setup
+    - file: general_information/reading
+  
+  - caption: Introduction
+    chapters:
+      - file: introduction/general_intro
+      - file: introduction/setup
+      - file: introduction/empirical_research
+      - file: introduction/model_appropriateness
+
+  - caption: Demo Project
+
+  - caption: Research Projects
+
+  - caption: Finalisation
+
+  - caption: 
+    chapters:
+    - file: general_information/results_communication
+    - file: general_information/symposium
+    - file: general_information/CoC
+    - file: general_information/dei
