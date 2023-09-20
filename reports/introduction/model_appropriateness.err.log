@@ -1,0 +1,43 @@
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+  File "/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+n <- 250  # number of observations
+amplitude <- 3.7  # amplitude of the sine wave
+offset <- 2.3  # offset from 0
+noise_sd <- 1  # SD of noise
+
+data <- tibble(
+  # randomly sample x values from 0 to 25
+  x = runif(n=n, min=0, max=25),
+  # generate the perfect sine wave
+  s = offset + amplitude * sin(x),
+  # generate random noise of desired sd
+  e = rnorm(n=n, mean=0, sd=noise_sd),
+  # add the sine wave to the noise to simulate observations
+  y = s + e
+)
+
+# plot the observations
+ggplot(data, aes(x, y)) +
+  geom_point()
+------------------
+
+
+Error in tibble(x = runif(n = n, min = 0, max = 25), s = offset + amplitude * : could not find function "tibble"
+Traceback:
+
+
