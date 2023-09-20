@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Model Appropriateness &#8212; ExPra Winter 2023</title>
+    <title>A Refresher in R &#8212; ExPra Winter 2023</title>
   
   
   
@@ -67,11 +67,9 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/model_appropriateness';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/r_refresh';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Results communication" href="../general_information/results_communication.html" />
-    <link rel="prev" title="Introduction to Empirical Research" href="empirical_research.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -178,11 +176,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../general_information/reading.html">Reading</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="general_intro.html">Course Information</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setup.html">Setup for the course</a></li>
 <li class="toctree-l1"><a class="reference internal" href="empirical_research.html">Introduction to Empirical Research</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Model Appropriateness</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_appropriateness.html">Model Appropriateness</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">test</span></p>
 <ul class="nav bd-sidenav">
@@ -244,7 +242,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/JackEdTaylor/expra-wise23/master?urlpath=tree/lecture/introduction/model_appropriateness.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/JackEdTaylor/expra-wise23/master?urlpath=tree/lecture/introduction/r_refresh.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -310,7 +308,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/JackEdTaylor/expra-wise23/edit/master/lecture/introduction/model_appropriateness.ipynb" target="_blank"
+      <li><a href="https://github.com/JackEdTaylor/expra-wise23/edit/master/lecture/introduction/r_refresh.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -327,7 +325,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/JackEdTaylor/expra-wise23/issues/new?title=Issue%20on%20page%20%2Fintroduction/model_appropriateness.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/JackEdTaylor/expra-wise23/issues/new?title=Issue%20on%20page%20%2Fintroduction/r_refresh.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -357,7 +355,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/introduction/model_appropriateness.ipynb" target="_blank"
+      <li><a href="../_sources/introduction/r_refresh.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -439,7 +437,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Model Appropriateness</h1>
+    <h1>A Refresher in R</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -449,7 +447,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-the-data">1: Generate the Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-a-simple-linear-model-pearson-correlation">2: Try a Simple Linear Model / Pearson Correlation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-a-more-appropriate-model">3: Fit a more Appropriate Model</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-understanding">4: Test your Understanding!</a></li>
@@ -464,23 +461,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="model-appropriateness">
-<h1>Model Appropriateness<a class="headerlink" href="#model-appropriateness" title="Permalink to this heading">#</a></h1>
-<p>One of the key themes of this ExPra will be the idea of <strong>model appropriateness</strong>. In this example, we briefly consider sine waves. Sine waves are very relevant to much of Psychology and Neuroscience - for example in describing <a class="reference external" href="https://en.wikipedia.org/wiki/Neural_oscillation">neural oscillations</a>.</p>
-<p>Sine waves are described by three main parameters:</p>
-<ul class="simple">
-<li><p><em>Amplitude (or “Power”)</em> - you could think of this as “loudness”</p></li>
-<li><p><em>Frequency</em> - you could think of this as “pitch”, or the tempo of a repetitive beat</p></li>
-<li><p><em>Phase</em> - you could think of this as shift in the timing of beats (how soon after 0 is the first beat?)</p></li>
-</ul>
-<img src="power.gif" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/power.gif';" class=".float-right" width="250px">
-<img src="frequency.gif" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/frequency.gif';" class=".float-right" width="250px">
-<img src="phase.gif" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/phase.gif';" class=".float-right" width="250px">
-<p>Don’t worry if this is all new! We’re just using this as a working example. In fact, in this example we’ll just focus on amplitude (power).</p>
-<p>We’ll show that a simple linear model is inappropriate for describing data that records an oscillation, but that a more appropriate model can describe these data much better.</p>
-<section id="generate-the-data">
-<h2>1: Generate the Data<a class="headerlink" href="#generate-the-data" title="Permalink to this heading">#</a></h2>
-<p>First of all, we need to generate the data we will use. We will also be using the packages <code class="docutils literal notranslate"><span class="pre">tibble</span></code> and <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code>, so make sure these are loaded!</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="a-refresher-in-r">
+<h1>A Refresher in R<a class="headerlink" href="#a-refresher-in-r" title="Permalink to this heading">#</a></h1>
+<p>It might have been a while since you last used R</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># load libraries used in the examples</span>
@@ -526,7 +509,6 @@ document.write(`
 </div>
 </div>
 <p>This shows that the pattern is clearly non-random - there is an obvious relationship between x and y.</p>
-</section>
 <section id="try-a-simple-linear-model-pearson-correlation">
 <h2>2: Try a Simple Linear Model / Pearson Correlation<a class="headerlink" href="#try-a-simple-linear-model-pearson-correlation" title="Permalink to this heading">#</a></h2>
 <p>Let’s get the Pearson correlation coefficient for our data.</p>
@@ -668,24 +650,6 @@ Coefficients:
                 <footer class="prev-next-footer">
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="empirical_research.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Introduction to Empirical Research</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="../general_information/results_communication.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Results communication</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -701,7 +665,6 @@ Coefficients:
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-the-data">1: Generate the Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-a-simple-linear-model-pearson-correlation">2: Try a Simple Linear Model / Pearson Correlation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-a-more-appropriate-model">3: Fit a more Appropriate Model</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-understanding">4: Test your Understanding!</a></li>
