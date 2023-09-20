@@ -1,10 +1,15 @@
 # packages
-install.packages("IRkernel")
-install.packages("tibble")
-install.packages("dplyr")
-install.packages("Cairo")
-install.packages("ggplot2")
-install.packages("lme4")
+packages <- c(
+  "IRkernel",
+  "tibble",
+  "dplyr",
+  "Cairo",
+  "ggplot2"
+)
+
+for (p in packages) {
+  install.packages(p, repos="https://cloud.r-project.org/")
+}
 
 # set up IRkernel
 IRkernel::installspec()
