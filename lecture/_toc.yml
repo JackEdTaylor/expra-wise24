@@ -22,7 +22,7 @@ parts:
 
   # - caption: Finalisation
 
-  - caption: test
+  - caption: Miscellaneous
     chapters:
     - file: general_information/results_communication
     - file: general_information/symposium
