@@ -7,9 +7,7 @@ packages <- c(
   "ggplot2"
 )
 
-for (p in packages) {
-  install.packages(p, repos="https://cloud.r-project.org/")
-}
+install.packages(packages, repos="https://cloud.r-project.org/")
 
 # set up IRkernel
 IRkernel::installspec()
