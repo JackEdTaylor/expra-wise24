@@ -2,12 +2,10 @@ root: general_information/index
 format: jb-book
 
 parts:
-  - caption: 
-    chapters:
-    - file: general_information/overview
-    - file: general_information/outline
-    - file: general_information/setup
-    - file: general_information/reading
+  - file: general_information/overview
+  - file: general_information/outline
+  - file: general_information/setup
+  - file: general_information/reading
   
   - caption: Introduction
     chapters:
@@ -22,9 +20,7 @@ parts:
 
   - caption: Finalisation
 
-  - caption: 
-    chapters:
-    - file: general_information/results_communication
-    - file: general_information/symposium
-    - file: general_information/CoC
-    - file: general_information/dei
+  - file: general_information/results_communication
+  - file: general_information/symposium
+  - file: general_information/CoC
+  - file: general_information/dei
