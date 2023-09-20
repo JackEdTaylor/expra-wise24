@@ -1,0 +1,28 @@
+[
+    {
+        "question": "Which of the following scientific outputs requires peer-review approval prior to *publication*?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "traditional scientific journal articles",
+                "correct": true,
+                "feedback": "Correct: peer review occurs at the point of submission to a traditional journal"
+            },
+            {
+                "answer": "preregistrations",
+                "correct": false,
+                "feedback": "Preregistrations are not peer-reviewed"
+            },
+            {
+                "answer": "registered reports",
+                "correct": true,
+                "feedback": "Correct: Registered Reports are peer-reviewed prior to data collection"
+            },
+            {
+                "answer": "scientific grant proposals",
+                "correct": true,
+                "feedback": "Correct: Scientific grant proposals are typically reviewed by scientists in related fields"
+            }
+        ]
+    }
+]
