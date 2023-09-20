@@ -482,6 +482,15 @@ document.write(`
 <section id="generate-the-data">
 <h2>1: Generate the Data<a class="headerlink" href="#generate-the-data" title="Permalink to this heading">#</a></h2>
 <p>First of all, we need to generate the data we will use. We will also be using the packages <code class="docutils literal notranslate"><span class="pre">tibble</span></code> and <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code>, so make sure these are loaded!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># import libraries</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tibble</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>Here we generate 250 observations from a Sine wave, with amplitude of 3.7 and with normally distributed noise of SD=1. We’ll also offset the sine wave from 0, by 2.3.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -508,10 +517,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="ow">in</span> <span class="n">tibble</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">runif</span><span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="p">,</span> <span class="nb">min</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">max</span> <span class="o">=</span> <span class="mi">25</span><span class="p">),</span> <span class="n">s</span> <span class="o">=</span> <span class="n">offset</span> <span class="o">+</span> <span class="n">amplitude</span> <span class="o">*</span> <span class="p">:</span> <span class="n">could</span> <span class="ow">not</span> <span class="n">find</span> <span class="n">function</span> <span class="s2">&quot;tibble&quot;</span>
-<span class="ne">Traceback</span>:
-</pre></div>
-</div>
+<img alt="../_images/646e1f724d908656496cc2f9aecdb21c5059c80a3e22c1aa00a20df659516f32.png" src="../_images/646e1f724d908656496cc2f9aecdb21c5059c80a3e22c1aa00a20df659516f32.png" />
 </div>
 </div>
 <p>This shows that the pattern is clearly non-random - there is an obvious relationship between x and y.</p>
@@ -527,7 +533,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">-0.0921077194806694</div></div>
+<div class="output text_html">-0.227198156425057</div></div>
 </div>
 <p>The Pearson’s correlation is very close to zero - why do you think that is?</p>
 <p>The Pearson’s correlation is based on a linear model. Here is what that looks like using the <code class="docutils literal notranslate"><span class="pre">lm()</span></code> function:</p>
@@ -543,7 +549,7 @@ lm(formula = y ~ x, data = data)
 
 Coefficients:
 (Intercept)            x  
-    2.99752     -0.03492  
+    3.15160     -0.08547  
 </pre></div>
 </div>
 </div>
@@ -560,7 +566,7 @@ Coefficients:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/bbd606f1894da78ad86480c4fa9eb89dac68e405ade8a7f4c559a41aa62808e6.png" src="../_images/bbd606f1894da78ad86480c4fa9eb89dac68e405ade8a7f4c559a41aa62808e6.png" />
+<img alt="../_images/7a0d618fb84d0171ce2dd19ffe50d25b2d4207c6a12926acba61abdcf24673cd.png" src="../_images/7a0d618fb84d0171ce2dd19ffe50d25b2d4207c6a12926acba61abdcf24673cd.png" />
 </div>
 </div>
 <p>Clearly, a simple Pearson’s correlation, and the associated simple linear model, are completely inappropriate in this case! It’s missing important information that we know about the data.</p>
@@ -579,7 +585,7 @@ Coefficients:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/66a9ecf6543d0206ef87d0f472b7f1799974b7393894c9773bffa72d7fac9db9.png" src="../_images/66a9ecf6543d0206ef87d0f472b7f1799974b7393894c9773bffa72d7fac9db9.png" />
+<img alt="../_images/97b70628e22cb05b40840b7ab8261d19c2098bd0d71a0b1e53260f2ae7683c38.png" src="../_images/97b70628e22cb05b40840b7ab8261d19c2098bd0d71a0b1e53260f2ae7683c38.png" />
 </div>
 </div>
 <p>This is looking like a much better description of the data!</p>
@@ -596,7 +602,7 @@ lm(formula = y ~ sin(x), data = data)
 
 Coefficients:
 (Intercept)       sin(x)  
-      2.278        3.711  
+      2.353        3.598  
 </pre></div>
 </div>
 </div>
@@ -614,7 +620,7 @@ Coefficients:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">0.940673515786082</div></div>
+<div class="output text_html">0.928335240917177</div></div>
 </div>
 </section>
 <section id="test-your-understanding">
