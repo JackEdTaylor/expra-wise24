@@ -463,13 +463,13 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="RswoDVabVmnX" data-shufflequestions="False"
+<div class="output text_html"><div id="QhGGcwDlyevC" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#RswoDVabVmnX {
+#QhGGcwDlyevC {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -639,7 +639,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsRswoDVabVmnX=[
+</style></div><script type="application/javascript">var questionsQhGGcwDlyevC=[
     {
         "question": "Which of the following scientific outputs requires peer-review approval prior to *publication*?",
         "type": "many_choice",
@@ -663,6 +663,32 @@ document.write(`
                 "answer": "scientific grant proposals",
                 "correct": true,
                 "feedback": "Correct: Scientific grant proposals are typically reviewed by scientists in related fields"
+            }
+        ]
+    },
+    {
+        "question": "Select the best description of a 'Conceptual Replication'",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "a new study is run, conceptually similar to the original",
+                "correct": true,
+                "feedback": "Correct"
+            },
+            {
+                "answer": "the idea is rephrased, but no experiments are run",
+                "correct": false,
+                "feedback": "conceptual replications collect new data"
+            },
+            {
+                "answer": "the original analysis is reproduced by separate authors",
+                "correct": false,
+                "feedback": "this describes reproduction of findings, not replication"
+            },
+            {
+                "answer": "the exact same study is re-run, but on a new sample",
+                "correct": false,
+                "feedback": "this describes an *exact* replication"
             }
         ]
     }
@@ -1415,8 +1441,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("RswoDVabVmnX")) {
-            show_questions(questionsRswoDVabVmnX,  RswoDVabVmnX); 
+          if(document.getElementById("QhGGcwDlyevC")) {
+            show_questions(questionsQhGGcwDlyevC,  QhGGcwDlyevC); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1431,10 +1457,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/open_science_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, RswoDVabVmnX))
+        .then(json => show_questions(json, QhGGcwDlyevC))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsRswoDVabVmnX, RswoDVabVmnX);
+        show_questions(questionsQhGGcwDlyevC, QhGGcwDlyevC);
         });
         }
         </script></div>
