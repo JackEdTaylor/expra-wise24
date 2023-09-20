@@ -15,6 +15,7 @@ parts:
       - file: introduction/setup
       - file: introduction/empirical_research
       - file: introduction/model_appropriateness
+      - file: introduction/open_science
 
   # - caption: Demo Project
 
