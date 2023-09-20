@@ -34,7 +34,7 @@ jobs:
 
     - name: Install R dependencies and setup graphics
       run: |
-        Rscript install.R
+        sudo Rscript install.R
 
     # Build the book
     - name: Build the book
