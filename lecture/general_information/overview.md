@@ -38,10 +38,7 @@ The course will be held at 08:00 - 12:00 on Wednesdays, in Seminarhaus - SH 5.10
 
 #### How do I get all the software and do I have to apply for a loan to get it?
 
-Nah, everything we'll use is [open-source software](https://en.wikipedia.org/wiki/Open-source_software) or at minimum free of charge and publicly available. 
-Why? Because teaching students via [proprietary software](https://en.wikipedia.org/wiki/Proprietary_software) is just not fair and won't help anyone: students have to obtain licenses or use those from the university (which usually doesn't have enough for everyone), leading to tremendous problems regarding inequity now and in the future. Additionally, [opens-source software](https://en.wikipedia.org/wiki/Open-source_software) can do everything, if not more than [proprietary software](https://en.wikipedia.org/wiki/Proprietary_software) and is furthermore usually better supported, tested and documented, creating a fantastic sense of community. 
-
-In order to help you get all the software required for the course, a [comprehensive installation instruction](link-to-setup.html) was compiled.
+Everything we will use is [open-source software](https://en.wikipedia.org/wiki/Open-source_software) or at minimum free of charge and publicly available. You can find details on how to set up software for the course in the [Setup](https://jackedtaylor.github.io/expra-wise23/introduction/setup.html) section of this book.
 
 #### Where is everything?
 
@@ -84,31 +81,7 @@ We might miss some things, so please notify the instructors of your pending abse
 
 ### Code of conduct
 
-This course has a `Code of conduct`. Please inform yourself about the specifics by carefully reading through the [respective section](link-to-CoC.html).
-
-
-
-### How to Get Your Question(s) Answered and/or Provide Feedback
-
-It’s great that we have so many ways to communicate, but it can get tricky to figure out who to contact or where your question belongs or when to expect a response. These guidelines are to help you get your question answered as quickly as possible and to ensure that we’re able to get to everyone’s questions.
-
-If you have:
-
-**- questions about course content** - these are awesome! We want everyone to see them and have their questions answered too, so either use the `discord` channel, `e-mail` or the [GitHub repository](https://github.com/JackEdTaylor/expra-wise23/issues).
-
-**- a technical assignment question** - come to office hours (after making an appointment) or use the provided communication platform to reach out (e.g. discord, slack etc.). Answering technical questions is often best accomplished ‘in person’ where we can discuss the question and talk through ideas. Be as specific as you can in the question you ask (and include error messages when appropriate!). And, for those answering, help your classmates as much as you can without just giving the answer. Help guide them, point them in a direction, provide pseudo code, but do not provide code that answers assignment questions.
-
-
-**- been stuck on something for a while (>30min) and aren’t even really sure where to start** - Programming can be frustrating and it may not always be obvious what is going wrong or why something isn’t working. **That’s OK - we’ve all been there!** IF you are stuck, you can and should reach out for help, even if you aren’t exactly sure what your specific question is. To determine when to reach out, consider the 2-hour rule. This rule states that if you are stuck, work on that problem for an hour. Then, take a 30 minute break and do something else. When you come back after your break, try for another 30 minutes or so to solve your problem. If you are still completely stuck, stop and contact us (office hours, post on `discord`). If you don’t have a specific question, include the information you have (what you’re stuck on, the code you’ve been trying that hasn’t been happening, and/or the error messages you’ve been getting).
-
-
-**- questions about course logistics** - first, check the [overview](link-to-overview.html) & [syllabus](link-to-outline.html). If you can’t find the answer there, first ask a classmate.
-
-**- something super cool to share related to class or want to talk about a topic in further depth** - feel free to post on `discord`, contact the instructors or come to office hours. 
-
-**- some feedback about the course you want to share anonymously** - If you’ve been offended by an example in class, really liked or disliked a lesson, or wish there were something covered in class that wasn’t but would rather not share this publicly, etc., please fill out the anonymous [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSerOu3sqdSZ5SJufa2qgg1yFb4_IMbos4TaYPSWiWbqXESYSQ/viewform?usp=sf_link)*
-
-*This form can be taken down at any time if it’s not being used for its intended purpose; however, you all will be notified should that happen.
+This course has a `Code of conduct`. You can find that in the [Code of Conduct](https://jackedtaylor.github.io/expra-wise23/general_information/CoC.html) section of this book.
 
 ### Acknowledgements
 
