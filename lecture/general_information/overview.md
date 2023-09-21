@@ -22,7 +22,7 @@ The contact information of the instructors are as follows:
 
 - Office hours: upon request
 - E-mail: `Taylor(at)psych.uni-frankfurt.de`
-- Preferred mode of contact: vie `discord` or e-mail
+- Preferred mode of contact: via `discord` or e-mail
 
 
 ### Gimme the details
