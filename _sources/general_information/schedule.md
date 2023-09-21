@@ -1,13 +1,10 @@
-# Outline & Schedule
+# Course Schedule
 
+Here is where we will keep track of our schedule. Depending on our progress, potential problems and different forms of learning, content and times might change a bit. Each section is divided into several parts, with the content linked to in the schedule below.
 
-## Schedule
+**Please note** that this initial, optimistic schedule below may be updated, based on time constraints and progress made in the previous meetings.  
 
-Please see below for our current optimistic schedule. Depending on our progress, potential problems and different forms of learning, content and times might change a bit. Each lecture will be divided into several parts separated by a 5-10 minute break and might constitute a transition from basic to advanced concepts, theoretic to practical sessions and individual to group work. The different parts are roughly indicated in the schedule below like this:
-
-**Please note** that the optimistic schedule below may be subject of change, dependent on time constraints and progress made in the previous meetings.  
-
-### Part 1: Introduction
+## Part 1: Introduction
 
 | Date (dd/mm/yyyy) 🗓         | Content | Tasks |
 |--------------|-----------|------------|
@@ -16,14 +13,14 @@ Please see below for our current optimistic schedule. Depending on our progress,
 | 01/11/2023 | <ul> <li>[Empirical Research](https://jackedtaylor.github.io/expra-wise23/introduction/empirical_research)</li> <li>[Model Appropriateness](https://jackedtaylor.github.io/expra-wise23/introduction/model_appropriateness)</li> <li>[Scientific Reading](https://jackedtaylor.github.io/expra-wise23/introduction/scientific_reading)</li> <li>Introduction to Likert Ratings</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general_information/reading.html) </li> </ul> | /not applicable |
 | 08/11/2023 | <ul> <li>[Scientific Writing](https://jackedtaylor.github.io/expra-wise23/introduction/scientific_reading)</li> <li>[Ratings: How should we estimate them?](https://jackedtaylor.github.io/expra-wise23/introduction/ratings)</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general_information/reading.html) </li> </ul> | /not applicable |
 
-### Part 2: The Demo Experiment
+## Part 2: The Demo Experiment
 
 | Date (dd/mm/yyyy) 🗓         | Content | Tasks |
 |--------------|-----------|------------|
 | 15/11/2023 | <ul> <li>[Building the Demo Experiment](https://jackedtaylor.github.io/expra-wise23/demo/build_demo)</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general_information/reading.html) </li> </ul> | /not applicable |
 | 22/11/2023 | <ul> <li>[Analysing the Demo Experiment](https://jackedtaylor.github.io/expra-wise23/demo/analyse_demo)</li> <li>[Writing the Demo Report](https://jackedtaylor.github.io/expra-wise23/demo/write_demo)</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general_information/reading.html) </li> </ul> | /not applicable |
 
-### Part 3: Research Projects
+## Part 3: Research Projects
 
 | Date (dd/mm/yyyy) 🗓         | Content | Tasks |
 |--------------|-----------|------------|
@@ -32,7 +29,7 @@ Please see below for our current optimistic schedule. Depending on our progress,
 | 13/12/2023 | <ul> <li>Building and Testing the Experiment</li> <li>Refining the Preregistration</li> <li>Finalising the Experiment for Data Collection</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general_information/reading.html) </li> </ul> | /not applicable |
 | 20/12/2023 | <ul> <li>Finalising the Experiment for Data Collection</li> <li>LIFOS Walkthrough</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general_information/reading.html) </li> </ul> | /not applicable |
 
-### Part 4: Finalisation
+## Part 4: Finalisation
 
 | Date (dd/mm/yyyy) 🗓         | Content | Tasks |
 |--------------|-----------|------------|
