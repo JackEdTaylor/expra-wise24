@@ -5,7 +5,7 @@ parts:
   - caption: General
     chapters:
     - file: general_information/overview
-    - file: general_information/outline
+    - file: general_information/schedule
     - file: general_information/setup
     - file: general_information/reading
   
