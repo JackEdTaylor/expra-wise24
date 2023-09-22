@@ -13,9 +13,9 @@ parts:
     chapters:
       - file: introduction/general_intro
       - file: introduction/setup
+      - file: introduction/open_science
       - file: introduction/empirical_research
       - file: introduction/model_appropriateness
-      - file: introduction/open_science
 
   # - caption: Demo Project
 
