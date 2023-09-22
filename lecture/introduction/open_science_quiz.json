@@ -31,8 +31,7 @@
         "answers": [
             {
                 "answer": "a new study is run, conceptually similar to the original",
-                "correct": true,
-                "feedback": "Correct"
+                "correct": true
             },
             {
                 "answer": "the idea is rephrased, but no experiments are run",
@@ -108,6 +107,49 @@
                 "answer": "publication bias may be one motivation for 'p-hacking'",
                 "correct": true,
                 "feedback": "if researchers believe negative findings are less likely to be published, they may be more likely to p-hack their results"
+            }
+        ]
+    },
+    {
+        "question": "Which of the following is *not* a preprint server?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "arXiv",
+                "correct": false
+            },
+            {
+                "answer": "PsyArXiv",
+                "correct": false
+            },
+            {
+                "answer": "PNAS",
+                "correct": true,
+                "feedback": "Correct! PNAS is not a preprint server, but an open-access peer-reviewed journal"
+            }
+            {
+                "answer": "bioRxiv",
+                "correct": false
+            }
+        ]
+    },
+    {
+        "question": "What is the name of the internal system where you will preregister your studies and share materials/code?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "PsyArXiv",
+                "correct": false,
+                "feedback": "PsyArXiv is a preprint server for psychology research"
+            },
+            {
+                "answer": "LIFOS",
+                "correct": true
+            },
+            {
+                "answer": "OSF",
+                "correct": false,
+                "feedback": "OSF does support preregistrations and data sharing, but is not the internal University system we will be using"
             }
         ]
     }
