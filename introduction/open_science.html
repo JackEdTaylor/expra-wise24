@@ -470,13 +470,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="PlneVgZktePe" data-shufflequestions="False"
+<div class="output text_html"><div id="izxTnllNVLWP" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#PlneVgZktePe {
+#izxTnllNVLWP {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -646,7 +646,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsPlneVgZktePe=[
+</style></div><script type="application/javascript">var questionsizxTnllNVLWP=[
     {
         "question": "Which of the following scientific outputs requires peer-review approval prior to *publication*?",
         "type": "many_choice",
@@ -679,8 +679,7 @@ document.write(`
         "answers": [
             {
                 "answer": "a new study is run, conceptually similar to the original",
-                "correct": true,
-                "feedback": "Correct"
+                "correct": true
             },
             {
                 "answer": "the idea is rephrased, but no experiments are run",
@@ -756,6 +755,49 @@ document.write(`
                 "answer": "publication bias may be one motivation for 'p-hacking'",
                 "correct": true,
                 "feedback": "if researchers believe negative findings are less likely to be published, they may be more likely to p-hack their results"
+            }
+        ]
+    },
+    {
+        "question": "Which of the following is *not* a preprint server?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "arXiv",
+                "correct": false
+            },
+            {
+                "answer": "PsyArXiv",
+                "correct": false
+            },
+            {
+                "answer": "PNAS",
+                "correct": true,
+                "feedback": "Correct! PNAS is not a preprint server, but an open-access peer-reviewed journal"
+            }
+            {
+                "answer": "bioRxiv",
+                "correct": false
+            }
+        ]
+    },
+    {
+        "question": "What is the name of the internal system where you will preregister your studies and share materials/code?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "PsyArXiv",
+                "correct": false,
+                "feedback": "PsyArXiv is a preprint server for psychology research"
+            },
+            {
+                "answer": "LIFOS",
+                "correct": true
+            },
+            {
+                "answer": "OSF",
+                "correct": false,
+                "feedback": "OSF does support preregistrations and data sharing, but is not the internal University system we will be using"
             }
         ]
     }
@@ -1508,8 +1550,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("PlneVgZktePe")) {
-            show_questions(questionsPlneVgZktePe,  PlneVgZktePe); 
+          if(document.getElementById("izxTnllNVLWP")) {
+            show_questions(questionsizxTnllNVLWP,  izxTnllNVLWP); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1524,10 +1566,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/open_science_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, PlneVgZktePe))
+        .then(json => show_questions(json, izxTnllNVLWP))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsPlneVgZktePe, PlneVgZktePe);
+        show_questions(questionsizxTnllNVLWP, izxTnllNVLWP);
         });
         }
         </script></div>
