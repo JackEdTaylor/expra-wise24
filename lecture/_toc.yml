@@ -14,6 +14,7 @@ parts:
       - file: introduction/general_intro
       - file: introduction/setup
       - file: introduction/open_science
+      - file: introduction/demo_participate
       - file: introduction/empirical_research
       - file: introduction/model_appropriateness
 
