@@ -470,13 +470,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="PvAMwTybUdwm" data-shufflequestions="False"
+<div class="output text_html"><div id="xCnIHeeWLfTq" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#PvAMwTybUdwm {
+#xCnIHeeWLfTq {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -646,7 +646,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsPvAMwTybUdwm=[
+</style></div><script type="application/javascript">var questionsxCnIHeeWLfTq=[
     {
         "question": "Which of the following scientific outputs requires peer-review approval prior to *publication*?",
         "type": "many_choice",
@@ -695,109 +695,6 @@ document.write(`
                 "answer": "the exact same study is re-run, but on a new sample",
                 "correct": false,
                 "feedback": "this describes an *exact* replication"
-            }
-        ]
-    },
-    {
-        "question": "On average, are effect sizes larger or smaller in replications than in originally published findings?",
-        "type": "multiple_choice",
-        "answers": [
-            {
-                "answer": "larger",
-                "correct": false,
-                "feedback": "findings are usually smaller in replications (e.g., see Nosek et al., 2022)"
-            },
-            {
-                "answer": "smaller",
-                "correct": true
-            }
-        ]
-    },
-    {
-        "question": "Which of the following is *not* a Questionable Research Practice?",
-        "type": "multiple_choice",
-        "answers": [
-            {
-                "answer": "adequately describing methodology",
-                "correct": true
-            },
-            {
-                "answer": "selective reporting of findings",
-                "correct": false,
-                "feedback": "this is an example of a QRP"
-            },
-            {
-                "answer": "forming hypotheses after data have been collected",
-                "correct": false,
-                "feedback": "this is an example of a QRP ('HARKing')"
-            }
-        ]
-    },
-    {
-        "question": "Which of the following statements about Publication Bias are true?",
-        "type": "many_choice",
-        "answers": [
-            {
-                "answer": "publication bias can lead to an over-representation of negative findings",
-                "correct": false,
-                "feedback": "publication bias describes a phenomenon whereby *positive* findings may become over-represented"
-            },
-            {
-                "answer": "publication bias may impact literature reviews and meta-analyses",
-                "correct": true,
-                "feedback": "if negative findings are systematically missing from the publication record, reviews and meta-analyses may overestimate strength of evidence for effects"
-            },
-            {
-                "answer": "publication bias refers to the pre-existing biases researchers have towards different journals",
-                "correct": false
-            },
-            {
-                "answer": "publication bias may be one motivation for 'p-hacking'",
-                "correct": true,
-                "feedback": "if researchers believe negative findings are less likely to be published, they may be more likely to p-hack their results"
-            }
-        ]
-    },
-    {
-        "question": "Which of the following is *not* a preprint server?",
-        "type": "multiple_choice",
-        "answers": [
-            {
-                "answer": "arXiv",
-                "correct": false
-            },
-            {
-                "answer": "PsyArXiv",
-                "correct": false
-            },
-            {
-                "answer": "PNAS",
-                "correct": true,
-                "feedback": "Correct! PNAS is not a preprint server, but an open-access peer-reviewed journal"
-            }
-            {
-                "answer": "bioRxiv",
-                "correct": false
-            }
-        ]
-    },
-    {
-        "question": "What is the name of the internal system where you will preregister your studies and share materials/code?",
-        "type": "multiple_choice",
-        "answers": [
-            {
-                "answer": "PsyArXiv",
-                "correct": false,
-                "feedback": "PsyArXiv is a preprint server for psychology research"
-            },
-            {
-                "answer": "LIFOS",
-                "correct": true
-            },
-            {
-                "answer": "OSF",
-                "correct": false,
-                "feedback": "OSF does support preregistrations and data sharing, but is not the internal University system we will be using"
             }
         ]
     }
@@ -1550,8 +1447,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("PvAMwTybUdwm")) {
-            show_questions(questionsPvAMwTybUdwm,  PvAMwTybUdwm); 
+          if(document.getElementById("xCnIHeeWLfTq")) {
+            show_questions(questionsxCnIHeeWLfTq,  xCnIHeeWLfTq); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1566,10 +1463,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/open_science_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, PvAMwTybUdwm))
+        .then(json => show_questions(json, xCnIHeeWLfTq))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsPvAMwTybUdwm, PvAMwTybUdwm);
+        show_questions(questionsxCnIHeeWLfTq, xCnIHeeWLfTq);
         });
         }
         </script></div>
