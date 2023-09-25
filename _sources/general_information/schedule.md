@@ -1,4 +1,4 @@
-# Course Schedule
+# Schedule
 
 Here is where we will keep track of our schedule. Depending on our progress, potential problems and different forms of learning, content and times might change a bit. Each section is divided into several parts, with the content linked to in the schedule below.
 
