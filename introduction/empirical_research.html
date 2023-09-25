@@ -470,13 +470,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="gBhCPPpiBeTQ" data-shufflequestions="False"
+<div class="output text_html"><div id="wWFzjEYZiJzS" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#gBhCPPpiBeTQ {
+#wWFzjEYZiJzS {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -646,7 +646,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsgBhCPPpiBeTQ=[
+</style></div><script type="application/javascript">var questionswWFzjEYZiJzS=[
     {
         "question": "Which type of study generally has the most stringent control of variables?",
         "type": "multiple_choice",
@@ -730,7 +730,7 @@ document.write(`
                 "answer": "The number of predictor variables",
                 "correct": false,
                 "feedback": "This could tell us about model complexity, but not model likelihood"
-            }
+            },
             {
                 "answer": "Bayesian Information Criterion",
                 "correct": true
@@ -1491,8 +1491,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("gBhCPPpiBeTQ")) {
-            show_questions(questionsgBhCPPpiBeTQ,  gBhCPPpiBeTQ); 
+          if(document.getElementById("wWFzjEYZiJzS")) {
+            show_questions(questionswWFzjEYZiJzS,  wWFzjEYZiJzS); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1507,10 +1507,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/empirical_research_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, gBhCPPpiBeTQ))
+        .then(json => show_questions(json, wWFzjEYZiJzS))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsgBhCPPpiBeTQ, gBhCPPpiBeTQ);
+        show_questions(questionswWFzjEYZiJzS, wWFzjEYZiJzS);
         });
         }
         </script></div>
