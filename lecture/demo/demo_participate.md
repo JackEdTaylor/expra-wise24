@@ -1,4 +1,6 @@
-# Participate in the Demo Experiment
+# Participate
+
+Here, you will find instructions on how to participate in the Demo experiment.
 
 ## **Step 1**: Ensure PsychoPy is installed
 
