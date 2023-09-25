@@ -13,6 +13,7 @@ parts:
     chapters:
       - file: introduction/general_intro
       - file: introduction/setup
+      - file: introduction/glm
       - file: introduction/open_science
       - file: introduction/empirical_research
       - file: introduction/model_appropriateness
