@@ -82,7 +82,7 @@
                 "answer": "The number of predictor variables",
                 "correct": false,
                 "feedback": "This could tell us about model complexity, but not model likelihood"
-            }
+            },
             {
                 "answer": "Bayesian Information Criterion",
                 "correct": true
