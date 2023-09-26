@@ -7,8 +7,6 @@ titlesonly: true
 ---
 ```
 
-![](../static/logo.png)
-
 
 # Welcome!
 
