@@ -20,7 +20,7 @@ parts:
 
   - caption: Demo Experiment
     chapters:
-      - file: introduction/demo_participate
+      - file: demo/demo_participate
 
   # - caption: Demo Project
 
