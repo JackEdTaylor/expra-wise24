@@ -21,9 +21,13 @@ We ask that you install the following software before arriving to the second ses
 
 - [`Psychopy`](https://www.psychopy.org/) (Standalone installation) for running the demo experiment and your projects
 
-- A modern browser: [Chrome](https://www.google.com/chrome/index.html), [Firefox](https://www.mozilla.org/en-GB/firefox/), [Opera](https://www.opera.com/)
+- A modern browser: [Chrome](https://www.google.com/chrome/index.html) or [Firefox](https://www.mozilla.org/en-GB/firefox/) are recommended
 
-- A literature & reference manager: [Zotero](https://www.zotero.org/) (recommended), or an alternative like  Citavi (possible but not recommended)
+-[Microsoft Office](https://www.rz.uni-frankfurt.de/120565083/Anleitung_Microsoft_Office_365_ProPlus__Windows___MAC)
+
+- A literature & reference manager: [Zotero](https://www.zotero.org/) (recommended), or an alternative like Citavi (possible but not recommended)
+
+- [Discord](https://discord.com/) for course-related communication
 
 ### OS-specific installation instructions
 
@@ -53,6 +57,10 @@ _Please note_: If you already have `R` installed, please check that you have ver
 
 3. Once downloaded, open the installer and allow it to install Psychopy.
 
+** Microsoft Office **
+
+Follow the [instructions on the Goethe University Frankfurt website](https://www.rz.uni-frankfurt.de/73202101/Microsoft_Office_f%25C3%25BCr_Studierende).
+
 **Zotero**
 
 1. Go to https://www.zotero.org/ and click the “Log in” button followed by the “Register for a free account” button on the subsequent page.
@@ -62,6 +70,8 @@ _Please note_: If you already have `R` installed, please check that you have ver
 3. Download the Zotero Desktop App for Windows from the [Download page](https://www.zotero.org/download/), run the downloaded file and follow the installer's instructions.
 
 4. Open the *Zotero Desktop App*, go to *Zotero* -> *Preferences* -> *Sync* and log in with your user credentials.
+
+5. Ensure that the Zotero connector is installed for your web browser. This can be installed from here: https://www.zotero.org/download/
 
 **Discord**
 
@@ -95,6 +105,10 @@ _Please note_: If you already have `R` installed, please check that you have ver
 
 3. Install from the tarball as you usually do for your distribution.
 
+** Microsoft Office Alternative **
+
+I recommend a LibreOffice installation, if you don't already have it, as Zotero supports a plugin for it. LibreOffice provide documentation here: https://wiki.documentfoundation.org/Documentation/Install/Linux
+
 **Zotero**
 
 1. Go to https://www.zotero.org/ and click the “Log in” button followed by the “Register for a free account” button on the subsequent page.
@@ -104,6 +118,8 @@ _Please note_: If you already have `R` installed, please check that you have ver
 3. Download the Zotero Desktop App for linux from the [Download page](https://www.zotero.org/download/), run the downloaded file and install from the tarball, as you normally do for your distribution.
 
 4. Open the *Zotero Desktop App*, go to *Zotero* -> *Preferences* -> *Sync* and log in with your user credentials.
+
+5. Ensure that the Zotero connector is installed for your web browser. This can be installed from here: https://www.zotero.org/download/
 
 **Discord**
 
@@ -137,6 +153,10 @@ _Please note_: If you already have `R` installed, please check that you have ver
 
 3. Once downloaded, open the installer and allow it to install Psychopy.
 
+** Microsoft Office **
+
+Follow the [instructions on the Goethe University Frankfurt website](https://www.rz.uni-frankfurt.de/73202101/Microsoft_Office_f%25C3%25BCr_Studierende).
+
 **Zotero**
 
 1. Go to https://www.zotero.org/ and click the “Log in” button followed by the “Register for a free account” button on the subsequent page.
@@ -146,6 +166,8 @@ _Please note_: If you already have `R` installed, please check that you have ver
 3. Download the Zotero Desktop App for macOS from the [Download page](https://www.zotero.org/download/), run the downloaded file and follow the installer's instructions.
 
 4. Open the *Zotero Desktop App*, go to *Zotero* -> *Preferences* -> *Sync* and log in with your user credentials.
+
+5. Ensure that the Zotero connector is installed for your web browser. This can be installed from here: https://www.zotero.org/download/
 
 **Discord**
 
