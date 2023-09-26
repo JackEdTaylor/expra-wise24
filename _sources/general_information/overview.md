@@ -2,27 +2,15 @@
 
 In this ExPra (Empirisch-Experimentelles Praktikum), you will get hands-on experience in Psychological research. We will progress through the stages of a research project, from theoretical background and methodological understanding, to experiment design, data collection, analysis, and presentation of results in a poster, presentation, and report.
 
-Sections on this website:
-
-- Introduction: we will cover the theoretical background of the research topic
-
-- Demo: We will run a simple demo experiment, going through the analysis, and submitting a demo report
-
-- Experimentation: You will design your experiments and preregister them. You will collect data, and then analyse it.
-
-- Finalisation: You will produce and present posters and presentations on your findings. Finally, you will submit your final reports.
-
 ### How to reach the folks in the front
 
-<p align="center"><iframe src="https://giphy.com/embed/U6GunJi6B1o7ecMfKc" width="240" height="240" frameBorder="0" vspace="0" class="giphy-embed" allowFullScreen style="overflow-y: hidden;"></iframe></p><p align="center"><a href="https://giphy.com/gifs/justviralnet-funny-mistake-spelling-U6GunJi6B1o7ecMfKc"><small>via GIPHY</small></a></p></p>
-
-The contact information of the instructors are as follows:
+<p align="center"><iframe src="https://giphy.com/embed/U6GunJi6B1o7ecMfKc" width="240" height="240" frameBorder="0" vspace="0" class="giphy-embed" allowFullScreen style="overflow-y: hidden;"></iframe></p><p align="center"><a href="https://giphy.com/gifs/justviralnet-funny-mistake-spelling-U6GunJi6B1o7ecMfKc"></a>
 
 [Jack Taylor](https://jackedtaylor.github.io/)
 
 - Office hours: upon request
 - E-mail: `Taylor(at)psych.uni-frankfurt.de`
-- Preferred mode of contact: via `discord` or e-mail
+- Preferred mode of contact: via `Discord` or e-mail
 
 
 ### Gimme the details
@@ -56,9 +44,9 @@ All course materials (lecture slides, lecture demo notebooks, lab notebooks, hom
 
 ##### Late Homework & Extension Policy
 
-`Homework assignments` will in general have a clearly stated due date, so as to manage course load clearly. Exceptions will be communicated. Please check the respective sections of this course and don't hesitate to ask questions if things are unclear. Generally `Homework assignments` must be turned in on the due date in order to to earn participation credits for the course and receive full scores.  Homework assignments must be turned in on the due date in order to receive full credit. Homework assignment turned in less than 1 week late will be accepted but the score will be penalized by 10%. Homework has to be handed in via e-mail to the [instructor](e-mail@psych.uni-frankfurt.de).
+*Homework assignments* will usually have a clearly stated deadline, so as to manage course load clearly. Exceptions will be communicated. Please check the respective sections of this course and don't hesitate to ask questions if things are unclear. Generally, *Homework assignments* must be turned in by the deadline in order to to earn participation credits for the course and receive full scores. Homework assignments must be turned in on the due date in order to receive full credit. Homework assignment turned in less than 1 week late will be accepted but the score will be penalized by 10%. Homework has to be handed in via e-mail.
 
-Late `homework assignments` will also be accepted under _exceptional circumstances_ (e.g., medical or family emergency etc.) and at the discretion of the instructor (e.g. exceptional "gedenotes a rare event) with no penalty. This policy allowing for exceptional circumstances is definitely a right, but courtesy to be used when needed and not abused. Should you encounter such circumstances, simply email the assignment to instructor and note "late submission due to exceptional circumstances". **You do not need to provide any further justification or personally revealing information regarding the details.**
+Late *homework assignments* will also be accepted under _exceptional circumstances_ (e.g., medical or family emergency etc.) and at the discretion of the instructor (e.g. exceptional denotes a rare event) with no penalty. This policy allowing for exceptional circumstances is definitely a right, but courtesy to be used when needed and not abused. Should you encounter such circumstances, simply email the assignment to instructor and note "late submission due to exceptional circumstances". **You do not need to provide any further justification or personally revealing information regarding the details.**
 
 
 ##### Academic Honor Code
@@ -81,7 +69,7 @@ We might miss some things, so please notify the instructors of your pending abse
 
 ### Code of conduct
 
-This course has a `Code of conduct`. You can find that in the [Code of Conduct](https://jackedtaylor.github.io/expra-wise23/general_information/CoC.html) section of this book.
+This course has a *Code of conduct*. You can find that in the [Code of Conduct](https://jackedtaylor.github.io/expra-wise23/general_information/CoC.html) section of this book.
 
 ### Acknowledgements
 
