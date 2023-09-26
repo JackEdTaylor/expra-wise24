@@ -1,4 +1,4 @@
-# Setup for the course
+# Setup for the Course
 
 There are a few things you need to get working on your machine in order to follow this course. Don't worry though! Everything will be open source, won't require a lot of storage, and will be explained in detail.
 
@@ -23,7 +23,7 @@ We ask that you install the following software before arriving to the second ses
 
 - A modern browser: [Chrome](https://www.google.com/chrome/index.html) or [Firefox](https://www.mozilla.org/en-GB/firefox/) are recommended
 
--[Microsoft Office](https://www.rz.uni-frankfurt.de/120565083/Anleitung_Microsoft_Office_365_ProPlus__Windows___MAC)
+- [Microsoft Office](https://www.rz.uni-frankfurt.de/120565083/Anleitung_Microsoft_Office_365_ProPlus__Windows___MAC)
 
 - A literature & reference manager: [Zotero](https://www.zotero.org/) (recommended), or an alternative like Citavi (possible but not recommended)
 
@@ -57,7 +57,7 @@ _Please note_: If you already have `R` installed, please check that you have ver
 
 3. Once downloaded, open the installer and allow it to install Psychopy.
 
-** Microsoft Office **
+**Microsoft Office**
 
 Follow the [instructions on the Goethe University Frankfurt website](https://www.rz.uni-frankfurt.de/73202101/Microsoft_Office_f%25C3%25BCr_Studierende).
 
@@ -105,7 +105,7 @@ _Please note_: If you already have `R` installed, please check that you have ver
 
 3. Install from the tarball as you usually do for your distribution.
 
-** Microsoft Office Alternative **
+**Microsoft Office Alternative**
 
 I recommend a LibreOffice installation, if you don't already have it, as Zotero supports a plugin for it. LibreOffice provide documentation here: https://wiki.documentfoundation.org/Documentation/Install/Linux
 
@@ -153,7 +153,7 @@ _Please note_: If you already have `R` installed, please check that you have ver
 
 3. Once downloaded, open the installer and allow it to install Psychopy.
 
-** Microsoft Office **
+**Microsoft Office**
 
 Follow the [instructions on the Goethe University Frankfurt website](https://www.rz.uni-frankfurt.de/73202101/Microsoft_Office_f%25C3%25BCr_Studierende).
 
