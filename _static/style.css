@@ -1,0 +1,14 @@
+/* left-align logo */
+.navbar-brand {
+    align-items: start;
+}
+
+/* make logo smaller */
+.navbar-brand img {
+    max-width: 75%;
+}
+
+/* support sidebar that is smaller than the default cutoff */
+.bd-sidebar-primary {
+    flex-basis: 17%;
+}
