@@ -25,7 +25,7 @@ We ask that you install the following software before arriving to the second ses
 
 -[Microsoft Office](https://www.rz.uni-frankfurt.de/120565083/Anleitung_Microsoft_Office_365_ProPlus__Windows___MAC)
 
-- A literature & reference manager: [Zotero](https://www.zotero.org/) (recommended), or an alternative like  Citavi (possible but not recommended)
+- A literature & reference manager: [Zotero](https://www.zotero.org/) (recommended), or an alternative like Citavi (possible but not recommended)
 
 - [Discord](https://discord.com/) for course-related communication
 
