@@ -475,13 +475,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="IxDhYtCITISH" data-shufflequestions="False"
+<div class="output text_html"><div id="dzpWMoDodkjo" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#IxDhYtCITISH {
+#dzpWMoDodkjo {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -651,7 +651,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsIxDhYtCITISH=[
+</style></div><script type="application/javascript">var questionsdzpWMoDodkjo=[
     {
         "question": "Which of the following scientific outputs requires peer-review approval prior to *publication*?",
         "type": "many_choice",
@@ -1555,8 +1555,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("IxDhYtCITISH")) {
-            show_questions(questionsIxDhYtCITISH,  IxDhYtCITISH); 
+          if(document.getElementById("dzpWMoDodkjo")) {
+            show_questions(questionsdzpWMoDodkjo,  dzpWMoDodkjo); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1571,10 +1571,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/open_science_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, IxDhYtCITISH))
+        .then(json => show_questions(json, dzpWMoDodkjo))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsIxDhYtCITISH, IxDhYtCITISH);
+        show_questions(questionsdzpWMoDodkjo, dzpWMoDodkjo);
         });
         }
         </script></div>
