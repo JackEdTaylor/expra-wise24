@@ -30,7 +30,5 @@ parts:
 
   - caption: Miscellaneous
     chapters:
-    - file: general_information/results_communication
     - file: general_information/symposium
     - file: general_information/CoC
-    - file: general_information/dei
