@@ -525,14 +525,19 @@ document.write(`
 <span class="w">    </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="nf">rnorm</span><span class="p">(</span><span class="n">N1</span><span class="p">,</span><span class="w"> </span><span class="m">180</span><span class="p">,</span><span class="w"> </span><span class="m">6.4</span><span class="p">),</span><span class="w"> </span><span class="nf">rnorm</span><span class="p">(</span><span class="n">N1</span><span class="p">,</span><span class="w"> </span><span class="m">175</span><span class="p">,</span><span class="w"> </span><span class="m">6.4</span><span class="p">))</span>
 <span class="p">)</span>
 
+<span class="c1"># plot all observations, with horizontal lines at means</span>
 <span class="n">dat1</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">    </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="n">group</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="w">    </span><span class="nf">geom_density</span><span class="p">(</span><span class="n">key_glyph</span><span class="o">=</span><span class="s">&quot;path&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">group</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">geom_jitter</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="m">0.1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">stat_summary</span><span class="p">(</span>
+<span class="w">        </span><span class="n">fun</span><span class="o">=</span><span class="n">mean</span><span class="p">,</span><span class="w"> </span><span class="n">fun.min</span><span class="o">=</span><span class="n">mean</span><span class="p">,</span><span class="w"> </span><span class="n">fun.max</span><span class="o">=</span><span class="n">mean</span><span class="p">,</span>
+<span class="w">        </span><span class="n">geom</span><span class="o">=</span><span class="s">&quot;crossbar&quot;</span>
+<span class="w">    </span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/e741e8b61ba11f48333fc9c717f4ad585f25bf09e0454362b85693bc3188c0ae.png" src="../_images/e741e8b61ba11f48333fc9c717f4ad585f25bf09e0454362b85693bc3188c0ae.png" />
+<img alt="../_images/25a408ffce5ccb49c81b3190cefef197649cb14a551fedf9cafb4d65fcabafd1.png" src="../_images/25a408ffce5ccb49c81b3190cefef197649cb14a551fedf9cafb4d65fcabafd1.png" />
 </div>
 </div>
 <p>If we were to perform a <em>t</em>-test on these data, we would get <em>t</em>(58)=4, <em>p</em>&lt;.001</p>
@@ -610,14 +615,20 @@ F-statistic: 10.78 on 1 and 58 DF,  p-value: 0.00174
 <span class="w">    </span><span class="p">)</span>
 <span class="p">)</span>
 
+<span class="c1"># plot all observations, with horizontal lines at means</span>
 <span class="n">dat2</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">    </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">score</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="n">age_group</span><span class="p">,</span><span class="w"> </span><span class="n">linetype</span><span class="o">=</span><span class="n">reading_group</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="w">    </span><span class="nf">geom_density</span><span class="p">(</span><span class="n">key_glyph</span><span class="o">=</span><span class="s">&quot;path&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">reading_group</span><span class="p">,</span><span class="w"> </span><span class="n">score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">geom_jitter</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="m">0.1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">stat_summary</span><span class="p">(</span>
+<span class="w">        </span><span class="n">fun</span><span class="o">=</span><span class="n">mean</span><span class="p">,</span><span class="w"> </span><span class="n">fun.min</span><span class="o">=</span><span class="n">mean</span><span class="p">,</span><span class="w"> </span><span class="n">fun.max</span><span class="o">=</span><span class="n">mean</span><span class="p">,</span>
+<span class="w">        </span><span class="n">geom</span><span class="o">=</span><span class="s">&quot;crossbar&quot;</span>
+<span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">facet_wrap</span><span class="p">(</span><span class="nf">vars</span><span class="p">(</span><span class="n">age_group</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/55ef1018fbf57f056eaa4a0296d1c85ef3ed44c0431db8505e82965e1354f143.png" src="../_images/55ef1018fbf57f056eaa4a0296d1c85ef3ed44c0431db8505e82965e1354f143.png" />
+<img alt="../_images/fafb60dad6e489eeec07f9d65a7406725b8aabe68d2ee64b535f59162105f8a0.png" src="../_images/fafb60dad6e489eeec07f9d65a7406725b8aabe68d2ee64b535f59162105f8a0.png" />
 </div>
 </div>
 <p>We could analyse this with an ANOVA. We might report the main effects and interaction as:</p>
@@ -631,10 +642,10 @@ F-statistic: 10.78 on 1 and 58 DF,  p-value: 0.00174
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                         Df Sum Sq Mean Sq F value   Pr(&gt;F)    
-age_group                 1  15767   15767  688.02  &lt; 2e-16 ***
-reading_group             1   1783    1783   77.79 1.37e-14 ***
-age_group:reading_group   1    777     777   33.92 5.23e-08 ***
-Residuals               116   2658      23                     
+age_group                 1  15806   15806  707.00  &lt; 2e-16 ***
+reading_group             1   1868    1868   83.54 2.45e-15 ***
+age_group:reading_group   1    927     927   41.46 2.83e-09 ***
+Residuals               116   2593      22                     
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 </pre></div>
@@ -663,20 +674,20 @@ lm(formula = score ~ age_num * reading_num, data = dat2)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--9.5762 -3.3081 -0.3837  2.7892 12.0860 
+-9.0855 -3.0319 -0.1937  2.9974 11.9266 
 
 Coefficients:
                     Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)           88.413      0.437 202.318  &lt; 2e-16 ***
-age_num              -22.925      0.874 -26.230  &lt; 2e-16 ***
-reading_num            7.708      0.874   8.820 1.37e-14 ***
-age_num:reading_num   10.180      1.748   5.824 5.23e-08 ***
+(Intercept)          88.2619     0.4316 204.483  &lt; 2e-16 ***
+age_num             -22.9538     0.8633 -26.589  &lt; 2e-16 ***
+reading_num           7.8903     0.8633   9.140 2.45e-15 ***
+age_num:reading_num  11.1165     1.7265   6.439 2.83e-09 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 4.787 on 116 degrees of freedom
-Multiple R-squared:  0.8733,	Adjusted R-squared:   0.87 
-F-statistic: 266.6 on 3 and 116 DF,  p-value: &lt; 2.2e-16
+Residual standard error: 4.728 on 116 degrees of freedom
+Multiple R-squared:  0.8776,	Adjusted R-squared:  0.8745 
+F-statistic: 277.3 on 3 and 116 DF,  p-value: &lt; 2.2e-16
 </pre></div>
 </div>
 </div>
