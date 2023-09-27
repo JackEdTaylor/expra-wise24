@@ -21,7 +21,7 @@ Below you will find important details regarding the course summarized in a compa
 
 The course will be held at 08:00 - 12:00 on Wednesdays, in Seminarhaus - SH 5.103. If it's useful, you can [download this `.ics` file](https://qis.server.uni-frankfurt.de/qisserver/rds?state=verpublish&status=transform&vmfile=no&publishid=843297&moduleCall=iCalendar&publishConfFile=reports&publishSubDir=veranstaltung) for your calendar app.
 
-<iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=8.667059540748598%2C50.12849695078025%2C8.669570088386537%2C50.129838125095446&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=19/50.12917/8.66831">View Larger Map</a></small>
+<iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=8.667665719985964%2C50.12801377492662%2C8.668872714042665%2C50.1305929489814&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=19/50.12930/8.66827">View Larger Map</a></small>
 
 
 #### How do I get all the software and do I have to apply for a loan to get it?
