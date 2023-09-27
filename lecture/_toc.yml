@@ -1,28 +1,28 @@
-root: general_information/index
+root: index
 format: jb-book
 
 parts:
   - caption: General
     chapters:
-    - file: general_information/overview
-    - file: general_information/schedule
-    - file: general_information/setup
-    - file: general_information/reading
+    - file: general/overview
+    - file: general/schedule
+    - file: general/setup
+    - file: general/reading
   
   - caption: Introduction
     chapters:
-      - file: introduction/general_intro
+      - file: introduction/intro
       - file: introduction/setup
       - file: introduction/glm
       - file: introduction/open_science
       - file: introduction/empirical_research
       - file: introduction/model_appropriateness
+      - file: introduction/scientific_reading
 
   - caption: Demo Experiment
     chapters:
       - file: demo/demo_participate
 
-  # - caption: Demo Project
 
   # - caption: Research Projects
 
@@ -30,5 +30,5 @@ parts:
 
   - caption: Miscellaneous
     chapters:
-    - file: general_information/symposium
-    - file: general_information/CoC
+    - file: general/symposium
+    - file: general/CoC
