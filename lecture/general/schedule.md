@@ -4,37 +4,32 @@ Here is where we will keep track of our schedule. Depending on our progress, pot
 
 **Please note** that this initial, optimistic schedule below may be updated, based on time constraints and progress made in the previous meetings.  
 
-## Part 1: Introduction
+## Part 1: Introduction and the Demo Experiment
 
 | Date (dd/mm/yyyy) 🗓         | Content | Tasks for Next Week |
 |--------------|-----------|------------|
-| 18/10/2023 | <ul> <li>[Introduction to the ExPra](https://jackedtaylor.github.io/expra-wise23/introduction/general_intro)</li> <li>[Introduction to Experimental Psychology](https://jackedtaylor.github.io/expra-wise23/introduction/intro_exp_psych)</li> <li>[Setup for the Course](https://jackedtaylor.github.io/expra-wise23/introduction/setup)</li> <li>Assign groups and reading</li> <ul> | Recap [Statistics II](https://pandar.netlify.app/lehre/#bsc7) |
-| 25/10/2023 | <ul> <li>[The General Linear Model](https://jackedtaylor.github.io/expra-wise23/introduction/glm)</li> <li>[Open Science](https://jackedtaylor.github.io/expra-wise23/introduction/open_science)</li> <li>[Take Part in the Demo Experiment](https://jackedtaylor.github.io/expra-wise23/introduction/demo_participate.html)</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general_information/reading.html) </li> </ul> | Send the Demo Experiment Data |
-| 01/11/2023 | <ul> <li>[Empirical Research](https://jackedtaylor.github.io/expra-wise23/introduction/empirical_research)</li> <li>[Model Appropriateness](https://jackedtaylor.github.io/expra-wise23/introduction/model_appropriateness)</li> <li>[Scientific Reading](https://jackedtaylor.github.io/expra-wise23/introduction/scientific_reading)</li> <li>[Rating Norms](https://jackedtaylor.github.io/expra-wise23/introduction/ratings)</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general_information/reading.html) </li> </ul> | /not applicable |
-| 08/11/2023 | <ul> <li>Scientific Writing</li> <li>Choosing a Project</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general_information/reading.html) </li> </ul> | /not applicable |
+| 18/10/2023 | <ul> <li>[Introduction to the ExPra](https://jackedtaylor.github.io/expra-wise23/introduction/general_intro)</li> <li>[Setup for the Course](https://jackedtaylor.github.io/expra-wise23/introduction/setup)</li> <li>[Empirical Research and Psychology](https://jackedtaylor.github.io/expra-wise23/introduction/empirical_research)</li> <li>Assign groups and reading</li> <ul> | Recap [Statistics II](https://pandar.netlify.app/lehre/#bsc7) |
+| 25/10/2023 | <ul> <li>[The General Linear Model](https://jackedtaylor.github.io/expra-wise23/introduction/glm)</li> <li>[Open Science](https://jackedtaylor.github.io/expra-wise23/introduction/open_science)</li> <li>[Take Part in the Demo Experiment](https://jackedtaylor.github.io/expra-wise23/introduction/demo_participate.html)</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) </li> </ul> | Send the Demo Experiment Data |
+| 01/11/2023 | <ul> <li>[Model Appropriateness](https://jackedtaylor.github.io/expra-wise23/introduction/model_appropriateness)</li> <li>[Rating Norms](https://jackedtaylor.github.io/expra-wise23/introduction/ratings)</li> <li>Plan Study Design in Groups</li> <li>[Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html)</li> </ul> | Plan study design for the research project |
+| 08/11/2023 | <ul> <li>[Scientific Reading](https://jackedtaylor.github.io/expra-wise23/introduction/scientific_reading)</li> <li>Scientific Writing</li> <li>Writing the Demo Report</li> <li>Study Design Refinement</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) </li> </ul> | Finalise study design for research project<br>Draft the Demo Report |
+| 15/11/2023 | <ul> <li>[Building the Demo Experiment](https://jackedtaylor.github.io/expra-wise23/demo/build_demo)</li> <li>[Analysing the Demo Experiment](https://jackedtaylor.github.io/expra-wise23/demo/analyse_demo)</li> <li>Finalise Study Design</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) </li> </ul> | Finalise your experimental design<br>Submit the Demo Report (due 22/11/2023) |
 
-## Part 2: The Demo Experiment
-
-| Date (dd/mm/yyyy) 🗓         | Content | Tasks for Next Week |
-|--------------|-----------|------------|
-| 15/11/2023 | <ul> <li>[Building the Demo Experiment](https://jackedtaylor.github.io/expra-wise23/demo/build_demo)</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general_information/reading.html) </li> </ul> | /not applicable |
-| 22/11/2023 | <ul> <li>[Analysing the Demo Experiment](https://jackedtaylor.github.io/expra-wise23/demo/analyse_demo)</li> <li>[Writing the Demo Report](https://jackedtaylor.github.io/expra-wise23/demo/write_demo)</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general_information/reading.html) </li> </ul> | /not applicable |
-
-## Part 3: Research Projects
+## Part 2: Research Projects
 
 | Date (dd/mm/yyyy) 🗓         | Content | Tasks for Next Week |
 |--------------|-----------|------------|
-| 29/11/2023 | <ul> <li>[Deciding on an Hypothesis](https://jackedtaylor.github.io/expra-wise23/experimentation/hypotheses)</li> <li>Discussion and Idea Development in Groups</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general_information/reading.html) </li> </ul> | /not applicable |
-| 06/12/2023 | <ul> <li>Project Refinement</li> <li>Draft the Project Preregistration</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general_information/reading.html) </li> </ul> | /not applicable |
-| 13/12/2023 | <ul> <li>Building and Testing the Experiment</li> <li>Refining the Preregistration</li> <li>Finalising the Experiment for Data Collection</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general_information/reading.html) </li> </ul> | /not applicable |
-| 20/12/2023 | <ul> <li>Finalising the Experiment for Data Collection</li> <li>LIFOS Walkthrough</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general_information/reading.html) </li> </ul> | /not applicable |
+| 22/11/2023 | <ul> <li>How to Preregister a Study</li> <li>Draft Preregistrations in Groups</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) </li> </ul> | Finalise Preregistrations |
+| 29/11/2023 | <ul> <li>LIFOS Walkthrough</li> <li>Preregistration Submission</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) </li> </ul> | Submit Preregistrations |
+| 06/12/2023 | <ul> <li>Experimental Code Finalisation and Testing</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) </li> </ul> | Data Collection! |
+| 13/12/2023 | <ul> <li>Building and Testing the Experiment</li> <li>Refining the Preregistration</li> <li>Finalising the Experiment for Data Collection</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) </li> </ul> | Data Collection! |
+| 20/12/2023 | <ul> <li>Data Wrangling Workshop</li> <li>Implementing your Data Cleaning</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) </li> </ul> | Finalise your data cleaning scripts<br>Draft your Report |
 
-## Part 4: Finalisation
+## Part 3: Finalisation
 
 | Date (dd/mm/yyyy) 🗓         | Content | Tasks for Next Week |
 |--------------|-----------|------------|
-| 10/01/2024 | <ul> <li>Demo Report Feedback</li> <li>Data Wrangling Workshop</li> <li>Analysis Help</li> </ul> | /not applicable
-| 17/01/2024 | <ul> <li>Data Visualisation Workshop</li> <li>Analysis Help</li> </ul> | /not applicable
-| 24/01/2024 | <ul> <li>Scientific Poster Workshop</li> <li>Analysis Help</li> </ul> | /not applicable
-| 31/01/2024 | <ul> <li>Analysis Help</li> </ul>
+| 10/01/2024 | <ul> <li>Demo Report Feedback</li> <li>Data Analysis Workshop</li> <li>Analysis Help</li> </ul> | Work on your Data analysis scripts<br>Work on your Report
+| 17/01/2024 | <ul> <li>Data Visualisation Workshop</li> <li>Analysis Help</li> <li>Visualisation Help</li> <li>Scientific Poster Workshop</li> </ul> | Work on your Report<br>Draft Poster
+| 24/01/2024 | <ul> <li>Scientific Outreach & Communication</li> <li>Analysis Help</li> <li>Poster Help</li> </ul> | Work on your Report<br>Work on your Poster
+| 31/01/2024 | <ul> <li>(Advanced Analysis Workshop)</li> <li>Analysis Help</li> </ul> | Submit your Poster
 | 07/02/2024 |
