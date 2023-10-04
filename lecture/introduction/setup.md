@@ -23,7 +23,7 @@ We ask that you install the following software before arriving to the second ses
 
 - A modern browser: [Chrome](https://www.google.com/chrome/index.html) or [Firefox](https://www.mozilla.org/en-GB/firefox/) are recommended
 
-- [Microsoft Office](https://www.rz.uni-frankfurt.de/120565083/Anleitung_Microsoft_Office_365_ProPlus__Windows___MAC)
+- [Microsoft Office](https://www.rz.uni-frankfurt.de/73202101/Microsoft_Office_f%25C3%25BCr_Studierende)
 
 - A literature & reference manager: [Zotero](https://www.zotero.org/) (recommended), or an alternative like Citavi (possible but not recommended)
 
