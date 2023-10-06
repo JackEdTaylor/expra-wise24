@@ -23,7 +23,7 @@ We ask that you install the following software before arriving to the second ses
 
 - A modern browser: [Chrome](https://www.google.com/chrome/index.html) or [Firefox](https://www.mozilla.org/en-GB/firefox/) are recommended
 
-- [Microsoft Office](https://www.rz.uni-frankfurt.de/120565083/Anleitung_Microsoft_Office_365_ProPlus__Windows___MAC)
+- [Microsoft Office](https://www.rz.uni-frankfurt.de/73202101/Microsoft_Office_f%25C3%25BCr_Studierende)
 
 - A literature & reference manager: [Zotero](https://www.zotero.org/) (recommended), or an alternative like Citavi (possible but not recommended)
 
@@ -182,3 +182,8 @@ You will be invited to the course channel via e-mail.
 **Note**: If the instructions aren't working and you have spent more than 15-20 minutes troubleshooting on your own, reach out on the `#help-installation` channel on the Discord channel with the exact problems you're having.
 One of the instructors will try and get back to you quickly to help resolve the situation.
 If they're unable to help via `Discord`, you may be directed to attend one of the installation office hours.
+
+Once this is all set up, you're ready to go!
+
+<br>
+<img src='https://media1.giphy.com/media/XreQmk7ETCak0/giphy.gif'>
