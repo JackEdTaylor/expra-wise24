@@ -17,7 +17,8 @@ parts:
       - file: introduction/open_science
       - file: introduction/empirical_research
       - file: introduction/model_appropriateness
-      - file: introduction/scientific_reading
+      - file: introduction/reading
+      - file: introduction/writing
       - file: introduction/ratings
 
   - caption: Demo Experiment
