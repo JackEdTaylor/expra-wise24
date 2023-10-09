@@ -1,6 +1,8 @@
 # Reading
 
-To help us navigate the ExPra, some papers will be assigned to groups. Once you know which paper you are preparing, the idea is that each group will lead us through their paper in a ~30 minute presentation
+To help us navigate the ExPra, some papers will be assigned to groups. Once you know which paper you are preparing, the idea is that each group will lead us through their paper in a ~30 minute presentation.
+
+Some of the assigned reading is specific to the projects you will be designing and collecting data for, and some of the papers are more general. These more general papers provide background on Psychology and Open Science.
 
 ## Assigned Reading
 
@@ -13,4 +15,20 @@ To help us navigate the ExPra, some papers will be assigned to groups. Once you 
 | 22/11/2023 | Ten simple rules for structuring papers | Mensch, B., & Kording, K. | 2017 | [*PLOS Computational Biology* *13*(9): e1005619](https://doi.org/10.1371/journal.pcbi.1005619) |
 | 29/11/2023 | The timing mega-study: comparing a range of experiment generators, both lab-based and online | Bridges et al. | 2020 | [*PeerJ*, 8:e9414](http://doi.org/10.7717/peerj.9414) |
 | 06/12/2023 | The preregistration revolution | Nosek et al. | 2018 | [*PNAS*, *115*(11), 2600-2606](https://doi.org/10.1073/pnas.1708274114) |
-| 13/12/2023 | 
+| 13/12/2023 | Semantic ambiguity and memory | Braierd et al. | 2021 | [*Journal of Memory and Language*, *121*, 104286](https://doi.org/10.1016/j.jml.2021.104286) |
+
+## Suggested Reading (Relevant to the Projects)
+
+Here are some suggested papers, which might be a useful starting place in exploring the literature. These will be useful to your Demo Reports and your final Project Report.
+
+* Bestgen, Y., & Vincze, N. (2012). Checking and bootstrapping lexical norms by means of word similarity indexes. *Behavior Research Methods*, *44*(4), 998–1006. https://doi.org/10.3758/s13428-012-0195-z
+
+* Connell, L., & Lynott, D. (2012). Strength of perceptual experience predicts word processing performance better than concreteness or imageability. *Cognition*, *125*(3), 452–465. https://doi.org/10.1016/j.cognition.2012.07.010
+
+* Kanske, P., & Kotz, S. A. (2010). Leipzig Affective Norms for German: A reliability study. *Behavior Research Methods*, *42*(4), 987–991. https://doi.org/10.3758/BRM.42.4.987
+
+* Liddell, T. M., & Kruschke, J. K. (2018). Analyzing ordinal data with metric models: What could possibly go wrong? *Journal of Experimental Social Psychology*, *79*, 328–348. https://doi.org/10.1016/j.jesp.2018.08.009
+
+* Neath, I., & Surprenant, A. M. (2020). Concreteness and disagreement: Comment on Pollock (2018). *Memory and Cognition*, *48*, 683–690. https://doi.org/10.3758/s13421-019-00992-8
+
+* Taylor, J. E., Rousselet, G. A., Scheepers, S., & Sereno, S. C. (2022). Rating norms should be calculated from Cumulative Link Mixed Effects Models. *Behavior Research Methods*, *55*, 2175-2196, https://doi.org/10.3758/s13428-022-01814-7

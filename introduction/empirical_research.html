@@ -70,8 +70,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Model Appropriateness" href="model_appropriateness.html" />
-    <link rel="prev" title="Open Science" href="open_science.html" />
+    <link rel="next" title="The General Linear Model" href="glm.html" />
+    <link rel="prev" title="Setup" href="setup.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -180,13 +180,13 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Empirical Research</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glm.html">The General Linear Model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_science.html">Open Science</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Empirical Research</a></li>
 <li class="toctree-l1"><a class="reference internal" href="model_appropriateness.html">Model Appropriateness</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ratings.html">Rating Norms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reading.html">Scientific Reading</a></li>
 <li class="toctree-l1"><a class="reference internal" href="writing.html">Scientific Writing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ratings.html">Rating Norms</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Demo Experiment</span></p>
 <ul class="nav bd-sidenav">
@@ -478,13 +478,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="xnSCLEMYMmPQ" data-shufflequestions="False"
+<div class="output text_html"><div id="QQDPLpbvwNsY" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#xnSCLEMYMmPQ {
+#QQDPLpbvwNsY {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -654,7 +654,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsxnSCLEMYMmPQ=[
+</style></div><script type="application/javascript">var questionsQQDPLpbvwNsY=[
     {
         "question": "Which type of study generally has the most stringent control of variables?",
         "type": "multiple_choice",
@@ -1499,8 +1499,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("xnSCLEMYMmPQ")) {
-            show_questions(questionsxnSCLEMYMmPQ,  xnSCLEMYMmPQ); 
+          if(document.getElementById("QQDPLpbvwNsY")) {
+            show_questions(questionsQQDPLpbvwNsY,  QQDPLpbvwNsY); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1515,10 +1515,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/empirical_research_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, xnSCLEMYMmPQ))
+        .then(json => show_questions(json, QQDPLpbvwNsY))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsxnSCLEMYMmPQ, xnSCLEMYMmPQ);
+        show_questions(questionsQQDPLpbvwNsY, QQDPLpbvwNsY);
         });
         }
         </script></div>
@@ -1557,20 +1557,20 @@ if (typeof version == 'undefined') {
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="open_science.html"
+       href="setup.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Open Science</p>
+        <p class="prev-next-title">Setup</p>
       </div>
     </a>
     <a class="right-next"
-       href="model_appropriateness.html"
+       href="glm.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Model Appropriateness</p>
+        <p class="prev-next-title">The General Linear Model</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
