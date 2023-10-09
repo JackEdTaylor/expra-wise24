@@ -21,7 +21,7 @@ Here is where we will keep track of our schedule. Depending on our progress, pot
 | 22/11/2023 | <ul> <li>How to Preregister a Study</li> <li>Draft Preregistrations in Groups</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) </li> </ul> | Finalise Preregistrations |
 | 29/11/2023 | <ul> <li>LIFOS Walkthrough</li> <li>Preregistration Submission</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) </li> </ul> | Submit Preregistrations |
 | 06/12/2023 | <ul> <li>Experimental Code Finalisation and Testing</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) </li> </ul> | Data Collection! |
-| 13/12/2023 | <ul> <li>Building and Testing the Experiment</li> <li>Refining the Preregistration</li> <li>Finalising the Experiment for Data Collection</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) </li> </ul> | Data Collection! |
+| 13/12/2023 | <ul> <li>Building and Testing the Experiment</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) </li> </ul> | Data Collection! |
 | 20/12/2023 | <ul> <li>Data Wrangling Workshop</li> <li>Implementing your Data Cleaning</li> <li> [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) </li> </ul> | Finalise your data cleaning scripts<br>Draft your Report |
 
 ## Part 3: Finalisation
