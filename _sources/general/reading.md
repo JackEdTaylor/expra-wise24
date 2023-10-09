@@ -31,4 +31,4 @@ Here are some suggested papers, which might be a useful starting place in explor
 
 * Neath, I., & Surprenant, A. M. (2020). Concreteness and disagreement: Comment on Pollock (2018). *Memory and Cognition*, *48*, 683–690. https://doi.org/10.3758/s13421-019-00992-8
 
-* Taylor, J. E., Rousselet, G. A., Scheepers, S., & Sereno, S. C. (2022). Rating norms should be calculated from Cumulative Link Mixed Effects Models. *Behavior Research Methods*, *55*, 2175-2196, https://doi.org/10.3758/s13428-022-01814-7
+* Taylor, J. E., Rousselet, G. A., Scheepers, S., & Sereno, S. C. (2023). Rating norms should be calculated from Cumulative Link Mixed Effects Models. *Behavior Research Methods*, *55*, 2175-2196, https://doi.org/10.3758/s13428-022-01814-7
