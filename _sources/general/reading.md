@@ -15,7 +15,7 @@ Some of the assigned reading is specific to the projects you will be designing a
 | 22/11/2023 | Ten simple rules for structuring papers | Mensch, B., & Kording, K. | 2017 | [*PLOS Computational Biology* *13*(9): e1005619](https://doi.org/10.1371/journal.pcbi.1005619) |
 | 29/11/2023 | The timing mega-study: comparing a range of experiment generators, both lab-based and online | Bridges et al. | 2020 | [*PeerJ*, 8:e9414](http://doi.org/10.7717/peerj.9414) |
 | 06/12/2023 | The preregistration revolution | Nosek et al. | 2018 | [*PNAS*, *115*(11), 2600-2606](https://doi.org/10.1073/pnas.1708274114) |
-| 13/12/2023 | Semantic ambiguity and memory | Braierd et al. | 2021 | [*Journal of Memory and Language*, *121*, 104286](https://doi.org/10.1016/j.jml.2021.104286) |
+| 13/12/2023 | Semantic ambiguity and memory | Brainerd et al. | 2021 | [*Journal of Memory and Language*, *121*, 104286](https://doi.org/10.1016/j.jml.2021.104286) |
 
 ## Suggested Reading (Relevant to the Projects)
 
