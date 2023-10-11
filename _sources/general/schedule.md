@@ -28,8 +28,8 @@ Here is where we will keep track of our schedule. Depending on our progress, pot
 
 | Date (dd/mm/yyyy) 🗓         | Content | Tasks for Next Week |
 |--------------|-----------|------------|
-| 10/01/2024 | <ul> <li>Demo Report Feedback</li> <li>Data Analysis Workshop</li> <li>Analysis Help</li> </ul> | Work on your Data analysis scripts<br>Work on your Report
-| 17/01/2024 | <ul> <li>Data Visualisation Workshop</li> <li>Analysis Help</li> <li>Visualisation Help</li> <li>Scientific Poster Workshop</li> </ul> | Work on your Report<br>Draft Poster
-| 24/01/2024 | <ul> <li>Scientific Outreach & Communication</li> <li>Analysis Help</li> <li>Poster Help</li> </ul> | Work on your Report<br>Work on your Poster
+| 10/01/2024 | <ul> <li>Demo Report Feedback</li> <li>Data Analysis Workshop</li> <li>Analysis Help</li> <li>Scientific Outreach & Communication</li> </ul> | Work on your Data analysis scripts <br>Draft Research Presentation Slides <br>Work on your Report
+| 17/01/2024 | <ul> <li>Data Visualisation Workshop</li> <li>Analysis Help</li> <li>Visualisation Help</li> <li>Scientific Poster Workshop</li> </ul> | Work on your Report <br>Finalise Research Presentation Slides <br>Draft Poster
+| 24/01/2024 | <ul> <li>Research Presentations</li> <li>Analysis Help</li> <li>Poster Help</li> </ul> | Work on your Report<br>Work on your Poster
 | 31/01/2024 | <ul> <li>(Advanced Analysis Workshop)</li> <li>Analysis Help</li> </ul> | Submit your Poster
 | 07/02/2024 |
