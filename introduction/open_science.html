@@ -195,6 +195,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../general/assignments.html">Assignments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../general/CoC.html">Code of Conduct</a></li>
 </ul>
 
@@ -477,13 +478,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="kqeMLsjdfGwn" data-shufflequestions="False"
+<div class="output text_html"><div id="iRsaBMHoULZK" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#kqeMLsjdfGwn {
+#iRsaBMHoULZK {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -653,7 +654,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionskqeMLsjdfGwn=[
+</style></div><script type="application/javascript">var questionsiRsaBMHoULZK=[
     {
         "question": "Which of the following scientific outputs requires peer-review approval prior to *publication*?",
         "type": "many_choice",
@@ -1557,8 +1558,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("kqeMLsjdfGwn")) {
-            show_questions(questionskqeMLsjdfGwn,  kqeMLsjdfGwn); 
+          if(document.getElementById("iRsaBMHoULZK")) {
+            show_questions(questionsiRsaBMHoULZK,  iRsaBMHoULZK); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1573,10 +1574,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/open_science_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, kqeMLsjdfGwn))
+        .then(json => show_questions(json, iRsaBMHoULZK))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionskqeMLsjdfGwn, kqeMLsjdfGwn);
+        show_questions(questionsiRsaBMHoULZK, iRsaBMHoULZK);
         });
         }
         </script></div>
