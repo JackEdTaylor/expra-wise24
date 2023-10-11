@@ -33,5 +33,5 @@ parts:
 
   - caption: Miscellaneous
     chapters:
-    - file: general/symposium
+    - file: general/assignemnts
     - file: general/CoC
