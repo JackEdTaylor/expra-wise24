@@ -4,11 +4,11 @@ This page lists all requirements for receiving the course credits.
 
 ## Deadlines
 
-The following course requirements have specific deadlines.
+The following course requirements have specific deadlines:
 
 | ExPra Requirement | Deadline (dd/mm/yyyy) 🗓 |
 |-------------------|--------------------------|
-| Present your assigned reading with your group | see [Reading](https://jackedtaylor.github.io/expra-wise23/general/reading.html) |
+| Present your assigned reading with your group | Varies by group: see [Reading](https://jackedtaylor.github.io/expra-wise23/general/reading.html) |
 | Submit the Demo Report as a group (not graded) | 22/11/2023 |
 | Preregister your experiment on LIFOS as a group | 06/12/2023 |
 | Present your research findings as a group | 24/01/2023 |
@@ -17,9 +17,9 @@ The following course requirements have specific deadlines.
 
 ## Requirements with no Specific Deadline
 
-You will also be expected to:
+To receive course credits, you will also be expected to:
 
-* Participate in at least 5 experiments of other ExPra groups (these will be marked with "*E*" on SONA)
+* Participate in at least 5 experiments of other ExPra groups (these will be marked with "*E*" on [SONA](https://uni-frankfurt.sona-systems.com/))
 
 * Actively participate in sessions and meetings
 
