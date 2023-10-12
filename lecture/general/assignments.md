@@ -39,7 +39,7 @@ To receive course credits, you will also be expected to:
 
 The ExPra report is the final exam for the research project. The report is graded, and determines your final mark for the course.
 
-You will write your ExPra reports individually (not as a group), reporting on the research question you investigated. Because the ExPra should be an individual assignment, **you cannot share titles, figures, tables, etc.**.
+You will write your ExPra reports individually (not as a group), reporting on the research question you investigated. Because the ExPra should be an individual assignment, **you cannot share titles, figures, tables, etc. with your group**.
 
 ExPra report submissions must:
 
@@ -61,11 +61,12 @@ The deadline for submitting ExPra reports is 4 weeks after the final session (se
 
 ### How is it graded?
 
-The ExPra will be graded by me (Jack Taylor).
-
-You can download the grading criteria that I will be using here: https://jackedtaylor.github.io/expra-wise23/static/grading_criteria.html
-
 ````{margin}
 ```{warning}
 Note that the grading criteria sheet is only a guide! Your grade will not be calculated as a simple sum of the scores on the grading criteria sheet.
 ````
+
+The ExPra will be graded by me (Jack Taylor).
+
+You can download the grading criteria that I will be using here: https://jackedtaylor.github.io/expra-wise23/static/grading_criteria.html
+
