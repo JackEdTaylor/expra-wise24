@@ -2,6 +2,8 @@
 
 In this ExPra (Empirisch-Experimentelles Praktikum), you will get hands-on experience in Psychological research. We will progress through the stages of a research project, from theoretical background and methodological understanding, to experiment design, data collection, analysis, and presentation of results in a poster, presentation, and report.
 
+#### [<i class="fa-solid fa-file-pdf"></i> Download the ExPra Guide for Students](https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/static/EXPRA_Guide_for_students.pdf)
+
 ### How to reach the folks in the front
 
 <p align="center"><iframe src="https://giphy.com/embed/U6GunJi6B1o7ecMfKc" width="240" height="240" frameBorder="0" vspace="0" class="giphy-embed" allowFullScreen style="overflow-y: hidden;"></iframe></p><p align="center"><a href="https://giphy.com/gifs/justviralnet-funny-mistake-spelling-U6GunJi6B1o7ecMfKc"></a>
