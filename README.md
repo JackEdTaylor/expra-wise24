@@ -1,20 +1,6 @@
-![logo](lecture/static/logo.png)
+<img src="lecture/static/logo.png" width="250">
 
-
-## "What's in this repository?"
-
-This is a template repository for creating online courses in higher education created for the DiLER (Digital Literacy for Empirical Research) project, financed by DIGITELL (Goethe-University Frankfurt).
-
-
-
-You'll find the following:
-
-Find more on how to utilizie this ressource in the online-course X
-
-Examples of how these courses could look:
-
-
-
+This is the GitHub repository for the Group 5 Empirisch-Experimentelles Praktikum course, taught at Goethe University Frankfurt as part of PsyBSc 10.
 
 Credit goes to the original G0RELLA template lectures.
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4279400.svg)](https://doi.org/10.5281/zenodo.4279400)
