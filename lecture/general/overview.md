@@ -12,6 +12,11 @@ In this ExPra (Empirisch-Experimentelles Praktikum), you will get hands-on exper
 - E-mail: `Taylor(at)psych.uni-frankfurt.de`
 - Preferred mode of contact: via `Discord` or e-mail
 
+Leon Scholz
+
+- Email: `l.scholz(at)psych.uni-frankfurt.de`
+- Preferred mode of contact: via `Discord` or e-mail
+
 
 ### Gimme the details
 
