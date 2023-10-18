@@ -10,7 +10,7 @@ Some of the assigned reading is specific to the projects you will be designing a
 
 | Date of Presentation (dd/mm/yyyy) | Group | Title | Authors | Year of Publication | Link |
 |-----------------------------------| ----- |-------| ------- | ------------------- | ---- |
-| 25/10/2023 | A | Estimating the reproducibility of psychological science | Open Science Collaboration | 2015 | [*Science*, *349*(6251)](https://doi.org/10.1126/science.aac4716) |
+| 01/11/2023 | A | Estimating the reproducibility of psychological science | Open Science Collaboration | 2015 | [*Science*, *349*(6251)](https://doi.org/10.1126/science.aac4716) |
 | 01/11/2023 | B | Measurement Schmeasurement: Questionable Measurement Practices and how to avoid them  | Flake, J. K., & Fried, E. | 2020 | [*Advances in Methods and Practices in Psychological Science*, *3*(4), 456-465](https://doi.org/10.1177/2515245920952393) |
 | 08/11/2023 | C | The Glasgow Norms: Ratings of 5,500 words on nine scales | Scott et al. | 2019 | [*Behavior Research Methods*, *51*(3), 1258–1270](https://doi.org/10.3758/s13428-018-1099-3) |
 | 15/11/2023 | D | Statistical and methodological problems with concreteness and other semantic variables: A list memory experiment case study | Pollock, L. | 2018 | [*Behavior Research Methods*, *50*(3), 1198–1216](https://doi.org/10.3758/s13428-017-0938-y) |
