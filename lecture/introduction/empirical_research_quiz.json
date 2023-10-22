@@ -41,7 +41,7 @@
                 "correct": false
             },
             {
-                "answer": "A confounder is variable that leads the IV and the DV, despite their being no true causal association",
+                "answer": "A confounder is variable that leads to a relationship between the IV and the DV, despite their being no true causal association",
                 "correct": true
             },
             {
