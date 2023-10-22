@@ -475,20 +475,22 @@ document.write(`
 <section id="slides">
 <h2>Slides<a class="headerlink" href="#slides" title="Permalink to this heading">#</a></h2>
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRr_MQGdgbXAoGdhHKjDRwqrGCL5kwJaMENii5s692CbxVD0HvTUDO7N2tZ4Ut4lx4RzIjdCK9mdw29/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-<p><a class="reference external" href="https://docs.google.com/presentation/d/1HDR21mItvD1Th75fPtCKndcFckjKLIRipZQShQby3Oo/export/pdf"><h5><i class="fa-solid fa-file-pdf"></i> Download .pdf</h5></a>
-<a class="reference external" href="https://docs.google.com/presentation/d/1HDR21mItvD1Th75fPtCKndcFckjKLIRipZQShQby3Oo/export/pptx"><h5><i class="fa-solid fa-file-powerpoint"></i> Download .pptx</h5></a></p>
-</section>
+<h5>
+<a href=https://docs.google.com/presentation/d/1HDR21mItvD1Th75fPtCKndcFckjKLIRipZQShQby3Oo/export/pdf><i class="fa-solid fa-file-pdf"></i> Download .pdf</a>
+&nbsp;
+<a href=https://docs.google.com/presentation/d/1HDR21mItvD1Th75fPtCKndcFckjKLIRipZQShQby3Oo/export/pptx><i class="fa-solid fa-file-powerpoint"></i> Download .pptx</a>
+</h5></section>
 <section id="test-your-knowledge">
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="ciwsAvfLBSNe" data-shufflequestions="False"
+<div class="output text_html"><div id="lZdupdiYMaye" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#ciwsAvfLBSNe {
+#lZdupdiYMaye {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -658,7 +660,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsciwsAvfLBSNe=[
+</style></div><script type="application/javascript">var questionslZdupdiYMaye=[
     {
         "question": "Which of the following scientific outputs requires peer-review approval prior to *publication*?",
         "type": "many_choice",
@@ -1562,8 +1564,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("ciwsAvfLBSNe")) {
-            show_questions(questionsciwsAvfLBSNe,  ciwsAvfLBSNe); 
+          if(document.getElementById("lZdupdiYMaye")) {
+            show_questions(questionslZdupdiYMaye,  lZdupdiYMaye); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1578,10 +1580,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/open_science_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, ciwsAvfLBSNe))
+        .then(json => show_questions(json, lZdupdiYMaye))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsciwsAvfLBSNe, ciwsAvfLBSNe);
+        show_questions(questionslZdupdiYMaye, lZdupdiYMaye);
         });
         }
         </script></div>
