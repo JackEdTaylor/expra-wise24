@@ -475,20 +475,20 @@ document.write(`
 <section id="slides">
 <h2>Slides<a class="headerlink" href="#slides" title="Permalink to this heading">#</a></h2>
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTNV_h_Z3AhTFk4k1eELyGiIhwM5N3qwcWnbVEge11Ik9X2jAVkFvRy2rPz8rfiFggYVm1FUreXR54v/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-<p><a class="reference external" href="https://docs.google.com/presentation/d/1ZU53v5keNdhnL50tpdFIBSLGttWB9PBhhtZ4FJhLZ5A/export/pdf"><h5><i class="fa-solid fa-file-pdf"></i> Download .pdf</h5></a></p>
-<p><a class="reference external" href="https://docs.google.com/presentation/d/1ZU53v5keNdhnL50tpdFIBSLGttWB9PBhhtZ4FJhLZ5A/export/pptx"><h5><i class="fa-solid fa-file-powerpoint"></i> Download .pptx</h5></a></p>
+<p><a class="reference external" href="https://docs.google.com/presentation/d/1ZU53v5keNdhnL50tpdFIBSLGttWB9PBhhtZ4FJhLZ5A/export/pdf"><h5><i class="fa-solid fa-file-pdf"></i> Download .pdf</h5></a>
+<a class="reference external" href="https://docs.google.com/presentation/d/1ZU53v5keNdhnL50tpdFIBSLGttWB9PBhhtZ4FJhLZ5A/export/pptx"><h5><i class="fa-solid fa-file-powerpoint"></i> Download .pptx</h5></a></p>
 </section>
 <section id="test-your-knowledge">
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="CmIDFuAjRyhc" data-shufflequestions="False"
+<div class="output text_html"><div id="scjcwOUVGQTm" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#CmIDFuAjRyhc {
+#scjcwOUVGQTm {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -658,7 +658,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsCmIDFuAjRyhc=[
+</style></div><script type="application/javascript">var questionsscjcwOUVGQTm=[
     {
         "question": "Which of the following fonts are recommended according to the APA guidelines?",
         "type": "many_choice",
@@ -1489,8 +1489,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("CmIDFuAjRyhc")) {
-            show_questions(questionsCmIDFuAjRyhc,  CmIDFuAjRyhc); 
+          if(document.getElementById("scjcwOUVGQTm")) {
+            show_questions(questionsscjcwOUVGQTm,  scjcwOUVGQTm); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1505,10 +1505,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/writing_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, CmIDFuAjRyhc))
+        .then(json => show_questions(json, scjcwOUVGQTm))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsCmIDFuAjRyhc, CmIDFuAjRyhc);
+        show_questions(questionsscjcwOUVGQTm, scjcwOUVGQTm);
         });
         }
         </script></div>
