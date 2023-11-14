@@ -465,6 +465,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#format-the-data">3: Format the Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clean-the-data">4: Clean the Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-the-models">5: Fit the Models!</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lm">LM</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lmm">LMM</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clmm">CLMM</a></li>
 </ul>
@@ -673,6 +674,7 @@ We'll start by excluding participants who gave too few unique responses. To do t
 </div>
 </div>
 </div>
+<p>It looks like the data was quite good quality overall! 💪</p>
 </section>
 <section id="fit-the-models">
 <h2>5: Fit the Models!<a class="headerlink" href="#fit-the-models" title="Permalink to this heading">#</a></h2>
@@ -683,14 +685,17 @@ We'll start by excluding participants who gave too few unique responses. To do t
 <li><p>A cumulative-link mixed-effects model (CLMM; <code class="docutils literal notranslate"><span class="pre">clmm()</span></code>), where we norm via random effects, on a latent normal distribution.</p></li>
 </ol>
 <br>
-### LM
+<section id="lm">
+<h3>LM<a class="headerlink" href="#lm" title="Permalink to this heading">#</a></h3>
 <p>First, the traditional approach is to take a raw average of all ratings for each item (a simple linear model). A simple way of estimating this is:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># estimate a raw average for each item</span>
 <span class="n">est_lm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">d_clean_c</span><span class="w"> </span><span class="o">|&gt;</span>
 <span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">word</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">summarise</span><span class="p">(</span><span class="n">M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">resp</span><span class="p">))</span>
+<span class="w">  </span><span class="nf">summarise</span><span class="p">(</span><span class="n">M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">resp</span><span class="p">))</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="c1"># store the model type as a variable (we&#39;ll use this later)</span>
+<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;LM&quot;</span><span class="p">)</span>
 
 <span class="c1"># show the first few estimates</span>
 <span class="n">est_lm</span>
@@ -699,73 +704,73 @@ We'll start by excluding participants who gave too few unique responses. To do t
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><table class="dataframe">
-<caption>A tibble: 100 × 2</caption>
+<caption>A tibble: 100 × 3</caption>
 <thead>
-	<tr><th scope=col>word</th><th scope=col>M</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+	<tr><th scope=col>word</th><th scope=col>M</th><th scope=col>model</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
 </thead>
 <tbody>
-	<tr><td>Abfahrt </td><td>2.785714</td></tr>
-	<tr><td>Advent  </td><td>2.928571</td></tr>
-	<tr><td>Album   </td><td>4.000000</td></tr>
-	<tr><td>Anhang  </td><td>2.571429</td></tr>
-	<tr><td>Anreiz  </td><td>1.857143</td></tr>
-	<tr><td>Anzahl  </td><td>2.571429</td></tr>
-	<tr><td>Bad     </td><td>4.571429</td></tr>
-	<tr><td>Bahn    </td><td>4.714286</td></tr>
-	<tr><td>Bankrott</td><td>2.142857</td></tr>
-	<tr><td>Becken  </td><td>4.642857</td></tr>
-	<tr><td>Beruf   </td><td>2.928571</td></tr>
-	<tr><td>Bestand </td><td>2.785714</td></tr>
-	<tr><td>Betrug  </td><td>2.142857</td></tr>
-	<tr><td>Bohne   </td><td>4.928571</td></tr>
-	<tr><td>Bonbon  </td><td>5.000000</td></tr>
-	<tr><td>Butter  </td><td>5.000000</td></tr>
-	<tr><td>Bündel  </td><td>3.857143</td></tr>
-	<tr><td>Dach    </td><td>4.714286</td></tr>
-	<tr><td>Dampf   </td><td>4.428571</td></tr>
-	<tr><td>Denkmal </td><td>4.071429</td></tr>
-	<tr><td>Einfahrt</td><td>4.214286</td></tr>
-	<tr><td>Faden   </td><td>4.357143</td></tr>
-	<tr><td>Feind   </td><td>3.500000</td></tr>
-	<tr><td>Felsen  </td><td>4.785714</td></tr>
-	<tr><td>Fleiss  </td><td>1.928571</td></tr>
-	<tr><td>Fluch   </td><td>1.928571</td></tr>
-	<tr><td>Freibad </td><td>4.928571</td></tr>
-	<tr><td>Freund  </td><td>4.000000</td></tr>
-	<tr><td>Gebäck  </td><td>4.714286</td></tr>
-	<tr><td>Gedicht </td><td>3.285714</td></tr>
-	<tr><td>⋮</td><td>⋮</td></tr>
-	<tr><td>Reptil </td><td>4.357143</td></tr>
-	<tr><td>Schal  </td><td>4.785714</td></tr>
-	<tr><td>Schale </td><td>4.500000</td></tr>
-	<tr><td>Schnur </td><td>4.714286</td></tr>
-	<tr><td>Schuh  </td><td>4.785714</td></tr>
-	<tr><td>Stachel</td><td>4.538462</td></tr>
-	<tr><td>Stapel </td><td>4.071429</td></tr>
-	<tr><td>Stress </td><td>1.857143</td></tr>
-	<tr><td>Stunk  </td><td>2.785714</td></tr>
-	<tr><td>Sucht  </td><td>2.230769</td></tr>
-	<tr><td>Säufer </td><td>3.500000</td></tr>
-	<tr><td>Tango  </td><td>3.714286</td></tr>
-	<tr><td>Tasche </td><td>4.857143</td></tr>
-	<tr><td>Tragik </td><td>1.785714</td></tr>
-	<tr><td>Tripper</td><td>2.785714</td></tr>
-	<tr><td>Triumph</td><td>2.000000</td></tr>
-	<tr><td>Tugend </td><td>1.285714</td></tr>
-	<tr><td>Tänzer </td><td>4.285714</td></tr>
-	<tr><td>Urin   </td><td>4.714286</td></tr>
-	<tr><td>Urne   </td><td>4.615385</td></tr>
-	<tr><td>Vortrag</td><td>3.000000</td></tr>
-	<tr><td>Wissen </td><td>1.428571</td></tr>
-	<tr><td>Wohl   </td><td>1.500000</td></tr>
-	<tr><td>Wunsch </td><td>1.571429</td></tr>
-	<tr><td>Würde  </td><td>1.461538</td></tr>
-	<tr><td>Zeitung</td><td>4.857143</td></tr>
-	<tr><td>Zelt   </td><td>4.928571</td></tr>
-	<tr><td>Zimmer </td><td>4.571429</td></tr>
-	<tr><td>Zufuhr </td><td>2.357143</td></tr>
-	<tr><td>Zug    </td><td>5.000000</td></tr>
+	<tr><td>Abfahrt </td><td>2.785714</td><td>LM</td></tr>
+	<tr><td>Advent  </td><td>2.928571</td><td>LM</td></tr>
+	<tr><td>Album   </td><td>4.000000</td><td>LM</td></tr>
+	<tr><td>Anhang  </td><td>2.571429</td><td>LM</td></tr>
+	<tr><td>Anreiz  </td><td>1.857143</td><td>LM</td></tr>
+	<tr><td>Anzahl  </td><td>2.571429</td><td>LM</td></tr>
+	<tr><td>Bad     </td><td>4.571429</td><td>LM</td></tr>
+	<tr><td>Bahn    </td><td>4.714286</td><td>LM</td></tr>
+	<tr><td>Bankrott</td><td>2.142857</td><td>LM</td></tr>
+	<tr><td>Becken  </td><td>4.642857</td><td>LM</td></tr>
+	<tr><td>Beruf   </td><td>2.928571</td><td>LM</td></tr>
+	<tr><td>Bestand </td><td>2.785714</td><td>LM</td></tr>
+	<tr><td>Betrug  </td><td>2.142857</td><td>LM</td></tr>
+	<tr><td>Bohne   </td><td>4.928571</td><td>LM</td></tr>
+	<tr><td>Bonbon  </td><td>5.000000</td><td>LM</td></tr>
+	<tr><td>Butter  </td><td>5.000000</td><td>LM</td></tr>
+	<tr><td>Bündel  </td><td>3.857143</td><td>LM</td></tr>
+	<tr><td>Dach    </td><td>4.714286</td><td>LM</td></tr>
+	<tr><td>Dampf   </td><td>4.428571</td><td>LM</td></tr>
+	<tr><td>Denkmal </td><td>4.071429</td><td>LM</td></tr>
+	<tr><td>Einfahrt</td><td>4.214286</td><td>LM</td></tr>
+	<tr><td>Faden   </td><td>4.357143</td><td>LM</td></tr>
+	<tr><td>Feind   </td><td>3.500000</td><td>LM</td></tr>
+	<tr><td>Felsen  </td><td>4.785714</td><td>LM</td></tr>
+	<tr><td>Fleiss  </td><td>1.928571</td><td>LM</td></tr>
+	<tr><td>Fluch   </td><td>1.928571</td><td>LM</td></tr>
+	<tr><td>Freibad </td><td>4.928571</td><td>LM</td></tr>
+	<tr><td>Freund  </td><td>4.000000</td><td>LM</td></tr>
+	<tr><td>Gebäck  </td><td>4.714286</td><td>LM</td></tr>
+	<tr><td>Gedicht </td><td>3.285714</td><td>LM</td></tr>
+	<tr><td>⋮</td><td>⋮</td><td>⋮</td></tr>
+	<tr><td>Reptil </td><td>4.357143</td><td>LM</td></tr>
+	<tr><td>Schal  </td><td>4.785714</td><td>LM</td></tr>
+	<tr><td>Schale </td><td>4.500000</td><td>LM</td></tr>
+	<tr><td>Schnur </td><td>4.714286</td><td>LM</td></tr>
+	<tr><td>Schuh  </td><td>4.785714</td><td>LM</td></tr>
+	<tr><td>Stachel</td><td>4.538462</td><td>LM</td></tr>
+	<tr><td>Stapel </td><td>4.071429</td><td>LM</td></tr>
+	<tr><td>Stress </td><td>1.857143</td><td>LM</td></tr>
+	<tr><td>Stunk  </td><td>2.785714</td><td>LM</td></tr>
+	<tr><td>Sucht  </td><td>2.230769</td><td>LM</td></tr>
+	<tr><td>Säufer </td><td>3.500000</td><td>LM</td></tr>
+	<tr><td>Tango  </td><td>3.714286</td><td>LM</td></tr>
+	<tr><td>Tasche </td><td>4.857143</td><td>LM</td></tr>
+	<tr><td>Tragik </td><td>1.785714</td><td>LM</td></tr>
+	<tr><td>Tripper</td><td>2.785714</td><td>LM</td></tr>
+	<tr><td>Triumph</td><td>2.000000</td><td>LM</td></tr>
+	<tr><td>Tugend </td><td>1.285714</td><td>LM</td></tr>
+	<tr><td>Tänzer </td><td>4.285714</td><td>LM</td></tr>
+	<tr><td>Urin   </td><td>4.714286</td><td>LM</td></tr>
+	<tr><td>Urne   </td><td>4.615385</td><td>LM</td></tr>
+	<tr><td>Vortrag</td><td>3.000000</td><td>LM</td></tr>
+	<tr><td>Wissen </td><td>1.428571</td><td>LM</td></tr>
+	<tr><td>Wohl   </td><td>1.500000</td><td>LM</td></tr>
+	<tr><td>Wunsch </td><td>1.571429</td><td>LM</td></tr>
+	<tr><td>Würde  </td><td>1.461538</td><td>LM</td></tr>
+	<tr><td>Zeitung</td><td>4.857143</td><td>LM</td></tr>
+	<tr><td>Zelt   </td><td>4.928571</td><td>LM</td></tr>
+	<tr><td>Zimmer </td><td>4.571429</td><td>LM</td></tr>
+	<tr><td>Zufuhr </td><td>2.357143</td><td>LM</td></tr>
+	<tr><td>Zug    </td><td>5.000000</td><td>LM</td></tr>
 </tbody>
 </table>
 </div></div>
@@ -834,6 +839,7 @@ wordHandlung     wordHarem     wordHärte      wordHast    wordHelfer
 </div>
 </div>
 </div>
+</section>
 <section id="lmm">
 <h3>LMM<a class="headerlink" href="#lmm" title="Permalink to this heading">#</a></h3>
 <p>To norm via random effects in an LMM, we can use the <code class="docutils literal notranslate"><span class="pre">lmer()</span></code> function. We include random (varying) intercepts for participants (<code class="docutils literal notranslate"><span class="pre">(1</span> <span class="pre">|</span> <span class="pre">participant)</span></code>) and items (<code class="docutils literal notranslate"><span class="pre">(1</span> <span class="pre">|</span> <span class="pre">item)</span></code>). We will only extract estimates for items, but we also include random intercepts for participants because it usually improves the accuracy of the estimates for items.</p>
@@ -1145,36 +1151,36 @@ Thresholds:
 	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
 </thead>
 <tbody>
-	<tr><td>Abfahrt </td><td>2.785714</td><td>NA</td></tr>
-	<tr><td>Advent  </td><td>2.928571</td><td>NA</td></tr>
-	<tr><td>Album   </td><td>4.000000</td><td>NA</td></tr>
-	<tr><td>Anhang  </td><td>2.571429</td><td>NA</td></tr>
-	<tr><td>Anreiz  </td><td>1.857143</td><td>NA</td></tr>
-	<tr><td>Anzahl  </td><td>2.571429</td><td>NA</td></tr>
-	<tr><td>Bad     </td><td>4.571429</td><td>NA</td></tr>
-	<tr><td>Bahn    </td><td>4.714286</td><td>NA</td></tr>
-	<tr><td>Bankrott</td><td>2.142857</td><td>NA</td></tr>
-	<tr><td>Becken  </td><td>4.642857</td><td>NA</td></tr>
-	<tr><td>Beruf   </td><td>2.928571</td><td>NA</td></tr>
-	<tr><td>Bestand </td><td>2.785714</td><td>NA</td></tr>
-	<tr><td>Betrug  </td><td>2.142857</td><td>NA</td></tr>
-	<tr><td>Bohne   </td><td>4.928571</td><td>NA</td></tr>
-	<tr><td>Bonbon  </td><td>5.000000</td><td>NA</td></tr>
-	<tr><td>Butter  </td><td>5.000000</td><td>NA</td></tr>
-	<tr><td>Bündel  </td><td>3.857143</td><td>NA</td></tr>
-	<tr><td>Dach    </td><td>4.714286</td><td>NA</td></tr>
-	<tr><td>Dampf   </td><td>4.428571</td><td>NA</td></tr>
-	<tr><td>Denkmal </td><td>4.071429</td><td>NA</td></tr>
-	<tr><td>Einfahrt</td><td>4.214286</td><td>NA</td></tr>
-	<tr><td>Faden   </td><td>4.357143</td><td>NA</td></tr>
-	<tr><td>Feind   </td><td>3.500000</td><td>NA</td></tr>
-	<tr><td>Felsen  </td><td>4.785714</td><td>NA</td></tr>
-	<tr><td>Fleiss  </td><td>1.928571</td><td>NA</td></tr>
-	<tr><td>Fluch   </td><td>1.928571</td><td>NA</td></tr>
-	<tr><td>Freibad </td><td>4.928571</td><td>NA</td></tr>
-	<tr><td>Freund  </td><td>4.000000</td><td>NA</td></tr>
-	<tr><td>Gebäck  </td><td>4.714286</td><td>NA</td></tr>
-	<tr><td>Gedicht </td><td>3.285714</td><td>NA</td></tr>
+	<tr><td>Abfahrt </td><td>2.785714</td><td>LM</td></tr>
+	<tr><td>Advent  </td><td>2.928571</td><td>LM</td></tr>
+	<tr><td>Album   </td><td>4.000000</td><td>LM</td></tr>
+	<tr><td>Anhang  </td><td>2.571429</td><td>LM</td></tr>
+	<tr><td>Anreiz  </td><td>1.857143</td><td>LM</td></tr>
+	<tr><td>Anzahl  </td><td>2.571429</td><td>LM</td></tr>
+	<tr><td>Bad     </td><td>4.571429</td><td>LM</td></tr>
+	<tr><td>Bahn    </td><td>4.714286</td><td>LM</td></tr>
+	<tr><td>Bankrott</td><td>2.142857</td><td>LM</td></tr>
+	<tr><td>Becken  </td><td>4.642857</td><td>LM</td></tr>
+	<tr><td>Beruf   </td><td>2.928571</td><td>LM</td></tr>
+	<tr><td>Bestand </td><td>2.785714</td><td>LM</td></tr>
+	<tr><td>Betrug  </td><td>2.142857</td><td>LM</td></tr>
+	<tr><td>Bohne   </td><td>4.928571</td><td>LM</td></tr>
+	<tr><td>Bonbon  </td><td>5.000000</td><td>LM</td></tr>
+	<tr><td>Butter  </td><td>5.000000</td><td>LM</td></tr>
+	<tr><td>Bündel  </td><td>3.857143</td><td>LM</td></tr>
+	<tr><td>Dach    </td><td>4.714286</td><td>LM</td></tr>
+	<tr><td>Dampf   </td><td>4.428571</td><td>LM</td></tr>
+	<tr><td>Denkmal </td><td>4.071429</td><td>LM</td></tr>
+	<tr><td>Einfahrt</td><td>4.214286</td><td>LM</td></tr>
+	<tr><td>Faden   </td><td>4.357143</td><td>LM</td></tr>
+	<tr><td>Feind   </td><td>3.500000</td><td>LM</td></tr>
+	<tr><td>Felsen  </td><td>4.785714</td><td>LM</td></tr>
+	<tr><td>Fleiss  </td><td>1.928571</td><td>LM</td></tr>
+	<tr><td>Fluch   </td><td>1.928571</td><td>LM</td></tr>
+	<tr><td>Freibad </td><td>4.928571</td><td>LM</td></tr>
+	<tr><td>Freund  </td><td>4.000000</td><td>LM</td></tr>
+	<tr><td>Gebäck  </td><td>4.714286</td><td>LM</td></tr>
+	<tr><td>Gedicht </td><td>3.285714</td><td>LM</td></tr>
 	<tr><td>⋮</td><td>⋮</td><td>⋮</td></tr>
 	<tr><td>Reptil </td><td> 0.79713326</td><td>CLMM</td></tr>
 	<tr><td>Säufer </td><td>-0.04713157</td><td>CLMM</td></tr>
@@ -1223,7 +1229,7 @@ Thresholds:
 <div class="output text_html"><table class="dataframe">
 <caption>A tibble: 100 × 4</caption>
 <thead>
-	<tr><th scope=col>word</th><th scope=col>NA</th><th scope=col>LMM</th><th scope=col>CLMM</th></tr>
+	<tr><th scope=col>word</th><th scope=col>LM</th><th scope=col>LMM</th><th scope=col>CLMM</th></tr>
 	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
 </thead>
 <tbody>
@@ -1363,6 +1369,7 @@ Thresholds:
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#format-the-data">3: Format the Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clean-the-data">4: Clean the Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-the-models">5: Fit the Models!</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lm">LM</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lmm">LMM</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clmm">CLMM</a></li>
 </ul>
