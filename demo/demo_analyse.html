@@ -472,6 +472,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-aics">6: Compare the AICs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#join-the-estimates-together">7: Join the Estimates Together</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examine-correlations">8: Examine Correlations</a></li>
 </ul>
             </nav>
         </div>
@@ -1219,7 +1220,8 @@ Thresholds:
 <p>We may also want the data in wide format (different model estimates are in different columns). This is possible with the <code class="docutils literal notranslate"><span class="pre">pivot_wider()</span></code> function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">norms_wide</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">pivot_wider</span><span class="p">(</span><span class="n">norms</span><span class="p">,</span><span class="w"> </span><span class="n">names_from</span><span class="o">=</span><span class="n">model</span><span class="p">,</span><span class="w"> </span><span class="n">values_from</span><span class="o">=</span><span class="n">M</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># pivot the data into wide format</span>
+<span class="n">norms_wide</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">pivot_wider</span><span class="p">(</span><span class="n">norms</span><span class="p">,</span><span class="w"> </span><span class="n">names_from</span><span class="o">=</span><span class="n">model</span><span class="p">,</span><span class="w"> </span><span class="n">values_from</span><span class="o">=</span><span class="n">M</span><span class="p">)</span>
 
 <span class="n">norms_wide</span>
 </pre></div>
@@ -1294,6 +1296,34 @@ Thresholds:
 	<tr><td>Zimmer </td><td>4.571429</td><td> 1.10353881</td><td> 1.09412517</td></tr>
 	<tr><td>Zufuhr </td><td>2.357143</td><td>-1.01776119</td><td>-1.08541200</td></tr>
 	<tr><td>Zug    </td><td>5.000000</td><td> 1.51411300</td><td> 2.41609910</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="examine-correlations">
+<h2>8: Examine Correlations<a class="headerlink" href="#examine-correlations" title="Permalink to this heading">#</a></h2>
+<p>We may be interested in how similar our estimates are from our three approaches. The variables are all very highly correlated because they are all trying to capture very similar information. However, the CLMM approach is least like the other two (lower Pearson’s r values in the matrix).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">norms_wide</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="c1"># remove non-numeric column</span>
+<span class="w">  </span><span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="n">word</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="c1"># get correlation matrix</span>
+<span class="w">  </span><span class="nf">cor</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A matrix: 3 × 3 of type dbl</caption>
+<thead>
+	<tr><th></th><th scope=col>LM</th><th scope=col>LMM</th><th scope=col>CLMM</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>LM</th><td>1.0000000</td><td>0.9999768</td><td>0.9895898</td></tr>
+	<tr><th scope=row>LMM</th><td>0.9999768</td><td>1.0000000</td><td>0.9895235</td></tr>
+	<tr><th scope=row>CLMM</th><td>0.9895898</td><td>0.9895235</td><td>1.0000000</td></tr>
 </tbody>
 </table>
 </div></div>
@@ -1376,6 +1406,7 @@ Thresholds:
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-aics">6: Compare the AICs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#join-the-estimates-together">7: Join the Estimates Together</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examine-correlations">8: Examine Correlations</a></li>
 </ul>
   </nav></div>
 
