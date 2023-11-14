@@ -458,7 +458,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#watch-this-space">Watch this Space!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-relevant-libraries">1: Load the Relevant Libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-data">2: Import the Data</a></li>
 </ul>
             </nav>
         </div>
@@ -472,9 +473,66 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="analysis">
 <h1>Analysis<a class="headerlink" href="#analysis" title="Permalink to this heading">#</a></h1>
-<section id="watch-this-space">
-<h2>Watch this Space!<a class="headerlink" href="#watch-this-space" title="Permalink to this heading">#</a></h2>
-<p>The walkthrough for the analysis of the Demo Experiment will go here, once we have the data.</p>
+<p>The main thing we’ll go through today is analysis of the Demo Experiment data. We have data from 14 participants who completed the German version of the experiment.</p>
+<p><strong>Before we can start:</strong></p>
+<p><strong>a</strong>) <a class="reference download internal" download="" href="../_downloads/7ede810df4318e8d509dd065b4ba2e7c/demo_data.zip"><span class="xref download myst">Download the data</span></a> as a <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file.</p>
+<p><strong>b</strong>) Extract the data from the <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file to a folder that makes sense for you. The data should be stored in that location in a folder called <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
+<p><strong>c</strong>) Start a new R script in RStudio.</p>
+<p>Once everyone has completed these steps, we’ll begin…</p>
+<section id="load-the-relevant-libraries">
+<h2>1: Load the Relevant Libraries<a class="headerlink" href="#load-the-relevant-libraries" title="Permalink to this heading">#</a></h2>
+<p>These are the libraries we’ll use for the analysis. Each library has a comment explaining what we will use it for.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span>    <span class="c1"># for reading the data into R</span>
+<span class="n">library</span><span class="p">(</span><span class="n">purrr</span><span class="p">)</span>    <span class="c1"># for easily importing multiple files</span>
+<span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>    <span class="c1"># for wrangling data (e.g., adding/renaming columns)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">)</span>    <span class="c1"># for switching between long and wide formats of data</span>
+<span class="n">library</span><span class="p">(</span><span class="n">ordinal</span><span class="p">)</span>  <span class="c1"># for fitting CLMMs</span>
+<span class="n">library</span><span class="p">(</span><span class="n">lme4</span><span class="p">)</span>     <span class="c1"># for fitting LMMs</span>
+
+<span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>  <span class="c1"># for visualising data</span>
+<span class="n">theme_set</span><span class="p">(</span><span class="n">theme_bw</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span>    <span class="c1"># for reading the data into R</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">library</span><span class="p">(</span><span class="n">purrr</span><span class="p">)</span>    <span class="c1"># for easily importing multiple files</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>    <span class="c1"># for wrangling data (e.g., adding/renaming columns)</span>
+
+<span class="ne">NameError</span>: name &#39;library&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="import-the-data">
+<h2>2: Import the Data<a class="headerlink" href="#import-the-data" title="Permalink to this heading">#</a></h2>
+<p>Let’s import the data extracted from the <code class="docutils literal notranslate"><span class="pre">.zip</span></code> folder:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># first, get a list of paths to all .csv data files</span>
+<span class="n">data_paths</span> <span class="o">&lt;-</span> <span class="nb">list</span><span class="o">.</span><span class="n">files</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="s2">&quot;.*</span><span class="se">\\</span><span class="s2">.csv$&quot;</span><span class="p">,</span> <span class="n">full</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
+
+<span class="c1"># now, iterate over these with `read_csv()` to import them</span>
+<span class="c1"># (note: col_types just says that we want these two columns to be stored as text, not numbers)</span>
+<span class="n">raw_data</span> <span class="o">&lt;-</span> <span class="n">map_df</span><span class="p">(</span><span class="n">data_paths</span><span class="p">,</span> <span class="n">read_csv</span><span class="p">,</span> <span class="n">col_types</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="n">participant</span><span class="o">=</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="n">frameRate</span><span class="o">=</span><span class="s2">&quot;c&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s have a look at the first few rows of the data, with <code class="docutils literal notranslate"><span class="pre">print()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">raw_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -541,7 +599,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#watch-this-space">Watch this Space!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-relevant-libraries">1: Load the Relevant Libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-data">2: Import the Data</a></li>
 </ul>
   </nav></div>
 
