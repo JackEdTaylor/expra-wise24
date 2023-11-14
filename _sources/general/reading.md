@@ -25,14 +25,20 @@ Here are some suggested papers, which might be a useful starting place in explor
 
 * Bestgen, Y., & Vincze, N. (2012). Checking and bootstrapping lexical norms by means of word similarity indexes. *Behavior Research Methods*, *44*(4), 998–1006. https://doi.org/10.3758/s13428-012-0195-z
 
+* Brodeur, M. B., Guérard, K., & Bouras, M. (2014). Bank of Standardized Stimuli (BOSS) Phase II: 930 New Normative Photos. *PLoS ONE*, *9*(9), e106953. https://doi.org/10.1371/journal.pone.0106953
+
 * Brysbaert, M., Warriner, A. B., & Kuperman, V. (2014). Concreteness ratings for 40 thousand generally known English word lemmas. *Behavior Research Methods*, *46*, 904-911. https://doi.org/10.3758/s13428-013-0403-5
 
 * Connell, L., & Lynott, D. (2012). Strength of perceptual experience predicts word processing performance better than concreteness or imageability. *Cognition*, *125*(3), 452–465. https://doi.org/10.1016/j.cognition.2012.07.010
+
+* Hebart et al. (2023). THINGS-data, a multimodal collection of large-scale datasets for investigating object representations in human brain and behavior. *eLife*, *2023*(12), e82580. https://doi.org/10.7554/eLife.82580
 
 * Kanske, P., & Kotz, S. A. (2010). Leipzig Affective Norms for German: A reliability study. *Behavior Research Methods*, *42*(4), 987–991. https://doi.org/10.3758/BRM.42.4.987
 
 * Liddell, T. M., & Kruschke, J. K. (2018). Analyzing ordinal data with metric models: What could possibly go wrong? *Journal of Experimental Social Psychology*, *79*, 328–348. https://doi.org/10.1016/j.jesp.2018.08.009
 
 * Neath, I., & Surprenant, A. M. (2020). Concreteness and disagreement: Comment on Pollock (2018). *Memory and Cognition*, *48*, 683–690. https://doi.org/10.3758/s13421-019-00992-8
+
+* Paisios, D., Nathalie, H., & Labeye, E. (2023, June 15). Addressing the elephant in the middle: Implications of the midscale disagreement problem through the lens of Body-Object Interaction ratings. https://doi.org/10.31234/osf.io/aj9hq
 
 * Taylor, J. E., Rousselet, G. A., Scheepers, S., & Sereno, S. C. (2023). Rating norms should be calculated from Cumulative Link Mixed Effects Models. *Behavior Research Methods*, *55*, 2175-2196, https://doi.org/10.3758/s13428-022-01814-7
