@@ -41,4 +41,4 @@ Here are some suggested papers, which might be a useful starting place in explor
 
 * Paisios, D., Nathalie, H., & Labeye, E. (2023, June 15). Addressing the elephant in the middle: Implications of the midscale disagreement problem through the lens of Body-Object Interaction ratings. https://doi.org/10.31234/osf.io/aj9hq
 
-* Taylor, J. E., Rousselet, G. A., Scheepers, S., & Sereno, S. C. (2023). Rating norms should be calculated from Cumulative Link Mixed Effects Models. *Behavior Research Methods*, *55*, 2175-2196, https://doi.org/10.3758/s13428-022-01814-7
+* Taylor, J. E., Rousselet, G. A., Scheepers, C., & Sereno, S. C. (2023). Rating norms should be calculated from Cumulative Link Mixed Effects Models. *Behavior Research Methods*, *55*, 2175-2196, https://doi.org/10.3758/s13428-022-01814-7
