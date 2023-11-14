@@ -484,27 +484,23 @@ document.write(`
 <p>These are the libraries we’ll use for the analysis. Each library has a comment explaining what we will use it for.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span>    <span class="c1"># for reading the data into R</span>
-<span class="n">library</span><span class="p">(</span><span class="n">purrr</span><span class="p">)</span>    <span class="c1"># for easily importing multiple files</span>
-<span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>    <span class="c1"># for wrangling data (e.g., adding/renaming columns)</span>
-<span class="n">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">)</span>    <span class="c1"># for switching between long and wide formats of data</span>
-<span class="n">library</span><span class="p">(</span><span class="n">ordinal</span><span class="p">)</span>  <span class="c1"># for fitting CLMMs</span>
-<span class="n">library</span><span class="p">(</span><span class="n">lme4</span><span class="p">)</span>     <span class="c1"># for fitting LMMs</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span><span class="w">    </span><span class="c1"># for reading the data into R</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">purrr</span><span class="p">)</span><span class="w">    </span><span class="c1"># for easily importing multiple files</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span><span class="w">    </span><span class="c1"># for wrangling data (e.g., adding/renaming columns)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">)</span><span class="w">    </span><span class="c1"># for switching between long and wide formats of data</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ordinal</span><span class="p">)</span><span class="w">  </span><span class="c1"># for fitting CLMMs</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">lme4</span><span class="p">)</span><span class="w">     </span><span class="c1"># for fitting LMMs</span>
 
-<span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>  <span class="c1"># for visualising data</span>
-<span class="n">theme_set</span><span class="p">(</span><span class="n">theme_bw</span><span class="p">())</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">  </span><span class="c1"># for visualising data</span>
+<span class="nf">theme_set</span><span class="p">(</span><span class="nf">theme_bw</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span>    <span class="c1"># for reading the data into R</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">library</span><span class="p">(</span><span class="n">purrr</span><span class="p">)</span>    <span class="c1"># for easily importing multiple files</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>    <span class="c1"># for wrangling data (e.g., adding/renaming columns)</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>Error in library(readr): there is no package called ‘readr’
+Traceback:
 
-<span class="ne">NameError</span>: name &#39;library&#39; is not defined
+1. library(readr)
 </pre></div>
 </div>
 </div>
@@ -515,12 +511,12 @@ document.write(`
 <p>Let’s import the data extracted from the <code class="docutils literal notranslate"><span class="pre">.zip</span></code> folder:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># first, get a list of paths to all .csv data files</span>
-<span class="n">data_paths</span> <span class="o">&lt;-</span> <span class="nb">list</span><span class="o">.</span><span class="n">files</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="s2">&quot;.*</span><span class="se">\\</span><span class="s2">.csv$&quot;</span><span class="p">,</span> <span class="n">full</span><span class="o">.</span><span class="n">names</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># first, get a list of paths to all .csv data files</span>
+<span class="n">data_paths</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list.files</span><span class="p">(</span><span class="s">&quot;data&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="o">=</span><span class="s">&quot;.*\\.csv$&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
 
 <span class="c1"># now, iterate over these with `read_csv()` to import them</span>
 <span class="c1"># (note: col_types just says that we want these two columns to be stored as text, not numbers)</span>
-<span class="n">raw_data</span> <span class="o">&lt;-</span> <span class="n">map_df</span><span class="p">(</span><span class="n">data_paths</span><span class="p">,</span> <span class="n">read_csv</span><span class="p">,</span> <span class="n">col_types</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="n">participant</span><span class="o">=</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="n">frameRate</span><span class="o">=</span><span class="s2">&quot;c&quot;</span><span class="p">))</span>
+<span class="n">raw_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">map_df</span><span class="p">(</span><span class="n">data_paths</span><span class="p">,</span><span class="w"> </span><span class="n">read_csv</span><span class="p">,</span><span class="w"> </span><span class="n">col_types</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="n">participant</span><span class="o">=</span><span class="s">&quot;c&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">frameRate</span><span class="o">=</span><span class="s">&quot;c&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -528,7 +524,7 @@ document.write(`
 <p>Let’s have a look at the first few rows of the data, with <code class="docutils literal notranslate"><span class="pre">print()</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">raw_data</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="n">raw_data</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -545,16 +541,16 @@ document.write(`
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "r"
         },
         kernelOptions: {
-            name: "python3",
+            name: "ir",
             path: "./demo"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'ir'</script>
 
                 </article>
               

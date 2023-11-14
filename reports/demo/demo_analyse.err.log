@@ -27,12 +27,8 @@ theme_set(theme_bw())
 ------------------
 
 
-[0;31m---------------------------------------------------------------------------[0m
-[0;31mNameError[0m                                 Traceback (most recent call last)
-Cell [0;32mIn[1], line 1[0m
-[0;32m----> 1[0m [43mlibrary[49m(readr)    [38;5;66;03m# for reading the data into R[39;00m
-[1;32m      2[0m library(purrr)    [38;5;66;03m# for easily importing multiple files[39;00m
-[1;32m      3[0m library(dplyr)    [38;5;66;03m# for wrangling data (e.g., adding/renaming columns)[39;00m
+Error in library(readr): there is no package called ‘readr’
+Traceback:
 
-[0;31mNameError[0m: name 'library' is not defined
+1. library(readr)
 
