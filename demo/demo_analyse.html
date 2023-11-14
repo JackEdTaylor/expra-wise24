@@ -473,6 +473,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-aics">6: Compare the AICs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#join-the-estimates-together">7: Join the Estimates Together</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examine-correlations">8: Examine Correlations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-1-recreate-the-plot-in-pollock-2018">Bonus 1: Recreate the Plot in Pollock (2018)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-2-cross-validation">Bonus 2: Cross-Validation</a></li>
 </ul>
             </nav>
         </div>
@@ -978,7 +980,7 @@ Thresholds:
 </table>
 </div></div>
 </div>
-<p>We may also want the data in wide format (different model estimates are in different columns). This is possible with the <code class="docutils literal notranslate"><span class="pre">pivot_wider()</span></code> function.</p>
+<p>We may also want the data in wide format (different model estimates are in different columns). This is possible with the <code class="docutils literal notranslate"><span class="pre">pivot_wider()</span></code> function. This lets us compare the estimates for each word from the three approaches.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># pivot the data into wide format</span>
@@ -1070,6 +1072,123 @@ Thresholds:
 </div>
 </div>
 </section>
+<section id="bonus-1-recreate-the-plot-in-pollock-2018">
+<h2>Bonus 1: Recreate the Plot in Pollock (2018)<a class="headerlink" href="#bonus-1-recreate-the-plot-in-pollock-2018" title="Permalink to this heading">#</a></h2>
+<p>Let’s see whether we can recreate the plot that Pollock (<a class="reference external" href="https://doi.org/10.3758/s13428-017-0938-y">2018</a>) made of the data from Brysbaert et al. (<a class="reference external" href="https://doi.org/10.3758/s13428-013-0403-5">2014</a>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># first, calculate the means and SDs of raw ratings</span>
+<span class="n">raw_summ</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">d_clean_c</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">word</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">summarise</span><span class="p">(</span><span class="n">M</span><span class="o">=</span><span class="nf">mean</span><span class="p">(</span><span class="n">resp</span><span class="p">),</span><span class="w"> </span><span class="n">SD</span><span class="o">=</span><span class="nf">sd</span><span class="p">(</span><span class="n">resp</span><span class="p">))</span>
+
+<span class="c1"># then, show the Ms and SDs in a scatter plot</span>
+<span class="n">raw_summ</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">SD</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/3ed8090dfd34a907f5947af8b1a3867ed2f01cbbc7dae075458a8a70415a0a06.png" src="../_images/3ed8090dfd34a907f5947af8b1a3867ed2f01cbbc7dae075458a8a70415a0a06.png" />
+</div>
+</div>
+<p>Even our small sample size shows a very similar pattern to that described by Pollock.</p>
+</section>
+<section id="bonus-2-cross-validation">
+<h2>Bonus 2: Cross-Validation<a class="headerlink" href="#bonus-2-cross-validation" title="Permalink to this heading">#</a></h2>
+<p>This is a section for the very keen!</p>
+<p>Cross Validation is also known as “out-of-sample testing”. The standard approach is to split the data into two sets: a <strong>training set</strong> (seen by the model) and a <strong>testing set</strong> (unseen by the model). We fit a model to the training set, and then see how well it can predict unseen data in the testing set.</p>
+<p>One particular approach is known as “leave-one-out” cross validation, where the training set contains every data point except one, and that data point is then used as the testing set. Here is an example function for the LM, LMM, and CLMM approaches, <code class="docutils literal notranslate"><span class="pre">get_loo_errors()</span></code>. It tries all possible combinations of training and testing sets for a leave one out cross-validation, and records the error of each model.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># there is no predict() method for the CLMM, so here is a custom solution</span>
+<span class="c1"># (only works for our specific data structure)</span>
+<span class="n">predict_clmm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">re_word</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ranef</span><span class="p">(</span><span class="n">model</span><span class="p">)</span><span class="o">$</span><span class="n">word</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">      </span><span class="nf">as_tibble</span><span class="p">(</span><span class="n">rownames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;word&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">      </span><span class="nf">rename</span><span class="p">(</span><span class="n">re_word</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">`(Intercept)`</span><span class="p">)</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">re_participant</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ranef</span><span class="p">(</span><span class="n">model</span><span class="p">)</span><span class="o">$</span><span class="n">participant</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">      </span><span class="nf">as_tibble</span><span class="p">(</span><span class="n">rownames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;participant&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">      </span><span class="nf">rename</span><span class="p">(</span><span class="n">re_participant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">`(Intercept)`</span><span class="p">)</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">thresh</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">model</span><span class="o">$</span><span class="n">alpha</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">pred_latent</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">d_i</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">      </span><span class="nf">select</span><span class="p">(</span><span class="n">word</span><span class="p">,</span><span class="w"> </span><span class="n">participant</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">      </span><span class="nf">left_join</span><span class="p">(</span><span class="n">re_word</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="o">=</span><span class="s">&quot;word&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">      </span><span class="nf">left_join</span><span class="p">(</span><span class="n">re_participant</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="o">=</span><span class="s">&quot;participant&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">      </span><span class="nf">mutate</span><span class="p">(</span><span class="n">latent_M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">re_word</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">re_participant</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">      </span><span class="nf">pull</span><span class="p">(</span><span class="n">latent_M</span><span class="p">)</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="nf">as.numeric</span><span class="p">(</span><span class="nf">which.max</span><span class="p">(</span><span class="n">thresh</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">pred_latent</span><span class="p">))</span>
+<span class="p">}</span>
+
+<span class="c1"># function to calculate leave one out prediction errors</span>
+<span class="n">get_loo_errors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">obs_out</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">nrow</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="w">  </span><span class="nf">map_df</span><span class="p">(</span><span class="n">obs_out</span><span class="p">,</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nf">cat</span><span class="p">(</span><span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;Iteration %g/%g (%.1f %%)\r&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">obs_out</span><span class="p">),</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="nf">max</span><span class="p">(</span><span class="n">obs_out</span><span class="p">)</span><span class="o">*</span><span class="m">100</span><span class="p">)))</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">d_i</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="nf">row_number</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">i</span><span class="p">)</span>
+<span class="w">    </span><span class="n">d_j</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="nf">row_number</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">i</span><span class="p">)</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1"># LM</span>
+<span class="w">    </span><span class="n">m_lm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">resp</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">word</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">)</span>
+<span class="w">    </span><span class="n">pred_lm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">predict</span><span class="p">(</span><span class="n">m_lm</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="o">=</span><span class="n">d_i</span><span class="p">)</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1"># LMM</span>
+<span class="w">    </span><span class="n">m_lmm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lmer</span><span class="p">(</span>
+<span class="w">      </span><span class="n">resp</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">word</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">participant</span><span class="p">),</span>
+<span class="w">      </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d_j</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="n">pred_lmm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">predict</span><span class="p">(</span><span class="n">m_lmm</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="o">=</span><span class="n">d_i</span><span class="p">)</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1"># CLMM</span>
+<span class="w">    </span><span class="n">m_clmm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">clmm</span><span class="p">(</span>
+<span class="w">      </span><span class="n">resp_fct</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">word</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">participant</span><span class="p">),</span>
+<span class="w">      </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d_j</span><span class="p">,</span>
+<span class="w">      </span><span class="n">link</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;probit&quot;</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="n">pred_clmm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">predict_clmm</span><span class="p">(</span><span class="n">m_clmm</span><span class="p">,</span><span class="w"> </span><span class="n">newdata</span><span class="o">=</span><span class="n">d_i</span><span class="p">)</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="nf">tibble</span><span class="p">(</span>
+<span class="w">      </span><span class="n">i</span><span class="p">,</span>
+<span class="w">      </span><span class="n">resp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d_i</span><span class="o">$</span><span class="n">resp</span><span class="p">,</span>
+<span class="w">      </span><span class="n">err_lm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d_i</span><span class="o">$</span><span class="n">resp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">pred_lm</span><span class="p">,</span>
+<span class="w">      </span><span class="n">err_lmm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d_i</span><span class="o">$</span><span class="n">resp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">pred_lmm</span><span class="p">,</span>
+<span class="w">      </span><span class="n">err_clmm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d_i</span><span class="o">$</span><span class="n">resp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">pred_clmm</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">  </span><span class="p">})</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">pivot_longer</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="nf">starts_with</span><span class="p">(</span><span class="s">&quot;err&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">names_to</span><span class="o">=</span><span class="s">&quot;model&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">values_to</span><span class="o">=</span><span class="s">&quot;error&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">names_prefix</span><span class="o">=</span><span class="s">&quot;err&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>It will take a very long time to run, but we can now run the function on our dataset!</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">loo_err</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">get_loo_errors</span><span class="p">(</span><span class="n">d_final</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is what the error looks like across our scale, for each model. What do you think leads to these patterns in the results?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">loo_err</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">resp</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="n">model</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">facet_wrap</span><span class="p">(</span><span class="nf">vars</span><span class="p">(</span><span class="n">model</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Actual Response&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Error in Prediction&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1148,6 +1267,8 @@ Thresholds:
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-aics">6: Compare the AICs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#join-the-estimates-together">7: Join the Estimates Together</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examine-correlations">8: Examine Correlations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-1-recreate-the-plot-in-pollock-2018">Bonus 1: Recreate the Plot in Pollock (2018)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-2-cross-validation">Bonus 2: Cross-Validation</a></li>
 </ul>
   </nav></div>
 
