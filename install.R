@@ -1,11 +1,16 @@
 # packages
 packages <- c(
   "IRkernel",
-  "tibble",
-  "dplyr",
   "Cairo",
   "ggplot2",
-  "usethis"
+  "usethis",
+  "tibble",
+  "dplyr",
+  "readr",
+  "tidyr",
+  "purrr",
+  "ordinal",
+  "lme4"
 )
 
 install.packages(packages, repos="https://cloud.r-project.org/")
