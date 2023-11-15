@@ -460,6 +460,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-the-stimuli">Generating the Stimuli</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reporting-stimuli-selection">Reporting Stimuli Selection</a></li>
 </ul>
             </nav>
         </div>
@@ -473,7 +474,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="stimuli">
 <h1>Stimuli<a class="headerlink" href="#stimuli" title="Permalink to this heading">#</a></h1>
-<p>One of the things you should include in your preregistration is a reproducible script that shows how you selected your stimuli. This example shows how the Demo Experiment stimuli were selected.</p>
+<p>One of the things you should include in your LIFOS repository is a reproducible script that shows how you selected your stimuli. This example shows how the Demo Experiment stimuli were selected.</p>
+<br>
 <p>The stimuli we used in the Demo Experiment were sampled from a previous, larger dataset of rating norms: Kanske &amp; Kotz (<a class="reference external" href="https://doi.org/10.3758/brm.42.4.987">2010</a>).</p>
 <ul class="simple">
 <li><p>You can download the version of the dataset that we used here: <a class="reference download internal" download="" href="../_downloads/714e49244d8b9eecfe775bdd49e99207/kanske_kotz.csv"><span class="xref download myst">kanske_kotz.csv</span></a>. This is not identical to the original, so go to the (<a class="reference external" href="https://doi.org/10.3758/brm.42.4.987">original paper</a>) to download the full dataset.</p></li>
@@ -542,7 +544,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Now we define some “stop words”. These are words which we deem inappropriate or unsuitable for our experiment.</p>
+<p>Now we define some “stop words”. These are words which we deem inappropriate or unsuitable for our experiment. This is justifiable because (1) we are not researching offensive or taboo words specifically, and (2) we do not have ethical approval to present words which may cause distress.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">stop_words</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Nazi&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Wichser&quot;</span><span class="p">)</span>
@@ -568,13 +570,17 @@ document.write(`
 <p>Now finally, we can filter the original dataset. Using this method we keep the columns in the original dataset (in case they are useful later).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">stim</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">kk</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">word</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">stim_words</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">stim</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">kk</span><span class="p">,</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">stim_words</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <p>We can write this to file like so:</p>
+</section>
+<section id="reporting-stimuli-selection">
+<h2>Reporting Stimuli Selection<a class="headerlink" href="#reporting-stimuli-selection" title="Permalink to this heading">#</a></h2>
+<p>Remember that as well as sharing your code for stimuli selection on LIFOS, you will need to include a description of how the stimuli were selected in your report. For example…</p>
+<p><em>Stimuli were selected from words in the LANG dataset collected by Kanske and Kotz (2010). We first excluded 2 words that were inappropriate for our experiment: Nazi and Wichser, as these words were not covered by our ethical approval, and because we were not interested in offensive or taboo words specifically for our hypotheses. We then selected N=100 words randomly from the words presented by Kanske and Kotz. The script used to generate our stimuli is included in the LIFOS repository associated with this report (LINK TO RELEVANT SECTION OF LIFOS REPOSITORY HERE).</em></p>
 </section>
 </section>
 
@@ -642,6 +648,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-the-stimuli">Generating the Stimuli</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reporting-stimuli-selection">Reporting Stimuli Selection</a></li>
 </ul>
   </nav></div>
 
