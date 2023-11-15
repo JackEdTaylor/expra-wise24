@@ -70,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Participate" href="../demo/demo_participate.html" />
+    <link rel="next" title="Stimuli" href="../demo/demo_stimuli.html" />
     <link rel="prev" title="Scientific Reading" href="reading.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -192,6 +192,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Demo Experiment</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../demo/demo_stimuli.html">Stimuli</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo/demo_participate.html">Participate</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../demo/demo_analyse.html">Analysis</a></li>
 </ul>
@@ -485,13 +486,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="edHAxozKTFmM" data-shufflequestions="False"
+<div class="output text_html"><div id="tSPSAwaCyVcu" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#edHAxozKTFmM {
+#tSPSAwaCyVcu {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -661,7 +662,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsedHAxozKTFmM=[
+</style></div><script type="application/javascript">var questionstSPSAwaCyVcu=[
     {
         "question": "Which of the following fonts are recommended according to the APA guidelines?",
         "type": "many_choice",
@@ -1492,8 +1493,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("edHAxozKTFmM")) {
-            show_questions(questionsedHAxozKTFmM,  edHAxozKTFmM); 
+          if(document.getElementById("tSPSAwaCyVcu")) {
+            show_questions(questionstSPSAwaCyVcu,  tSPSAwaCyVcu); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1508,10 +1509,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/writing_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, edHAxozKTFmM))
+        .then(json => show_questions(json, tSPSAwaCyVcu))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsedHAxozKTFmM, edHAxozKTFmM);
+        show_questions(questionstSPSAwaCyVcu, tSPSAwaCyVcu);
         });
         }
         </script></div>
@@ -1559,11 +1560,11 @@ if (typeof version == 'undefined') {
       </div>
     </a>
     <a class="right-next"
-       href="../demo/demo_participate.html"
+       href="../demo/demo_stimuli.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Participate</p>
+        <p class="prev-next-title">Stimuli</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
