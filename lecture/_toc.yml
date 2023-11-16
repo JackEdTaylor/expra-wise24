@@ -25,6 +25,7 @@ parts:
     chapters:
       - file: demo/demo_stimuli
       - file: demo/demo_participate
+      - file: demo/demo_demog
       - file: demo/demo_analyse
 
 
