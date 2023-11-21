@@ -28,8 +28,9 @@ parts:
       - file: demo/demo_demog
       - file: demo/demo_analyse
 
-
-  # - caption: Research Projects
+  - caption: Research Projects
+    chapters:
+      -file: projects/preregistration
 
   # - caption: Finalisation
 
