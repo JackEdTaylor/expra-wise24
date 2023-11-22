@@ -19,7 +19,7 @@ Some of the assigned reading is specific to the projects you will be designing a
 | 06/12/2023 | C | The preregistration revolution | Nosek et al. | 2018 | [*PNAS*, *115*(11), 2600-2606](https://doi.org/10.1073/pnas.1708274114) |
 | 13/12/2023 | D | Semantic ambiguity and memory | Brainerd et al. | 2021 | [*Journal of Memory and Language*, *121*, 104286](https://doi.org/10.1016/j.jml.2021.104286) |
 
-## Suggested Reading (Relevant to the Projects)
+## Suggested Reading (General)
 
 Here are some suggested papers, which might be a useful starting place in exploring the literature. These will be useful to your Demo Reports and your final Project Report.
 
@@ -28,8 +28,6 @@ Here are some suggested papers, which might be a useful starting place in explor
 * Brodeur, M. B., Guérard, K., & Bouras, M. (2014). Bank of Standardized Stimuli (BOSS) Phase II: 930 New Normative Photos. *PLoS ONE*, *9*(9), e106953. https://doi.org/10.1371/journal.pone.0106953
 
 * Brysbaert, M., Warriner, A. B., & Kuperman, V. (2014). Concreteness ratings for 40 thousand generally known English word lemmas. *Behavior Research Methods*, *46*, 904-911. https://doi.org/10.3758/s13428-013-0403-5
-
-* Connell, L., & Lynott, D. (2012). Strength of perceptual experience predicts word processing performance better than concreteness or imageability. *Cognition*, *125*(3), 452–465. https://doi.org/10.1016/j.cognition.2012.07.010
 
 * Hebart et al. (2023). THINGS-data, a multimodal collection of large-scale datasets for investigating object representations in human brain and behavior. *eLife*, *2023*(12), e82580. https://doi.org/10.7554/eLife.82580
 
@@ -44,3 +42,37 @@ Here are some suggested papers, which might be a useful starting place in explor
 * Paisios, D., Nathalie, H., & Labeye, E. (2023, June 15). Addressing the elephant in the middle: Implications of the midscale disagreement problem through the lens of Body-Object Interaction ratings. https://doi.org/10.31234/osf.io/aj9hq
 
 * Taylor, J. E., Rousselet, G. A., Scheepers, C., & Sereno, S. C. (2023). Rating norms should be calculated from Cumulative Link Mixed Effects Models. *Behavior Research Methods*, *55*, 2175-2196, https://doi.org/10.3758/s13428-022-01814-7
+
+## Suggested Reading Specific to Each Project
+
+In addition to the suggested reading above, here you can find some example literature which will be mostly relevant to each group's project.
+
+### Group A
+
+* Connell, L., & Lynott, D. (2012). Strength of perceptual experience predicts word processing performance better than concreteness or imageability. *Cognition*, *125*(3), 452–465. https://doi.org/10.1016/j.cognition.2012.07.010
+
+* Dellantonio, S., Mulatti, C., Pastore, L., & Job, R. (2014). Measuring inconsistencies can lead you forward: Imageability and the x-ception theory. *Frontiers in Psychology*, *5*(2014), Article 708. https://doi.org/10.3389/fpsyg.2014.00708
+
+* Montefinese,  M., Gregori, L., Ravelli, A. A., Varvara, R., & Radicioni, D. P. (2023). CONcreTEXT norms: Concreteness ratings for Italian and English words in context. *PLOS ONE*, *18*(10), e0293031. https://doi.org/10.1371/journal.pone.0293031
+
+### Group B
+
+
+
+### Group C
+
+* Blechert, J., Muele, A., Busch, N. A., & Ohla, K. (2014). Food-pics: An image database for experimental research on eating and appetite. *Frontiers in Psychology*, *5*(2014), Article 617. https://doi.org/10.3389/fpsyg.2014.00617
+
+* Casper, W. C., Edwards, B. D., Wallace, J. C., Landis, R. S., & Fife, D. A. (2020). Selecting response anchors with equal intervals for summated rating scales. *Journal of Applied Psychology*, *105*(4), 390–409. https://doi.org/10.1037/apl0000444
+
+* Konkle, T., & Caramazza, A. (2013). Tripartite organization of the ventral stream by animacy and object size. *Journal of Neuroscience*, *33*(25), 10235-10242. https://doi.org/10.1523/JNEUROSCI.0983-13.2013
+
+* Souza, C., Garrido, M. V., & Carmo, J. C. (2020). A systematic review of normative studies using images of common objects. *Frontiers in Psychology*, *11*(2020), Article 573314. https://doi.org/10.3389/fpsyg.2020.573314
+
+### Group D
+
+* Adelman, J. S., & Estes, Z. (2013). Emotion and memory: A recognition advantage for positive and negative words independent of arousal. *Cognition*, *129*(3), 530-535. https://doi.org/10.1016/j.cognition.2013.08.014
+
+* Kensinger, E. A., & Corkin, S. (2003). Memory enhancement for emotional words: Are emotional words more vividly remembered than neutral words? *Memory and Cognition*, *31*(8), 1169-1180. https://doi.org/10.3758/bf03195800
+
+* Kousta, S.-T., Vigliocco, G., Vinson, D. P., Andrews, M., & Del Campo, E. (2011). The representation of abstract words: Why emotion matters. *Journal of Experimental Psychology: General*, *140*(1), 14–34. https://doi.org/10.1037/a0021446
