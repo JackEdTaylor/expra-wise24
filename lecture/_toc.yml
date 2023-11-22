@@ -30,9 +30,7 @@ parts:
 
   - caption: Research Projects
     chapters:
-      -file: projects/preregistration
-
-  # - caption: Finalisation
+      - file: projects/preregistration
 
   - caption: Miscellaneous
     chapters:
