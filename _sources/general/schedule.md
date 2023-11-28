@@ -19,8 +19,8 @@ Here is where we will keep track of our schedule. Depending on our progress, pot
 | Date (dd/mm/yyyy) 🗓         | Content | Tasks for Next Week |
 |--------------|-----------|------------|
 | 22/11/2023 |  - Progress Check <br> - [How to Preregister a Study](https://jackedtaylor.github.io/expra-wise23/projects/preregistration.html)<br> - Draft Preregistrations in Groups<br> - Stimuli Selection Finalisation<br> - [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) <br>  | - Finalise Preregistrations |
-| 29/11/2023 |  - LIFOS Walkthrough<br> - Preregistration Submission<br> - Uploading Stimuli and Code<br> - [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) <br>  | - Submit Preregistrations |
-| 06/12/2023 |  - Experiment Testing<br> - Introduction to EEG & MEG<br> - [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) <br>  | - Data Collection! |
+| 29/11/2023 |  - [LIFOS Walkthrough](https://jackedtaylor.github.io/expra-wise23/projects/lifos)<br> - Preregistration Submission<br> - Uploading Stimuli and Code<br> - [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) <br>  | - Submit Preregistrations |
+| 06/12/2023 |  - Experiment Testing<br> - [Introduction to EEG & MEG](ttps://jackedtaylor.github.io/expra-wise23/cbi/meeg)<br> - [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) <br>  | - Data Collection! |
 | 13/12/2023 |  - How to Build an Experiment<br> - Introduction to MRI & fMRI<br> - [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) <br>  | - Data Collection! |
 | 20/12/2023 |  - Data Wrangling Workshop<br> - Implementing your Data Cleaning<br> -  [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) <br>  | - Finalise your data cleaning scripts<br>- Draft your Report |
 

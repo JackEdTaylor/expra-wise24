@@ -201,6 +201,11 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Research Projects</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../projects/preregistration.html">Preregistration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/lifos.html">LIFOS Walkthrough</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Cognitive Brain Imaging</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cbi/meeg.html">Introduction to EEG &amp; MEG</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
 <ul class="nav bd-sidenav">
@@ -494,13 +499,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="gEJuujKrpxTP" data-shufflequestions="False"
+<div class="output text_html"><div id="MNXDvFMJRIqt" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#gEJuujKrpxTP {
+#MNXDvFMJRIqt {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -670,7 +675,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsgEJuujKrpxTP=[
+</style></div><script type="application/javascript">var questionsMNXDvFMJRIqt=[
     {
         "question": "Which type of study generally has the most stringent control of variables?",
         "type": "multiple_choice",
@@ -1515,8 +1520,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("gEJuujKrpxTP")) {
-            show_questions(questionsgEJuujKrpxTP,  gEJuujKrpxTP); 
+          if(document.getElementById("MNXDvFMJRIqt")) {
+            show_questions(questionsMNXDvFMJRIqt,  MNXDvFMJRIqt); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1531,10 +1536,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/empirical_research_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, gEJuujKrpxTP))
+        .then(json => show_questions(json, MNXDvFMJRIqt))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsgEJuujKrpxTP, gEJuujKrpxTP);
+        show_questions(questionsMNXDvFMJRIqt, MNXDvFMJRIqt);
         });
         }
         </script></div>
