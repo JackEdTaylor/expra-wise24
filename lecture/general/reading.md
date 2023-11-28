@@ -41,6 +41,8 @@ Here are some suggested papers, which might be a useful starting place in explor
 
 * Paisios, D., Nathalie, H., & Labeye, E. (2023, June 15). Addressing the elephant in the middle: Implications of the midscale disagreement problem through the lens of Body-Object Interaction ratings. https://doi.org/10.31234/osf.io/aj9hq
 
+* Sung, Y.-T., & Wu, J.-S. (2018). The Visual Analogue Scale for Rating, Ranking and Paired-Comparison (VAS-RRP): A new technique for psychological measurement. *Behavior Research Methods*, *50*, 1694-1715. https://doi.org/10.3758/s13428-018-1041-8
+
 * Taylor, J. E., Rousselet, G. A., Scheepers, C., & Sereno, S. C. (2023). Rating norms should be calculated from Cumulative Link Mixed Effects Models. *Behavior Research Methods*, *55*, 2175-2196, https://doi.org/10.3758/s13428-022-01814-7
 
 ## Suggested Reading Specific to Each Project
@@ -56,6 +58,8 @@ In addition to the suggested reading above, here you can find some example liter
 * Montefinese,  M., Gregori, L., Ravelli, A. A., Varvara, R., & Radicioni, D. P. (2023). CONcreTEXT norms: Concreteness ratings for Italian and English words in context. *PLOS ONE*, *18*(10), e0293031. https://doi.org/10.1371/journal.pone.0293031
 
 ### Group B
+
+* Flynn, D., van Schaik, P., & van Wersch, A. (2004). A comparison of multi-item Likert and visual analogue scales for the assessment of transactionally defined coping function. *European Journal of Psychological Assessment*, *20*, 49–58. https://doi.org/10.3758/s13428-018-1041-8
 
 * Lozano, L. M., García-Cueto, E., & Muñiz, J. (2008). Effect of the number of response categories on the reliability and validity of rating scales. *Methodology*, *4*(2). https://doi.org/10.1027/1614-2241.4.2.73
 
