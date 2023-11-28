@@ -57,7 +57,13 @@ In addition to the suggested reading above, here you can find some example liter
 
 ### Group B
 
+* Lozano, L. M., García-Cueto, E., & Muñiz, J. (2008). Effect of the number of response categories on the reliability and validity of rating scales. *Methodology*, *4*(2). https://doi.org/10.1027/1614-2241.4.2.73
 
+* Masters, J. R. (1974). The relationship between number of response categories and reliability of likert-type questionnaires. *Journal of Educational Measurement*, *11*(1), 49-53. https://doi.org/10.1111/j.1745-3984.1974.tb00970.x
+
+* Simms, L. J., Zelazny, K., Williams, T. F., & Bernstein, L. (2019). Does the number of response options matter? Psychometric perspectives using personality questionnaire data. *Psychological Assessment*, *31*(4), 557–566. https://doi.org/10.1037/pas0000648
+
+* Weng, L. J. (2004). Impact of the number of response categories and anchor labels on coefficient alpha and test-retest reliability. *Educational and Psychological Measurement*, *64*, 956–972. https://doi.org/10.1177/0013164404268674
 
 ### Group C
 
