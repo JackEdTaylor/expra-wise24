@@ -31,6 +31,11 @@ parts:
   - caption: Research Projects
     chapters:
       - file: projects/preregistration
+      - file: projects/lifos
+
+  - caption: Cognitive Brain Imaging
+    chapters:
+      - file: cbi/meeg
 
   - caption: Miscellaneous
     chapters:
