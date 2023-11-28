@@ -6,6 +6,8 @@ You can access LIFOS here: https://lifos.uni-frankfurt.de
 
 ## Slides
 
-<object data="https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/static/ExPra_grading_criteria.pdf" type="application/pdf" width="100%" height="500px">
-    <p>Unable to display PDF file. <a href="https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/static/ExPra_grading_criteria.pdf">Download</a> instead.</p>
-</object>
+<iframe src="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/static/LIFOS_ExPra_English.pdf&embedded=true" frameborder="0" height="500px" width="100%"></iframe>
+
+<h5>
+<a href=https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/static/LIFOS_ExPra_English.pdf><i class="fa-solid fa-file-pdf"></i> Download .pdf</a>
+</h5>
