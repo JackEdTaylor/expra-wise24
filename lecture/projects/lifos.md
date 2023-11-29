@@ -11,3 +11,5 @@ You can access LIFOS here: https://lifos.uni-frankfurt.de
 <h5>
 <a href=https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/static/LIFOS_ExPra_English.pdf><i class="fa-solid fa-file-pdf"></i> Download .pdf</a>
 </h5>
+
+<img src="https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/static/logo_blau_raupenlos_640.png" alt="LIFOS Logo" width="320" height="320"></img>
