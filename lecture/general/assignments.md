@@ -19,7 +19,7 @@ The following course requirements have specific deadlines:
 
 To receive course credits, you will also be expected to:
 
-* Participate in at least 5 experiments of other ExPra groups (these will be marked with "*E*" on [SONA](https://uni-frankfurt.sona-systems.com/))
+* Participate in at least 5 experiments of other ExPra groups (these will be marked with "*E*" on [SONA](https://uni-frankfurt.sona-systems.com/)). For participation recorded, you will need to provide your "E" code.
 
 * Actively participate in sessions and meetings
 
@@ -36,6 +36,8 @@ To receive course credits, you will also be expected to:
 ## The ExPra Report
 
 ### What should the report look like?
+
+<h4> <i class="fa-solid fa-file-pdf"></i> <a href="https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/static/EXPRA_example_report.pdf">Download the Example ExPra Report</a>  </h4>
 
 The ExPra report is the final exam for the research project. The report is graded, and determines your final mark for the course.
 
