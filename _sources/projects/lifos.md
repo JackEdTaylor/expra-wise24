@@ -1,6 +1,6 @@
 # LIFOS Walkthrough
 
-LIFOS, standing for *Local Infrastructure for Open Science*, is our internal platform for implementing open science research practices. This is the platfrom where you will post your preregistrations and upload your data/code for your research projects. In this session, Dr Tatiana Kvetnaya has very kindly offered to introduce us to LIFOS and get us started.
+LIFOS, standing for *Local Infrastructure for Open Science*, is our internal platform for implementing open science research practices. This is the platfrom where you will post your preregistrations and upload your data/code for your research projects. In this session, Tatiana Kvetnaya has very kindly offered to introduce us to LIFOS and get us started.
 
 You can access LIFOS here: https://lifos.uni-frankfurt.de
 
