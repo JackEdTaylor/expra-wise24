@@ -36,6 +36,7 @@ parts:
   - caption: Cognitive Brain Imaging
     chapters:
       - file: cbi/meeg
+      - file: cbi/mri
 
   - caption: Miscellaneous
     chapters:
