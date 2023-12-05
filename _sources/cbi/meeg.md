@@ -1,6 +1,6 @@
 # Introduction to EEG & MEG
 
-EEG and MEG offer excellent temporal and spatial resolution to study the electrical potentials and magnetic fields produced by neural activity in the brain. In this session, we'll explore the features of these related measures, and consider the differences between them. By the end of the sesion, you should have enough background to understand the basics in most EEG and MEG papers.
+EEG and MEG offer excellent temporal resolution, and poor spatial resolution. These techniques allow us to study the electrical potentials and magnetic fields produced by neural activity in the brain. In this session, we'll explore the features of these related measures, and consider the differences between them. By the end of the sesion, you should have enough background to understand the basics in most EEG and MEG papers.
 
 ## Slides
 
