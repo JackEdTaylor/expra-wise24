@@ -504,13 +504,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="OLGCzqAokFdy" data-shufflequestions="False"
+<div class="output text_html"><div id="JaZarRVxJBrn" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#OLGCzqAokFdy {
+#JaZarRVxJBrn {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -680,7 +680,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsOLGCzqAokFdy=[
+</style></div><script type="application/javascript">var questionsJaZarRVxJBrn=[
     {
         "question": "Which type of study generally has the most stringent control of variables?",
         "type": "multiple_choice",
@@ -1525,8 +1525,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("OLGCzqAokFdy")) {
-            show_questions(questionsOLGCzqAokFdy,  OLGCzqAokFdy); 
+          if(document.getElementById("JaZarRVxJBrn")) {
+            show_questions(questionsJaZarRVxJBrn,  JaZarRVxJBrn); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1541,10 +1541,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/empirical_research_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, OLGCzqAokFdy))
+        .then(json => show_questions(json, JaZarRVxJBrn))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsOLGCzqAokFdy, OLGCzqAokFdy);
+        show_questions(questionsJaZarRVxJBrn, JaZarRVxJBrn);
         });
         }
         </script></div>
