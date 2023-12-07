@@ -70,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Stimuli" href="../demo/demo_stimuli.html" />
+    <link rel="next" title="The General Linear Model" href="glm.html" />
     <link rel="prev" title="Scientific Reading" href="reading.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -184,12 +184,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="intro.html">General Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="empirical_research.html">Empirical Research</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glm.html">The General Linear Model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_science.html">Open Science</a></li>
-<li class="toctree-l1"><a class="reference internal" href="model_appropriateness.html">Model Appropriateness</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ratings.html">Rating Norms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reading.html">Scientific Reading</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Scientific Writing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">R &amp; Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="glm.html">The General Linear Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_appropriateness.html">Model Appropriateness</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_wrangling.html">Data Wrangling</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Demo Experiment</span></p>
 <ul class="nav bd-sidenav">
@@ -500,13 +504,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="NLYluxiIqCaZ" data-shufflequestions="False"
+<div class="output text_html"><div id="oPbyuIuSJhDL" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#NLYluxiIqCaZ {
+#oPbyuIuSJhDL {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -676,7 +680,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsNLYluxiIqCaZ=[
+</style></div><script type="application/javascript">var questionsoPbyuIuSJhDL=[
     {
         "question": "Which of the following fonts are recommended according to the APA guidelines?",
         "type": "many_choice",
@@ -1507,8 +1511,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("NLYluxiIqCaZ")) {
-            show_questions(questionsNLYluxiIqCaZ,  NLYluxiIqCaZ); 
+          if(document.getElementById("oPbyuIuSJhDL")) {
+            show_questions(questionsoPbyuIuSJhDL,  oPbyuIuSJhDL); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1523,10 +1527,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/writing_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, NLYluxiIqCaZ))
+        .then(json => show_questions(json, oPbyuIuSJhDL))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsNLYluxiIqCaZ, NLYluxiIqCaZ);
+        show_questions(questionsoPbyuIuSJhDL, oPbyuIuSJhDL);
         });
         }
         </script></div>
@@ -1574,11 +1578,11 @@ if (typeof version == 'undefined') {
       </div>
     </a>
     <a class="right-next"
-       href="../demo/demo_stimuli.html"
+       href="glm.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Stimuli</p>
+        <p class="prev-next-title">The General Linear Model</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
