@@ -19,11 +19,11 @@ parts:
       - file: introduction/reading
       - file: introduction/writing
 
-    - caption: R & Stats
-      chapters:
-        - file: introduction/glm
-        - file: introduction/model_appropriateness
-        - file: introduction/data_wrangling
+  - caption: R & Statistics
+    chapters:
+      - file: introduction/glm
+      - file: introduction/model_appropriateness
+      - file: introduction/data_wrangling
 
   - caption: Demo Experiment
     chapters:
