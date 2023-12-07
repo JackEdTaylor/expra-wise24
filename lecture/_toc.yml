@@ -14,12 +14,16 @@ parts:
       - file: introduction/intro
       - file: introduction/setup
       - file: introduction/empirical_research
-      - file: introduction/glm
       - file: introduction/open_science
-      - file: introduction/model_appropriateness
       - file: introduction/ratings
       - file: introduction/reading
       - file: introduction/writing
+
+    - caption: R & Stats
+      chapters:
+        - file: introduction/glm
+        - file: introduction/model_appropriateness
+        - file: introduction/data_wrangling
 
   - caption: Demo Experiment
     chapters:
