@@ -66,6 +66,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/data_wrangling_1';</script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -496,6 +498,18 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Combining Statements</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#select"><code class="docutils literal notranslate"><span class="pre">select()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-specific-columns">Selecting Specific Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reordering-columns">Reordering Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-a-range-of-columns">Selecting a Range of Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selection-helpers">Selection Helpers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pull"><code class="docutils literal notranslate"><span class="pre">pull()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mutate"><code class="docutils literal notranslate"><span class="pre">mutate()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-existing-columns">Editing Existing Columns</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -922,6 +936,295 @@ As with <code class="docutils literal notranslate"><span class="pre">==</span></
 </div>
 </section>
 </section>
+<section id="select">
+<h2><code class="docutils literal notranslate"><span class="pre">select()</span></code><a class="headerlink" href="#select" title="Permalink to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">select()</span></code> function is useful for subsetting <em>columns</em>.</p>
+<section id="selecting-specific-columns">
+<h3>Selecting Specific Columns<a class="headerlink" href="#selecting-specific-columns" title="Permalink to this heading">#</a></h3>
+<p>For instance, if we only want to select the <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code> columns, we can do this like so:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">select</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 87 × 2
+   name               height
+   &lt;chr&gt;               &lt;int&gt;
+ 1 Luke Skywalker        172
+ 2 C-3PO                 167
+ 3 R2-D2                  96
+ 4 Darth Vader           202
+ 5 Leia Organa           150
+ 6 Owen Lars             178
+ 7 Beru Whitesun Lars    165
+ 8 R5-D4                  97
+ 9 Biggs Darklighter     183
+10 Obi-Wan Kenobi        182
+# ℹ 77 more rows
+</pre></div>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<p>To include all columns <em>except</em> a given column, we can use the exclamation mark (<code class="docutils literal notranslate"><span class="pre">!</span></code>) or a minus (<code class="docutils literal notranslate"><span class="pre">-</span></code>).</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">select</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="o">!</span><span class="n">height</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 87 × 13
+   name   mass hair_color skin_color eye_color birth_year sex   gender homeworld
+   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;    
+ 1 Luke…    77 blond      fair       blue            19   male  mascu… Tatooine 
+ 2 C-3PO    75 <span class=" -Color -Color-Red">NA</span>         gold       yellow         112   none  mascu… Tatooine 
+ 3 R2-D2    32 <span class=" -Color -Color-Red">NA</span>         white, bl… red             33   none  mascu… Naboo    
+ 4 Dart…   136 none       white      yellow          41.9 male  mascu… Tatooine 
+ 5 Leia…    49 brown      light      brown           19   fema… femin… Alderaan 
+ 6 Owen…   120 brown, gr… light      blue            52   male  mascu… Tatooine 
+ 7 Beru…    75 brown      light      blue            47   fema… femin… Tatooine 
+ 8 R5-D4    32 <span class=" -Color -Color-Red">NA</span>         white, red red             <span class=" -Color -Color-Red">NA</span>   none  mascu… Tatooine 
+ 9 Bigg…    84 black      light      brown           24   male  mascu… Tatooine 
+10 Obi-…    77 auburn, w… fair       blue-gray       57   male  mascu… Stewjon  
+# ℹ 77 more rows
+# ℹ 4 more variables: species &lt;chr&gt;, films &lt;list&gt;, vehicles &lt;list&gt;,
+#   starships &lt;list&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+</section>
+<section id="reordering-columns">
+<h3>Reordering Columns<a class="headerlink" href="#reordering-columns" title="Permalink to this heading">#</a></h3>
+<p>When we use <code class="docutils literal notranslate"><span class="pre">select()</span></code>, we can also specify the order of columns. For instance, we can select the columns <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">gender</span></code>, and <code class="docutils literal notranslate"><span class="pre">homeworld</span></code> in a new order.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">select</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">homeworld</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">gender</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 87 × 3
+   homeworld name               gender   
+   &lt;chr&gt;     &lt;chr&gt;              &lt;chr&gt;    
+ 1 Tatooine  Luke Skywalker     masculine
+ 2 Tatooine  C-3PO              masculine
+ 3 Naboo     R2-D2              masculine
+ 4 Tatooine  Darth Vader        masculine
+ 5 Alderaan  Leia Organa        feminine 
+ 6 Tatooine  Owen Lars          masculine
+ 7 Tatooine  Beru Whitesun Lars feminine 
+ 8 Tatooine  R5-D4              masculine
+ 9 Tatooine  Biggs Darklighter  masculine
+10 Stewjon   Obi-Wan Kenobi     masculine
+# ℹ 77 more rows
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+</section>
+<section id="selecting-a-range-of-columns">
+<h3>Selecting a Range of Columns<a class="headerlink" href="#selecting-a-range-of-columns" title="Permalink to this heading">#</a></h3>
+<p>We can say that we want to select variables in a range (e.g., from <code class="docutils literal notranslate"><span class="pre">name</span></code> until <code class="docutils literal notranslate"><span class="pre">hair_color</span></code>) with a colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>).</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">select</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">:</span><span class="n">hair_color</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 87 × 4
+   name               height  mass hair_color   
+   &lt;chr&gt;               &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;        
+ 1 Luke Skywalker        172    77 blond        
+ 2 C-3PO                 167    75 <span class=" -Color -Color-Red">NA</span>           
+ 3 R2-D2                  96    32 <span class=" -Color -Color-Red">NA</span>           
+ 4 Darth Vader           202   136 none         
+ 5 Leia Organa           150    49 brown        
+ 6 Owen Lars             178   120 brown, grey  
+ 7 Beru Whitesun Lars    165    75 brown        
+ 8 R5-D4                  97    32 <span class=" -Color -Color-Red">NA</span>           
+ 9 Biggs Darklighter     183    84 black        
+10 Obi-Wan Kenobi        182    77 auburn, white
+# ℹ 77 more rows
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+</section>
+<section id="selection-helpers">
+<h3>Selection Helpers<a class="headerlink" href="#selection-helpers" title="Permalink to this heading">#</a></h3>
+<p>The tidyverse also supports a range of <a class="reference external" href="https://dplyr.tidyverse.org/reference/dplyr_tidy_select.html">selection helpers</a>. For example, we can use <code class="docutils literal notranslate"><span class="pre">everything()</span></code> to select everything not already selected. This can be useful if we want to set a new first column (e.g., <code class="docutils literal notranslate"><span class="pre">homeworld</span></code>), but keep the other columns in their existing order:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">select</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">homeworld</span><span class="p">,</span><span class="w"> </span><span class="nf">everything</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 87 × 14
+   homeworld name  height  mass hair_color skin_color eye_color birth_year sex  
+   &lt;chr&gt;     &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;
+ 1 Tatooine  Luke…    172    77 blond      fair       blue            19   male 
+ 2 Tatooine  C-3PO    167    75 <span class=" -Color -Color-Red">NA</span>         gold       yellow         112   none 
+ 3 Naboo     R2-D2     96    32 <span class=" -Color -Color-Red">NA</span>         white, bl… red             33   none 
+ 4 Tatooine  Dart…    202   136 none       white      yellow          41.9 male 
+ 5 Alderaan  Leia…    150    49 brown      light      brown           19   fema…
+ 6 Tatooine  Owen…    178   120 brown, gr… light      blue            52   male 
+ 7 Tatooine  Beru…    165    75 brown      light      blue            47   fema…
+ 8 Tatooine  R5-D4     97    32 <span class=" -Color -Color-Red">NA</span>         white, red red             <span class=" -Color -Color-Red">NA</span>   none 
+ 9 Tatooine  Bigg…    183    84 black      light      brown           24   male 
+10 Stewjon   Obi-…    182    77 auburn, w… fair       blue-gray       57   male 
+# ℹ 77 more rows
+# ℹ 5 more variables: gender &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p><br><br>
+We can also use selection helpers to select variables that <em>start</em> (<code class="docutils literal notranslate"><span class="pre">starts_with()</span></code>), <em>end</em> (<code class="docutils literal notranslate"><span class="pre">ends_with()</span></code>), or <em>contain</em> (<code class="docutils literal notranslate"><span class="pre">contains()</span></code>) a given string.</p>
+<p>Here we select variables that:</p>
+<ul class="simple">
+<li><p>Contain “color”</p></li>
+<li><p>End with the character “s”</p></li>
+</ul>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">select</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="nf">contains</span><span class="p">(</span><span class="s">&quot;color&quot;</span><span class="p">),</span><span class="w"> </span><span class="nf">ends_with</span><span class="p">(</span><span class="s">&quot;s&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 87 × 8
+   hair_color    skin_color  eye_color  mass species films  vehicles  starships
+   &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;list&gt; &lt;list&gt;    &lt;list&gt;   
+ 1 blond         fair        blue         77 Human   &lt;chr&gt;  &lt;chr [2]&gt; &lt;chr [2]&gt;
+ 2 <span class=" -Color -Color-Red">NA</span>            gold        yellow       75 Droid   &lt;chr&gt;  &lt;chr [0]&gt; &lt;chr [0]&gt;
+ 3 <span class=" -Color -Color-Red">NA</span>            white, blue red          32 Droid   &lt;chr&gt;  &lt;chr [0]&gt; &lt;chr [0]&gt;
+ 4 none          white       yellow      136 Human   &lt;chr&gt;  &lt;chr [0]&gt; &lt;chr [1]&gt;
+ 5 brown         light       brown        49 Human   &lt;chr&gt;  &lt;chr [1]&gt; &lt;chr [0]&gt;
+ 6 brown, grey   light       blue        120 Human   &lt;chr&gt;  &lt;chr [0]&gt; &lt;chr [0]&gt;
+ 7 brown         light       blue         75 Human   &lt;chr&gt;  &lt;chr [0]&gt; &lt;chr [0]&gt;
+ 8 <span class=" -Color -Color-Red">NA</span>            white, red  red          32 Droid   &lt;chr&gt;  &lt;chr [0]&gt; &lt;chr [0]&gt;
+ 9 black         light       brown        84 Human   &lt;chr&gt;  &lt;chr [0]&gt; &lt;chr [1]&gt;
+10 auburn, white fair        blue-gray    77 Human   &lt;chr&gt;  &lt;chr [1]&gt; &lt;chr [5]&gt;
+# ℹ 77 more rows
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="pull">
+<h2><code class="docutils literal notranslate"><span class="pre">pull()</span></code><a class="headerlink" href="#pull" title="Permalink to this heading">#</a></h2>
+<p>While <code class="docutils literal notranslate"><span class="pre">select()</span></code> subsets columns in our dataframe, the output is still stored as a column in a dataframe. Instead, we may want to store the results in a more standard data format. The <code class="docutils literal notranslate"><span class="pre">pull()</span></code> function makes this easy.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">pull</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'Luke Skywalker'</li><li>'C-3PO'</li><li>'R2-D2'</li><li>'Darth Vader'</li><li>'Leia Organa'</li><li>'Owen Lars'</li><li>'Beru Whitesun Lars'</li><li>'R5-D4'</li><li>'Biggs Darklighter'</li><li>'Obi-Wan Kenobi'</li><li>'Anakin Skywalker'</li><li>'Wilhuff Tarkin'</li><li>'Chewbacca'</li><li>'Han Solo'</li><li>'Greedo'</li><li>'Jabba Desilijic Tiure'</li><li>'Wedge Antilles'</li><li>'Jek Tono Porkins'</li><li>'Yoda'</li><li>'Palpatine'</li><li>'Boba Fett'</li><li>'IG-88'</li><li>'Bossk'</li><li>'Lando Calrissian'</li><li>'Lobot'</li><li>'Ackbar'</li><li>'Mon Mothma'</li><li>'Arvel Crynyd'</li><li>'Wicket Systri Warrick'</li><li>'Nien Nunb'</li><li>'Qui-Gon Jinn'</li><li>'Nute Gunray'</li><li>'Finis Valorum'</li><li>'Padmé Amidala'</li><li>'Jar Jar Binks'</li><li>'Roos Tarpals'</li><li>'Rugor Nass'</li><li>'Ric Olié'</li><li>'Watto'</li><li>'Sebulba'</li><li>'Quarsh Panaka'</li><li>'Shmi Skywalker'</li><li>'Darth Maul'</li><li>'Bib Fortuna'</li><li>'Ayla Secura'</li><li>'Ratts Tyerel'</li><li>'Dud Bolt'</li><li>'Gasgano'</li><li>'Ben Quadinaros'</li><li>'Mace Windu'</li><li>'Ki-Adi-Mundi'</li><li>'Kit Fisto'</li><li>'Eeth Koth'</li><li>'Adi Gallia'</li><li>'Saesee Tiin'</li><li>'Yarael Poof'</li><li>'Plo Koon'</li><li>'Mas Amedda'</li><li>'Gregar Typho'</li><li>'Cordé'</li><li>'Cliegg Lars'</li><li>'Poggle the Lesser'</li><li>'Luminara Unduli'</li><li>'Barriss Offee'</li><li>'Dormé'</li><li>'Dooku'</li><li>'Bail Prestor Organa'</li><li>'Jango Fett'</li><li>'Zam Wesell'</li><li>'Dexter Jettster'</li><li>'Lama Su'</li><li>'Taun We'</li><li>'Jocasta Nu'</li><li>'R4-P17'</li><li>'Wat Tambor'</li><li>'San Hill'</li><li>'Shaak Ti'</li><li>'Grievous'</li><li>'Tarfful'</li><li>'Raymus Antilles'</li><li>'Sly Moore'</li><li>'Tion Medon'</li><li>'Finn'</li><li>'Rey'</li><li>'Poe Dameron'</li><li>'BB8'</li><li>'Captain Phasma'</li></ol>
+</div></div>
+</div>
+<br>
+<p>This is a tidyverse equivalent to the <code class="docutils literal notranslate"><span class="pre">$</span></code> operator. For instance, another way of writing this would be:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">starwars</span><span class="o">$</span><span class="n">name</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'Luke Skywalker'</li><li>'C-3PO'</li><li>'R2-D2'</li><li>'Darth Vader'</li><li>'Leia Organa'</li><li>'Owen Lars'</li><li>'Beru Whitesun Lars'</li><li>'R5-D4'</li><li>'Biggs Darklighter'</li><li>'Obi-Wan Kenobi'</li><li>'Anakin Skywalker'</li><li>'Wilhuff Tarkin'</li><li>'Chewbacca'</li><li>'Han Solo'</li><li>'Greedo'</li><li>'Jabba Desilijic Tiure'</li><li>'Wedge Antilles'</li><li>'Jek Tono Porkins'</li><li>'Yoda'</li><li>'Palpatine'</li><li>'Boba Fett'</li><li>'IG-88'</li><li>'Bossk'</li><li>'Lando Calrissian'</li><li>'Lobot'</li><li>'Ackbar'</li><li>'Mon Mothma'</li><li>'Arvel Crynyd'</li><li>'Wicket Systri Warrick'</li><li>'Nien Nunb'</li><li>'Qui-Gon Jinn'</li><li>'Nute Gunray'</li><li>'Finis Valorum'</li><li>'Padmé Amidala'</li><li>'Jar Jar Binks'</li><li>'Roos Tarpals'</li><li>'Rugor Nass'</li><li>'Ric Olié'</li><li>'Watto'</li><li>'Sebulba'</li><li>'Quarsh Panaka'</li><li>'Shmi Skywalker'</li><li>'Darth Maul'</li><li>'Bib Fortuna'</li><li>'Ayla Secura'</li><li>'Ratts Tyerel'</li><li>'Dud Bolt'</li><li>'Gasgano'</li><li>'Ben Quadinaros'</li><li>'Mace Windu'</li><li>'Ki-Adi-Mundi'</li><li>'Kit Fisto'</li><li>'Eeth Koth'</li><li>'Adi Gallia'</li><li>'Saesee Tiin'</li><li>'Yarael Poof'</li><li>'Plo Koon'</li><li>'Mas Amedda'</li><li>'Gregar Typho'</li><li>'Cordé'</li><li>'Cliegg Lars'</li><li>'Poggle the Lesser'</li><li>'Luminara Unduli'</li><li>'Barriss Offee'</li><li>'Dormé'</li><li>'Dooku'</li><li>'Bail Prestor Organa'</li><li>'Jango Fett'</li><li>'Zam Wesell'</li><li>'Dexter Jettster'</li><li>'Lama Su'</li><li>'Taun We'</li><li>'Jocasta Nu'</li><li>'R4-P17'</li><li>'Wat Tambor'</li><li>'San Hill'</li><li>'Shaak Ti'</li><li>'Grievous'</li><li>'Tarfful'</li><li>'Raymus Antilles'</li><li>'Sly Moore'</li><li>'Tion Medon'</li><li>'Finn'</li><li>'Rey'</li><li>'Poe Dameron'</li><li>'BB8'</li><li>'Captain Phasma'</li></ol>
+</div></div>
+</div>
+<br>
+<p>Extracting variables in this way can be useful for passing the output to more standard R functions. In this example, we use the <code class="docutils literal notranslate"><span class="pre">unique()</span></code> function to find all unique values for the <code class="docutils literal notranslate"><span class="pre">homeworld</span></code> variable, sorted in alphabetic order.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">hws</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">pull</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">homeworld</span><span class="p">)</span>
+<span class="nf">sort</span><span class="p">(</span><span class="nf">unique</span><span class="p">(</span><span class="n">hws</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'Alderaan'</li><li>'Aleen Minor'</li><li>'Bespin'</li><li>'Bestine IV'</li><li>'Cato Neimoidia'</li><li>'Cerea'</li><li>'Champala'</li><li>'Chandrila'</li><li>'Concord Dawn'</li><li>'Corellia'</li><li>'Coruscant'</li><li>'Dathomir'</li><li>'Dorin'</li><li>'Endor'</li><li>'Eriadu'</li><li>'Geonosis'</li><li>'Glee Anselm'</li><li>'Haruun Kal'</li><li>'Iktotch'</li><li>'Iridonia'</li><li>'Kalee'</li><li>'Kamino'</li><li>'Kashyyyk'</li><li>'Malastare'</li><li>'Mirial'</li><li>'Mon Cala'</li><li>'Muunilinst'</li><li>'Naboo'</li><li>'Nal Hutta'</li><li>'Ojom'</li><li>'Quermia'</li><li>'Rodia'</li><li>'Ryloth'</li><li>'Serenno'</li><li>'Shili'</li><li>'Skako'</li><li>'Socorro'</li><li>'Stewjon'</li><li>'Sullust'</li><li>'Tatooine'</li><li>'Toydaria'</li><li>'Trandosha'</li><li>'Troiken'</li><li>'Tund'</li><li>'Umbara'</li><li>'Utapau'</li><li>'Vulpter'</li><li>'Zolan'</li></ol>
+</div></div>
+</div>
+</section>
+<section id="mutate">
+<h2><code class="docutils literal notranslate"><span class="pre">mutate()</span></code><a class="headerlink" href="#mutate" title="Permalink to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">mutate()</span></code> function allows us to edit columns and add new columns in dataframes.</p>
+<section id="editing-existing-columns">
+<h3>Editing Existing Columns<a class="headerlink" href="#editing-existing-columns" title="Permalink to this heading">#</a></h3>
+<p>Suppose we want to convert all values in the <code class="docutils literal notranslate"><span class="pre">species</span></code> column to be lowercase. We can do this like so, with the <code class="docutils literal notranslate"><span class="pre">tolower()</span></code> function:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">mutate</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">species</span><span class="o">=</span><span class="nf">tolower</span><span class="p">(</span><span class="n">species</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 87 × 14
+   name     height  mass hair_color skin_color eye_color birth_year sex   gender
+   &lt;chr&gt;     &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+ 1 Luke Sk…    172    77 blond      fair       blue            19   male  mascu…
+ 2 C-3PO       167    75 <span class=" -Color -Color-Red">NA</span>         gold       yellow         112   none  mascu…
+ 3 R2-D2        96    32 <span class=" -Color -Color-Red">NA</span>         white, bl… red             33   none  mascu…
+ 4 Darth V…    202   136 none       white      yellow          41.9 male  mascu…
+ 5 Leia Or…    150    49 brown      light      brown           19   fema… femin…
+ 6 Owen La…    178   120 brown, gr… light      blue            52   male  mascu…
+ 7 Beru Wh…    165    75 brown      light      blue            47   fema… femin…
+ 8 R5-D4        97    32 <span class=" -Color -Color-Red">NA</span>         white, red red             <span class=" -Color -Color-Red">NA</span>   none  mascu…
+ 9 Biggs D…    183    84 black      light      brown           24   male  mascu…
+10 Obi-Wan…    182    77 auburn, w… fair       blue-gray       57   male  mascu…
+# ℹ 77 more rows
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1004,6 +1307,18 @@ As with <code class="docutils literal notranslate"><span class="pre">==</span></
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Character Variables</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Numeric Variables</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Combining Statements</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#select"><code class="docutils literal notranslate"><span class="pre">select()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-specific-columns">Selecting Specific Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reordering-columns">Reordering Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-a-range-of-columns">Selecting a Range of Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selection-helpers">Selection Helpers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pull"><code class="docutils literal notranslate"><span class="pre">pull()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mutate"><code class="docutils literal notranslate"><span class="pre">mutate()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-existing-columns">Editing Existing Columns</a></li>
 </ul>
 </li>
 </ul>
