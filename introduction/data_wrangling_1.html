@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Data Wrangling &#8212; ExPra Winter 2023</title>
+    <title>Data Wrangling 1 &#8212; ExPra Winter 2023</title>
   
   
   
@@ -66,7 +66,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/data_wrangling';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/data_wrangling_1';</script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -193,7 +193,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="glm.html">The General Linear Model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="model_appropriateness.html">Model Appropriateness</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Data Wrangling</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Data Wrangling 1</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Demo Experiment</span></p>
 <ul class="nav bd-sidenav">
@@ -270,7 +270,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/JackEdTaylor/expra-wise23/master?urlpath=tree/lecture/introduction/data_wrangling.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/JackEdTaylor/expra-wise23/master?urlpath=tree/lecture/introduction/data_wrangling_1.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -336,7 +336,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/JackEdTaylor/expra-wise23/edit/master/lecture/introduction/data_wrangling.ipynb" target="_blank"
+      <li><a href="https://github.com/JackEdTaylor/expra-wise23/edit/master/lecture/introduction/data_wrangling_1.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -353,7 +353,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/JackEdTaylor/expra-wise23/issues/new?title=Issue%20on%20page%20%2Fintroduction/data_wrangling.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/JackEdTaylor/expra-wise23/issues/new?title=Issue%20on%20page%20%2Fintroduction/data_wrangling_1.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -383,7 +383,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/introduction/data_wrangling.ipynb" target="_blank"
+      <li><a href="../_sources/introduction/data_wrangling_1.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -467,7 +467,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Data Wrangling</h1>
+    <h1>Data Wrangling 1</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -479,15 +479,23 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-part-1-install-packages">Setup Part 1: Install Packages</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-part-2-check-the-packages-load">Setup Part 2: Check the Packages Load</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-part-2-check-dplyr-loads">Setup Part 2: Check <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> Loads</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-part-3-check-the-data-loads">Setup Part 3: Check the Data Loads</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrange"><code class="docutils literal notranslate"><span class="pre">arrange()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numeric-variables">Numeric Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#character-variables">Character Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-statements">Combining Statements</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-your-knowledge">Check your Knowledge!</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter"><code class="docutils literal notranslate"><span class="pre">filter()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter"><code class="docutils literal notranslate"><span class="pre">filter()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Character Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Numeric Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Combining Statements</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -499,8 +507,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="data-wrangling">
-<h1>Data Wrangling<a class="headerlink" href="#data-wrangling" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="data-wrangling-1">
+<h1>Data Wrangling 1<a class="headerlink" href="#data-wrangling-1" title="Permalink to this heading">#</a></h1>
 <h5>
 <p><strong>Wrangling</strong> /ˈræŋ.ɡəl.ɪŋ/</p>
 <p>the activity of taking care of, controlling, or moving animals, especially large animals such as cows or horses</p>
@@ -508,15 +516,28 @@ document.write(`
 <p>(<a class="reference external" href="https://dictionary.cambridge.org/dictionary/english/wrangling">Cambridge Dictionary</a>)</p>
 <p><img alt="Cattle Wrangler - image from https://commons.wikimedia.org/wiki/File:Pioneer_Day_Wrangler.jpg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Pioneer_Day_Wrangler.jpg/320px-Pioneer_Day_Wrangler.jpg" /></p>
 <p><strong><a class="reference external" href="https://en.wikipedia.org/wiki/Data_wrangling">Data wrangling</a></strong> commonly refers to the transformation of data from one “input” format (e.g., <code class="docutils literal notranslate"><span class="pre">.csv</span></code> files from an experiment), to a different format (e.g., a tidy dataframe) that is more appropriate to the needs of an analysis. In the context of the ExPra experiments, you will use data wrangling techniques to implement the transformations and data cleaning steps specified in your preregistrations.</p>
+<p>We will use <a class="reference external" href="https://www.tidyverse.org/"><code class="docutils literal notranslate"><span class="pre">tidyverse</span></code></a> packages to implement our data wrangling. The “tidyverse” is a series of packages which share a philosphy based around code and data structures (e.g., “<a class="reference external" href="https://tibble.tidyverse.org/">tibbles</a>”) that are (a) tidy, and (b) readable.</p>
+<p>The most useful tidyverse packages for wrangling data are <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> and <code class="docutils literal notranslate"><span class="pre">tidyr</span></code>. The <a class="reference external" href="https://dplyr.tidyverse.org/"><code class="docutils literal notranslate"><span class="pre">dplyr</span></code></a> package has useful functions for manipulating tibbles (dataframes), such as sorting, filtering, and editing columns. The <a class="reference external" href="https://tidyr.tidyverse.org/"><code class="docutils literal notranslate"><span class="pre">tidyr</span></code></a> package has functions that help us tidy or reformat dataframes.</p>
+<img src="https://www.tidyverse.org/css/images/hex/dplyr.png" width=138>
+<img src="https://www.tidyverse.org/css/images/hex/tidyr.png" width=138>
+<p>In this session, we will cover how to use 6 very handy functions from <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> package:</p>
+<ul class="simple">
+<li><p><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">arrange()</span></code></span></p></li>
+<li><p><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">filter()</span></code></span></p></li>
+<li><p><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">select()</span></code></span></p></li>
+<li><p><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">pull()</span></code></span></p></li>
+<li><p><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">mutate()</span></code></span></p></li>
+<li><p><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">summarise()</span></code></span></p></li>
+</ul>
 <section id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">#</a></h2>
 <section id="setup-part-1-install-packages">
 <h3>Setup Part 1: Install Packages<a class="headerlink" href="#setup-part-1-install-packages" title="Permalink to this heading">#</a></h3>
-<p>We will use <a class="reference external" href="https://www.tidyverse.org/"><code class="docutils literal notranslate"><span class="pre">tidyverse</span></code></a> packages to implement our data wrangling. The “tidyverse” is a series of packages which share a philosphy based around code and data structures that are (a) tidy, and (b) readable. These packages are frequently based around tidy dataframes, known as “<a class="reference external" href="https://tibble.tidyverse.org/">tibbles</a>”. You can install the tidyverse packages like so:</p>
+<p>You can install the tidyverse packages like so:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&quot;tidyverse&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>This includes many packages that we won’t be using today, but which will be useful in other parts of the course (e.g., on Data Visualisation).</p>
+<p>This includes many packages that we won’t be using today, but which will be useful in other parts of the course (e.g., we will use <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> for Data Visualisation).</p>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition warning">
@@ -525,25 +546,22 @@ document.write(`
 </div>
 </aside>
 </section>
-<section id="setup-part-2-check-the-packages-load">
-<h3>Setup Part 2: Check the Packages Load<a class="headerlink" href="#setup-part-2-check-the-packages-load" title="Permalink to this heading">#</a></h3>
-<p>Now, we can test that the packages we will be using today actually load. You should be able to run this code without any errors:</p>
+<section id="setup-part-2-check-dplyr-loads">
+<h3>Setup Part 2: Check <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> Loads<a class="headerlink" href="#setup-part-2-check-dplyr-loads" title="Permalink to this heading">#</a></h3>
+<p>Now, we can test that the package we will be using today actually load. You should be able to run this code without any errors:</p>
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>The <a class="reference external" href="https://dplyr.tidyverse.org/"><code class="docutils literal notranslate"><span class="pre">dplyr</span></code></a> package has useful functions for manipulating tibbles (dataframes), such as sorting, filtering, and editing columns. The <a class="reference external" href="https://tidyr.tidyverse.org/"><code class="docutils literal notranslate"><span class="pre">tidyr</span></code></a> package has functions that help us tidy or reformat dataframes.</p>
-<img src="https://www.tidyverse.org/css/images/hex/dplyr.png" width=138>
-<img src="https://www.tidyverse.org/css/images/hex/tidyr.png" width=138></section>
+</section>
 <section id="setup-part-3-check-the-data-loads">
 <h3>Setup Part 3: Check the Data Loads<a class="headerlink" href="#setup-part-3-check-the-data-loads" title="Permalink to this heading">#</a></h3>
-<p>Finally, check that you can access the dataset we’ll be using in this session. The <code class="docutils literal notranslate"><span class="pre">starwars</span></code> dataset is a dataset built into R that contains details of characters from the Star Wars films:</p>
+<p>Finally, check that you can access the dataset we’ll be using in this session. The <code class="docutils literal notranslate"><span class="pre">starwars</span></code> dataset is a dataset built into <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> that contains details of characters from the Star Wars films:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="n">starwars</span><span class="p">)</span>
@@ -577,7 +595,10 @@ document.write(`
 </section>
 <section id="arrange">
 <h2><code class="docutils literal notranslate"><span class="pre">arrange()</span></code><a class="headerlink" href="#arrange" title="Permalink to this heading">#</a></h2>
-<p>We can use the <code class="docutils literal notranslate"><span class="pre">arrange()</span></code> function to sort by variables in the dataframe. For example, we can arrange all characters in order of height (shortest to tallest) like so:</p>
+<p>We can use the <code class="docutils literal notranslate"><span class="pre">arrange()</span></code> function to sort by variables in the dataframe.</p>
+<section id="numeric-variables">
+<h3>Numeric Variables<a class="headerlink" href="#numeric-variables" title="Permalink to this heading">#</a></h3>
+<p>For example, we can arrange all characters in order of height (shortest to tallest) like so:</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">arrange</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">)</span>
@@ -609,7 +630,8 @@ document.write(`
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">arrange()</span></code> function, like most <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> verb functions, takes the dataframe (<code class="docutils literal notranslate"><span class="pre">starwars</span></code>) as its first argument, and the variable names (e.g., <code class="docutils literal notranslate"><span class="pre">height</span></code>) as subsequent arguments.</p>
 <p>In height order, we can see that Yoda is the shortest character, at 66 cm, with podracer <a class="reference external" href="https://starwars.fandom.com/wiki/Ratts_Tyerell">Ratts Tyerell</a> next shortest, at 79 cm.</p>
-<p>We can also arrange the dataframe in <em>descending</em> order, with the <em><code class="docutils literal notranslate"><span class="pre">desc()</span></code></em> function.</p>
+<p><br><br>
+We can also arrange the dataframe in <em>descending</em> order, with the <em><code class="docutils literal notranslate"><span class="pre">desc()</span></code></em> function.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">arrange</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="nf">desc</span><span class="p">(</span><span class="n">height</span><span class="p">))</span>
@@ -640,6 +662,10 @@ document.write(`
 </div>
 </div>
 <p>This shows us that long-necked Jedi, <a class="reference external" href="https://starwars.fandom.com/wiki/Yarael_Poof">Yarael Poof</a>, is the tallest character, at 264 cm.</p>
+<br>
+</section>
+<section id="character-variables">
+<h3>Character Variables<a class="headerlink" href="#character-variables" title="Permalink to this heading">#</a></h3>
 <p>As well as sorting by numeric variables, we can also sort by character variables. For instance, we can sort by hair colour. If we do this we will sort hair alphabetically, from “auburn” to “white”.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -670,6 +696,10 @@ document.write(`
 </div>
 </div>
 </div>
+<br>
+</section>
+<section id="combining-statements">
+<h3>Combining Statements<a class="headerlink" href="#combining-statements" title="Permalink to this heading">#</a></h3>
 <p>Finally, we can sort by multiple variables at once with comma-separated statements. For instance, we may want to sort by hair colour alphabetically, and then by height descendingly:</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -700,6 +730,8 @@ document.write(`
 </div>
 </div>
 </div>
+<br>
+</section>
 <section id="check-your-knowledge">
 <h3>Check your Knowledge!<a class="headerlink" href="#check-your-knowledge" title="Permalink to this heading">#</a></h3>
 <p>Try coming up with code to solve the following:</p>
@@ -711,7 +743,11 @@ document.write(`
 </section>
 <section id="filter">
 <h2><code class="docutils literal notranslate"><span class="pre">filter()</span></code><a class="headerlink" href="#filter" title="Permalink to this heading">#</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">filter()</span></code> function is useful for subsetting data. For example, we can easily filter our dataset to find all our data on Darth Vader. The following code says that we should <em>filter</em> the dataframe called <em>starwars</em> to only include rows where the variable called <code class="docutils literal notranslate"><span class="pre">name</span></code> has the value <code class="docutils literal notranslate"><span class="pre">&quot;Darth</span> <span class="pre">Vader&quot;</span></code>:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">filter()</span></code> function is useful for subsetting rows of data.</p>
+<br>
+<section id="id1">
+<h3>Character Variables<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>For example, we can easily filter our dataset to find all our data on Darth Vader. The following code says that we should <em>filter</em> the dataframe called <em>starwars</em> to only include rows where the variable called <code class="docutils literal notranslate"><span class="pre">name</span></code> has the value <code class="docutils literal notranslate"><span class="pre">&quot;Darth</span> <span class="pre">Vader&quot;</span></code>:</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">filter</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">==</span><span class="s">&quot;Darth Vader&quot;</span><span class="p">)</span>
@@ -733,7 +769,8 @@ document.write(`
 </div>
 <img src="https://media1.giphy.com/media/Uu4WP50jNo1uZeor4t/giphy.gif" width=250>
 <p><sub><sup><a class="reference external" href="https://media.giphy.com/media/Uu4WP50jNo1uZeor4t/giphy.gif">via giphy</a></sup></sub></p>
-<p>To find all characters that are <em>not</em> Darth Vader, we can use <code class="docutils literal notranslate"><span class="pre">!=</span></code>, which stands for “does not equal.” This returns all rows in the dataframe where the <code class="docutils literal notranslate"><span class="pre">name</span></code> column does not have the value <code class="docutils literal notranslate"><span class="pre">&quot;Darth</span> <span class="pre">Vader&quot;</span></code>.</p>
+<p><br><br>
+To find all characters that are <em>not</em> Darth Vader, we can use <code class="docutils literal notranslate"><span class="pre">!=</span></code>, which stands for “does not equal.” This returns all rows in the dataframe where the <code class="docutils literal notranslate"><span class="pre">name</span></code> column does not have the value <code class="docutils literal notranslate"><span class="pre">&quot;Darth</span> <span class="pre">Vader&quot;</span></code>.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">filter</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">!=</span><span class="s">&quot;Darth Vader&quot;</span><span class="p">)</span>
@@ -763,7 +800,8 @@ document.write(`
 </div>
 </div>
 </div>
-<p>We can also filter to include a list of characters. To do this, we first define a character vector of characters we wish to keep. We can then filter to only include characters whose <code class="docutils literal notranslate"><span class="pre">name</span></code> is in (<code class="docutils literal notranslate"><span class="pre">%in%</span></code>) that vector:</p>
+<p><br><br>
+We can also filter to include a list of characters. To do this, we first define a character vector of characters we wish to keep. We can then filter to only include characters whose <code class="docutils literal notranslate"><span class="pre">name</span></code> is in (<code class="docutils literal notranslate"><span class="pre">%in%</span></code>) that vector:</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cool_droids</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;C-3PO&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;R2-D2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;IG-88&quot;</span><span class="p">)</span>
@@ -786,7 +824,8 @@ document.write(`
 </div>
 </div>
 </div>
-<p>As with <code class="docutils literal notranslate"><span class="pre">==</span></code> and <code class="docutils literal notranslate"><span class="pre">!=</span></code>, we can invert <code class="docutils literal notranslate"><span class="pre">%in%</span></code> to only include characters who are <em>not</em> in the list. To do this, we put an exclamation mark (<code class="docutils literal notranslate"><span class="pre">!</span></code>) at the <em>start</em> of the statement:</p>
+<p><br><br>
+As with <code class="docutils literal notranslate"><span class="pre">==</span></code> and <code class="docutils literal notranslate"><span class="pre">!=</span></code>, we can invert <code class="docutils literal notranslate"><span class="pre">%in%</span></code> to only include characters who are <em>not</em> in the list. To do this, we put an exclamation mark (<code class="docutils literal notranslate"><span class="pre">!</span></code>) at the <em>start</em> of the statement:</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">filter</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">cool_droids</span><span class="p">))</span>
@@ -816,6 +855,10 @@ document.write(`
 </div>
 </div>
 </div>
+<br>
+</section>
+<section id="id2">
+<h3>Numeric Variables<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">filter()</span></code> function can also deal with numeric values. For instance, we can filter to only include characters who are shorter than, or are exactly, 96 cm tall. To do this we use <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, which stands for “less than or equal to”, or “≤”.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -841,6 +884,10 @@ document.write(`
 </div>
 </div>
 </div>
+<br>
+</section>
+<section id="id3">
+<h3>Combining Statements<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
 <p>Finally, as in other <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> functions, we can combine multiple comma-separated statements in one use of the <code class="docutils literal notranslate"><span class="pre">filter()</span></code> function. Here we filter to only include characters who:</p>
 <ul class="simple">
 <li><p>come from Tatooine</p></li>
@@ -873,6 +920,7 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
 </section>
 </section>
 
@@ -941,15 +989,23 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-part-1-install-packages">Setup Part 1: Install Packages</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-part-2-check-the-packages-load">Setup Part 2: Check the Packages Load</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-part-2-check-dplyr-loads">Setup Part 2: Check <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> Loads</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-part-3-check-the-data-loads">Setup Part 3: Check the Data Loads</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrange"><code class="docutils literal notranslate"><span class="pre">arrange()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numeric-variables">Numeric Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#character-variables">Character Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-statements">Combining Statements</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-your-knowledge">Check your Knowledge!</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter"><code class="docutils literal notranslate"><span class="pre">filter()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter"><code class="docutils literal notranslate"><span class="pre">filter()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Character Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Numeric Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Combining Statements</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
