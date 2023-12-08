@@ -483,11 +483,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-part-3-check-the-data-loads">Setup Part 3: Check the Data Loads</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrange">Arrange</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrange"><code class="docutils literal notranslate"><span class="pre">arrange()</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-your-knowledge">Check your Knowledge!</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Filter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter"><code class="docutils literal notranslate"><span class="pre">filter()</span></code></a></li>
 </ul>
             </nav>
         </div>
@@ -517,7 +517,13 @@ document.write(`
 </pre></div>
 </div>
 <p>This includes many packages that we won’t be using today, but which will be useful in other parts of the course (e.g., on Data Visualisation).</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>Remember, you should install packages in the console - never in a script that your share with others. This is because otherwise, your script will go to the effort of reinstalling a package <em>every time</em> it is run!</p>
+</div>
+</aside>
 </section>
 <section id="setup-part-2-check-the-packages-load">
 <h3>Setup Part 2: Check the Packages Load<a class="headerlink" href="#setup-part-2-check-the-packages-load" title="Permalink to this heading">#</a></h3>
@@ -533,8 +539,8 @@ document.write(`
 </div>
 </div>
 <p>The <a class="reference external" href="https://dplyr.tidyverse.org/"><code class="docutils literal notranslate"><span class="pre">dplyr</span></code></a> package has useful functions for manipulating tibbles (dataframes), such as sorting, filtering, and editing columns. The <a class="reference external" href="https://tidyr.tidyverse.org/"><code class="docutils literal notranslate"><span class="pre">tidyr</span></code></a> package has functions that help us tidy or reformat dataframes.</p>
-<img src="https://www.tidyverse.org/css/images/hex/dplyr.png" width=92>
-<img src="https://www.tidyverse.org/css/images/hex/tidyr.png" width=92></section>
+<img src="https://www.tidyverse.org/css/images/hex/dplyr.png" width=138>
+<img src="https://www.tidyverse.org/css/images/hex/tidyr.png" width=138></section>
 <section id="setup-part-3-check-the-data-loads">
 <h3>Setup Part 3: Check the Data Loads<a class="headerlink" href="#setup-part-3-check-the-data-loads" title="Permalink to this heading">#</a></h3>
 <p>Finally, check that you can access the dataset we’ll be using in this session. The <code class="docutils literal notranslate"><span class="pre">starwars</span></code> dataset is a dataset built into R that contains details of characters from the Star Wars films:</p>
@@ -566,11 +572,11 @@ document.write(`
 </div>
 </div>
 <p>This snapshot shows an example of tidy data - a philosophy of organising data such that each observation (<em>character</em>) has a single row, with all variables tied to that character as a single column.</p>
-<p>Now that we’re all set up, let’s dig into the data…</p>
+<p>Now that we’re all set up, let’s start a-wrangling…</p>
 </section>
 </section>
 <section id="arrange">
-<h2>Arrange<a class="headerlink" href="#arrange" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">arrange()</span></code><a class="headerlink" href="#arrange" title="Permalink to this heading">#</a></h2>
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">arrange()</span></code> function to sort by variables in the dataframe. For example, we can arrange all characters in order of height (shortest to tallest) like so:</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -704,9 +710,7 @@ document.write(`
 </section>
 </section>
 <section id="filter">
-<h2>Filter<a class="headerlink" href="#filter" title="Permalink to this heading">#</a></h2>
-<img src="https://media1.giphy.com/media/Uu4WP50jNo1uZeor4t/giphy.gif" width=250>
-<p><sub><sup><a class="reference external" href="https://media.giphy.com/media/Uu4WP50jNo1uZeor4t/giphy.gif">via giphy</a></sup></sub></p>
+<h2><code class="docutils literal notranslate"><span class="pre">filter()</span></code><a class="headerlink" href="#filter" title="Permalink to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">filter()</span></code> function is useful for subsetting data. For example, we can easily filter our dataset to find all our data on Darth Vader. The following code says that we should <em>filter</em> the dataframe called <em>starwars</em> to only include rows where the variable called <code class="docutils literal notranslate"><span class="pre">name</span></code> has the value <code class="docutils literal notranslate"><span class="pre">&quot;Darth</span> <span class="pre">Vader&quot;</span></code>:</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -727,6 +731,8 @@ document.write(`
 </div>
 </div>
 </div>
+<img src="https://media1.giphy.com/media/Uu4WP50jNo1uZeor4t/giphy.gif" width=250>
+<p><sub><sup><a class="reference external" href="https://media.giphy.com/media/Uu4WP50jNo1uZeor4t/giphy.gif">via giphy</a></sup></sub></p>
 <p>To find all characters that are <em>not</em> Darth Vader, we can use <code class="docutils literal notranslate"><span class="pre">!=</span></code>, which stands for “does not equal.” This returns all rows in the dataframe where the <code class="docutils literal notranslate"><span class="pre">name</span></code> column does not have the value <code class="docutils literal notranslate"><span class="pre">&quot;Darth</span> <span class="pre">Vader&quot;</span></code>.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -939,11 +945,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-part-3-check-the-data-loads">Setup Part 3: Check the Data Loads</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrange">Arrange</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrange"><code class="docutils literal notranslate"><span class="pre">arrange()</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-your-knowledge">Check your Knowledge!</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Filter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter"><code class="docutils literal notranslate"><span class="pre">filter()</span></code></a></li>
 </ul>
   </nav></div>
 
