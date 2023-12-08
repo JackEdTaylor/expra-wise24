@@ -754,12 +754,13 @@ We can also arrange the dataframe in <em>descending</em> order, with the <em><co
 <li><p>Sort descendingly by mass, such that the most massive character comes first.</p></li>
 <li><p>Sort by gender, eye colour, and then height. Which character is the first observation? Why?</p></li>
 </ol>
+<p>;
+<br></p>
 </section>
 </section>
 <section id="filter">
 <h2><code class="docutils literal notranslate"><span class="pre">filter()</span></code><a class="headerlink" href="#filter" title="Permalink to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">filter()</span></code> function is useful for subsetting rows of data.</p>
-<br>
 <section id="id1">
 <h3>Character Variables<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p>For example, we can easily filter our dataset to find all our data on Darth Vader. The following code says that we should <em>filter</em> the dataframe called <em>starwars</em> to only include rows where the variable called <code class="docutils literal notranslate"><span class="pre">name</span></code> has the value <code class="docutils literal notranslate"><span class="pre">&quot;Darth</span> <span class="pre">Vader&quot;</span></code>:</p>
@@ -935,6 +936,7 @@ As with <code class="docutils literal notranslate"><span class="pre">==</span></
 </div>
 </div>
 </div>
+<br>
 </section>
 </section>
 <section id="select">
@@ -1133,34 +1135,64 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 </div>
 </div>
 </div>
+<br>
 </section>
 </section>
 <section id="pull">
 <h2><code class="docutils literal notranslate"><span class="pre">pull()</span></code><a class="headerlink" href="#pull" title="Permalink to this heading">#</a></h2>
 <p>While <code class="docutils literal notranslate"><span class="pre">select()</span></code> subsets columns in our dataframe, the output is still stored as a column in a dataframe. Instead, we may want to store the results in a more standard data format. The <code class="docutils literal notranslate"><span class="pre">pull()</span></code> function makes this easy.</p>
-<div class="cell docutils container">
+<div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">pull</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><style>
-.list-inline {list-style: none; margin:0; padding: 0}
-.list-inline>li {display: inline-block}
-.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
-</style>
-<ol class=list-inline><li>'Luke Skywalker'</li><li>'C-3PO'</li><li>'R2-D2'</li><li>'Darth Vader'</li><li>'Leia Organa'</li><li>'Owen Lars'</li><li>'Beru Whitesun Lars'</li><li>'R5-D4'</li><li>'Biggs Darklighter'</li><li>'Obi-Wan Kenobi'</li><li>'Anakin Skywalker'</li><li>'Wilhuff Tarkin'</li><li>'Chewbacca'</li><li>'Han Solo'</li><li>'Greedo'</li><li>'Jabba Desilijic Tiure'</li><li>'Wedge Antilles'</li><li>'Jek Tono Porkins'</li><li>'Yoda'</li><li>'Palpatine'</li><li>'Boba Fett'</li><li>'IG-88'</li><li>'Bossk'</li><li>'Lando Calrissian'</li><li>'Lobot'</li><li>'Ackbar'</li><li>'Mon Mothma'</li><li>'Arvel Crynyd'</li><li>'Wicket Systri Warrick'</li><li>'Nien Nunb'</li><li>'Qui-Gon Jinn'</li><li>'Nute Gunray'</li><li>'Finis Valorum'</li><li>'Padmé Amidala'</li><li>'Jar Jar Binks'</li><li>'Roos Tarpals'</li><li>'Rugor Nass'</li><li>'Ric Olié'</li><li>'Watto'</li><li>'Sebulba'</li><li>'Quarsh Panaka'</li><li>'Shmi Skywalker'</li><li>'Darth Maul'</li><li>'Bib Fortuna'</li><li>'Ayla Secura'</li><li>'Ratts Tyerel'</li><li>'Dud Bolt'</li><li>'Gasgano'</li><li>'Ben Quadinaros'</li><li>'Mace Windu'</li><li>'Ki-Adi-Mundi'</li><li>'Kit Fisto'</li><li>'Eeth Koth'</li><li>'Adi Gallia'</li><li>'Saesee Tiin'</li><li>'Yarael Poof'</li><li>'Plo Koon'</li><li>'Mas Amedda'</li><li>'Gregar Typho'</li><li>'Cordé'</li><li>'Cliegg Lars'</li><li>'Poggle the Lesser'</li><li>'Luminara Unduli'</li><li>'Barriss Offee'</li><li>'Dormé'</li><li>'Dooku'</li><li>'Bail Prestor Organa'</li><li>'Jango Fett'</li><li>'Zam Wesell'</li><li>'Dexter Jettster'</li><li>'Lama Su'</li><li>'Taun We'</li><li>'Jocasta Nu'</li><li>'R4-P17'</li><li>'Wat Tambor'</li><li>'San Hill'</li><li>'Shaak Ti'</li><li>'Grievous'</li><li>'Tarfful'</li><li>'Raymus Antilles'</li><li>'Sly Moore'</li><li>'Tion Medon'</li><li>'Finn'</li><li>'Rey'</li><li>'Poe Dameron'</li><li>'BB8'</li><li>'Captain Phasma'</li></ol>
-</div></div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [1] &quot;Luke Skywalker&quot;        &quot;C-3PO&quot;                 &quot;R2-D2&quot;                
+ [4] &quot;Darth Vader&quot;           &quot;Leia Organa&quot;           &quot;Owen Lars&quot;            
+ [7] &quot;Beru Whitesun Lars&quot;    &quot;R5-D4&quot;                 &quot;Biggs Darklighter&quot;    
+[10] &quot;Obi-Wan Kenobi&quot;        &quot;Anakin Skywalker&quot;      &quot;Wilhuff Tarkin&quot;       
+[13] &quot;Chewbacca&quot;             &quot;Han Solo&quot;              &quot;Greedo&quot;               
+[16] &quot;Jabba Desilijic Tiure&quot; &quot;Wedge Antilles&quot;        &quot;Jek Tono Porkins&quot;     
+[19] &quot;Yoda&quot;                  &quot;Palpatine&quot;             &quot;Boba Fett&quot;            
+[22] &quot;IG-88&quot;                 &quot;Bossk&quot;                 &quot;Lando Calrissian&quot;     
+[25] &quot;Lobot&quot;                 &quot;Ackbar&quot;                &quot;Mon Mothma&quot;           
+[28] &quot;Arvel Crynyd&quot;          &quot;Wicket Systri Warrick&quot; &quot;Nien Nunb&quot;            
+[31] &quot;Qui-Gon Jinn&quot;          &quot;Nute Gunray&quot;           &quot;Finis Valorum&quot;        
+[34] &quot;Padmé Amidala&quot;         &quot;Jar Jar Binks&quot;         &quot;Roos Tarpals&quot;         
+[37] &quot;Rugor Nass&quot;            &quot;Ric Olié&quot;              &quot;Watto&quot;                
+[40] &quot;Sebulba&quot;               &quot;Quarsh Panaka&quot;         &quot;Shmi Skywalker&quot;       
+[43] &quot;Darth Maul&quot;            &quot;Bib Fortuna&quot;           &quot;Ayla Secura&quot;          
+[46] &quot;Ratts Tyerel&quot;          &quot;Dud Bolt&quot;              &quot;Gasgano&quot;              
+[49] &quot;Ben Quadinaros&quot;        &quot;Mace Windu&quot;            &quot;Ki-Adi-Mundi&quot;         
+[52] &quot;Kit Fisto&quot;             &quot;Eeth Koth&quot;             &quot;Adi Gallia&quot;           
+[55] &quot;Saesee Tiin&quot;           &quot;Yarael Poof&quot;           &quot;Plo Koon&quot;             
+[58] &quot;Mas Amedda&quot;            &quot;Gregar Typho&quot;          &quot;Cordé&quot;                
+[61] &quot;Cliegg Lars&quot;           &quot;Poggle the Lesser&quot;     &quot;Luminara Unduli&quot;      
+[64] &quot;Barriss Offee&quot;         &quot;Dormé&quot;                 &quot;Dooku&quot;                
+[67] &quot;Bail Prestor Organa&quot;   &quot;Jango Fett&quot;            &quot;Zam Wesell&quot;           
+[70] &quot;Dexter Jettster&quot;       &quot;Lama Su&quot;               &quot;Taun We&quot;              
+[73] &quot;Jocasta Nu&quot;            &quot;R4-P17&quot;                &quot;Wat Tambor&quot;           
+[76] &quot;San Hill&quot;              &quot;Shaak Ti&quot;              &quot;Grievous&quot;             
+[79] &quot;Tarfful&quot;               &quot;Raymus Antilles&quot;       &quot;Sly Moore&quot;            
+[82] &quot;Tion Medon&quot;            &quot;Finn&quot;                  &quot;Rey&quot;                  
+[85] &quot;Poe Dameron&quot;           &quot;BB8&quot;                   &quot;Captain Phasma&quot;       
+</pre></div>
+</div>
+</div>
 </div>
 <br>
-<p>This is a tidyverse equivalent to the <code class="docutils literal notranslate"><span class="pre">$</span></code> operator. For instance, another way of writing this would be:</p>
-<div class="cell docutils container">
+<p>This is a tidyverse equivalent to the <code class="docutils literal notranslate"><span class="pre">$</span></code> operator. Another way of writing this would be:</p>
+<div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">starwars</span><span class="o">$</span><span class="n">name</span>
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style>
 .list-inline {list-style: none; margin:0; padding: 0}
@@ -1172,22 +1204,33 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 </div>
 <br>
 <p>Extracting variables in this way can be useful for passing the output to more standard R functions. In this example, we use the <code class="docutils literal notranslate"><span class="pre">unique()</span></code> function to find all unique values for the <code class="docutils literal notranslate"><span class="pre">homeworld</span></code> variable, sorted in alphabetic order.</p>
-<div class="cell docutils container">
+<div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">hws</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">pull</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">homeworld</span><span class="p">)</span>
 <span class="nf">sort</span><span class="p">(</span><span class="nf">unique</span><span class="p">(</span><span class="n">hws</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><style>
-.list-inline {list-style: none; margin:0; padding: 0}
-.list-inline>li {display: inline-block}
-.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
-</style>
-<ol class=list-inline><li>'Alderaan'</li><li>'Aleen Minor'</li><li>'Bespin'</li><li>'Bestine IV'</li><li>'Cato Neimoidia'</li><li>'Cerea'</li><li>'Champala'</li><li>'Chandrila'</li><li>'Concord Dawn'</li><li>'Corellia'</li><li>'Coruscant'</li><li>'Dathomir'</li><li>'Dorin'</li><li>'Endor'</li><li>'Eriadu'</li><li>'Geonosis'</li><li>'Glee Anselm'</li><li>'Haruun Kal'</li><li>'Iktotch'</li><li>'Iridonia'</li><li>'Kalee'</li><li>'Kamino'</li><li>'Kashyyyk'</li><li>'Malastare'</li><li>'Mirial'</li><li>'Mon Cala'</li><li>'Muunilinst'</li><li>'Naboo'</li><li>'Nal Hutta'</li><li>'Ojom'</li><li>'Quermia'</li><li>'Rodia'</li><li>'Ryloth'</li><li>'Serenno'</li><li>'Shili'</li><li>'Skako'</li><li>'Socorro'</li><li>'Stewjon'</li><li>'Sullust'</li><li>'Tatooine'</li><li>'Toydaria'</li><li>'Trandosha'</li><li>'Troiken'</li><li>'Tund'</li><li>'Umbara'</li><li>'Utapau'</li><li>'Vulpter'</li><li>'Zolan'</li></ol>
-</div></div>
 </div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [1] &quot;Alderaan&quot;       &quot;Aleen Minor&quot;    &quot;Bespin&quot;         &quot;Bestine IV&quot;    
+ [5] &quot;Cato Neimoidia&quot; &quot;Cerea&quot;          &quot;Champala&quot;       &quot;Chandrila&quot;     
+ [9] &quot;Concord Dawn&quot;   &quot;Corellia&quot;       &quot;Coruscant&quot;      &quot;Dathomir&quot;      
+[13] &quot;Dorin&quot;          &quot;Endor&quot;          &quot;Eriadu&quot;         &quot;Geonosis&quot;      
+[17] &quot;Glee Anselm&quot;    &quot;Haruun Kal&quot;     &quot;Iktotch&quot;        &quot;Iridonia&quot;      
+[21] &quot;Kalee&quot;          &quot;Kamino&quot;         &quot;Kashyyyk&quot;       &quot;Malastare&quot;     
+[25] &quot;Mirial&quot;         &quot;Mon Cala&quot;       &quot;Muunilinst&quot;     &quot;Naboo&quot;         
+[29] &quot;Nal Hutta&quot;      &quot;Ojom&quot;           &quot;Quermia&quot;        &quot;Rodia&quot;         
+[33] &quot;Ryloth&quot;         &quot;Serenno&quot;        &quot;Shili&quot;          &quot;Skako&quot;         
+[37] &quot;Socorro&quot;        &quot;Stewjon&quot;        &quot;Sullust&quot;        &quot;Tatooine&quot;      
+[41] &quot;Toydaria&quot;       &quot;Trandosha&quot;      &quot;Troiken&quot;        &quot;Tund&quot;          
+[45] &quot;Umbara&quot;         &quot;Utapau&quot;         &quot;Vulpter&quot;        &quot;Zolan&quot;         
+</pre></div>
+</div>
+</div>
+</div>
+<br>
 </section>
 <section id="mutate">
 <h2><code class="docutils literal notranslate"><span class="pre">mutate()</span></code><a class="headerlink" href="#mutate" title="Permalink to this heading">#</a></h2>
