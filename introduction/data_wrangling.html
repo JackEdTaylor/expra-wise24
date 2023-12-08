@@ -483,7 +483,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-part-3">Setup Part 3</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arranging">Arranging</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrange">Arrange</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-your-knowledge">Check your Knowledge!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Filter</a></li>
 </ul>
             </nav>
         </div>
@@ -500,15 +504,15 @@ document.write(`
 <h5>
 <p><strong>Wrangling</strong> /ˈræŋ.ɡəl.ɪŋ/</p>
 <p>the activity of taking care of, controlling, or moving animals, especially large animals such as cows or horses</p>
-<p>(<a class="reference external" href="https://dictionary.cambridge.org/dictionary/english/wrangling">Cambridge Dictionary</a>)</p>
 </h5>
+<p>(<a class="reference external" href="https://dictionary.cambridge.org/dictionary/english/wrangling">Cambridge Dictionary</a>)</p>
 <p><img alt="Cattle Wrangler - image from https://commons.wikimedia.org/wiki/File:Pioneer_Day_Wrangler.jpg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Pioneer_Day_Wrangler.jpg/320px-Pioneer_Day_Wrangler.jpg" /></p>
 <p><strong><a class="reference external" href="https://en.wikipedia.org/wiki/Data_wrangling">Data wrangling</a></strong> commonly refers to the transformation of data from one “input” format (e.g., <code class="docutils literal notranslate"><span class="pre">.csv</span></code> files from an experiment), to a different format (e.g., a tidy dataframe) that is more appropriate to the needs of an analysis. In the context of the ExPra experiments, you will use data wrangling techniques to implement the transformations and data cleaning steps specified in your preregistrations.</p>
 <section id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">#</a></h2>
 <section id="setup-part-1-install-packages">
 <h3>Setup Part 1: Install Packages<a class="headerlink" href="#setup-part-1-install-packages" title="Permalink to this heading">#</a></h3>
-<p>We will use <a class="reference external" href="https://www.tidyverse.org/"><code class="docutils literal notranslate"><span class="pre">tidyverse</span></code></a> packages to implement our data wrangling. The “tidyverse” is a series of packages which share a philosphy based around code and data structures that are (a) tidy, and (b) readable. You can install the tidyverse packages like so:</p>
+<p>We will use <a class="reference external" href="https://www.tidyverse.org/"><code class="docutils literal notranslate"><span class="pre">tidyverse</span></code></a> packages to implement our data wrangling. The “tidyverse” is a series of packages which share a philosphy based around code and data structures that are (a) tidy, and (b) readable. These packages are frequently based around tidy dataframes, known as “<a class="reference external" href="https://tibble.tidyverse.org/">tibbles</a>”. You can install the tidyverse packages like so:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&quot;tidyverse&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -528,7 +532,9 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
+<p>The <a class="reference external" href="https://dplyr.tidyverse.org/"><code class="docutils literal notranslate"><span class="pre">dplyr</span></code></a> package has useful functions for manipulating tibbles (dataframes), such as sorting, filtering, and editing columns. The <a class="reference external" href="https://tidyr.tidyverse.org/"><code class="docutils literal notranslate"><span class="pre">tidyr</span></code></a> package has functions that help us tidy or reformat dataframes.</p>
+<img src="https://www.tidyverse.org/css/images/hex/dplyr.png" width=92>
+<img src="https://www.tidyverse.org/css/images/hex/tidyr.png" width=92></section>
 <section id="setup-part-3">
 <h3>Setup Part 3<a class="headerlink" href="#setup-part-3" title="Permalink to this heading">#</a></h3>
 <p>Finally, check that you can access the dataset we’ll be using in this session. The <code class="docutils literal notranslate"><span class="pre">starwars</span></code> dataset is a dataset built into R that contains details of characters from the Star Wars films:</p>
@@ -559,12 +565,12 @@ document.write(`
 </div>
 </div>
 </div>
-<p>This is snapshot shows an example of tidy data - a philosophy of organising data such that each observation (<em>character</em>) has a single row, with all variables tied to that character as a single column.</p>
+<p>This snapshot shows an example of tidy data - a philosophy of organising data such that each observation (<em>character</em>) has a single row, with all variables tied to that character as a single column.</p>
 <p>Now that we’re all set up, let’s dig into the data…</p>
 </section>
 </section>
-<section id="arranging">
-<h2>Arranging<a class="headerlink" href="#arranging" title="Permalink to this heading">#</a></h2>
+<section id="arrange">
+<h2>Arrange<a class="headerlink" href="#arrange" title="Permalink to this heading">#</a></h2>
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">arrange()</span></code> function to sort by variables in the dataframe. For example, we can arrange all characters in order of height (shortest to tallest) like so:</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -658,7 +664,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Finally, we can sort by multiple variables at once. For instance, we may want to sort by hair colour alphabetically, and then by height descendingly:</p>
+<p>Finally, we can sort by multiple variables at once with comma-separated statements. For instance, we may want to sort by hair colour alphabetically, and then by height descendingly:</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">arrange</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">hair_color</span><span class="p">,</span><span class="w"> </span><span class="nf">desc</span><span class="p">(</span><span class="n">height</span><span class="p">))</span>
@@ -682,6 +688,179 @@ document.write(`
  9 Jango F…    183  79   black      tan        brown           66   male  mascu…
 10 Lando C…    177  79   black      dark       brown           31   male  mascu…
 # ℹ 77 more rows
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<section id="check-your-knowledge">
+<h3>Check your Knowledge!<a class="headerlink" href="#check-your-knowledge" title="Permalink to this heading">#</a></h3>
+<p>Try coming up with code to solve the following:</p>
+<ol class="arabic simple">
+<li><p>Sort descendingly by mass, such that the most massive character comes first.</p></li>
+<li><p>Sort by gender, eye colour, and then height. Which character is the first observation? Why?</p></li>
+</ol>
+</section>
+</section>
+<section id="filter">
+<h2>Filter<a class="headerlink" href="#filter" title="Permalink to this heading">#</a></h2>
+<img src="https://media1.giphy.com/media/Uu4WP50jNo1uZeor4t/giphy.gif" width=250>
+<p><sub><sup><a class="reference external" href="https://media.giphy.com/media/Uu4WP50jNo1uZeor4t/giphy.gif">via giphy</a></sup></sub></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">filter()</span></code> function is useful for subsetting data. For example, we can easily filter our dataset to find all our data on Darth Vader. The following code says that we should <em>filter</em> the dataframe called <em>starwars</em> to only include rows where the variable called <code class="docutils literal notranslate"><span class="pre">name</span></code> has the value <code class="docutils literal notranslate"><span class="pre">&quot;Darth</span> <span class="pre">Vader&quot;</span></code>:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">filter</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">==</span><span class="s">&quot;Darth Vader&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 1 × 14
+  name      height  mass hair_color skin_color eye_color birth_year sex   gender
+  &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+1 Darth Va…    202   136 none       white      yellow          41.9 male  mascu…
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>To find all characters that are <em>not</em> Darth Vader, we can use <code class="docutils literal notranslate"><span class="pre">!=</span></code>, which stands for “does not equal.” This returns all rows in the dataframe where the <code class="docutils literal notranslate"><span class="pre">name</span></code> column does not have the value <code class="docutils literal notranslate"><span class="pre">&quot;Darth</span> <span class="pre">Vader&quot;</span></code>.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">filter</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">!=</span><span class="s">&quot;Darth Vader&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 86 × 14
+   name     height  mass hair_color skin_color eye_color birth_year sex   gender
+   &lt;chr&gt;     &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+ 1 Luke Sk…    172    77 blond      fair       blue            19   male  mascu…
+ 2 C-3PO       167    75 <span class=" -Color -Color-Red">NA</span>         gold       yellow         112   none  mascu…
+ 3 R2-D2        96    32 <span class=" -Color -Color-Red">NA</span>         white, bl… red             33   none  mascu…
+ 4 Leia Or…    150    49 brown      light      brown           19   fema… femin…
+ 5 Owen La…    178   120 brown, gr… light      blue            52   male  mascu…
+ 6 Beru Wh…    165    75 brown      light      blue            47   fema… femin…
+ 7 R5-D4        97    32 <span class=" -Color -Color-Red">NA</span>         white, red red             <span class=" -Color -Color-Red">NA</span>   none  mascu…
+ 8 Biggs D…    183    84 black      light      brown           24   male  mascu…
+ 9 Obi-Wan…    182    77 auburn, w… fair       blue-gray       57   male  mascu…
+10 Anakin …    188    84 blond      fair       blue            41.9 male  mascu…
+# ℹ 76 more rows
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also filter to include a list of characters. To do this, we first define a character vector of characters we wish to keep. We can then filter to only include characters whose <code class="docutils literal notranslate"><span class="pre">name</span></code> is in (<code class="docutils literal notranslate"><span class="pre">%in%</span></code>) that vector:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">cool_droids</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;C-3PO&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;R2-D2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;IG-88&quot;</span><span class="p">)</span>
+<span class="nf">filter</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">cool_droids</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 3 × 14
+  name  height  mass hair_color skin_color  eye_color birth_year sex   gender   
+  &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;    
+1 C-3PO    167    75 <span class=" -Color -Color-Red">NA</span>         gold        yellow           112 none  masculine
+2 R2-D2     96    32 <span class=" -Color -Color-Red">NA</span>         white, blue red               33 none  masculine
+3 IG-88    200   140 none       metal       red               15 none  masculine
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>As with <code class="docutils literal notranslate"><span class="pre">==</span></code> and <code class="docutils literal notranslate"><span class="pre">!=</span></code>, we can invert <code class="docutils literal notranslate"><span class="pre">%in%</span></code> to only include characters who are <em>not</em> in the list. To do this, we put an exclamation mark (<code class="docutils literal notranslate"><span class="pre">!</span></code>) at the <em>start</em> of the statement:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">filter</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">cool_droids</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 84 × 14
+   name     height  mass hair_color skin_color eye_color birth_year sex   gender
+   &lt;chr&gt;     &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+ 1 Luke Sk…    172    77 blond      fair       blue            19   male  mascu…
+ 2 Darth V…    202   136 none       white      yellow          41.9 male  mascu…
+ 3 Leia Or…    150    49 brown      light      brown           19   fema… femin…
+ 4 Owen La…    178   120 brown, gr… light      blue            52   male  mascu…
+ 5 Beru Wh…    165    75 brown      light      blue            47   fema… femin…
+ 6 R5-D4        97    32 <span class=" -Color -Color-Red">NA</span>         white, red red             <span class=" -Color -Color-Red">NA</span>   none  mascu…
+ 7 Biggs D…    183    84 black      light      brown           24   male  mascu…
+ 8 Obi-Wan…    182    77 auburn, w… fair       blue-gray       57   male  mascu…
+ 9 Anakin …    188    84 blond      fair       blue            41.9 male  mascu…
+10 Wilhuff…    180    <span class=" -Color -Color-Red">NA</span> auburn, g… fair       blue            64   male  mascu…
+# ℹ 74 more rows
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">filter()</span></code> function can also deal with numeric values. For instance, we can filter to only include characters who are shorter than, or are exactly, 96 cm tall. To do this we use <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, which stands for “less than or equal to”, or “≤”.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">filter</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">&lt;=</span><span class="m">96</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 6 × 14
+  name      height  mass hair_color skin_color eye_color birth_year sex   gender
+  &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+1 R2-D2         96    32 <span class=" -Color -Color-Red">NA</span>         white, bl… red               33 none  mascu…
+2 Yoda          66    17 white      green      brown            896 male  mascu…
+3 Wicket S…     88    20 brown      brown      brown              8 male  mascu…
+4 Ratts Ty…     79    15 none       grey, blue unknown           <span class=" -Color -Color-Red">NA</span> male  mascu…
+5 Dud Bolt      94    45 none       blue, grey yellow            <span class=" -Color -Color-Red">NA</span> male  mascu…
+6 R4-P17        96    <span class=" -Color -Color-Red">NA</span> none       silver, r… red, blue         <span class=" -Color -Color-Red">NA</span> none  femin…
+# ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, as in other <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> functions, we can combine multiple comma-separated statements in one use of the <code class="docutils literal notranslate"><span class="pre">filter()</span></code> function. Here we filter to only include characters who:</p>
+<ul class="simple">
+<li><p>come from Tatooine</p></li>
+<li><p>are at least 100 cm tall</p></li>
+<li><p>are human</p></li>
+</ul>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">filter</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">homeworld</span><span class="o">==</span><span class="s">&quot;Tatooine&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">&gt;=</span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="n">species</span><span class="o">==</span><span class="s">&quot;Human&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 8 × 14
+  name      height  mass hair_color skin_color eye_color birth_year sex   gender
+  &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+1 Luke Sky…    172    77 blond      fair       blue            19   male  mascu…
+2 Darth Va…    202   136 none       white      yellow          41.9 male  mascu…
+3 Owen Lars    178   120 brown, gr… light      blue            52   male  mascu…
+4 Beru Whi…    165    75 brown      light      blue            47   fema… femin…
+5 Biggs Da…    183    84 black      light      brown           24   male  mascu…
+6 Anakin S…    188    84 blond      fair       blue            41.9 male  mascu…
+7 Shmi Sky…    163    <span class=" -Color -Color-Red">NA</span> black      fair       brown           72   fema… femin…
+8 Cliegg L…    183    <span class=" -Color -Color-Red">NA</span> brown      fair       blue            82   male  mascu…
 # ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
 #   vehicles &lt;list&gt;, starships &lt;list&gt;
 </pre></div>
@@ -760,7 +939,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-part-3">Setup Part 3</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arranging">Arranging</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrange">Arrange</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-your-knowledge">Check your Knowledge!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Filter</a></li>
 </ul>
   </nav></div>
 
