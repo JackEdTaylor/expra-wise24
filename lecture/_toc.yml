@@ -23,7 +23,7 @@ parts:
     chapters:
       - file: introduction/glm
       - file: introduction/model_appropriateness
-      - file: introduction/data_wrangling
+      - file: introduction/data_wrangling_1
 
   - caption: Demo Experiment
     chapters:
