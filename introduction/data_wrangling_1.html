@@ -496,6 +496,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Character Variables</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Numeric Variables</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Combining Statements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Check your Knowledge!</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#select"><code class="docutils literal notranslate"><span class="pre">select()</span></code></a><ul class="nav section-nav flex-column">
@@ -503,11 +504,17 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reordering-columns">Reordering Columns</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-a-range-of-columns">Selecting a Range of Columns</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selection-helpers">Selection Helpers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Check your Knowledge!</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pull"><code class="docutils literal notranslate"><span class="pre">pull()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pull"><code class="docutils literal notranslate"><span class="pre">pull()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Check your Knowledge!</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mutate"><code class="docutils literal notranslate"><span class="pre">mutate()</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-existing-columns">Editing Existing Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-new-columns">Adding new columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Check your Knowledge!</a></li>
 </ul>
 </li>
 </ul>
@@ -754,9 +761,7 @@ We can also arrange the dataframe in <em>descending</em> order, with the <em><co
 <li><p>Sort descendingly by mass, such that the most massive character comes first.</p></li>
 <li><p>Sort by gender, eye colour, and then height. Which character is the first observation? Why?</p></li>
 </ol>
-<p>;
-<br></p>
-</section>
+<br></section>
 </section>
 <section id="filter">
 <h2><code class="docutils literal notranslate"><span class="pre">filter()</span></code><a class="headerlink" href="#filter" title="Permalink to this heading">#</a></h2>
@@ -936,6 +941,15 @@ As with <code class="docutils literal notranslate"><span class="pre">==</span></
 </div>
 </div>
 </div>
+<br>
+</section>
+<section id="id4">
+<h3>Check your Knowledge!<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<p>Try coming up with code to solve the following:</p>
+<ol class="arabic simple">
+<li><p>Exclude any characters who come from Tatooine, Zolan, or Naboo.</p></li>
+<li><p>Filter to only include female characters who are between 160 and 200 cm.</p></li>
+</ol>
 <br>
 </section>
 </section>
@@ -1137,6 +1151,15 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 </div>
 <br>
 </section>
+<section id="id5">
+<h3>Check your Knowledge!<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<p>Try coming up with code to solve the following:</p>
+<ol class="arabic simple">
+<li><p>Reorder the columns so that the first two columns are <code class="docutils literal notranslate"><span class="pre">eye_color</span></code> and <code class="docutils literal notranslate"><span class="pre">films</span></code>.</p></li>
+<li><p>Remove any columns that end with the word <code class="docutils literal notranslate"><span class="pre">&quot;color&quot;</span></code>.</p></li>
+</ol>
+<br>
+</section>
 </section>
 <section id="pull">
 <h2><code class="docutils literal notranslate"><span class="pre">pull()</span></code><a class="headerlink" href="#pull" title="Permalink to this heading">#</a></h2>
@@ -1194,13 +1217,38 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><style>
-.list-inline {list-style: none; margin:0; padding: 0}
-.list-inline>li {display: inline-block}
-.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
-</style>
-<ol class=list-inline><li>'Luke Skywalker'</li><li>'C-3PO'</li><li>'R2-D2'</li><li>'Darth Vader'</li><li>'Leia Organa'</li><li>'Owen Lars'</li><li>'Beru Whitesun Lars'</li><li>'R5-D4'</li><li>'Biggs Darklighter'</li><li>'Obi-Wan Kenobi'</li><li>'Anakin Skywalker'</li><li>'Wilhuff Tarkin'</li><li>'Chewbacca'</li><li>'Han Solo'</li><li>'Greedo'</li><li>'Jabba Desilijic Tiure'</li><li>'Wedge Antilles'</li><li>'Jek Tono Porkins'</li><li>'Yoda'</li><li>'Palpatine'</li><li>'Boba Fett'</li><li>'IG-88'</li><li>'Bossk'</li><li>'Lando Calrissian'</li><li>'Lobot'</li><li>'Ackbar'</li><li>'Mon Mothma'</li><li>'Arvel Crynyd'</li><li>'Wicket Systri Warrick'</li><li>'Nien Nunb'</li><li>'Qui-Gon Jinn'</li><li>'Nute Gunray'</li><li>'Finis Valorum'</li><li>'Padmé Amidala'</li><li>'Jar Jar Binks'</li><li>'Roos Tarpals'</li><li>'Rugor Nass'</li><li>'Ric Olié'</li><li>'Watto'</li><li>'Sebulba'</li><li>'Quarsh Panaka'</li><li>'Shmi Skywalker'</li><li>'Darth Maul'</li><li>'Bib Fortuna'</li><li>'Ayla Secura'</li><li>'Ratts Tyerel'</li><li>'Dud Bolt'</li><li>'Gasgano'</li><li>'Ben Quadinaros'</li><li>'Mace Windu'</li><li>'Ki-Adi-Mundi'</li><li>'Kit Fisto'</li><li>'Eeth Koth'</li><li>'Adi Gallia'</li><li>'Saesee Tiin'</li><li>'Yarael Poof'</li><li>'Plo Koon'</li><li>'Mas Amedda'</li><li>'Gregar Typho'</li><li>'Cordé'</li><li>'Cliegg Lars'</li><li>'Poggle the Lesser'</li><li>'Luminara Unduli'</li><li>'Barriss Offee'</li><li>'Dormé'</li><li>'Dooku'</li><li>'Bail Prestor Organa'</li><li>'Jango Fett'</li><li>'Zam Wesell'</li><li>'Dexter Jettster'</li><li>'Lama Su'</li><li>'Taun We'</li><li>'Jocasta Nu'</li><li>'R4-P17'</li><li>'Wat Tambor'</li><li>'San Hill'</li><li>'Shaak Ti'</li><li>'Grievous'</li><li>'Tarfful'</li><li>'Raymus Antilles'</li><li>'Sly Moore'</li><li>'Tion Medon'</li><li>'Finn'</li><li>'Rey'</li><li>'Poe Dameron'</li><li>'BB8'</li><li>'Captain Phasma'</li></ol>
-</div></div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> [1] &quot;Luke Skywalker&quot;        &quot;C-3PO&quot;                 &quot;R2-D2&quot;                
+ [4] &quot;Darth Vader&quot;           &quot;Leia Organa&quot;           &quot;Owen Lars&quot;            
+ [7] &quot;Beru Whitesun Lars&quot;    &quot;R5-D4&quot;                 &quot;Biggs Darklighter&quot;    
+[10] &quot;Obi-Wan Kenobi&quot;        &quot;Anakin Skywalker&quot;      &quot;Wilhuff Tarkin&quot;       
+[13] &quot;Chewbacca&quot;             &quot;Han Solo&quot;              &quot;Greedo&quot;               
+[16] &quot;Jabba Desilijic Tiure&quot; &quot;Wedge Antilles&quot;        &quot;Jek Tono Porkins&quot;     
+[19] &quot;Yoda&quot;                  &quot;Palpatine&quot;             &quot;Boba Fett&quot;            
+[22] &quot;IG-88&quot;                 &quot;Bossk&quot;                 &quot;Lando Calrissian&quot;     
+[25] &quot;Lobot&quot;                 &quot;Ackbar&quot;                &quot;Mon Mothma&quot;           
+[28] &quot;Arvel Crynyd&quot;          &quot;Wicket Systri Warrick&quot; &quot;Nien Nunb&quot;            
+[31] &quot;Qui-Gon Jinn&quot;          &quot;Nute Gunray&quot;           &quot;Finis Valorum&quot;        
+[34] &quot;Padmé Amidala&quot;         &quot;Jar Jar Binks&quot;         &quot;Roos Tarpals&quot;         
+[37] &quot;Rugor Nass&quot;            &quot;Ric Olié&quot;              &quot;Watto&quot;                
+[40] &quot;Sebulba&quot;               &quot;Quarsh Panaka&quot;         &quot;Shmi Skywalker&quot;       
+[43] &quot;Darth Maul&quot;            &quot;Bib Fortuna&quot;           &quot;Ayla Secura&quot;          
+[46] &quot;Ratts Tyerel&quot;          &quot;Dud Bolt&quot;              &quot;Gasgano&quot;              
+[49] &quot;Ben Quadinaros&quot;        &quot;Mace Windu&quot;            &quot;Ki-Adi-Mundi&quot;         
+[52] &quot;Kit Fisto&quot;             &quot;Eeth Koth&quot;             &quot;Adi Gallia&quot;           
+[55] &quot;Saesee Tiin&quot;           &quot;Yarael Poof&quot;           &quot;Plo Koon&quot;             
+[58] &quot;Mas Amedda&quot;            &quot;Gregar Typho&quot;          &quot;Cordé&quot;                
+[61] &quot;Cliegg Lars&quot;           &quot;Poggle the Lesser&quot;     &quot;Luminara Unduli&quot;      
+[64] &quot;Barriss Offee&quot;         &quot;Dormé&quot;                 &quot;Dooku&quot;                
+[67] &quot;Bail Prestor Organa&quot;   &quot;Jango Fett&quot;            &quot;Zam Wesell&quot;           
+[70] &quot;Dexter Jettster&quot;       &quot;Lama Su&quot;               &quot;Taun We&quot;              
+[73] &quot;Jocasta Nu&quot;            &quot;R4-P17&quot;                &quot;Wat Tambor&quot;           
+[76] &quot;San Hill&quot;              &quot;Shaak Ti&quot;              &quot;Grievous&quot;             
+[79] &quot;Tarfful&quot;               &quot;Raymus Antilles&quot;       &quot;Sly Moore&quot;            
+[82] &quot;Tion Medon&quot;            &quot;Finn&quot;                  &quot;Rey&quot;                  
+[85] &quot;Poe Dameron&quot;           &quot;BB8&quot;                   &quot;Captain Phasma&quot;       
+</pre></div>
+</div>
+</div>
 </div>
 <br>
 <p>Extracting variables in this way can be useful for passing the output to more standard R functions. In this example, we use the <code class="docutils literal notranslate"><span class="pre">unique()</span></code> function to find all unique values for the <code class="docutils literal notranslate"><span class="pre">homeworld</span></code> variable, sorted in alphabetic order.</p>
@@ -1231,16 +1279,25 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 </div>
 </div>
 <br>
+<section id="id6">
+<h3>Check your Knowledge!<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<p>Try coming up with code to solve the following:</p>
+<ol class="arabic simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">pull()</span></code> to extract the variables for <code class="docutils literal notranslate"><span class="pre">mass</span></code>, and calculate the average (via <code class="docutils literal notranslate"><span class="pre">mean()</span></code>). Note: you may have to set <code class="docutils literal notranslate"><span class="pre">na.rm=TRUE</span></code>, as some observations are missing.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">pull()</span></code> to extract the eye colours. How many different categories for eye colour are there?</p></li>
+</ol>
+<br>
+</section>
 </section>
 <section id="mutate">
 <h2><code class="docutils literal notranslate"><span class="pre">mutate()</span></code><a class="headerlink" href="#mutate" title="Permalink to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">mutate()</span></code> function allows us to edit columns and add new columns in dataframes.</p>
 <section id="editing-existing-columns">
 <h3>Editing Existing Columns<a class="headerlink" href="#editing-existing-columns" title="Permalink to this heading">#</a></h3>
-<p>Suppose we want to convert all values in the <code class="docutils literal notranslate"><span class="pre">species</span></code> column to be lowercase. We can do this like so, with the <code class="docutils literal notranslate"><span class="pre">tolower()</span></code> function:</p>
+<p>Suppose we want to convert all values in the <code class="docutils literal notranslate"><span class="pre">name</span></code> column to be lowercase. We can do this like so, with the <code class="docutils literal notranslate"><span class="pre">tolower()</span></code> function:</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">mutate</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">species</span><span class="o">=</span><span class="nf">tolower</span><span class="p">(</span><span class="n">species</span><span class="p">))</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">mutate</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="nf">tolower</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1250,16 +1307,16 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 87 × 14
    name     height  mass hair_color skin_color eye_color birth_year sex   gender
    &lt;chr&gt;     &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
- 1 Luke Sk…    172    77 blond      fair       blue            19   male  mascu…
- 2 C-3PO       167    75 <span class=" -Color -Color-Red">NA</span>         gold       yellow         112   none  mascu…
- 3 R2-D2        96    32 <span class=" -Color -Color-Red">NA</span>         white, bl… red             33   none  mascu…
- 4 Darth V…    202   136 none       white      yellow          41.9 male  mascu…
- 5 Leia Or…    150    49 brown      light      brown           19   fema… femin…
- 6 Owen La…    178   120 brown, gr… light      blue            52   male  mascu…
- 7 Beru Wh…    165    75 brown      light      blue            47   fema… femin…
- 8 R5-D4        97    32 <span class=" -Color -Color-Red">NA</span>         white, red red             <span class=" -Color -Color-Red">NA</span>   none  mascu…
- 9 Biggs D…    183    84 black      light      brown           24   male  mascu…
-10 Obi-Wan…    182    77 auburn, w… fair       blue-gray       57   male  mascu…
+ 1 luke sk…    172    77 blond      fair       blue            19   male  mascu…
+ 2 c-3po       167    75 <span class=" -Color -Color-Red">NA</span>         gold       yellow         112   none  mascu…
+ 3 r2-d2        96    32 <span class=" -Color -Color-Red">NA</span>         white, bl… red             33   none  mascu…
+ 4 darth v…    202   136 none       white      yellow          41.9 male  mascu…
+ 5 leia or…    150    49 brown      light      brown           19   fema… femin…
+ 6 owen la…    178   120 brown, gr… light      blue            52   male  mascu…
+ 7 beru wh…    165    75 brown      light      blue            47   fema… femin…
+ 8 r5-d4        97    32 <span class=" -Color -Color-Red">NA</span>         white, red red             <span class=" -Color -Color-Red">NA</span>   none  mascu…
+ 9 biggs d…    183    84 black      light      brown           24   male  mascu…
+10 obi-wan…    182    77 auburn, w… fair       blue-gray       57   male  mascu…
 # ℹ 77 more rows
 # ℹ 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
 #   vehicles &lt;list&gt;, starships &lt;list&gt;
@@ -1267,6 +1324,51 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 </div>
 </div>
 </div>
+<br>
+</section>
+<section id="adding-new-columns">
+<h3>Adding new columns<a class="headerlink" href="#adding-new-columns" title="Permalink to this heading">#</a></h3>
+<p>We can also create new columns with this syntax. These can be calculated from the values of existing columns. For example, character heights are currently stored in <em>centimeters</em>. We can create a new column, height_inches, which will be the same data but converted into <em>inches</em> (by dividing by 2.54).</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">mutate</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">height_inches</span><span class="o">=</span><span class="n">height</span><span class="o">/</span><span class="m">2.54</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 87 × 15</caption>
+<thead>
+	<tr><th scope=col>name</th><th scope=col>height</th><th scope=col>mass</th><th scope=col>hair_color</th><th scope=col>skin_color</th><th scope=col>eye_color</th><th scope=col>birth_year</th><th scope=col>sex</th><th scope=col>gender</th><th scope=col>homeworld</th><th scope=col>species</th><th scope=col>films</th><th scope=col>vehicles</th><th scope=col>starships</th><th scope=col>height_inches</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;list&gt;</th><th scope=col>&lt;list&gt;</th><th scope=col>&lt;list&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Luke Skywalker</td><td>172</td><td> 77</td><td>blond</td><td>fair       </td><td>blue  </td><td> 19.0</td><td>male  </td><td>masculine</td><td>Tatooine</td><td>Human</td><td>A New Hope             , The Empire Strikes Back, Return of the Jedi     , Revenge of the Sith    , The Force Awakens      </td><td>Snowspeeder          , Imperial Speeder Bike</td><td>X-wing          , Imperial shuttle</td><td>67.71654</td></tr>
+	<tr><td>C-3PO         </td><td>167</td><td> 75</td><td>NA   </td><td>gold       </td><td>yellow</td><td>112.0</td><td>none  </td><td>masculine</td><td>Tatooine</td><td>Droid</td><td>A New Hope             , The Empire Strikes Back, Return of the Jedi     , The Phantom Menace     , Attack of the Clones   , Revenge of the Sith    </td><td></td><td></td><td>65.74803</td></tr>
+	<tr><td>R2-D2         </td><td> 96</td><td> 32</td><td>NA   </td><td>white, blue</td><td>red   </td><td> 33.0</td><td>none  </td><td>masculine</td><td>Naboo   </td><td>Droid</td><td>A New Hope             , The Empire Strikes Back, Return of the Jedi     , The Phantom Menace     , Attack of the Clones   , Revenge of the Sith    , The Force Awakens      </td><td></td><td></td><td>37.79528</td></tr>
+	<tr><td>Darth Vader   </td><td>202</td><td>136</td><td>none </td><td>white      </td><td>yellow</td><td> 41.9</td><td>male  </td><td>masculine</td><td>Tatooine</td><td>Human</td><td>A New Hope             , The Empire Strikes Back, Return of the Jedi     , Revenge of the Sith    </td><td></td><td>TIE Advanced x1</td><td>79.52756</td></tr>
+	<tr><td>Leia Organa   </td><td>150</td><td> 49</td><td>brown</td><td>light      </td><td>brown </td><td> 19.0</td><td>female</td><td>feminine </td><td>Alderaan</td><td>Human</td><td>A New Hope             , The Empire Strikes Back, Return of the Jedi     , Revenge of the Sith    , The Force Awakens      </td><td>Imperial Speeder Bike</td><td></td><td>59.05512</td></tr>
+	<tr><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td></tr>
+	<tr><td>Finn          </td><td>NA</td><td>NA</td><td>black</td><td>dark </td><td>dark   </td><td>NA</td><td>male  </td><td>masculine</td><td>NA</td><td>Human</td><td>The Force Awakens</td><td></td><td></td><td>NA</td></tr>
+	<tr><td>Rey           </td><td>NA</td><td>NA</td><td>brown</td><td>light</td><td>hazel  </td><td>NA</td><td>female</td><td>feminine </td><td>NA</td><td>Human</td><td>The Force Awakens</td><td></td><td></td><td>NA</td></tr>
+	<tr><td>Poe Dameron   </td><td>NA</td><td>NA</td><td>brown</td><td>light</td><td>brown  </td><td>NA</td><td>male  </td><td>masculine</td><td>NA</td><td>Human</td><td>The Force Awakens</td><td></td><td>X-wing</td><td>NA</td></tr>
+	<tr><td>BB8           </td><td>NA</td><td>NA</td><td>none </td><td>none </td><td>black  </td><td>NA</td><td>none  </td><td>masculine</td><td>NA</td><td>Droid</td><td>The Force Awakens</td><td></td><td></td><td>NA</td></tr>
+	<tr><td>Captain Phasma</td><td>NA</td><td>NA</td><td>none </td><td>none </td><td>unknown</td><td>NA</td><td>female</td><td>feminine </td><td>NA</td><td>Human</td><td>The Force Awakens</td><td></td><td></td><td>NA</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<br>
+</section>
+<section id="id7">
+<h3>Check your Knowledge!<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<p>Try coming up with code to solve the following:</p>
+<ol class="arabic simple">
+<li><p>Add a new column that contains the number of characters (letters, including spaces) in each starwars character’s name. <em>Hint: <code class="docutils literal notranslate"><span class="pre">nchar()</span></code> can count characters in text</em></p></li>
+<li><p>The example above makes it hard compare <code class="docutils literal notranslate"><span class="pre">height</span></code> and <code class="docutils literal notranslate"><span class="pre">height_inches</span></code>. Can you combine <code class="docutils literal notranslate"><span class="pre">mutate()</span></code> with <code class="docutils literal notranslate"><span class="pre">select()</span></code> to show the two height values side by side?</p></li>
+</ol>
 </section>
 </section>
 </section>
@@ -1351,6 +1453,7 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Character Variables</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Numeric Variables</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Combining Statements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Check your Knowledge!</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#select"><code class="docutils literal notranslate"><span class="pre">select()</span></code></a><ul class="nav section-nav flex-column">
@@ -1358,11 +1461,17 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reordering-columns">Reordering Columns</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-a-range-of-columns">Selecting a Range of Columns</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selection-helpers">Selection Helpers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Check your Knowledge!</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pull"><code class="docutils literal notranslate"><span class="pre">pull()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pull"><code class="docutils literal notranslate"><span class="pre">pull()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Check your Knowledge!</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mutate"><code class="docutils literal notranslate"><span class="pre">mutate()</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-existing-columns">Editing Existing Columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-new-columns">Adding new columns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Check your Knowledge!</a></li>
 </ul>
 </li>
 </ul>
