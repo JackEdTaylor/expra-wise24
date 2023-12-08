@@ -534,6 +534,7 @@ document.write(`
 <p>The most useful tidyverse packages for wrangling data are <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> and <code class="docutils literal notranslate"><span class="pre">tidyr</span></code>. The <a class="reference external" href="https://dplyr.tidyverse.org/"><code class="docutils literal notranslate"><span class="pre">dplyr</span></code></a> package has useful functions for manipulating tibbles (dataframes), such as sorting, filtering, and editing columns. The <a class="reference external" href="https://tidyr.tidyverse.org/"><code class="docutils literal notranslate"><span class="pre">tidyr</span></code></a> package has functions that help us tidy or reformat dataframes.</p>
 <img src="https://www.tidyverse.org/css/images/hex/dplyr.png" width=138>
 <img src="https://www.tidyverse.org/css/images/hex/tidyr.png" width=138>
+<br>
 <p>In this session, we will cover how to use 6 very handy functions from <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> package:</p>
 <ul class="simple">
 <li><p><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">arrange()</span></code></span></p></li>
@@ -547,11 +548,6 @@ document.write(`
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">#</a></h2>
 <section id="setup-part-1-install-packages">
 <h3>Setup Part 1: Install Packages<a class="headerlink" href="#setup-part-1-install-packages" title="Permalink to this heading">#</a></h3>
-<p>You can install the tidyverse packages like so:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&quot;tidyverse&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>This includes many packages that we won’t be using today, but which will be useful in other parts of the course (e.g., we will use <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> for Data Visualisation).</p>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition warning">
@@ -559,6 +555,11 @@ document.write(`
 <p>Remember, you should install packages in the console - never in a script that your share with others. This is because otherwise, your script will go to the effort of reinstalling a package <em>every time</em> it is run!</p>
 </div>
 </aside>
+<p>You can install the tidyverse packages like so:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&quot;tidyverse&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This includes many packages that we won’t be using today, but which will be useful in other parts of the course (e.g., we will use <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> for Data Visualisation).</p>
 </section>
 <section id="setup-part-2-check-dplyr-loads">
 <h3>Setup Part 2: Check <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> Loads<a class="headerlink" href="#setup-part-2-check-dplyr-loads" title="Permalink to this heading">#</a></h3>
