@@ -66,8 +66,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/data_wrangling_1';</script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -515,6 +513,15 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-existing-columns">Editing Existing Columns</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-new-columns">Adding new columns</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Check your Knowledge!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summarise"><code class="docutils literal notranslate"><span class="pre">summarise()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overall-summaries">Overall Summaries</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#per-group-summaries">Per-Group Summaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#counting-observations">Counting Observations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Check your Knowledge!</a></li>
 </ul>
 </li>
 </ul>
@@ -1338,27 +1345,25 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><table class="dataframe">
-<caption>A tibble: 87 × 15</caption>
-<thead>
-	<tr><th scope=col>name</th><th scope=col>height</th><th scope=col>mass</th><th scope=col>hair_color</th><th scope=col>skin_color</th><th scope=col>eye_color</th><th scope=col>birth_year</th><th scope=col>sex</th><th scope=col>gender</th><th scope=col>homeworld</th><th scope=col>species</th><th scope=col>films</th><th scope=col>vehicles</th><th scope=col>starships</th><th scope=col>height_inches</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;list&gt;</th><th scope=col>&lt;list&gt;</th><th scope=col>&lt;list&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td>Luke Skywalker</td><td>172</td><td> 77</td><td>blond</td><td>fair       </td><td>blue  </td><td> 19.0</td><td>male  </td><td>masculine</td><td>Tatooine</td><td>Human</td><td>A New Hope             , The Empire Strikes Back, Return of the Jedi     , Revenge of the Sith    , The Force Awakens      </td><td>Snowspeeder          , Imperial Speeder Bike</td><td>X-wing          , Imperial shuttle</td><td>67.71654</td></tr>
-	<tr><td>C-3PO         </td><td>167</td><td> 75</td><td>NA   </td><td>gold       </td><td>yellow</td><td>112.0</td><td>none  </td><td>masculine</td><td>Tatooine</td><td>Droid</td><td>A New Hope             , The Empire Strikes Back, Return of the Jedi     , The Phantom Menace     , Attack of the Clones   , Revenge of the Sith    </td><td></td><td></td><td>65.74803</td></tr>
-	<tr><td>R2-D2         </td><td> 96</td><td> 32</td><td>NA   </td><td>white, blue</td><td>red   </td><td> 33.0</td><td>none  </td><td>masculine</td><td>Naboo   </td><td>Droid</td><td>A New Hope             , The Empire Strikes Back, Return of the Jedi     , The Phantom Menace     , Attack of the Clones   , Revenge of the Sith    , The Force Awakens      </td><td></td><td></td><td>37.79528</td></tr>
-	<tr><td>Darth Vader   </td><td>202</td><td>136</td><td>none </td><td>white      </td><td>yellow</td><td> 41.9</td><td>male  </td><td>masculine</td><td>Tatooine</td><td>Human</td><td>A New Hope             , The Empire Strikes Back, Return of the Jedi     , Revenge of the Sith    </td><td></td><td>TIE Advanced x1</td><td>79.52756</td></tr>
-	<tr><td>Leia Organa   </td><td>150</td><td> 49</td><td>brown</td><td>light      </td><td>brown </td><td> 19.0</td><td>female</td><td>feminine </td><td>Alderaan</td><td>Human</td><td>A New Hope             , The Empire Strikes Back, Return of the Jedi     , Revenge of the Sith    , The Force Awakens      </td><td>Imperial Speeder Bike</td><td></td><td>59.05512</td></tr>
-	<tr><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td></tr>
-	<tr><td>Finn          </td><td>NA</td><td>NA</td><td>black</td><td>dark </td><td>dark   </td><td>NA</td><td>male  </td><td>masculine</td><td>NA</td><td>Human</td><td>The Force Awakens</td><td></td><td></td><td>NA</td></tr>
-	<tr><td>Rey           </td><td>NA</td><td>NA</td><td>brown</td><td>light</td><td>hazel  </td><td>NA</td><td>female</td><td>feminine </td><td>NA</td><td>Human</td><td>The Force Awakens</td><td></td><td></td><td>NA</td></tr>
-	<tr><td>Poe Dameron   </td><td>NA</td><td>NA</td><td>brown</td><td>light</td><td>brown  </td><td>NA</td><td>male  </td><td>masculine</td><td>NA</td><td>Human</td><td>The Force Awakens</td><td></td><td>X-wing</td><td>NA</td></tr>
-	<tr><td>BB8           </td><td>NA</td><td>NA</td><td>none </td><td>none </td><td>black  </td><td>NA</td><td>none  </td><td>masculine</td><td>NA</td><td>Droid</td><td>The Force Awakens</td><td></td><td></td><td>NA</td></tr>
-	<tr><td>Captain Phasma</td><td>NA</td><td>NA</td><td>none </td><td>none </td><td>unknown</td><td>NA</td><td>female</td><td>feminine </td><td>NA</td><td>Human</td><td>The Force Awakens</td><td></td><td></td><td>NA</td></tr>
-</tbody>
-</table>
-</div></div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 87 × 15
+   name     height  mass hair_color skin_color eye_color birth_year sex   gender
+   &lt;chr&gt;     &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+ 1 Luke Sk…    172    77 blond      fair       blue            19   male  mascu…
+ 2 C-3PO       167    75 <span class=" -Color -Color-Red">NA</span>         gold       yellow         112   none  mascu…
+ 3 R2-D2        96    32 <span class=" -Color -Color-Red">NA</span>         white, bl… red             33   none  mascu…
+ 4 Darth V…    202   136 none       white      yellow          41.9 male  mascu…
+ 5 Leia Or…    150    49 brown      light      brown           19   fema… femin…
+ 6 Owen La…    178   120 brown, gr… light      blue            52   male  mascu…
+ 7 Beru Wh…    165    75 brown      light      blue            47   fema… femin…
+ 8 R5-D4        97    32 <span class=" -Color -Color-Red">NA</span>         white, red red             <span class=" -Color -Color-Red">NA</span>   none  mascu…
+ 9 Biggs D…    183    84 black      light      brown           24   male  mascu…
+10 Obi-Wan…    182    77 auburn, w… fair       blue-gray       57   male  mascu…
+# ℹ 77 more rows
+# ℹ 6 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;, films &lt;list&gt;,
+#   vehicles &lt;list&gt;, starships &lt;list&gt;, height_inches &lt;dbl&gt;
+</pre></div>
+</div>
+</div>
 </div>
 <br>
 </section>
@@ -1368,6 +1373,158 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 <ol class="arabic simple">
 <li><p>Add a new column that contains the number of characters (letters, including spaces) in each starwars character’s name. <em>Hint: <code class="docutils literal notranslate"><span class="pre">nchar()</span></code> can count characters in text</em></p></li>
 <li><p>The example above makes it hard compare <code class="docutils literal notranslate"><span class="pre">height</span></code> and <code class="docutils literal notranslate"><span class="pre">height_inches</span></code>. Can you combine <code class="docutils literal notranslate"><span class="pre">mutate()</span></code> with <code class="docutils literal notranslate"><span class="pre">select()</span></code> to show the two height values side by side?</p></li>
+</ol>
+<br>
+</section>
+</section>
+<section id="summarise">
+<h2><code class="docutils literal notranslate"><span class="pre">summarise()</span></code><a class="headerlink" href="#summarise" title="Permalink to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">summarise()</span></code> function lets us calculate summary statistics for our dataframe. It can be coimbined with <code class="docutils literal notranslate"><span class="pre">group_by()</span></code> to calculate summary statistics for groups separately (e.g., factorial designs in an experiment).</p>
+<section id="overall-summaries">
+<h3>Overall Summaries<a class="headerlink" href="#overall-summaries" title="Permalink to this heading">#</a></h3>
+<p>On it’s own, <code class="docutils literal notranslate"><span class="pre">summarise()</span></code> gives us overall summary statistics for the dataframe. For example, we can calculate the average height (ignoring missing observations) like so:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summarise</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">mean_height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 1 × 1
+  mean_height
+        &lt;dbl&gt;
+1        175.
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+<p>We can ask for multiple summary statistics. For example, we can also calculate the standard deviation (<code class="docutils literal notranslate"><span class="pre">sd()</span></code>), and calculate these variables for multiple variables (both <code class="docutils literal notranslate"><span class="pre">height</span></code> and <code class="docutils literal notranslate"><span class="pre">mass</span></code>).</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summarise</span><span class="p">(</span>
+<span class="w">    </span><span class="n">starwars</span><span class="p">,</span>
+<span class="w">    </span><span class="n">mean_height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
+<span class="w">    </span><span class="n">sd_height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sd</span><span class="p">(</span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
+<span class="w">    </span><span class="n">mean_mass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
+<span class="w">    </span><span class="n">sd_mass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sd</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 1 × 4
+  mean_height sd_height mean_mass sd_mass
+        &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+1        175.      34.8      97.3    169.
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+</section>
+</section>
+<section id="per-group-summaries">
+<h2>Per-Group Summaries<a class="headerlink" href="#per-group-summaries" title="Permalink to this heading">#</a></h2>
+<p>If we call <code class="docutils literal notranslate"><span class="pre">group_by()</span></code> before <code class="docutils literal notranslate"><span class="pre">summarise()</span></code>, we can calculate summary statistics per group. For example, we could calculate the Mean and SD of height and mass for each category of sex.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">starwars_grouped</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">group_by</span><span class="p">(</span><span class="n">starwars</span><span class="p">,</span><span class="w"> </span><span class="n">sex</span><span class="p">)</span>
+
+<span class="nf">summarise</span><span class="p">(</span>
+<span class="w">    </span><span class="n">starwars_grouped</span><span class="p">,</span>
+<span class="w">    </span><span class="n">mean_height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
+<span class="w">    </span><span class="n">sd_height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sd</span><span class="p">(</span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
+<span class="w">    </span><span class="n">mean_mass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
+<span class="w">    </span><span class="n">sd_mass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sd</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 5 × 5
+  sex            mean_height sd_height mean_mass sd_mass
+  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+1 female                172.      15.9      54.7    8.59
+2 hermaphroditic        175       <span class=" -Color -Color-Red">NA</span>      1358     <span class=" -Color -Color-Red">NA</span>   
+3 male                  179.      36.0      80.2   28.5 
+4 none                  131.      49.1      69.8   51.0 
+5 <span class=" -Color -Color-Red">NA</span>                    175       12.4      81     31.2 
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+<p>As a brief teaser for <a class="reference external" href="https://jackedtaylor.github.io/expra-wise23/introduction/data_wrangling_2.html">Data Wrangling Part 2</a>, we can rewrite this into a single chain, via the pipe operator (<code class="docutils literal notranslate"><span class="pre">|&gt;</span></code>).</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">starwars_grouped</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">group_by</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">summarise</span><span class="p">(</span>
+<span class="w">        </span><span class="n">mean_height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
+<span class="w">        </span><span class="n">sd_height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sd</span><span class="p">(</span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
+<span class="w">        </span><span class="n">mean_mass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
+<span class="w">        </span><span class="n">sd_mass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sd</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="w">    </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 5 × 5
+  sex            mean_height sd_height mean_mass sd_mass
+  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+1 female                172.      15.9      54.7    8.59
+2 hermaphroditic        175       <span class=" -Color -Color-Red">NA</span>      1358     <span class=" -Color -Color-Red">NA</span>   
+3 male                  179.      36.0      80.2   28.5 
+4 none                  131.      49.1      69.8   51.0 
+5 <span class=" -Color -Color-Red">NA</span>                    175       12.4      81     31.2 
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+</section>
+<section id="counting-observations">
+<h2>Counting Observations<a class="headerlink" href="#counting-observations" title="Permalink to this heading">#</a></h2>
+<p>One common use of <code class="docutils literal notranslate"><span class="pre">group_by()</span></code> and <code class="docutils literal notranslate"><span class="pre">summarise()</span></code> is to count the number of observations. Here, we count the number of observations for each category of <code class="docutils literal notranslate"><span class="pre">sex</span></code>, via the <code class="docutils literal notranslate"><span class="pre">n()</span></code> function.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">starwars_grouped</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">group_by</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">summarise</span><span class="p">(</span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">n</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 5 × 2
+  sex                N
+  &lt;chr&gt;          &lt;int&gt;
+1 female            16
+2 hermaphroditic     1
+3 male              60
+4 none               6
+5 <span class=" -Color -Color-Red">NA</span>                 4
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+<section id="id8">
+<h3>Check your Knowledge!<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<p>Try coming up with code to solve the following:</p>
+<ol class="arabic simple">
+<li><p>Create a single summary that contains the mean height, SD of height, and number of observations, for each category of <code class="docutils literal notranslate"><span class="pre">sex</span></code>.</p></li>
+<li><p>Count the number of observations for each category of <code class="docutils literal notranslate"><span class="pre">species</span></code>, and combine this with another function you have learned to sort descendingly (most populous species first).</p></li>
 </ol>
 </section>
 </section>
@@ -1472,6 +1629,15 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-existing-columns">Editing Existing Columns</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-new-columns">Adding new columns</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Check your Knowledge!</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summarise"><code class="docutils literal notranslate"><span class="pre">summarise()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overall-summaries">Overall Summaries</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#per-group-summaries">Per-Group Summaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#counting-observations">Counting Observations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Check your Knowledge!</a></li>
 </ul>
 </li>
 </ul>
