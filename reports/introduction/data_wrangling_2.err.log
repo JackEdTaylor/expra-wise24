@@ -1,0 +1,84 @@
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/jupyter_core/utils/__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+  File "/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# simulate two conditions' RTs - cell hidden but kept as may need changing at some point
+N <- 1e6
+B0 <- 1
+Bb <- 0.5
+Bc <- -0.5
+e_sd <- 0.6
+ndt <- 150
+
+d <- tibble(cond = rep(c("A", "B", "C"), each=N)) |>
+    mutate(
+        b_dum = cond=="B",
+        c_dum = cond=="C",
+        y = ndt + exp(
+            B0 + b_dum * Bb + c_dum * Bc +
+                rnorm(n(), 0, e_sd)
+        ) * 100
+    )
+
+summ <- d |>
+    group_by(cond) |>
+    summarise(mean_rt = mean(y), median_rt = median(y)) |>
+    mutate(mean_rt = round(mean, 2), median_rt = round(median_rt, 2))
+
+summ
+------------------
+
+
+[1m[33mError[39m in `mutate()`:[22m
+[1m[22m[36mℹ[39m In argument: `mean_rt = round(mean, 2)`.
+[1mCaused by error in `round()`:[22m
+[33m![39m non-numeric argument to mathematical function
+Traceback:
+
+1. mutate(summarise(group_by(d, cond), mean_rt = mean(y), median_rt = median(y)), 
+ .     mean_rt = round(mean, 2), median_rt = round(median_rt, 2))
+2. mutate.data.frame(summarise(group_by(d, cond), mean_rt = mean(y), 
+ .     median_rt = median(y)), mean_rt = round(mean, 2), median_rt = round(median_rt, 
+ .     2))
+3. mutate_cols(.data, dplyr_quosures(...), by)
+4. withCallingHandlers(for (i in seq_along(dots)) {
+ .     poke_error_context(dots, i, mask = mask)
+ .     context_poke("column", old_current_column)
+ .     new_columns <- mutate_col(dots[[i]], data, mask, new_columns)
+ . }, error = dplyr_error_handler(dots = dots, mask = mask, bullets = mutate_bullets, 
+ .     error_call = error_call, error_class = "dplyr:::mutate_error"), 
+ .     warning = dplyr_warning_handler(state = warnings_state, mask = mask, 
+ .         error_call = error_call))
+5. mutate_col(dots[[i]], data, mask, new_columns)
+6. mask$eval_all_mutate(quo)
+7. eval()
+8. .handleSimpleError(function (cnd) 
+ . {
+ .     local_error_context(dots, i = frame[[i_sym]], mask = mask)
+ .     if (inherits(cnd, "dplyr:::internal_error")) {
+ .         parent <- error_cnd(message = bullets(cnd))
+ .     }
+ .     else {
+ .         parent <- cnd
+ .     }
+ .     message <- c(cnd_bullet_header(action), i = if (has_active_group_context(mask)) cnd_bullet_cur_group_label())
+ .     abort(message, class = error_class, parent = parent, call = error_call)
+ . }, "non-numeric argument to mathematical function", base::quote(round(mean, 
+ .     2)))
+9. h(simpleError(msg, call))
+10. abort(message, class = error_class, parent = parent, call = error_call)
+11. signal_abort(cnd, .file)
+
