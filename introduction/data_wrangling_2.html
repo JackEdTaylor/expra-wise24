@@ -66,6 +66,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/data_wrangling_2';</script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -487,6 +489,11 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wide-and-long-data-formatting">Wide and Long Data Formatting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wide-format-example">Wide Format Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#long-format-example">Long Format Example</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -502,9 +509,33 @@ document.write(`
 <h1>Data Wrangling 2<a class="headerlink" href="#data-wrangling-2" title="Permalink to this heading">#</a></h1>
 <p>Welcome to part 2! In this session, we will recap everything we covered in <a class="reference external" href="https://jackedtaylor.github.io/expra-wise23/introduction/data_wrangling_1.html">Part 1</a>, and we will cover:</p>
 <ul class="simple">
-<li><p><span class="xref myst">Pipes</span></p></li>
-<li><p>Long and Wide format</p></li>
+<li><p><span class="xref myst">Pipes</span>: <code class="docutils literal notranslate"><span class="pre">|&gt;</span></code></p></li>
+<li><p><span class="xref myst">Reformatting into Wide / Long format</span>: <code class="docutils literal notranslate"><span class="pre">pivot_wider()</span></code> and <code class="docutils literal notranslate"><span class="pre">pivot_longer()</span></code></p></li>
 </ul>
+<p>We will use two main packages today: <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> and <code class="docutils literal notranslate"><span class="pre">tidyr</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attaching package: ‘dplyr’
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following objects are masked from ‘package:stats’:
+
+    filter, lag
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+</pre></div>
+</div>
+</div>
+</div>
 <br>
 <hr class="docutils" />
 <section id="pipes">
@@ -515,9 +546,7 @@ document.write(`
 </div>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
-
-<span class="n">data_1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">starwars</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">data_1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">starwars</span>
 <span class="n">data_2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">data_1</span><span class="p">,</span><span class="w"> </span><span class="n">homeworld</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&quot;Alderaan&quot;</span><span class="p">)</span>
 <span class="n">data_3</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">mutate</span><span class="p">(</span><span class="n">data_2</span><span class="p">,</span><span class="w"> </span><span class="n">height_inches</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height</span><span class="o">/</span><span class="m">2.54</span><span class="p">)</span>
 <span class="n">data_4</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">data_3</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">height_inches</span><span class="p">)</span>
@@ -618,7 +647,76 @@ document.write(`
 </div>
 </div>
 </div>
+<br>
 </section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="wide-and-long-data-formatting">
+<h2>Wide and Long Data Formatting<a class="headerlink" href="#wide-and-long-data-formatting" title="Permalink to this heading">#</a></h2>
+<p>Imagine we have a database of names, heights, and ages. There are two sensible ways we can organise these data in a table.</p>
+<section id="wide-format-example">
+<h3>Wide Format Example<a class="headerlink" href="#wide-format-example" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Each variable is in a different column</p></li>
+<li><p>Each row refers to one ID (name)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">data.frame</span><span class="p">(</span>
+<span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Julia&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hans&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Paul&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Laura&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">180</span><span class="p">,</span><span class="w"> </span><span class="m">193</span><span class="p">,</span><span class="w"> </span><span class="m">174</span><span class="p">,</span><span class="w"> </span><span class="m">168</span><span class="p">),</span>
+<span class="w">    </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="m">32</span><span class="p">,</span><span class="w"> </span><span class="m">28</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 4 × 3</caption>
+<thead>
+	<tr><th scope=col>name</th><th scope=col>height</th><th scope=col>age</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Julia</td><td>180</td><td>25</td></tr>
+	<tr><td>Hans </td><td>193</td><td>32</td></tr>
+	<tr><td>Paul </td><td>174</td><td>28</td></tr>
+	<tr><td>Laura</td><td>168</td><td>30</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="long-format-example">
+<h3>Long Format Example<a class="headerlink" href="#long-format-example" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>One column contains values from multiple variables</p></li>
+<li><p>Another column tells us which variable each value comes from</p></li>
+<li><p>Each row refers to one combination of variable and ID (name)</p></li>
+</ul>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 8 × 3</caption>
+<thead>
+	<tr><th scope=col>name</th><th scope=col>variable</th><th scope=col>value</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Julia</td><td>height</td><td>180</td></tr>
+	<tr><td>Julia</td><td>age   </td><td> 25</td></tr>
+	<tr><td>Hans </td><td>height</td><td>193</td></tr>
+	<tr><td>Hans </td><td>age   </td><td> 32</td></tr>
+	<tr><td>Paul </td><td>height</td><td>174</td></tr>
+	<tr><td>Paul </td><td>age   </td><td> 28</td></tr>
+	<tr><td>Laura</td><td>height</td><td>168</td></tr>
+	<tr><td>Laura</td><td>age   </td><td> 30</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>Wide and Long data formats are simply different ways of representing the data.</p>
 </section>
 </section>
 </section>
@@ -693,6 +791,11 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#c">1C)</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wide-and-long-data-formatting">Wide and Long Data Formatting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wide-format-example">Wide Format Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#long-format-example">Long Format Example</a></li>
 </ul>
 </li>
 </ul>
