@@ -24,6 +24,7 @@ parts:
       - file: introduction/glm
       - file: introduction/model_appropriateness
       - file: introduction/data_wrangling_1
+      - file: introduction/data_wrangling_2
 
   - caption: Demo Experiment
     chapters:
