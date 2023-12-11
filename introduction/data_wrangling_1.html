@@ -622,6 +622,7 @@ document.write(`
 <p>Now that we’re all set up, let’s start a-wrangling…</p>
 </section>
 </section>
+<hr class="docutils" />
 <section id="arrange">
 <h2><code class="docutils literal notranslate"><span class="pre">arrange()</span></code><a class="headerlink" href="#arrange" title="Permalink to this heading">#</a></h2>
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">arrange()</span></code> function to sort by variables in the dataframe.</p>
@@ -768,8 +769,10 @@ We can also arrange the dataframe in <em>descending</em> order, with the <em><co
 <li><p>Sort descendingly by mass, such that the most massive character comes first.</p></li>
 <li><p>Sort by gender, eye colour, and then height. Which character is the first observation? Why?</p></li>
 </ol>
-<br></section>
+<br><br>
 </section>
+</section>
+<hr class="docutils" />
 <section id="filter">
 <h2><code class="docutils literal notranslate"><span class="pre">filter()</span></code><a class="headerlink" href="#filter" title="Permalink to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">filter()</span></code> function is useful for subsetting rows of data.</p>
@@ -960,6 +963,7 @@ As with <code class="docutils literal notranslate"><span class="pre">==</span></
 <br>
 </section>
 </section>
+<hr class="docutils" />
 <section id="select">
 <h2><code class="docutils literal notranslate"><span class="pre">select()</span></code><a class="headerlink" href="#select" title="Permalink to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">select()</span></code> function is useful for subsetting <em>columns</em>.</p>
@@ -1168,6 +1172,7 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 <br>
 </section>
 </section>
+<hr class="docutils" />
 <section id="pull">
 <h2><code class="docutils literal notranslate"><span class="pre">pull()</span></code><a class="headerlink" href="#pull" title="Permalink to this heading">#</a></h2>
 <p>While <code class="docutils literal notranslate"><span class="pre">select()</span></code> subsets columns in our dataframe, the output is still stored as a column in a dataframe. Instead, we may want to store the results in a more standard data format. The <code class="docutils literal notranslate"><span class="pre">pull()</span></code> function makes this easy.</p>
@@ -1296,6 +1301,7 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 <br>
 </section>
 </section>
+<hr class="docutils" />
 <section id="mutate">
 <h2><code class="docutils literal notranslate"><span class="pre">mutate()</span></code><a class="headerlink" href="#mutate" title="Permalink to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">mutate()</span></code> function allows us to edit columns and add new columns in dataframes.</p>
@@ -1377,6 +1383,7 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 <br>
 </section>
 </section>
+<hr class="docutils" />
 <section id="summarise">
 <h2><code class="docutils literal notranslate"><span class="pre">summarise()</span></code><a class="headerlink" href="#summarise" title="Permalink to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">summarise()</span></code> function lets us calculate summary statistics for our dataframe. It can be coimbined with <code class="docutils literal notranslate"><span class="pre">group_by()</span></code> to calculate summary statistics for groups separately (e.g., factorial designs in an experiment).</p>
@@ -1464,7 +1471,7 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 <p>As a brief teaser for <a class="reference external" href="https://jackedtaylor.github.io/expra-wise23/introduction/data_wrangling_2.html">Data Wrangling Part 2</a>, we can rewrite this into a single chain, via the pipe operator (<code class="docutils literal notranslate"><span class="pre">|&gt;</span></code>).</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">starwars_grouped</span><span class="w"> </span><span class="o">|&gt;</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">starwars</span><span class="w"> </span><span class="o">|&gt;</span>
 <span class="w">    </span><span class="nf">group_by</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
 <span class="w">    </span><span class="nf">summarise</span><span class="p">(</span>
 <span class="w">        </span><span class="n">mean_height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
@@ -1497,7 +1504,7 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 <p>One common use of <code class="docutils literal notranslate"><span class="pre">group_by()</span></code> and <code class="docutils literal notranslate"><span class="pre">summarise()</span></code> is to count the number of observations. Here, we count the number of observations for each category of <code class="docutils literal notranslate"><span class="pre">sex</span></code>, via the <code class="docutils literal notranslate"><span class="pre">n()</span></code> function.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">starwars_grouped</span><span class="w"> </span><span class="o">|&gt;</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">starwars</span><span class="w"> </span><span class="o">|&gt;</span>
 <span class="w">    </span><span class="nf">group_by</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
 <span class="w">    </span><span class="nf">summarise</span><span class="p">(</span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">n</span><span class="p">())</span>
 </pre></div>
