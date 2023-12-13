@@ -69,11 +69,6 @@ We might miss some things, so please notify the instructors of your pending abse
 - Please notify me as soon as possible if the material being presented in class is not accessible.
 - Please notify me if any of the physical accomodations are difficult to use or access for you.
 
-
-### Code of conduct
-
-This course has a *Code of conduct*. You can find that in the [Code of Conduct](https://jackedtaylor.github.io/expra-wise23/general_information/CoC.html) section of this book.
-
 ### Acknowledgements
 
 Several parts of this section are directly taken or adapted from [Alexander Huth's Neuro Data Analysis in Python syllabus](https://github.com/alexhuth/ndap-fa2020) licensed under a [BSD-3-Clause License](https://github.com/alexhuth/ndap-fa2020/blob/master/LICENSE) and [Shannon Ellis' COGS 18: Introduction to Python](https://cogs18.github.io/assets/intro/syllabus.html).
