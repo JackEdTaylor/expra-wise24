@@ -6,7 +6,9 @@ In this ExPra (Empirisch-Experimentelles Praktikum), you will get hands-on exper
 
 ### How to reach the folks in the front
 
-<p align="center"><iframe src="https://giphy.com/embed/U6GunJi6B1o7ecMfKc" width="240" height="240" frameBorder="0" vspace="0" class="giphy-embed" allowFullScreen style="overflow-y: hidden;"></iframe></p><p align="center"><a href="https://giphy.com/gifs/justviralnet-funny-mistake-spelling-U6GunJi6B1o7ecMfKc"></a>
+<img src="https://media1.giphy.com/media/LGjdE8oxY7SQE/giphy.gif" width=250>
+
+<sub><sup>[via giphy](https://media.giphy.com/media/LGjdE8oxY7SQE/giphy.gif)</sup></sub>
 
 [Jack Taylor](https://jackedtaylor.github.io/)
 
