@@ -10,7 +10,9 @@ packages <- c(
   "tidyr",
   "purrr",
   "ordinal",
-  "lme4"
+  "lme4",
+  "patchwork",
+  "magick"
 )
 
 install.packages(packages, repos="https://cloud.r-project.org/")
