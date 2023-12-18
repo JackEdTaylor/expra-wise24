@@ -12,8 +12,8 @@ The following course requirements have specific deadlines:
 | Submit the Demo Report as a group (not graded) | 22/11/2023 |
 | Preregister your experiment on LIFOS as a group | 06/12/2023 |
 | Present your research findings as a group | 24/01/2023 |
-| Submit your poster as a group | 01/02/2023 (currently approximate!) |
-| Submit your ExPra Report individually (more details [below](#the-expra-report)) | 06/03/2023 (currently approximate!) | 
+| Submit your poster as a group (*to ensure we have time to print it!*) | 29/01/2023 |
+| Submit your ExPra Report individually (more details [below](#the-expra-report)) | 04/03/2023 | 
 
 ## Requirements with no Specific Deadline
 
@@ -38,6 +38,8 @@ To receive course credits, you will also be expected to:
 ### What should the report look like?
 
 <b> <i class="fa-solid fa-file-pdf"></i> <a href="https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/static/EXPRA_example_report.pdf">Download the Example ExPra Report</a>  </b>
+
+<b> <i class="fa-solid fa-file-pdf"></i> <a href="https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/static/EXPRA_Guide_for_students.pdf">Download the ExPra Guide for Students</a>  </b>
 
 The ExPra report is the final exam for the research project. The report is graded, and determines your final mark for the course.
 
