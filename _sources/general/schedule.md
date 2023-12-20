@@ -28,8 +28,8 @@ Here is where we will keep track of our schedule. Depending on our progress, pot
 
 | Date (dd/mm/yyyy) 🗓         | Content | Tasks for Next Week |
 |--------------|-----------|------------|
-| 10/01/2024 |  - Demo Report Feedback<br> - Data Analysis Workshop<br> - Analysis Help<br> - Scientific Outreach & Communication<br>  | - Work on your Data analysis scripts <br>- Draft Research Presentation Slides <br>- Work on your Report
-| 17/01/2024 |  - Data Visualisation Workshop<br> - Analysis Help<br> - Visualisation Help<br> - Scientific Poster Workshop<br>  | - Work on your Report <br>- Finalise Research Presentation Slides <br>- Draft Poster
+| 10/01/2024 |  - Demo Report Feedback<br> - [Data Visualisation Workshop](https://jackedtaylor.github.io/expra-wise23/introduction/data_vis)<br> - Analysis Help<br> - Scientific Outreach & Communication<br>  | - Work on your Data analysis scripts <br>- Draft Research Presentation Slides <br>- Work on your Report
+| 17/01/2024 |  - Scientific Poster Workshop<br> - Analysis Help<br> - Visualisation Help<br>  | - Work on your Report <br>- Finalise Research Presentation Slides <br>- Draft Poster
 | 24/01/2024 |  - Research Presentations<br> - Analysis Help<br> - Poster Help<br>  | - Work on your Report<br>- Work on your Poster
 | 31/01/2024 |  - (Advanced Analysis Workshop)<br> - Analysis Help<br>  | - Submit your Poster
 | 07/02/2024 |
