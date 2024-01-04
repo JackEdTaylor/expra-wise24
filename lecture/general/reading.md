@@ -59,15 +59,11 @@ In addition to the suggested reading above, here you can find some example liter
 
 ### Group B
 
-* Flynn, D., van Schaik, P., & van Wersch, A. (2004). A comparison of multi-item Likert and visual analogue scales for the assessment of transactionally defined coping function. *European Journal of Psychological Assessment*, *20*, 49–58. https://doi.org/10.3758/s13428-018-1041-8
+* Imbault, C., Shore, D., & Kuperman, V. (2018). Reliability of the sliding scale for collecting affective responses to words. *Behavior Research Methods*, *50*, 2399–2407. https://doi.org/10.3758/s13428-018-1016-9
 
 * Lozano, L. M., García-Cueto, E., & Muñiz, J. (2008). Effect of the number of response categories on the reliability and validity of rating scales. *Methodology*, *4*(2). https://doi.org/10.1027/1614-2241.4.2.73
 
-* Masters, J. R. (1974). The relationship between number of response categories and reliability of likert-type questionnaires. *Journal of Educational Measurement*, *11*(1), 49-53. https://doi.org/10.1111/j.1745-3984.1974.tb00970.x
-
-* Simms, L. J., Zelazny, K., Williams, T. F., & Bernstein, L. (2019). Does the number of response options matter? Psychometric perspectives using personality questionnaire data. *Psychological Assessment*, *31*(4), 557–566. https://doi.org/10.1037/pas0000648
-
-* Weng, L. J. (2004). Impact of the number of response categories and anchor labels on coefficient alpha and test-retest reliability. *Educational and Psychological Measurement*, *64*, 956–972. https://doi.org/10.1177/0013164404268674
+* Proos, M., & Aigro, M. (2023). Concreteness ratings for 36,000 Estonian words. *Behavior Research Methods*. https://doi.org/10.3758/s13428-023-02257-4
 
 ### Group C
 
