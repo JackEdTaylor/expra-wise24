@@ -498,14 +498,17 @@ document.write(`
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparing-distributions-by-group">Comparing Distributions by Group</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Check your Knowledge!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Solutions</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scatter-plots">Scatter Plots</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Check your Knowledge!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Check your Knowledge!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Solutions</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-data-visualisation-with-data-wrangling">Combining Data Visualisation with Data Wrangling</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Check your Knowledge!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Check your Knowledge!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Solutions</a></li>
 </ul>
 </li>
 </ul>
@@ -745,13 +748,40 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/9f5a4f721bafb4f249247e3f86314b417e15c6a4aab25a6c914798f2f717a7f5.png" src="../_images/9f5a4f721bafb4f249247e3f86314b417e15c6a4aab25a6c914798f2f717a7f5.png" />
+<img alt="../_images/cbcc5682bc1d479e6a83d526ee563b60005cc7c0a8af5641fc0e93bfdd621831.png" src="../_images/cbcc5682bc1d479e6a83d526ee563b60005cc7c0a8af5641fc0e93bfdd621831.png" />
 </div>
 </div>
 <section id="id1">
 <h4>Check your Knowledge!<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
 <p><strong>a)</strong> Overlay density plots of memory scores for each experimental session. Notice any similarities/differences to the pattern with reading scores?</p>
-<p><strong>b)</strong> Overlay a categorical scatter plot of memory scores for each session, with a small amount of random jitter, on top of a violin plot.</p>
+<p><strong>b)</strong> Create a categorical scatter plot of memory scores for each session, with a small amount of random jitter, and overly on top of a violin plot.</p>
+</section>
+<section id="id2">
+<h4>Solutions<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># a</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">memory_score</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_density</span><span class="p">()</span>
+
+<span class="c1"># b</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">memory_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_violin</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">position_jitter</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="m">0.1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/b1607c345f27cac9cb93deba163e8967d5a579b51fe974714efa6b68ecbdb3d8.png" src="../_images/b1607c345f27cac9cb93deba163e8967d5a579b51fe974714efa6b68ecbdb3d8.png" />
+<img alt="../_images/55f32ceca47f4035c6bd88fea3a46bef9a6c1006fab2098b84047f0d7003f23d.png" src="../_images/55f32ceca47f4035c6bd88fea3a46bef9a6c1006fab2098b84047f0d7003f23d.png" />
+</div>
+</details>
+</div>
 </section>
 </section>
 <section id="scatter-plots">
@@ -799,11 +829,54 @@ document.write(`
 <img alt="../_images/086c6f5237f0eeae149f33b8147c541bc976e7562f65d75c4d3b6a018d9e578d.png" src="../_images/086c6f5237f0eeae149f33b8147c541bc976e7562f65d75c4d3b6a018d9e578d.png" />
 </div>
 </div>
-<section id="id2">
-<h4>Check your Knowledge!<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<section id="id3">
+<h4>Check your Knowledge!<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
 <p><strong>a)</strong> Overlay the linear model estimates from <code class="docutils literal notranslate"><span class="pre">geom_smooth()</span></code> on top of a scatter plot of all points.</p>
 <p><strong>b)</strong> Does this correlation differ by experimental session time? Find a way to plot the scatter plot with linear models fit to each experimental session time separately. What conclusion do you draw from this plot?</p>
 <p><strong>c)</strong> Would you reach the same conclusion with a <code class="docutils literal notranslate"><span class="pre">loess</span></code> model?</p>
+</section>
+<section id="id4">
+<h4>Solutions<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
+<div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># a</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">read_score</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">memory_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">()</span>
+
+<span class="c1"># b</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">read_score</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">memory_score</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="n">time</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">&quot;lm&quot;</span><span class="p">)</span>
+
+<span class="c1"># c</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">read_score</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">memory_score</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="n">time</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">&quot;loess&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using method = &#39;loess&#39; and formula = &#39;y ~ x&#39;
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = &#39;y ~ x&#39;
+</pre></div>
+</div>
+<img alt="../_images/8206f375b0a74d7a95843b77a475f716c576f1c6bebbb0ade263f3525bf368b8.png" src="../_images/8206f375b0a74d7a95843b77a475f716c576f1c6bebbb0ade263f3525bf368b8.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = &#39;y ~ x&#39;
+</pre></div>
+</div>
+<img alt="../_images/e577704bcd7f7e6667a8a3950bf158b2ce01594bd08693369da1fcf09f8b7480.png" src="../_images/e577704bcd7f7e6667a8a3950bf158b2ce01594bd08693369da1fcf09f8b7480.png" />
+<img alt="../_images/2220d9cd618bb239daf4198bc49245b52c1ab304f558285bb58f5cad557525dc.png" src="../_images/2220d9cd618bb239daf4198bc49245b52c1ab304f558285bb58f5cad557525dc.png" />
+</div>
+</details>
+</div>
 </section>
 </section>
 <section id="combining-data-visualisation-with-data-wrangling">
@@ -882,10 +955,48 @@ document.write(`
 </div>
 </div>
 <p>This shows that participants’ scores are somewhat correlated. This is related to the idea of test-retest reliability.</p>
-<section id="id3">
-<h4>Check your Knowledge!<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<section id="id5">
+<h4>Check your Knowledge!<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
 <p><strong>a)</strong> Plot the correlation between participants’ morning and midday memory scores.</p>
 <p><strong>b)</strong> Tricky! Plot the correlation between morning scores in the reading test and evening scores in the memory test.</p>
+</section>
+<section id="id6">
+<h4>Solutions<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<div class="cell tag_hide-cell docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># a</span>
+<span class="n">exp_dat</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">pivot_wider</span><span class="p">(</span><span class="n">id_cols</span><span class="o">=</span><span class="n">subj_id</span><span class="p">,</span><span class="w"> </span><span class="n">names_from</span><span class="o">=</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">values_from</span><span class="o">=</span><span class="n">memory_score</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">midday</span><span class="p">,</span><span class="w"> </span><span class="n">morning</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">&quot;lm&quot;</span><span class="p">)</span>
+
+<span class="c1"># b</span>
+<span class="n">exp_dat</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">pivot_wider</span><span class="p">(</span><span class="n">id_cols</span><span class="o">=</span><span class="n">subj_id</span><span class="p">,</span><span class="w"> </span><span class="n">names_from</span><span class="o">=</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">values_from</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="n">read_score</span><span class="p">,</span><span class="w"> </span><span class="n">memory_score</span><span class="p">))</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">read_score_morning</span><span class="p">,</span><span class="w"> </span><span class="n">memory_score_evening</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">&quot;lm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = &#39;y ~ x&#39;
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = &#39;y ~ x&#39;
+</pre></div>
+</div>
+<img alt="../_images/d1c8ac5881f180fd61d715bdb4617c77add83c270f116f8d2ff8923d44555f14.png" src="../_images/d1c8ac5881f180fd61d715bdb4617c77add83c270f116f8d2ff8923d44555f14.png" />
+<img alt="../_images/af80d5c339e07549c65ca575d90e8bc888ac8eed31aa712a05142fb8bcf87dee.png" src="../_images/af80d5c339e07549c65ca575d90e8bc888ac8eed31aa712a05142fb8bcf87dee.png" />
+</div>
+</details>
+</div>
 </section>
 </section>
 </section>
@@ -966,14 +1077,17 @@ document.write(`
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparing-distributions-by-group">Comparing Distributions by Group</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Check your Knowledge!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Solutions</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scatter-plots">Scatter Plots</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Check your Knowledge!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Check your Knowledge!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Solutions</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-data-visualisation-with-data-wrangling">Combining Data Visualisation with Data Wrangling</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Check your Knowledge!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Check your Knowledge!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Solutions</a></li>
 </ul>
 </li>
 </ul>
