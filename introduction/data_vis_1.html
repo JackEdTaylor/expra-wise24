@@ -490,6 +490,24 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides">Slides</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out">Try it Out!</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ggplot2-canvas">The <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> “Canvas”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-distributions">Plotting Distributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#check-your-knowledge">Check your Knowledge!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions">Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparing-distributions-by-group">Comparing Distributions by Group</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Check your Knowledge!</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scatter-plots">Scatter Plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Check your Knowledge!</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-data-visualisation-with-data-wrangling">Combining Data Visualisation with Data Wrangling</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Check your Knowledge!</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -508,6 +526,7 @@ document.write(`
 <p>Data visualisation is an incredibly useful skill to develop! It can be an invaluable way to explore your data and present your findings.</p>
 <p>In the first half of this session, we will discuss what makes a good figure.</p>
 <p>In the second half, we will see how we apply these principles of data visualisation in practice, using <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> in R.</p>
+<p>Finally, in <a class="reference external" href="https://jackedtaylor.github.io/expra-wise23/introduction/data_vis_2">Data Visualisation Part 2</a>, we will look at how to make your figures pretty and publication-ready.</p>
 <section id="slides">
 <h2>Slides<a class="headerlink" href="#slides" title="Permalink to this heading">#</a></h2>
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ2Axzq7HMzOUqhjaekUAA399otP3LAsJFk3-OclQya5nk9-bFYesMbXwa6faf98cOrp1ChNL_8H_Lc/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
@@ -541,7 +560,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>This simulated dataset contains reading scores and memory scores from <em>N</em>=67 participants at three times in the day: morning, midday, and evening.</p>
+<p>This simulated dataset contains scores in a reading task and a memory task from <em>N</em>=67 participants at three times in the day: morning, midday, and evening.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">)</span>
@@ -567,6 +586,302 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
+<section id="the-ggplot2-canvas">
+<h3>The <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> “Canvas”<a class="headerlink" href="#the-ggplot2-canvas" title="Permalink to this heading">#</a></h3>
+<p>When we create a <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> object, the first function we use is <code class="docutils literal notranslate"><span class="pre">ggplot()</span></code>. The first argument is the dataframe we would like to plot. The second argument contains the <code class="docutils literal notranslate"><span class="pre">aes()</span></code> specifications, which says which variables in the data should be mapped to which aesthetics.</p>
+<p>Let’s see an example, where we say we want to plot reading scores from <code class="docutils literal notranslate"><span class="pre">exp_dat</span></code> on the x axis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read_score</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/2844c21e6b9caa1ae1602b0d4a49a9686583289a9c88e6e628a02bbde609cc4c.png" src="../_images/2844c21e6b9caa1ae1602b0d4a49a9686583289a9c88e6e628a02bbde609cc4c.png" />
+</div>
+</div>
+<p>What gives - where is our plot?</p>
+<p>Well, we’ve told <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> what to put on the x axis, but we haven’t said what to actually do with it!</p>
+<p>We’ve created a “blank canvas” - now we need to add plot objects. In <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> these are referred to as <em>Geoms</em>, and we add them with <code class="docutils literal notranslate"><span class="pre">geom_*</span></code> functions.</p>
+</section>
+<section id="plotting-distributions">
+<h3>Plotting Distributions<a class="headerlink" href="#plotting-distributions" title="Permalink to this heading">#</a></h3>
+<p>We can plot a histogram with the <code class="docutils literal notranslate"><span class="pre">geom_histogram()</span></code> function. We can simply add this to our code from before. <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> will then automatically know that the y axis should contain counts.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_histogram</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+</pre></div>
+</div>
+<img alt="../_images/81794d42619db7028eda5dba1d056eb135b6bb6c4b25a25dfc22f3ab84e393eb.png" src="../_images/81794d42619db7028eda5dba1d056eb135b6bb6c4b25a25dfc22f3ab84e393eb.png" />
+</div>
+</div>
+<p>Notice that we get a warning from <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> that it is using the default of <code class="docutils literal notranslate"><span class="pre">bins</span> <span class="pre">=</span> <span class="pre">30</span></code> for the <code class="docutils literal notranslate"><span class="pre">geom_histogram()</span></code> function, which means there are a total of 30 bins. It is recommended to pick a number of bins, or a bin width, that makes sense for your data. For example, if we want each bin to have a width of 10, we could write:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">binwidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5e09880299c2734c267456b7980cf8676e4553d230a57231599bb02df65d6f28.png" src="../_images/5e09880299c2734c267456b7980cf8676e4553d230a57231599bb02df65d6f28.png" />
+</div>
+</div>
+<p>Similarly, we can plot the empirical probability density with the <code class="docutils literal notranslate"><span class="pre">geom_density()</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_density</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/b4ef36d11c35ef9ab31946d0240afb27c7db76b3352b1ec5cdf6b6dd114ae6cb.png" src="../_images/b4ef36d11c35ef9ab31946d0240afb27c7db76b3352b1ec5cdf6b6dd114ae6cb.png" />
+</div>
+</div>
+<section id="check-your-knowledge">
+<h4>Check your Knowledge!<a class="headerlink" href="#check-your-knowledge" title="Permalink to this heading">#</a></h4>
+<p><strong>a)</strong> Plot the density of memory scores.</p>
+<p><strong>b)</strong> Plot a histogram of memory scores, with a bin width of 5.</p>
+<p><strong>c)</strong> Plot a histogram of memory scores, with 5 bins overall.</p>
+</section>
+<section id="solutions">
+<h4>Solutions<a class="headerlink" href="#solutions" title="Permalink to this heading">#</a></h4>
+<div class="cell tag_hide-cell tag_remove-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell content</span>
+<span class="expanded">Hide code cell content</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># a</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">memory_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_density</span><span class="p">()</span>
+
+<span class="c1"># b</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">memory_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">binwidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
+
+<span class="c1"># c</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">memory_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_histogram</span><span class="p">(</span><span class="n">bins</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+</section>
+<section id="comparing-distributions-by-group">
+<h3>Comparing Distributions by Group<a class="headerlink" href="#comparing-distributions-by-group" title="Permalink to this heading">#</a></h3>
+<p>Let’s say we also want to plot the distribution of reading scores for each experimental session separately. We can do this by saying we want the <code class="docutils literal notranslate"><span class="pre">time</span></code> variable (<code class="docutils literal notranslate"><span class="pre">&quot;morning&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;midday&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;evening&quot;</span></code>) to be mapped to the <code class="docutils literal notranslate"><span class="pre">colour</span></code> aesthetic.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read_score</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_density</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5f7c0b1d3cfc5e541858eaf4391284e872e36a083247181a8cc9d4b560605622.png" src="../_images/5f7c0b1d3cfc5e541858eaf4391284e872e36a083247181a8cc9d4b560605622.png" />
+</div>
+</div>
+<p>This shows us that reading scores were poorest in the morning, and best at midday. Other useful ways to compare distributions include the violin plot. A violin plot is a density plot mirrored across zero.</p>
+<p>This time, we want the time of day to be on the <code class="docutils literal notranslate"><span class="pre">x</span></code> axis, and the reading scores to be on the <code class="docutils literal notranslate"><span class="pre">y</span></code> axis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">read_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_violin</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/900fd3da7181cfe38b061f7cef11feb186b756f95b25abbaedc146a99ec43e09.png" src="../_images/900fd3da7181cfe38b061f7cef11feb186b756f95b25abbaedc146a99ec43e09.png" />
+</div>
+</div>
+<p>One of the nice things about <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> is that the <code class="docutils literal notranslate"><span class="pre">geom_*</span></code> functions are additive. We can just add geom objects on top of one another. For example, you may want to place a <a class="reference external" href="https://en.wikipedia.org/wiki/Box_plot">boxplot</a> on top of a violin plot. You can see the <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> documentation for details on <a class="reference external" href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html#summary-statistics">how to interpret the boxplot</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">read_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_violin</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_boxplot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/35351497763532a1bf376fd686368736e93eeb6292ac19e948b221a3c43b3102.png" src="../_images/35351497763532a1bf376fd686368736e93eeb6292ac19e948b221a3c43b3102.png" />
+</div>
+</div>
+<p>Finally, we can also just create a categorical scatter plot, plotting individual points in the data with <code class="docutils literal notranslate"><span class="pre">geom_point()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">read_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5bcee233cfc540b24bf54dec37f322d57513a69d3053f5a6a758a7e36339e194.png" src="../_images/5bcee233cfc540b24bf54dec37f322d57513a69d3053f5a6a758a7e36339e194.png" />
+</div>
+</div>
+<p>This is sometimes easier to read if we add “jitter” (random noise) to the x axis, rather than plotting all points in a line. We can do this with the <code class="docutils literal notranslate"><span class="pre">position_jiter()</span></code> function. The <code class="docutils literal notranslate"><span class="pre">width</span></code> argument tells <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> how wide we want the jittered points to be.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">read_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">position_jitter</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/691d676ff0517552ed82e516e4e8169691b5d34ce36a2f79e3a89bba9b7dc082.png" src="../_images/691d676ff0517552ed82e516e4e8169691b5d34ce36a2f79e3a89bba9b7dc082.png" />
+</div>
+</div>
+<section id="id1">
+<h4>Check your Knowledge!<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<p><strong>a)</strong> Overlay density plots of memory scores for each experimental session. Notice any similarities/differences to the pattern with reading scores?</p>
+<p><strong>b)</strong> Overlay a categorical scatter plot of memory scores for each session, with a small amount of random jitter, on top of a violin plot.</p>
+</section>
+</section>
+<section id="scatter-plots">
+<h3>Scatter Plots<a class="headerlink" href="#scatter-plots" title="Permalink to this heading">#</a></h3>
+<p>Let’s look at the relationship between reading scores and memory scores with <code class="docutils literal notranslate"><span class="pre">geom_point()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">read_score</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">memory_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/20d65951423e4a7feb5a97615850b351e93a77773866d140b3d9e23285d2a29a.png" src="../_images/20d65951423e4a7feb5a97615850b351e93a77773866d140b3d9e23285d2a29a.png" />
+</div>
+</div>
+<p>This looks like a positive correlation! It seems to say that participants’ reading scores and memory scores are correlated. We can plot this relationship with the <code class="docutils literal notranslate"><span class="pre">geom_smooth()</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">read_score</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">memory_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using method = &#39;loess&#39; and formula = &#39;y ~ x&#39;
+</pre></div>
+</div>
+<img alt="../_images/9d8a6a8f429251071cb418d0894d5ead605c62c6f8a5ca682d5af4e92bf43ee8.png" src="../_images/9d8a6a8f429251071cb418d0894d5ead605c62c6f8a5ca682d5af4e92bf43ee8.png" />
+</div>
+</div>
+<p>This plots a <a class="reference external" href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/loess">LOESS model</a> to predict memory score as a function of reading score - this is a non-linear estimate of the local relationship. The middle blue line shows the estimated relationship, and the 95% confidence interval.</p>
+<p>If we want to fit a simple linear model instead, we can just pass <code class="docutils literal notranslate"><span class="pre">method</span> <span class="pre">=</span> <span class="pre">&quot;lm&quot;</span></code> to the function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">read_score</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">memory_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;lm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = &#39;y ~ x&#39;
+</pre></div>
+</div>
+<img alt="../_images/086c6f5237f0eeae149f33b8147c541bc976e7562f65d75c4d3b6a018d9e578d.png" src="../_images/086c6f5237f0eeae149f33b8147c541bc976e7562f65d75c4d3b6a018d9e578d.png" />
+</div>
+</div>
+<section id="id2">
+<h4>Check your Knowledge!<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<p><strong>a)</strong> Overlay the linear model estimates from <code class="docutils literal notranslate"><span class="pre">geom_smooth()</span></code> on top of a scatter plot of all points.</p>
+<p><strong>b)</strong> Does this correlation differ by experimental session time? Find a way to plot the scatter plot with linear models fit to each experimental session time separately. What conclusion do you draw from this plot?</p>
+<p><strong>c)</strong> Would you reach the same conclusion with a <code class="docutils literal notranslate"><span class="pre">loess</span></code> model?</p>
+</section>
+</section>
+<section id="combining-data-visualisation-with-data-wrangling">
+<h3>Combining Data Visualisation with Data Wrangling<a class="headerlink" href="#combining-data-visualisation-with-data-wrangling" title="Permalink to this heading">#</a></h3>
+<p>Let’s have another look at the data. Notice that each participant occurs multiple times - we have one row for each combination of <code class="docutils literal notranslate"><span class="pre">subj_id</span></code> and <code class="docutils literal notranslate"><span class="pre">time</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 201 × 4
+   subj_id time    read_score memory_score
+   &lt;chr&gt;   &lt;chr&gt;        &lt;dbl&gt;        &lt;dbl&gt;
+ 1 s01     morning       76.8         67.2
+ 2 s01     midday        95.7         98.4
+ 3 s01     evening       94.3         95.0
+ 4 s02     morning       79.5         54.2
+ 5 s02     midday        97.2         88.5
+ 6 s02     evening       98.1         91.1
+ 7 s03     morning       76.2         69.1
+ 8 s03     midday        91.1         98.2
+ 9 s03     evening       85.2         94.9
+10 s04     morning       89.5         92.5
+# ℹ 191 more rows
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s imagine we want to plot the correlation between each participants reading scores at different times of day. How would we do this?</p>
+<p>The problem is that the reading scores from all times of day are in the same column - we are in <em>Long Format</em>. We can simply <a class="reference external" href="https://jackedtaylor.github.io/expra-wise23/introduction/data_wrangling_2.html#wide-and-long-data-formatting">pivot our data</a> into <em>Wide Format</em>.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">pivot_wider</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="n">id_cols</span><span class="o">=</span><span class="n">subj_id</span><span class="p">,</span><span class="w"> </span><span class="n">names_from</span><span class="o">=</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">values_from</span><span class="o">=</span><span class="n">read_score</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 67 × 4
+   subj_id morning midday evening
+   &lt;chr&gt;     &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
+ 1 s01        76.8   95.7    94.3
+ 2 s02        79.5   97.2    98.1
+ 3 s03        76.2   91.1    85.2
+ 4 s04        89.5  110.    100. 
+ 5 s05        76.7  101.    103. 
+ 6 s06        73.1   92.7    98.4
+ 7 s07        76.8   99.7    97.0
+ 8 s08        79.6  108.     99.8
+ 9 s09        81.6   99.9    99.9
+10 s10        68.5  102.     93.2
+# ℹ 57 more rows
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we pipe this into our plot, we can plot the correlation between participants’ morning and evening reading scores like so:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">exp_dat</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">pivot_wider</span><span class="p">(</span><span class="n">id_cols</span><span class="o">=</span><span class="n">subj_id</span><span class="p">,</span><span class="w"> </span><span class="n">names_from</span><span class="o">=</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">values_from</span><span class="o">=</span><span class="n">read_score</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">morning</span><span class="p">,</span><span class="w"> </span><span class="n">evening</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">&quot;lm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = &#39;y ~ x&#39;
+</pre></div>
+</div>
+<img alt="../_images/b1b2f42015db51fd63fb4dab2a03e6e82543c957a1c5e31c1681b3e1c57f6d58.png" src="../_images/b1b2f42015db51fd63fb4dab2a03e6e82543c957a1c5e31c1681b3e1c57f6d58.png" />
+</div>
+</div>
+<p>This shows that participants’ scores are somewhat correlated. This is related to the idea of test-retest reliability.</p>
+<section id="id3">
+<h4>Check your Knowledge!<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<p><strong>a)</strong> Plot the correlation between participants’ morning and midday memory scores.</p>
+<p><strong>b)</strong> Tricky! Plot the correlation between morning scores in the reading test and evening scores in the memory test.</p>
+</section>
 </section>
 </section>
 </section>
@@ -638,6 +953,24 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides">Slides</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out">Try it Out!</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ggplot2-canvas">The <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> “Canvas”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-distributions">Plotting Distributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#check-your-knowledge">Check your Knowledge!</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions">Solutions</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparing-distributions-by-group">Comparing Distributions by Group</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Check your Knowledge!</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scatter-plots">Scatter Plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Check your Knowledge!</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-data-visualisation-with-data-wrangling">Combining Data Visualisation with Data Wrangling</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Check your Knowledge!</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
