@@ -20,7 +20,7 @@ d <- tibble(
   mutate(
     read_score = 100 + time_morn_dum * -23 + time_eve_dum * -6 + subj_intercept + rnorm(n_subj, 0, 5),
     memory_score = (read_score - 100) * case_when(
-      time == "morning" ~ 1.03,
+      time == "morning" ~ 1.2,
       time == "midday" ~ 0,
       time == "evening" ~ 0.24
     ) + rnorm(n_subj, 0, 10) + 100
