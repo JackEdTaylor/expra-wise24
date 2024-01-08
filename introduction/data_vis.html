@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Data Visualisation &#8212; ExPra Winter 2023</title>
+    <title>Data Visualisation 1 &#8212; ExPra Winter 2023</title>
   
   
   
@@ -19,15 +19,15 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -40,9 +40,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -81,7 +81,7 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
 
@@ -124,12 +124,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <header>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
   
+  </header>
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -195,7 +203,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="model_appropriateness.html">Model Appropriateness</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_wrangling_1.html">Data Wrangling 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_wrangling_2.html">Data Wrangling 2</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Data Visualisation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Data Visualisation 1</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Demo Experiment</span></p>
 <ul class="nav bd-sidenav">
@@ -469,7 +477,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Data Visualisation</h1>
+    <h1>Data Visualisation 1</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -479,7 +487,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-xmas-trees">Bonus: Xmas Trees</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides">Slides</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out">Try it Out!</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -489,11 +501,26 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="data-visualisation">
-<h1>Data Visualisation<a class="headerlink" href="#data-visualisation" title="Permalink to this heading">#</a></h1>
-<p><strong>Coming soon! (watch this space)</strong></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="data-visualisation-1">
+<h1>Data Visualisation 1<a class="headerlink" href="#data-visualisation-1" title="Permalink to this heading">#</a></h1>
+<p>Data visualisation is an incredibly useful skill to develop! It can be an invaluable way to explore your data and present your findings.</p>
+<p>In the first half of this session, we will discuss what makes a good figure.</p>
+<p>In the second half, we will see how we apply these principles of data visualisation in practice, using <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> in R.</p>
+<section id="slides">
+<h2>Slides<a class="headerlink" href="#slides" title="Permalink to this heading">#</a></h2>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ2Axzq7HMzOUqhjaekUAA399otP3LAsJFk3-OclQya5nk9-bFYesMbXwa6faf98cOrp1ChNL_8H_Lc/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<h5>
+<a href=https://docs.google.com/presentation/d/1BCrbXmNgxQuRpLZEgJUspxtbSs_sFel1I0Bs_gbd9ZM/export/pdf><i class="fa-solid fa-file-pdf"></i> Download .pdf</a>
+&nbsp;
+<a href=https://docs.google.com/presentation/d/1BCrbXmNgxQuRpLZEgJUspxtbSs_sFel1I0Bs_gbd9ZM/export/pptx><i class="fa-solid fa-file-powerpoint"></i> Download .pptx</a>
+</h5></section>
+<section id="try-it-out">
+<h2>Try it Out!<a class="headerlink" href="#try-it-out" title="Permalink to this heading">#</a></h2>
+<section id="setup">
+<h3>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">#</a></h3>
+<p>We will be using <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> for data visualisation in R. This is the most popular package for data visualisation in R, and is extremely flexible.</p>
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_remove-output docutils container">
@@ -505,82 +532,29 @@ document.write(`
 </div>
 </div>
 </div>
-<section id="bonus-xmas-trees">
-<h2>Bonus: Xmas Trees<a class="headerlink" href="#bonus-xmas-trees" title="Permalink to this heading">#</a></h2>
-<p>In the meantime, here is a computationally reproducible festive meme…</p>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-output docutils container">
+<p>You can import the data we will be using like so:</p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># for plotting</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">patchwork</span><span class="p">)</span>
-
-<span class="c1"># for working with png images and adding them to ggplot objects</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">grid</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">magick</span><span class="p">)</span>
-
-<span class="c1"># download an image as a temporary file</span>
-<span class="n">tree_url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;https://upload.wikimedia.org/wikipedia/commons/4/42/TheresaKnott_christmas_tree.png&quot;</span>
-<span class="n">tree</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">tempfile</span><span class="p">(</span><span class="n">fileext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;.png&quot;</span><span class="p">)</span>
-<span class="nf">download.file</span><span class="p">(</span><span class="n">tree_url</span><span class="p">,</span><span class="w"> </span><span class="n">tree</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="o">=</span><span class="s">&quot;wb&quot;</span><span class="p">)</span>
-
-<span class="c1"># read image into R</span>
-<span class="n">tree_img</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">image_read</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span>
-
-<span class="c1"># get grobs for each plot</span>
-<span class="n">tree_grob_y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rasterGrob</span><span class="p">(</span><span class="n">tree_img</span><span class="p">,</span><span class="w"> </span><span class="n">interpolate</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-
-<span class="n">tree_grob_x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tree_img</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">image_rotate</span><span class="p">(</span><span class="m">90</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">rasterGrob</span><span class="p">(</span><span class="n">interpolate</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-
-<span class="n">tree_grob_z</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tree_img</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">image_rotate</span><span class="p">(</span><span class="m">60</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">image_scale</span><span class="p">(</span><span class="n">geometry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">geometry_size_percent</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="m">90</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">=</span><span class="m">60</span><span class="p">))</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">rasterGrob</span><span class="p">(</span><span class="n">interpolate</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-
-<span class="c1"># create canvas</span>
-<span class="n">canvas</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">scale_y_continuous</span><span class="p">(</span><span class="n">limits</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">))</span>
-
-<span class="c1"># XMAS</span>
-<span class="n">xmas</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">canvas</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">geom_vline</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="n">linewidth</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="n">linewidth</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="s">&quot;blue&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">annotation_custom</span><span class="p">(</span><span class="n">tree_grob_x</span><span class="p">,</span><span class="w"> </span><span class="n">xmin</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="n">xmax</span><span class="o">=</span><span class="kc">Inf</span><span class="p">,</span><span class="w"> </span><span class="n">ymin</span><span class="o">=-</span><span class="kc">Inf</span><span class="p">,</span><span class="w"> </span><span class="n">ymax</span><span class="o">=</span><span class="kc">Inf</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;Xmas Tree&quot;</span><span class="p">)</span>
-
-<span class="c1"># YMAS</span>
-<span class="n">ymas</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">canvas</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">geom_vline</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="n">linewidth</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="n">linewidth</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="s">&quot;blue&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">annotation_custom</span><span class="p">(</span><span class="n">tree_grob_y</span><span class="p">,</span><span class="w"> </span><span class="n">xmin</span><span class="o">=-</span><span class="kc">Inf</span><span class="p">,</span><span class="w"> </span><span class="n">xmax</span><span class="o">=</span><span class="kc">Inf</span><span class="p">,</span><span class="w"> </span><span class="n">ymin</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="n">ymax</span><span class="o">=</span><span class="kc">Inf</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;Ymas Tree&quot;</span><span class="p">)</span>
-
-<span class="c1"># ZMAS</span>
-<span class="n">zmas</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">canvas</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">annotation_custom</span><span class="p">(</span><span class="n">tree_grob_z</span><span class="p">,</span><span class="w"> </span><span class="n">xmin</span><span class="o">=</span><span class="m">0.2</span><span class="p">,</span><span class="w"> </span><span class="n">xmax</span><span class="o">=</span><span class="m">1.1</span><span class="p">,</span><span class="w"> </span><span class="n">ymin</span><span class="o">=</span><span class="m">-0.45</span><span class="p">,</span><span class="w"> </span><span class="n">ymax</span><span class="o">=</span><span class="m">1.1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">geom_vline</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">linewidth</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">geom_hline</span><span class="p">(</span><span class="n">yintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">linewidth</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="s">&quot;blue&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">annotate</span><span class="p">(</span><span class="s">&quot;segment&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">xend</span><span class="o">=</span><span class="m">0.66</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">yend</span><span class="o">=</span><span class="m">0.33</span><span class="p">,</span><span class="w"> </span><span class="n">linewidth</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="s">&quot;green&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;Zmas Tree&quot;</span><span class="p">)</span>
-
-<span class="c1"># show result in one figure</span>
-<span class="p">(</span><span class="n">xmas</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">ymas</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">zmas</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span>
-<span class="w">  </span><span class="nf">theme_void</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;</span>
-<span class="w">  </span><span class="nf">theme</span><span class="p">(</span><span class="n">plot.title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">hjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">))</span><span class="w"> </span><span class="o">&amp;</span>
-<span class="w">  </span><span class="nf">coord_equal</span><span class="p">()</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">exp_dat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/static/data_vis_dat.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="ow">in</span> <span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/static/data_vis_dat.csv&quot;</span><span class="p">):</span> <span class="n">could</span> <span class="ow">not</span> <span class="n">find</span> <span class="n">function</span> <span class="s2">&quot;read_csv&quot;</span>
+<span class="ne">Traceback</span>:
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="../_images/6569a8216b3216b9bee4d9ca0e49c361c37e785338b16d39d5d882fcafa6a557.png" src="../_images/6569a8216b3216b9bee4d9ca0e49c361c37e785338b16d39d5d882fcafa6a557.png" />
+<p>This simulated dataset contains reading scores and memory scores from <em>N</em>=67 participants at three times in the day: morning, midday, and evening.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">)</span>
+</pre></div>
 </div>
 </div>
+</div>
+</section>
 </section>
 </section>
 
@@ -641,13 +615,18 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-xmas-trees">Bonus: Xmas Trees</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slides">Slides</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-it-out">Try it Out!</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -696,8 +675,8 @@ By Jack Taylor
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
 
   <footer class="bd-footer">
   </footer>
