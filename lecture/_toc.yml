@@ -25,7 +25,8 @@ parts:
       - file: introduction/model_appropriateness
       - file: introduction/data_wrangling_1
       - file: introduction/data_wrangling_2
-      - file: introduction/data_vis
+      - file: introduction/data_vis_1
+      - file: introduction/data_vis_2
 
   - caption: Demo Experiment
     chapters:
