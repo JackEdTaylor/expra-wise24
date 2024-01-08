@@ -29,6 +29,7 @@ d <- tibble(
   mutate(
     read_score = round(read_score + rt(n_subj, 2, 0), 2),
     memory_score = round(memory_score + rt(n_subj, 2, 0), 2)
-  )
+  ) |>
+  arrange(subj_id)
 
 write_csv(d, "data_vis_dat.csv")
