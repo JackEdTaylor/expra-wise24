@@ -12,7 +12,8 @@ packages <- c(
   "ordinal",
   "lme4",
   "patchwork",
-  "magick"
+  "magick",
+  "colorBlindness"
 )
 
 install.packages(packages, repos="https://cloud.r-project.org/")
