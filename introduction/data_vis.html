@@ -528,6 +528,7 @@ document.write(`
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -540,8 +541,17 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="ow">in</span> <span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/static/data_vis_dat.csv&quot;</span><span class="p">):</span> <span class="n">could</span> <span class="ow">not</span> <span class="n">find</span> <span class="n">function</span> <span class="s2">&quot;read_csv&quot;</span>
-<span class="ne">Traceback</span>:
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">201</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">4</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">────────────────────────────────────────────────────────</span>
+<span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
+<span class=" -Color -Color-Red">chr</span> (2): subj_id, time
+<span class=" -Color -Color-Green">dbl</span> (2): read_score, memory_score
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">ℹ</span> Use `spec()` to retrieve the full column specification for this data.
+<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
 </pre></div>
 </div>
 </div>
@@ -550,6 +560,24 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 201 × 4
+   subj_id time    read_score memory_score
+   &lt;chr&gt;   &lt;chr&gt;        &lt;dbl&gt;        &lt;dbl&gt;
+ 1 s01     morning       70.7         84.5
+ 2 s02     morning       78.8         79.7
+ 3 s03     morning       68.6         89.4
+ 4 s04     morning       93.0         97.5
+ 5 s05     morning       80.3         72.6
+ 6 s06     morning       68.8         74.0
+ 7 s07     morning       81.9         72.0
+ 8 s08     morning       84.4         71.4
+ 9 s09     morning       82.8         85.2
+10 s10     morning       74.0         68.7
+# ℹ 191 more rows
 </pre></div>
 </div>
 </div>
