@@ -25,7 +25,7 @@ d <- tibble(
       time == "evening" ~ 0.24
     ) + rnorm(n_subj, 0, 10) + 100
   ) |>
-  select(-ends_with("dum")) |>
+  select(-ends_with("dum"), -subj_intercept) |>
   mutate(
     read_score = round(read_score + rt(n_subj, 2, 0), 2),
     memory_score = round(memory_score + rt(n_subj, 2, 0), 2)
