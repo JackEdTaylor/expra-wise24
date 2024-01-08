@@ -18,7 +18,7 @@ d <- tibble(
 ) |>
   left_join(subj_intercepts, by="subj_id") |>
   mutate(
-    read_score = 100 + time_morn_dum * -23 + time_eve_dum * -6 + subj_intercept + rnorm(n_subj, 0, 5),
+    read_score = 100 + time_morn_dum * -23 + time_eve_dum * -6 + subj_intercept + rnorm(n(), 0, 5),
     memory_score = (read_score - 100) * case_when(
       time == "morning" ~ 1.2,
       time == "midday" ~ 0,
@@ -27,8 +27,8 @@ d <- tibble(
   ) |>
   select(-ends_with("dum"), -subj_intercept) |>
   mutate(
-    read_score = round(read_score + rt(n_subj, 2, 0), 2),
-    memory_score = round(memory_score + rt(n_subj, 2, 0), 2)
+    read_score = round(read_score + rt(n(), 2, 0), 2),
+    memory_score = round(memory_score + rt(n(), 2, 0), 2)
   ) |>
   arrange(subj_id)
 
