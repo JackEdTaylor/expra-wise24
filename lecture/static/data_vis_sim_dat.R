@@ -21,8 +21,8 @@ d <- tibble(
   ) |>
   select(-ends_with("dum")) |>
   mutate(
-    read_score = round(read_score, 2),
-    memory_score = round(memory_score, 2)
+    read_score = round(read_score + runif(n_subj, -1.5, 1.5), 2),
+    memory_score = round(memory_score + runif(n_subj, -1.5, 1.5), 2)
   )
 
 write_csv(d, "data_vis_dat.csv")
