@@ -203,6 +203,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="model_appropriateness.html">Model Appropriateness</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_wrangling_1.html">Data Wrangling 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_wrangling_2.html">Data Wrangling 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_vis_1.html">Data Visualisation 1</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Demo Experiment</span></p>
 <ul class="nav bd-sidenav">
@@ -513,13 +514,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="vProMolkKWPX" data-shufflequestions="False"
+<div class="output text_html"><div id="KGfBbwvfqHmQ" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#vProMolkKWPX {
+#KGfBbwvfqHmQ {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -689,7 +690,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsvProMolkKWPX=[
+</style></div><script type="application/javascript">var questionsKGfBbwvfqHmQ=[
     {
         "question": "Which type of study generally has the most stringent control of variables?",
         "type": "multiple_choice",
@@ -1534,8 +1535,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("vProMolkKWPX")) {
-            show_questions(questionsvProMolkKWPX,  vProMolkKWPX); 
+          if(document.getElementById("KGfBbwvfqHmQ")) {
+            show_questions(questionsKGfBbwvfqHmQ,  KGfBbwvfqHmQ); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1550,10 +1551,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/empirical_research_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, vProMolkKWPX))
+        .then(json => show_questions(json, KGfBbwvfqHmQ))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsvProMolkKWPX, vProMolkKWPX);
+        show_questions(questionsKGfBbwvfqHmQ, KGfBbwvfqHmQ);
         });
         }
         </script></div>
