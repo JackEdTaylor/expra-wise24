@@ -1073,7 +1073,7 @@ The easiest way to change the labels' order is to set the variable as a factor b
 </div>
 <p>Notice that we have used the <code class="docutils literal notranslate"><span class="pre">tag</span></code> argument of <code class="docutils literal notranslate"><span class="pre">labs()</span></code> to laels them <em>A</em>, <em>B</em>, <em>C</em>, and that only one panel has a legend, to avoid being redundant.</p>
 <br>
-We could build the panelled figure using `patchwork` syntax, combining the plots with `|` to indicate that when should be side-by-side, and `/` to indicate when they should be above and below one another:<div class="cell docutils container">
+We could build the panelled figure using `patchwork` syntax, combining the plots with `|` to indicate that when should be side-by-side, and `/` to indicate when they should be above and below one another.<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">7.5</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="o">=</span><span class="m">6</span><span class="p">)</span>
 </pre></div>
@@ -1093,6 +1093,10 @@ We could build the panelled figure using `patchwork` syntax, combining the plots
 <img alt="../_images/d151479ffe9b861519004e80bc336f40b3cefd57cf734d140c748e8777ce32fb.png" src="../_images/d151479ffe9b861519004e80bc336f40b3cefd57cf734d140c748e8777ce32fb.png" />
 </div>
 </div>
+<p>Finally, here is an example figure caption that we might decide to use:</p>
+<blockquote>
+<div><p><strong>Figure 1.</strong> Relationship between scores in the Reading Comprehension and N-Back tasks, at the three session times. The upper two panels (<strong>A</strong>, <strong>B</strong>) show the densities of scores. The lower panel (<strong>C</strong>) shows the correlations between scores in the two tasks in each of the three session times. Each point depicts one participant, and the lines depict the linear relationships. Shaded grey intervals depict 95% Confidence Intervals.</p>
+</div></blockquote>
 </section>
 </section>
 
