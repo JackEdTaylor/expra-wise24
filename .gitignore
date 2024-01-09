@@ -9,3 +9,6 @@ lecture/_build/*
 
 # jupyter notebook checkpoints
 */.ipynb_checkpoints/
+
+# R
+.Rprofile
