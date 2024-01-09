@@ -40,6 +40,7 @@ parts:
     chapters:
       - file: projects/preregistration
       - file: projects/lifos
+      - file: projects/presentations
 
   - caption: Cognitive Brain Imaging
     chapters:
