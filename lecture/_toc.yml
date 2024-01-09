@@ -18,6 +18,7 @@ parts:
       - file: introduction/ratings
       - file: introduction/reading
       - file: introduction/writing
+      - file: introduction/communication
 
   - caption: R & Statistics
     chapters:
