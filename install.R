@@ -13,7 +13,8 @@ packages <- c(
   "lme4",
   "patchwork",
   "magick",
-  "colorBlindness"
+  "colorBlindness",
+  "svglite"
 )
 
 install.packages(packages, repos="https://cloud.r-project.org/")
