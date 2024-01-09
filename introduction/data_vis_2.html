@@ -665,7 +665,7 @@ document.write(`
 <img alt="../_images/6bf9b467c210e546ac24272da3c688d791bd3007d36a6668aa0835b7ee1423f3.png" src="../_images/6bf9b467c210e546ac24272da3c688d791bd3007d36a6668aa0835b7ee1423f3.png" />
 </div>
 </div>
-<p>We could also pass a function to the <code class="docutils literal notranslate"><span class="pre">breaks</span></code> argument to do this for us. For example, <code class="docutils literal notranslate"><span class="pre">scales::breaks_pretty()</span></code> will automatically assign some sensible breaks. We can set <code class="docutils literal notranslate"><span class="pre">n=7</span></code> to ask for  7 sensible breaks.around</p>
+<p>We could also pass a function to the <code class="docutils literal notranslate"><span class="pre">breaks</span></code> argument to do this for us. For example, <code class="docutils literal notranslate"><span class="pre">scales::breaks_pretty()</span></code> will automatically assign some sensible breaks. We can set <code class="docutils literal notranslate"><span class="pre">n=7</span></code> to ask for 7 breaks (or as close as possible while keeping the breaks sensible).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">read_score</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">memory_score</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="n">time</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
@@ -777,7 +777,7 @@ The easiest way to change the labels' order is to set the variable as a factor b
 </div>
 </div>
 <p>We could also put the legend in that empty space at the bottom right section inside the plot.</p>
-<p>We have to use standardised units between 0 and 1. We set the position to <code class="docutils literal notranslate"><span class="pre">c(1,</span> <span class="pre">0)</span></code>, meaning to place the axis at 100% of the x axis, and 0% of the y axis. Here, we also set the justification to match, with <code class="docutils literal notranslate"><span class="pre">c(1,</span> <span class="pre">0)</span></code>. This ensures that our legend is snug against the axes of the plot.</p>
+<p>We have to use standardised units between 0 and 1. We set the position to <code class="docutils literal notranslate"><span class="pre">c(1,</span> <span class="pre">0)</span></code>, meaning to place the axis at 100% of the x axis, and 0% of the y axis. Here, we also set the justification to match, with <code class="docutils literal notranslate"><span class="pre">c(1,</span> <span class="pre">0)</span></code>. This ensures that our legend is snug against the axes of the plot. Finally, we remove the legend background, to avoid occuluding any data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">exp_dat_fct</span><span class="w"> </span><span class="o">|&gt;</span>
@@ -792,7 +792,8 @@ The easiest way to change the labels' order is to set the variable as a factor b
 <span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
 <span class="w">  </span><span class="nf">theme</span><span class="p">(</span>
 <span class="w">    </span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">),</span>
-<span class="w">    </span><span class="n">legend.justification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="n">legend.justification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">),</span>
+<span class="w">    </span><span class="n">legend.background</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_blank</span><span class="p">()</span>
 <span class="w">  </span><span class="p">)</span>
 </pre></div>
 </div>
@@ -801,7 +802,7 @@ The easiest way to change the labels' order is to set the variable as a factor b
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = &#39;y ~ x&#39;
 </pre></div>
 </div>
-<img alt="../_images/e947bd9aa68912f15a94c5c6e9cab922382e49015bdcd3ea78e77d4cb97a9292.png" src="../_images/e947bd9aa68912f15a94c5c6e9cab922382e49015bdcd3ea78e77d4cb97a9292.png" />
+<img alt="../_images/1d76833d25fe28f645872c36e2d036e8035244ab95ee67ed638d85d4376dd942.png" src="../_images/1d76833d25fe28f645872c36e2d036e8035244ab95ee67ed638d85d4376dd942.png" />
 </div>
 </div>
 </section>
@@ -825,7 +826,8 @@ The easiest way to change the labels' order is to set the variable as a factor b
 <span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
 <span class="w">  </span><span class="nf">theme</span><span class="p">(</span>
 <span class="w">    </span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">),</span>
-<span class="w">    </span><span class="n">legend.justification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="n">legend.justification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">),</span>
+<span class="w">    </span><span class="n">legend.background</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_blank</span><span class="p">()</span>
 <span class="w">  </span><span class="p">)</span>
 
 <span class="nf">cvdPlot</span><span class="p">(</span><span class="n">pl</span><span class="p">)</span>
@@ -836,7 +838,7 @@ The easiest way to change the labels' order is to set the variable as a factor b
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = &#39;y ~ x&#39;
 </pre></div>
 </div>
-<img alt="../_images/bb47a7ff3bbae2d91f59596b940f61e538be08caad44fae46fe79f0ad6acb2ff.png" src="../_images/bb47a7ff3bbae2d91f59596b940f61e538be08caad44fae46fe79f0ad6acb2ff.png" />
+<img alt="../_images/baba2b6d3b02fc1a0ae170f214d5ae6aed49345ec5ceb37640385dafeac8a841.png" src="../_images/baba2b6d3b02fc1a0ae170f214d5ae6aed49345ec5ceb37640385dafeac8a841.png" />
 </div>
 </div>
 <p>People with deuteranopia and protanopia will have a hard time distinguishing our red and green colours. We could use viridis as alternative colours. This also makes sense because viridis is an ordered colour palette, and our time of day variable is ordered from Morning to Evening.</p>
@@ -855,7 +857,8 @@ The easiest way to change the labels' order is to set the variable as a factor b
 <span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
 <span class="w">  </span><span class="nf">theme</span><span class="p">(</span>
 <span class="w">    </span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">),</span>
-<span class="w">    </span><span class="n">legend.justification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="n">legend.justification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">),</span>
+<span class="w">    </span><span class="n">legend.background</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_blank</span><span class="p">()</span>
 <span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
 <span class="w">  </span><span class="nf">scale_colour_viridis_d</span><span class="p">()</span>
 
@@ -867,7 +870,7 @@ The easiest way to change the labels' order is to set the variable as a factor b
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = &#39;y ~ x&#39;
 </pre></div>
 </div>
-<img alt="../_images/7f82464466849a56b3590f0ff8a6902e7569bee2f4f60d3b893509fc383e31e9.png" src="../_images/7f82464466849a56b3590f0ff8a6902e7569bee2f4f60d3b893509fc383e31e9.png" />
+<img alt="../_images/9c9e46336f7d25f28336a24169cbb193dfb9d33a05cf3ab37dad8fcd4eea2543.png" src="../_images/9c9e46336f7d25f28336a24169cbb193dfb9d33a05cf3ab37dad8fcd4eea2543.png" />
 </div>
 </div>
 <div class="cell tag_remove-input docutils container">
@@ -888,10 +891,6 @@ The easiest way to change the labels' order is to set the variable as a factor b
 <span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Reading Comprehension Score&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;N-Back Score&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Test Session&quot;</span>
-<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">theme</span><span class="p">(</span>
-<span class="w">    </span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">),</span>
-<span class="w">    </span><span class="n">legend.justification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
 <span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
 <span class="w">  </span><span class="nf">facet_wrap</span><span class="p">(</span><span class="nf">vars</span><span class="p">(</span><span class="n">time</span><span class="p">))</span>
 </pre></div>
@@ -925,7 +924,8 @@ The easiest way to change the labels' order is to set the variable as a factor b
 <span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
 <span class="w">  </span><span class="nf">theme</span><span class="p">(</span>
 <span class="w">    </span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">),</span>
-<span class="w">    </span><span class="n">legend.justification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="n">legend.justification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">),</span>
+<span class="w">    </span><span class="n">legend.background</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_blank</span><span class="p">()</span>
 <span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
 <span class="w">  </span><span class="nf">scale_colour_viridis_d</span><span class="p">()</span>
 
@@ -937,7 +937,7 @@ The easiest way to change the labels' order is to set the variable as a factor b
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = &#39;y ~ x&#39;
 </pre></div>
 </div>
-<img alt="../_images/30b33f67cdbeae493da6091abda8659b513e0ce8849fdfec7422ec9cdfba82b9.png" src="../_images/30b33f67cdbeae493da6091abda8659b513e0ce8849fdfec7422ec9cdfba82b9.png" />
+<img alt="../_images/1091a7c3edb48501b6872a8cd2a269762340ed71398892f29b360cf41eb29aef.png" src="../_images/1091a7c3edb48501b6872a8cd2a269762340ed71398892f29b360cf41eb29aef.png" />
 </div>
 </div>
 <section id="saving-figures-for-a-report">
@@ -968,23 +968,17 @@ The easiest way to change the labels' order is to set the variable as a factor b
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = &#39;y ~ x&#39;
 </pre></div>
 </div>
-<img alt="../_images/544ebfcd0e36fc9301d39def4467c3bf7e186df87f14ee83a5fdf9ab783ddc77.png" src="../_images/544ebfcd0e36fc9301d39def4467c3bf7e186df87f14ee83a5fdf9ab783ddc77.png" />
+<img alt="../_images/5690ab7f20dcd79ef2accf233074fc0f20aa413d065e946b99ed115883422327.png" src="../_images/5690ab7f20dcd79ef2accf233074fc0f20aa413d065e946b99ed115883422327.png" />
 </div>
 </div>
-<p>There are two issues we notice with this plot, which <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> doesn’t solve for us:</p>
-<ol class="arabic simple">
-<li><p>The legend seems to cover part of the x axis</p></li>
-<li><p>The last digit of “120” on the x axis is cut off</p></li>
-</ol>
-<p>We can fix this by changing the following parameters in <code class="docutils literal notranslate"><span class="pre">theme()</span></code>.</p>
+<p>This introduces a problem where the last digit of “120” on the x axis is cut off</p>
+<p>We can fix this by changing the the <code class="docutils literal notranslate"><span class="pre">plot.margin</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">theme()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">scatter_pl_large</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">scatter_pl</span><span class="w"> </span><span class="o">+</span>
 <span class="w">  </span><span class="nf">theme</span><span class="p">(</span>
 <span class="w">    </span><span class="c1"># set base text size to 18-point</span>
 <span class="w">    </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">18</span><span class="p">),</span>
-<span class="w">    </span><span class="c1"># remove the background from the legend</span>
-<span class="w">    </span><span class="n">legend.background</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_blank</span><span class="p">(),</span>
 <span class="w">    </span><span class="c1"># add some extra space to the right of the plot</span>
 <span class="w">    </span><span class="c1"># (numbers are in the form top, right, bottom, left)</span>
 <span class="w">    </span><span class="n">plot.margin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">margin</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">15</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">unit</span><span class="o">=</span><span class="s">&quot;pt&quot;</span><span class="p">)</span>
@@ -1059,6 +1053,7 @@ The easiest way to change the labels' order is to set the variable as a factor b
 <span class="w">  </span><span class="nf">theme</span><span class="p">(</span>
 <span class="w">    </span><span class="n">legend.position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">),</span>
 <span class="w">    </span><span class="n">legend.justification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">),</span>
+<span class="w">    </span><span class="n">legend.background</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_blank</span><span class="p">(),</span>
 <span class="w">    </span><span class="n">legend.direction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;horizontal&quot;</span>
 <span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
 <span class="w">  </span><span class="nf">scale_colour_viridis_d</span><span class="p">()</span>
@@ -1073,7 +1068,7 @@ The easiest way to change the labels' order is to set the variable as a factor b
 </pre></div>
 </div>
 <img alt="../_images/a592e426f97c60fdd98b7bde7a6b51547f39080806412416b4589c9a69f757a8.png" src="../_images/a592e426f97c60fdd98b7bde7a6b51547f39080806412416b4589c9a69f757a8.png" />
-<img alt="../_images/8fce0b896ec6ef2cf4aed2be67553729c3746d3128cee31396ba506fc5b2c049.png" src="../_images/8fce0b896ec6ef2cf4aed2be67553729c3746d3128cee31396ba506fc5b2c049.png" />
+<img alt="../_images/3f371173c90cf9d2dd9b86ec471ac6f718261eeac4403cb24ced4500642ca8f3.png" src="../_images/3f371173c90cf9d2dd9b86ec471ac6f718261eeac4403cb24ced4500642ca8f3.png" />
 </div>
 </div>
 <p>Notice that we have used the <code class="docutils literal notranslate"><span class="pre">tag</span></code> argument of <code class="docutils literal notranslate"><span class="pre">labs()</span></code> to laels them <em>A</em>, <em>B</em>, <em>C</em>, and that only one panel has a legend, to avoid being redundant.</p>
@@ -1095,7 +1090,7 @@ We could build the panelled figure using `patchwork` syntax, combining the plots
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = &#39;y ~ x&#39;
 </pre></div>
 </div>
-<img alt="../_images/f7ba3aeb0e55a2909827b2fecbfc362bab4a32d0b8ebc8d8a8c4ee80d6306a05.png" src="../_images/f7ba3aeb0e55a2909827b2fecbfc362bab4a32d0b8ebc8d8a8c4ee80d6306a05.png" />
+<img alt="../_images/d151479ffe9b861519004e80bc336f40b3cefd57cf734d140c748e8777ce32fb.png" src="../_images/d151479ffe9b861519004e80bc336f40b3cefd57cf734d140c748e8777ce32fb.png" />
 </div>
 </div>
 </section>
