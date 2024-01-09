@@ -1042,7 +1042,7 @@ The easiest way to change the labels' order is to set the variable as a factor b
 <span class="n">scatter</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">exp_dat_fct</span><span class="w"> </span><span class="o">|&gt;</span>
 <span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">read_score</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">memory_score</span><span class="p">,</span><span class="w"> </span><span class="n">colour</span><span class="o">=</span><span class="n">time</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
 <span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">&quot;lm&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">&quot;lm&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">formula</span><span class="o">=</span><span class="n">y</span><span class="o">~</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
 <span class="w">  </span><span class="nf">theme_classic</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
 <span class="w">  </span><span class="nf">labs</span><span class="p">(</span>
 <span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Reading Comprehension Score&quot;</span><span class="p">,</span>
@@ -1064,18 +1064,15 @@ The easiest way to change the labels' order is to set the variable as a factor b
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/057b4aa52fbce0f1a2a88490b2fc38c252425f0b0e458e2ae99ea9d3a3f91279.png" src="../_images/057b4aa52fbce0f1a2a88490b2fc38c252425f0b0e458e2ae99ea9d3a3f91279.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = &#39;y ~ x&#39;
-</pre></div>
-</div>
 <img alt="../_images/a592e426f97c60fdd98b7bde7a6b51547f39080806412416b4589c9a69f757a8.png" src="../_images/a592e426f97c60fdd98b7bde7a6b51547f39080806412416b4589c9a69f757a8.png" />
 <img alt="../_images/3f371173c90cf9d2dd9b86ec471ac6f718261eeac4403cb24ced4500642ca8f3.png" src="../_images/3f371173c90cf9d2dd9b86ec471ac6f718261eeac4403cb24ced4500642ca8f3.png" />
 </div>
 </div>
 <p>Notice that we have used the <code class="docutils literal notranslate"><span class="pre">tag</span></code> argument of <code class="docutils literal notranslate"><span class="pre">labs()</span></code> to laels them <em>A</em>, <em>B</em>, <em>C</em>, and that only one panel has a legend, to avoid being redundant.</p>
 <br>
-We could build the panelled figure using `patchwork` syntax, combining the plots with `|` to indicate that when should be side-by-side, and `/` to indicate when they should be above and below one another.<div class="cell docutils container">
+We could build the panelled figure using [`patchwork`](https://patchwork.data-imaginist.com/) syntax, combining the plots with `|` to indicate that when should be side-by-side, and `/` to indicate when they should be above and below one another.<div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">7.5</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="o">=</span><span class="m">6</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="n">repr.plot.height</span><span class="o">=</span><span class="m">6.25</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1087,16 +1084,19 @@ We could build the panelled figure using `patchwork` syntax, combining the plots
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = &#39;y ~ x&#39;
-</pre></div>
-</div>
-<img alt="../_images/d151479ffe9b861519004e80bc336f40b3cefd57cf734d140c748e8777ce32fb.png" src="../_images/d151479ffe9b861519004e80bc336f40b3cefd57cf734d140c748e8777ce32fb.png" />
+<img alt="../_images/616d94b1d007ca501889e4ad0517b5e586129cc70cd0c5854b57deb4a38bac1f.png" src="../_images/616d94b1d007ca501889e4ad0517b5e586129cc70cd0c5854b57deb4a38bac1f.png" />
 </div>
 </div>
-<p>Finally, here is an example figure caption that we might decide to use:</p>
-<blockquote>
-<div><p><strong>Figure 1.</strong> Relationship between scores in the Reading Comprehension and N-Back tasks, at the three session times. The upper two panels (<strong>A</strong>, <strong>B</strong>) show the densities of scores. The lower panel (<strong>C</strong>) shows the correlations between scores in the two tasks in each of the three session times. Each point depicts one participant, and the lines depict the linear relationships. Shaded grey intervals depict 95% Confidence Intervals.</p>
-</div></blockquote>
+<p>Finally, here is the figure with an example caption that we might decide to use:</p>
+<br>
+<p><strong>Figure 1.</strong></p>
+<p><em>Relationship between scores in the Reading Comprehension and N-Back tasks, at the three session times.</em></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/616d94b1d007ca501889e4ad0517b5e586129cc70cd0c5854b57deb4a38bac1f.png" src="../_images/616d94b1d007ca501889e4ad0517b5e586129cc70cd0c5854b57deb4a38bac1f.png" />
+</div>
+</div>
+<p>The upper two panels (<strong>A</strong>, <strong>B</strong>) show the densities of scores. The lower panel (<strong>C</strong>) shows the correlations between scores in the two tasks in each of the three session times. Each point depicts one participant, and the lines depict the linear relationships. Shaded grey intervals depict 95% Confidence Intervals.</p>
 </section>
 </section>
 
