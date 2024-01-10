@@ -742,16 +742,16 @@ document.write(`
 <img alt="../_images/a18e5930e83f2d45faa71c6680d828e1f751145b13c02e2fc3906731417e4c9f.png" src="../_images/a18e5930e83f2d45faa71c6680d828e1f751145b13c02e2fc3906731417e4c9f.png" />
 </div>
 </div>
-<p>This is sometimes easier to read if we add “jitter” (random noise) to the x axis, rather than plotting all points in a line. We can do this with the <code class="docutils literal notranslate"><span class="pre">position_jiter()</span></code> function. The <code class="docutils literal notranslate"><span class="pre">width</span></code> argument tells <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> how wide we want the jittered points to be.</p>
+<p>This is sometimes easier to read if we add “jitter” (random noise) to the x axis, rather than plotting all points in a line. We can do this with the <code class="docutils literal notranslate"><span class="pre">position_jiter()</span></code> function. The <code class="docutils literal notranslate"><span class="pre">width</span></code> argument tells <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> how wide we want the jittered points to be. <strong>Note that we have to add <code class="docutils literal notranslate"><span class="pre">height=0</span></code> to avoid the function from also jittering our y values!</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">exp_dat</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">read_score</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">position_jitter</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.2</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">=</span><span class="m">0</span><span class="p">))</span>
+<span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">position_jitter</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.2</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/b26a86c23ed0c1f3557253a12c225fd113ff6acaf5197fb93c37cffbe2d4ee7b.png" src="../_images/b26a86c23ed0c1f3557253a12c225fd113ff6acaf5197fb93c37cffbe2d4ee7b.png" />
+<img alt="../_images/c621425be89d0bb6a7e605af7734a105c7ae9d1520be32ab652d142002b1986e.png" src="../_images/c621425be89d0bb6a7e605af7734a105c7ae9d1520be32ab652d142002b1986e.png" />
 </div>
 </div>
 <section id="id1">
@@ -781,7 +781,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/ca92ff4302a772e4fa2f7f8e85ca7096c34ab264889e95d5b16adeb00e7c4ea4.png" src="../_images/ca92ff4302a772e4fa2f7f8e85ca7096c34ab264889e95d5b16adeb00e7c4ea4.png" />
-<img alt="../_images/bc03bb6e068cfb3ad74863dcfb6063d94a09abb7dee1fb5ba74852a21adf59bf.png" src="../_images/bc03bb6e068cfb3ad74863dcfb6063d94a09abb7dee1fb5ba74852a21adf59bf.png" />
+<img alt="../_images/0e3ceb74e8a51d0bbdbed0d1d1d9d02af031e7479b72904eddb8f8df73327639.png" src="../_images/0e3ceb74e8a51d0bbdbed0d1d1d9d02af031e7479b72904eddb8f8df73327639.png" />
 </div>
 </details>
 </div>
