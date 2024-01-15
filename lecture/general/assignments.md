@@ -11,9 +11,9 @@ The following course requirements have specific deadlines:
 | Present your assigned reading with your group | Varies by group: see [Reading](https://jackedtaylor.github.io/expra-wise23/general/reading.html) |
 | Submit the Demo Report as a group (not graded) | 22/11/2023 |
 | Preregister your experiment on LIFOS as a group | 06/12/2023 |
-| Present your research findings as a group | 24/01/2023 |
-| Submit your poster as a group (*to ensure we have time to print it!*) | 29/01/2023 |
-| Submit your ExPra Report individually (more details [below](#the-expra-report)) | 04/03/2023 | 
+| Present your research findings as a group | 24/01/2024 |
+| Submit your poster as a group (*to ensure we have time to print it!*) | 29/01/2024 |
+| Submit your ExPra Report individually (more details [below](#the-expra-report)) | 04/03/2024 | 
 
 ## Requirements with no Specific Deadline
 
