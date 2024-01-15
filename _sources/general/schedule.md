@@ -22,7 +22,7 @@ Here is where we will keep track of our schedule. Depending on our progress, pot
 | 29/11/2023 |  - [LIFOS Walkthrough](https://jackedtaylor.github.io/expra-wise23/projects/lifos)<br> - Preregistration Submission<br> - Uploading Stimuli and Code<br> - [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) <br>  | - Submit Preregistrations |
 | 06/12/2023 |  - Experiment Testing<br> - [Introduction to EEG & MEG](https://jackedtaylor.github.io/expra-wise23/cbi/meeg)<br> - [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) <br>  | - Data Collection! |
 | 13/12/2023 |  - [Data Wrangling Workshop Part 1](https://jackedtaylor.github.io/expra-wise23/introduction/data_wrangling_1)<br> - [Introduction to MRI & fMRI](https://jackedtaylor.github.io/expra-wise23/cbi/mri.html)<br> - [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) <br>  | - Data Collection! |
-| 20/12/2023 |  - [Data Wrangling Workshop Part 2](https://jackedtaylor.github.io/expra-wise23/introduction/data_wrangling_2)<br> - Implementing your Data Cleaning<br> -  [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) <br>  | - Finalise your data cleaning scripts<br>- Draft your Report |
+| 20/12/2023 |  - [Data Wrangling Workshop Part 2](https://jackedtaylor.github.io/expra-wise23/introduction/data_wrangling_2)<br> - Implementing your Data Cleaning<br> -  [Literature Presentation](https://jackedtaylor.github.io/expra-wise23/general/reading.html) | - Finalise your data cleaning scripts<br>- Draft your Report |
 
 ## Part 3: Finalisation
 
@@ -31,6 +31,6 @@ Here is where we will keep track of our schedule. Depending on our progress, pot
 | 10/01/2024 |  - Demo Report Feedback<br> - [Scientific Outreach & Communication](https://jackedtaylor.github.io/expra-wise23/introduction/communication)<br> - [Presentations Tips](https://jackedtaylor.github.io/expra-wise23/projects/presentations)<br> - [Data Visualisation Workshop Part 1](https://jackedtaylor.github.io/expra-wise23/introduction/data_vis_1)<br> - [Data Visualisation Workshop Part 2](https://jackedtaylor.github.io/expra-wise23/introduction/data_vis_2)<br> - Analysis Help<br>  | - Work on your Data analysis scripts <br>- Draft Research Presentation Slides <br>- Work on your Report
 | 17/01/2024 |  - Progress Check<br> - [Scientific Poster Workshop](https://jackedtaylor.github.io/expra-wise23/projects/posters)<br> - Analysis, Posters, Presentation, & Visualisation Help<br> | - Work on your Report <br>- Finalise Research Presentation Slides <br>- Draft Poster
 | 24/01/2024 |  - Research Presentations<br> - Analysis Help<br> - Poster Help<br> | - Work on your Report<br>- Work on your Poster
-| 31/01/2024 |  - (Advanced Analysis Workshop)<br> - Analysis Help<br>  | - Submit your Poster
-| 05/02/2024 |  - The Poster Session! <br>&nbsp;Location: Cas 1.801 (Casino)<br>&nbsp;Time: 14:00 - 18:00
+| 31/01/2024 |  - (Advanced Analysis Workshop)<br> - Analysis Help<br>  | - Submit your Poster<br> - Prepare for the Poster Session
+| 05/02/2024 |  - The Poster Session! <br>&nbsp;&nbsp;&nbsp;&nbsp;Location: Cas 1.801 (Casino)<br>&nbsp;&nbsp;&nbsp;&nbsp;Time: 14:00 - 18:00
 | 07/02/2024 |  - Preparing your Report for Submission<br> - Rounding up the ExPra<br> - ExPra Party!
