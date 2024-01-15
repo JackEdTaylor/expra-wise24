@@ -32,5 +32,5 @@ Here is where we will keep track of our schedule. Depending on our progress, pot
 | 17/01/2024 |  - Scientific Poster Workshop<br> - Analysis Help<br> - Visualisation Help<br>  | - Work on your Report <br>- Finalise Research Presentation Slides <br>- Draft Poster
 | 24/01/2024 |  - Research Presentations<br> - Analysis Help<br> - Poster Help<br>  | - Work on your Report<br>- Work on your Poster
 | 31/01/2024 |  - (Advanced Analysis Workshop)<br> - Analysis Help<br>  | - Submit your Poster
-| 05/02/2024 |  - The Poster Session! (Location: TBC, Time: 15:00)
+| 05/02/2024 |  - The Poster Session! (Location: Cas 1.801 (Casino), Time: 14:00 - 18:00)
 | 07/02/2024 |  - Preparing your Report for Submission<br> - Rounding up the ExPra<br> - ExPra Party!
