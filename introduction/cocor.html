@@ -504,27 +504,30 @@ document.write(`
 <p>Here’s a quick example showing how to calculate this…</p>
 <div class="cell tag_remove-input docutils container">
 </div>
-<div class="cell tag_remove-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">cocor</span><span class="p">)</span><span class="w">  </span><span class="c1"># for comparing correlations</span>
-
-<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 <p>Imagine we have the following data, with estimates for group A and group B, from an LMM (<code class="docutils literal notranslate"><span class="pre">lmer()</span></code>) and a CLMM (<code class="docutils literal notranslate"><span class="pre">clmm</span></code>).</p>
 <p>(I think these data are organised similar to all the groups I talked to, but let me know if not!)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="n">results_wide</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">results_wide</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/example_wide_res.csv&quot;</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">results_wide</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">100</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">5</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">────────────────────────────────────────────────────────</span>
+<span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
+<span class=" -Color -Color-Red">chr</span> (1): item_id
+<span class=" -Color -Color-Green">dbl</span> (4): A_LMM, B_LMM, A_CLMM, B_CLMM
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">ℹ</span> Use `spec()` to retrieve the full column specification for this data.
+<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 100 × 5
    item_id   A_LMM  B_LMM  A_CLMM B_CLMM
    &lt;chr&gt;     &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;
@@ -586,7 +589,9 @@ B_CLMM 0.6803572 0.7014971 0.9012779 1.0000000
 <p>When you specify <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">=</span> <span class="pre">my_data_frame</span></code>, you may have to explicitly tell the function that the data is a dataframe, with <code class="docutils literal notranslate"><span class="pre">data.frame(my_data_frame)</span></code>. This is because <code class="docutils literal notranslate"><span class="pre">cocor</span></code> doesn’t recognise <code class="docutils literal notranslate"><span class="pre">tidyverse</span></code> tibbles as dataframes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">cocor</span><span class="p">(</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">cocor</span><span class="p">)</span><span class="w">  </span><span class="c1"># load package</span>
+
+<span class="nf">cocor</span><span class="p">(</span>
 <span class="w">    </span><span class="o">~</span><span class="w"> </span><span class="n">A_LMM</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">B_LMM</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">A_CLMM</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">B_CLMM</span><span class="p">,</span>
 <span class="w">    </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">results_wide</span><span class="p">)</span>
 <span class="p">)</span>
