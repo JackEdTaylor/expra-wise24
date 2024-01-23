@@ -14,7 +14,9 @@ packages <- c(
   "patchwork",
   "magick",
   "colorBlindness",
-  "svglite"
+  "svglite",
+  "cocor",
+  "faux"
 )
 
 install.packages(packages, repos="https://cloud.r-project.org/")
