@@ -485,8 +485,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-on-syntax">Notes on syntax:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-on-bugs">Notes on bugs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-cocor">Using <code class="docutils literal notranslate"><span class="pre">cocor()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-on-syntax">Notes on syntax:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-on-bugs">Notes on bugs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-usage">Example Usage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-report">How to Report</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -573,9 +578,11 @@ B_CLMM 0.6803572 0.7014971 0.9012779 1.0000000
 <p>A_LMM and B_LMM have a correlation of r = .77.</p>
 <p>A_CLMM and B_CLMM have a correlation of r = .9.</p>
 <br>
+<section id="using-cocor">
+<h2>Using <code class="docutils literal notranslate"><span class="pre">cocor()</span></code><a class="headerlink" href="#using-cocor" title="Permalink to this heading">#</a></h2>
 <p>We can use <code class="docutils literal notranslate"><span class="pre">cocor()</span></code> to see whether the sizes of these correlations differ to an extent that we can consider statistically significant.</p>
 <section id="notes-on-syntax">
-<h2>Notes on syntax:<a class="headerlink" href="#notes-on-syntax" title="Permalink to this heading">#</a></h2>
+<h3>Notes on syntax:<a class="headerlink" href="#notes-on-syntax" title="Permalink to this heading">#</a></h3>
 <p>The syntax for <code class="docutils literal notranslate"><span class="pre">cocor()</span></code> formulas:</p>
 <ul class="simple">
 <li><p>Starts with a <code class="docutils literal notranslate"><span class="pre">~</span></code></p></li>
@@ -585,8 +592,11 @@ B_CLMM 0.6803572 0.7014971 0.9012779 1.0000000
 </ul>
 </section>
 <section id="notes-on-bugs">
-<h2>Notes on bugs<a class="headerlink" href="#notes-on-bugs" title="Permalink to this heading">#</a></h2>
+<h3>Notes on bugs<a class="headerlink" href="#notes-on-bugs" title="Permalink to this heading">#</a></h3>
 <p>When you specify <code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">=</span> <span class="pre">my_data_frame</span></code>, you may have to explicitly tell the function that the data is a dataframe, with <code class="docutils literal notranslate"><span class="pre">data.frame(my_data_frame)</span></code>. This is because <code class="docutils literal notranslate"><span class="pre">cocor</span></code> doesn’t recognise <code class="docutils literal notranslate"><span class="pre">tidyverse</span></code> tibbles as dataframes.</p>
+</section>
+<section id="example-usage">
+<h3>Example Usage<a class="headerlink" href="#example-usage" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">cocor</span><span class="p">)</span><span class="w">  </span><span class="c1"># load package</span>
@@ -638,10 +648,14 @@ zou2007: Zou&#39;s (2007) confidence interval
 </div>
 </div>
 <p>This gives us several estimates of whether the correlation is significantly larger for CLMMs than for LMMs. The estimates are usually likely to be similar for the different methods. For the ExPra, if you didn’t preregister which comparison you would use, then Pearson and Filon’s z (1898) will usually suffice.</p>
+</section>
+<section id="how-to-report">
+<h3>How to Report<a class="headerlink" href="#how-to-report" title="Permalink to this heading">#</a></h3>
 <p>We could report this as:</p>
 <blockquote>
 <div><p>We found that the correlation between item estimates from group A and group B was larger for the CLMMs (<em>r</em> = 9) than it was for the LMMs (<em>r</em> = .77). Cmoparing the size of these correlations with Pearson and Filon’s (1898) <em>z</em> value method revealed that the correlation between the CLMMs was significantly larger than the correlation between the LMMs (<em>z</em> = -3.25, <em>p</em> = .001).</p>
 </div></blockquote>
+</section>
 </section>
 </section>
 
@@ -709,8 +723,13 @@ zou2007: Zou&#39;s (2007) confidence interval
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-on-syntax">Notes on syntax:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-on-bugs">Notes on bugs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-cocor">Using <code class="docutils literal notranslate"><span class="pre">cocor()</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-on-syntax">Notes on syntax:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-on-bugs">Notes on bugs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-usage">Example Usage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-report">How to Report</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
