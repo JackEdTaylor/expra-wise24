@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Analysis &#8212; ExPra Winter 2023</title>
   
@@ -29,47 +28,51 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=97eb33c9" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'demo/demo_analyse';</script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Preregistration" href="../projects/preregistration.html" />
@@ -167,7 +170,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -514,7 +528,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="analysis">
-<h1>Analysis<a class="headerlink" href="#analysis" title="Permalink to this heading">#</a></h1>
+<h1>Analysis<a class="headerlink" href="#analysis" title="Link to this heading">#</a></h1>
 <p>The main thing we’ll go through today is analysis of the Demo Experiment data. We have data from 14 participants who completed the German version of the experiment.</p>
 <p><strong>Before we can start:</strong></p>
 <p><strong>a</strong>) <a class="reference download internal" download="" href="../_downloads/7ede810df4318e8d509dd065b4ba2e7c/demo_data.zip"><span class="xref download myst">Download the data</span></a> as a <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file.</p>
@@ -522,7 +536,7 @@ document.write(`
 <p><strong>c</strong>) Start a new R script in RStudio.</p>
 <p>Once everyone has completed these steps, we’ll begin…</p>
 <section id="load-the-relevant-libraries">
-<h2>1: Load the Relevant Libraries<a class="headerlink" href="#load-the-relevant-libraries" title="Permalink to this heading">#</a></h2>
+<h2>1: Load the Relevant Libraries<a class="headerlink" href="#load-the-relevant-libraries" title="Link to this heading">#</a></h2>
 <p>These are the libraries we’ll use for the analysis. Each library has a comment explaining what we will use it for.</p>
 <div class="cell tag_remove-input docutils container">
 </div>
@@ -543,7 +557,7 @@ document.write(`
 </div>
 </section>
 <section id="import-the-data">
-<h2>2: Import the Data<a class="headerlink" href="#import-the-data" title="Permalink to this heading">#</a></h2>
+<h2>2: Import the Data<a class="headerlink" href="#import-the-data" title="Link to this heading">#</a></h2>
 <p>Let’s import the data extracted from the <code class="docutils literal notranslate"><span class="pre">.zip</span></code> folder:</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -584,7 +598,7 @@ document.write(`
 </div>
 </section>
 <section id="format-the-data">
-<h2>3: Format the Data<a class="headerlink" href="#format-the-data" title="Permalink to this heading">#</a></h2>
+<h2>3: Format the Data<a class="headerlink" href="#format-the-data" title="Link to this heading">#</a></h2>
 <p>Here we make two quick changes:</p>
 <ol class="arabic simple">
 <li><p>We rename the column containing response variable to a short name: <code class="docutils literal notranslate"><span class="pre">resp</span></code></p></li>
@@ -605,7 +619,7 @@ document.write(`
 <p>Coding the variable as a factor in this last step is useful for the CLMM approach. It ensures that R knows the order of our Likert responses.</p>
 </section>
 <section id="clean-the-data">
-<h2>4: Clean the Data<a class="headerlink" href="#clean-the-data" title="Permalink to this heading">#</a></h2>
+<h2>4: Clean the Data<a class="headerlink" href="#clean-the-data" title="Link to this heading">#</a></h2>
 <p>To remove outliers, we may want to filter by response times, or exclude participants who only provided one response for the whole experiment.</p>
 <p>Here are the rules we’ll use:</p>
 <ul class="simple">
@@ -691,7 +705,7 @@ We'll start by excluding participants who gave too few unique responses. To do t
 <p>It looks like the data was quite good quality overall! 💪</p>
 </section>
 <section id="fit-the-models">
-<h2>5: Fit the Models!<a class="headerlink" href="#fit-the-models" title="Permalink to this heading">#</a></h2>
+<h2>5: Fit the Models!<a class="headerlink" href="#fit-the-models" title="Link to this heading">#</a></h2>
 <p>Now that the data are formatted and cleaned we can fit three models to estimate our norms:</p>
 <ol class="arabic simple">
 <li><p>The traditional model (LM; <code class="docutils literal notranslate"><span class="pre">lm()</span></code>), where each item’s ratings are averaged.</p></li>
@@ -699,7 +713,7 @@ We'll start by excluding participants who gave too few unique responses. To do t
 <li><p>A cumulative-link mixed-effects model (CLMM; <code class="docutils literal notranslate"><span class="pre">clmm()</span></code>), where we norm via random effects, on a latent normal distribution.</p></li>
 </ol>
 <section id="lm">
-<h3>LM<a class="headerlink" href="#lm" title="Permalink to this heading">#</a></h3>
+<h3>LM<a class="headerlink" href="#lm" title="Link to this heading">#</a></h3>
 <p>First, the traditional approach is to take a raw average of all ratings for each item (a simple linear model). A simple way of estimating this is:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -798,7 +812,7 @@ wordHandlung     wordHarem     wordHärte      wordHast    wordHelfer
 </div>
 </section>
 <section id="lmm">
-<h3>LMM<a class="headerlink" href="#lmm" title="Permalink to this heading">#</a></h3>
+<h3>LMM<a class="headerlink" href="#lmm" title="Link to this heading">#</a></h3>
 <p>To norm via random effects in an LMM, we can use the <code class="docutils literal notranslate"><span class="pre">lmer()</span></code> function. We include random (varying) intercepts for participants (<code class="docutils literal notranslate"><span class="pre">(1</span> <span class="pre">|</span> <span class="pre">participant)</span></code>) and items (<code class="docutils literal notranslate"><span class="pre">(1</span> <span class="pre">|</span> <span class="pre">item)</span></code>). We will only extract estimates for items, but we also include random intercepts for participants because it usually improves the accuracy of the estimates for items.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -868,7 +882,7 @@ Fixed Effects:
 </div>
 </section>
 <section id="clmm">
-<h3>CLMM<a class="headerlink" href="#clmm" title="Permalink to this heading">#</a></h3>
+<h3>CLMM<a class="headerlink" href="#clmm" title="Link to this heading">#</a></h3>
 <p>To norm via random effects in a CLMM, we can use the <code class="docutils literal notranslate"><span class="pre">clmm()</span></code> function. We include the same random effects structure as above. The key difference is that now we are using a model more appropriate for ordinal ratings.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -946,7 +960,7 @@ Thresholds:
 </section>
 </section>
 <section id="compare-the-aics">
-<h2>6: Compare the AICs<a class="headerlink" href="#compare-the-aics" title="Permalink to this heading">#</a></h2>
+<h2>6: Compare the AICs<a class="headerlink" href="#compare-the-aics" title="Link to this heading">#</a></h2>
 <p>One nice comparison we can do is on the Akaike Information Criteria (AIC). This is something we touched on in the session on <a class="reference external" href="https://jackedtaylor.github.io/expra-wise23/introduction/empirical_research.html">Empirical Research</a>. The AIC, and estimators like it, can help us decide which model is most appropriate for the trade-off between model complexity and model likelihood.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -978,7 +992,7 @@ Thresholds:
 <p>This shows that the CLMM has the lowest AIC of the three models, and so is likely to be the most appropriate for the data.</p>
 </section>
 <section id="join-the-estimates-together">
-<h2>7: Join the Estimates Together<a class="headerlink" href="#join-the-estimates-together" title="Permalink to this heading">#</a></h2>
+<h2>7: Join the Estimates Together<a class="headerlink" href="#join-the-estimates-together" title="Link to this heading">#</a></h2>
 <p>Now that we have the estimates, we can join these rows together into one big dataframe, <code class="docutils literal notranslate"><span class="pre">norms</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1037,7 +1051,7 @@ Thresholds:
 </div>
 </section>
 <section id="examine-correlations">
-<h2>8: Examine Correlations<a class="headerlink" href="#examine-correlations" title="Permalink to this heading">#</a></h2>
+<h2>8: Examine Correlations<a class="headerlink" href="#examine-correlations" title="Link to this heading">#</a></h2>
 <p>We may be interested in how similar our estimates are from our three approaches. The variables are all very highly correlated because they are all trying to capture very similar information. However, the CLMM approach is least like the other two (lower Pearson’s r values in the matrix).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1100,7 +1114,7 @@ Thresholds:
 </div>
 </section>
 <section id="bonus-1-recreate-the-plot-in-pollock-2018">
-<h2>Bonus 1: Recreate the Plot in Pollock (2018)<a class="headerlink" href="#bonus-1-recreate-the-plot-in-pollock-2018" title="Permalink to this heading">#</a></h2>
+<h2>Bonus 1: Recreate the Plot in Pollock (2018)<a class="headerlink" href="#bonus-1-recreate-the-plot-in-pollock-2018" title="Link to this heading">#</a></h2>
 <p>Let’s see whether we can recreate the plot that Pollock (<a class="reference external" href="https://doi.org/10.3758/s13428-017-0938-y">2018</a>) made of the data from Brysbaert et al. (<a class="reference external" href="https://doi.org/10.3758/s13428-013-0403-5">2014</a>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

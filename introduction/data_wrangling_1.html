@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Data Wrangling 1 &#8212; ExPra Winter 2023</title>
   
@@ -29,45 +28,49 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=97eb33c9" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/data_wrangling_1';</script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Data Wrangling 2" href="data_wrangling_2.html" />
@@ -165,7 +168,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -545,7 +559,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="data-wrangling-1">
-<h1>Data Wrangling 1<a class="headerlink" href="#data-wrangling-1" title="Permalink to this heading">#</a></h1>
+<h1>Data Wrangling 1<a class="headerlink" href="#data-wrangling-1" title="Link to this heading">#</a></h1>
 <h5>
 <p><strong>Wrangling</strong> /ˈræŋ.ɡəl.ɪŋ/</p>
 <p>the activity of taking care of, controlling, or moving animals, especially large animals such as cows or horses</p>
@@ -560,17 +574,17 @@ document.write(`
 <br>
 <p>In this session, we will cover how to use 6 very handy functions from <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> package:</p>
 <ul class="simple">
-<li><p><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">arrange()</span></code></span></p></li>
-<li><p><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">filter()</span></code></span></p></li>
-<li><p><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">select()</span></code></span></p></li>
-<li><p><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">pull()</span></code></span></p></li>
-<li><p><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">mutate()</span></code></span></p></li>
-<li><p><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">summarise()</span></code></span></p></li>
+<li><p><a class="reference internal" href="#arrange"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">arrange()</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="#filter"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">filter()</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="#select"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">select()</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="#pull"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">pull()</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="#mutate"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">mutate()</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="#summarise"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">summarise()</span></code></span></a></p></li>
 </ul>
 <section id="setup">
-<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">#</a></h2>
+<h2>Setup<a class="headerlink" href="#setup" title="Link to this heading">#</a></h2>
 <section id="setup-part-1-install-packages">
-<h3>Setup Part 1: Install Packages<a class="headerlink" href="#setup-part-1-install-packages" title="Permalink to this heading">#</a></h3>
+<h3>Setup Part 1: Install Packages<a class="headerlink" href="#setup-part-1-install-packages" title="Link to this heading">#</a></h3>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition warning">
@@ -585,7 +599,7 @@ document.write(`
 <p>This includes many packages that we won’t be using today, but which will be useful in other parts of the course (e.g., we will use <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> for Data Visualisation).</p>
 </section>
 <section id="setup-part-2-check-dplyr-loads">
-<h3>Setup Part 2: Check <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> Loads<a class="headerlink" href="#setup-part-2-check-dplyr-loads" title="Permalink to this heading">#</a></h3>
+<h3>Setup Part 2: Check <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> Loads<a class="headerlink" href="#setup-part-2-check-dplyr-loads" title="Link to this heading">#</a></h3>
 <p>Now, we can test that the package we will be using today actually load. You should be able to run this code without any errors:</p>
 <div class="cell tag_remove-input docutils container">
 </div>
@@ -598,7 +612,7 @@ document.write(`
 </div>
 </section>
 <section id="setup-part-3-check-the-data-loads">
-<h3>Setup Part 3: Check the Data Loads<a class="headerlink" href="#setup-part-3-check-the-data-loads" title="Permalink to this heading">#</a></h3>
+<h3>Setup Part 3: Check the Data Loads<a class="headerlink" href="#setup-part-3-check-the-data-loads" title="Link to this heading">#</a></h3>
 <p>Finally, check that you can access the dataset we’ll be using in this session. The <code class="docutils literal notranslate"><span class="pre">starwars</span></code> dataset is a dataset built into <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> that contains details of characters from the Star Wars films:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -633,10 +647,10 @@ document.write(`
 </section>
 <hr class="docutils" />
 <section id="arrange">
-<h2><code class="docutils literal notranslate"><span class="pre">arrange()</span></code><a class="headerlink" href="#arrange" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">arrange()</span></code><a class="headerlink" href="#arrange" title="Link to this heading">#</a></h2>
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">arrange()</span></code> function to sort by variables in the dataframe.</p>
 <section id="numeric-variables">
-<h3>Numeric Variables<a class="headerlink" href="#numeric-variables" title="Permalink to this heading">#</a></h3>
+<h3>Numeric Variables<a class="headerlink" href="#numeric-variables" title="Link to this heading">#</a></h3>
 <p>For example, we can arrange all characters in order of height (shortest to tallest) like so:</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -704,7 +718,7 @@ We can also arrange the dataframe in <em>descending</em> order, with the <em><co
 <br>
 </section>
 <section id="character-variables">
-<h3>Character Variables<a class="headerlink" href="#character-variables" title="Permalink to this heading">#</a></h3>
+<h3>Character Variables<a class="headerlink" href="#character-variables" title="Link to this heading">#</a></h3>
 <p>As well as sorting by numeric variables, we can also sort by character variables. For instance, we can sort by hair colour. If we do this we will sort hair alphabetically, from “auburn” to “white”.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -738,7 +752,7 @@ We can also arrange the dataframe in <em>descending</em> order, with the <em><co
 <br>
 </section>
 <section id="combining-statements">
-<h3>Combining Statements<a class="headerlink" href="#combining-statements" title="Permalink to this heading">#</a></h3>
+<h3>Combining Statements<a class="headerlink" href="#combining-statements" title="Link to this heading">#</a></h3>
 <p>Finally, we can sort by multiple variables at once with comma-separated statements. For instance, we may want to sort by hair colour alphabetically, and then by height descendingly:</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -772,7 +786,7 @@ We can also arrange the dataframe in <em>descending</em> order, with the <em><co
 <br>
 </section>
 <section id="check-your-knowledge">
-<h3>Check your Knowledge!<a class="headerlink" href="#check-your-knowledge" title="Permalink to this heading">#</a></h3>
+<h3>Check your Knowledge!<a class="headerlink" href="#check-your-knowledge" title="Link to this heading">#</a></h3>
 <p>Try coming up with code to solve the following:</p>
 <ol class="arabic simple">
 <li><p>Sort descendingly by mass, such that the most massive character comes first.</p></li>
@@ -783,10 +797,10 @@ We can also arrange the dataframe in <em>descending</em> order, with the <em><co
 </section>
 <hr class="docutils" />
 <section id="filter">
-<h2><code class="docutils literal notranslate"><span class="pre">filter()</span></code><a class="headerlink" href="#filter" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">filter()</span></code><a class="headerlink" href="#filter" title="Link to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">filter()</span></code> function is useful for subsetting rows of data.</p>
 <section id="id1">
-<h3>Character Variables<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3>Character Variables<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>For example, we can easily filter our dataset to find all our data on Darth Vader. The following code says that we should <em>filter</em> the dataframe called <em>starwars</em> to only include rows where the variable called <code class="docutils literal notranslate"><span class="pre">name</span></code> has the value <code class="docutils literal notranslate"><span class="pre">&quot;Darth</span> <span class="pre">Vader&quot;</span></code>:</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -898,7 +912,7 @@ As with <code class="docutils literal notranslate"><span class="pre">==</span></
 <br>
 </section>
 <section id="id2">
-<h3>Numeric Variables<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h3>Numeric Variables<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">filter()</span></code> function can also deal with numeric values. For instance, we can filter to only include characters who are shorter than, or are exactly, 96 cm tall. To do this we use <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, which stands for “less than or equal to”, or “≤”.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -927,7 +941,7 @@ As with <code class="docutils literal notranslate"><span class="pre">==</span></
 <br>
 </section>
 <section id="id3">
-<h3>Combining Statements<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<h3>Combining Statements<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p>Finally, as in other <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> functions, we can combine multiple comma-separated statements in one use of the <code class="docutils literal notranslate"><span class="pre">filter()</span></code> function. Here we filter to only include characters who:</p>
 <ul class="simple">
 <li><p>come from Tatooine</p></li>
@@ -963,7 +977,7 @@ As with <code class="docutils literal notranslate"><span class="pre">==</span></
 <br>
 </section>
 <section id="id4">
-<h3>Check your Knowledge!<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<h3>Check your Knowledge!<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p>Try coming up with code to solve the following:</p>
 <ol class="arabic simple">
 <li><p>Exclude any characters who come from Tatooine, Zolan, or Naboo.</p></li>
@@ -974,10 +988,10 @@ As with <code class="docutils literal notranslate"><span class="pre">==</span></
 </section>
 <hr class="docutils" />
 <section id="select">
-<h2><code class="docutils literal notranslate"><span class="pre">select()</span></code><a class="headerlink" href="#select" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">select()</span></code><a class="headerlink" href="#select" title="Link to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">select()</span></code> function is useful for subsetting <em>columns</em>.</p>
 <section id="selecting-specific-columns">
-<h3>Selecting Specific Columns<a class="headerlink" href="#selecting-specific-columns" title="Permalink to this heading">#</a></h3>
+<h3>Selecting Specific Columns<a class="headerlink" href="#selecting-specific-columns" title="Link to this heading">#</a></h3>
 <p>For instance, if we only want to select the <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code> columns, we can do this like so:</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -1040,7 +1054,7 @@ As with <code class="docutils literal notranslate"><span class="pre">==</span></
 <br>
 </section>
 <section id="reordering-columns">
-<h3>Reordering Columns<a class="headerlink" href="#reordering-columns" title="Permalink to this heading">#</a></h3>
+<h3>Reordering Columns<a class="headerlink" href="#reordering-columns" title="Link to this heading">#</a></h3>
 <p>When we use <code class="docutils literal notranslate"><span class="pre">select()</span></code>, we can also specify the order of columns. For instance, we can select the columns <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">gender</span></code>, and <code class="docutils literal notranslate"><span class="pre">homeworld</span></code> in a new order.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -1072,7 +1086,7 @@ As with <code class="docutils literal notranslate"><span class="pre">==</span></
 <br>
 </section>
 <section id="selecting-a-range-of-columns">
-<h3>Selecting a Range of Columns<a class="headerlink" href="#selecting-a-range-of-columns" title="Permalink to this heading">#</a></h3>
+<h3>Selecting a Range of Columns<a class="headerlink" href="#selecting-a-range-of-columns" title="Link to this heading">#</a></h3>
 <p>We can say that we want to select variables in a range (e.g., from <code class="docutils literal notranslate"><span class="pre">name</span></code> until <code class="docutils literal notranslate"><span class="pre">hair_color</span></code>) with a colon (<code class="docutils literal notranslate"><span class="pre">:</span></code>).</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -1104,7 +1118,7 @@ As with <code class="docutils literal notranslate"><span class="pre">==</span></
 <br>
 </section>
 <section id="selection-helpers">
-<h3>Selection Helpers<a class="headerlink" href="#selection-helpers" title="Permalink to this heading">#</a></h3>
+<h3>Selection Helpers<a class="headerlink" href="#selection-helpers" title="Link to this heading">#</a></h3>
 <p>The tidyverse also supports a range of <a class="reference external" href="https://dplyr.tidyverse.org/reference/dplyr_tidy_select.html">selection helpers</a>. For example, we can use <code class="docutils literal notranslate"><span class="pre">everything()</span></code> to select everything not already selected. This can be useful if we want to set a new first column (e.g., <code class="docutils literal notranslate"><span class="pre">homeworld</span></code>), but keep the other columns in their existing order:</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -1172,7 +1186,7 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 <br>
 </section>
 <section id="id5">
-<h3>Check your Knowledge!<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<h3>Check your Knowledge!<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p>Try coming up with code to solve the following:</p>
 <ol class="arabic simple">
 <li><p>Reorder the columns so that the first two columns are <code class="docutils literal notranslate"><span class="pre">eye_color</span></code> and <code class="docutils literal notranslate"><span class="pre">films</span></code>.</p></li>
@@ -1183,7 +1197,7 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 </section>
 <hr class="docutils" />
 <section id="pull">
-<h2><code class="docutils literal notranslate"><span class="pre">pull()</span></code><a class="headerlink" href="#pull" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">pull()</span></code><a class="headerlink" href="#pull" title="Link to this heading">#</a></h2>
 <p>While <code class="docutils literal notranslate"><span class="pre">select()</span></code> subsets columns in our dataframe, the output is still stored as a column in a dataframe. Instead, we may want to store the results in a more standard data format. The <code class="docutils literal notranslate"><span class="pre">pull()</span></code> function makes this easy.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -1301,7 +1315,7 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 </div>
 <br>
 <section id="id6">
-<h3>Check your Knowledge!<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<h3>Check your Knowledge!<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <p>Try coming up with code to solve the following:</p>
 <ol class="arabic simple">
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">pull()</span></code> to extract the variables for <code class="docutils literal notranslate"><span class="pre">mass</span></code>, and calculate the average (via <code class="docutils literal notranslate"><span class="pre">mean()</span></code>). Note: you may have to set <code class="docutils literal notranslate"><span class="pre">na.rm=TRUE</span></code>, as some observations are missing.</p></li>
@@ -1312,10 +1326,10 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 </section>
 <hr class="docutils" />
 <section id="mutate">
-<h2><code class="docutils literal notranslate"><span class="pre">mutate()</span></code><a class="headerlink" href="#mutate" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">mutate()</span></code><a class="headerlink" href="#mutate" title="Link to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">mutate()</span></code> function allows us to edit columns and add new columns in dataframes.</p>
 <section id="editing-existing-columns">
-<h3>Editing Existing Columns<a class="headerlink" href="#editing-existing-columns" title="Permalink to this heading">#</a></h3>
+<h3>Editing Existing Columns<a class="headerlink" href="#editing-existing-columns" title="Link to this heading">#</a></h3>
 <p>Suppose we want to convert all values in the <code class="docutils literal notranslate"><span class="pre">name</span></code> column to be lowercase. We can do this like so, with the <code class="docutils literal notranslate"><span class="pre">tolower()</span></code> function:</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -1349,7 +1363,7 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 <br>
 </section>
 <section id="adding-new-columns">
-<h3>Adding new columns<a class="headerlink" href="#adding-new-columns" title="Permalink to this heading">#</a></h3>
+<h3>Adding new columns<a class="headerlink" href="#adding-new-columns" title="Link to this heading">#</a></h3>
 <p>We can also create new columns with this syntax. These can be calculated from the values of existing columns. For example, character heights are currently stored in <em>centimeters</em>. We can create a new column, height_inches, which will be the same data but converted into <em>inches</em> (by dividing by 2.54).</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -1383,7 +1397,7 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 <br>
 </section>
 <section id="id7">
-<h3>Check your Knowledge!<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<h3>Check your Knowledge!<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <p>Try coming up with code to solve the following:</p>
 <ol class="arabic simple">
 <li><p>Add a new column that contains the number of characters (letters, including spaces) in each starwars character’s name. <em>Hint: <code class="docutils literal notranslate"><span class="pre">nchar()</span></code> can count characters in text</em></p></li>
@@ -1394,10 +1408,10 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 </section>
 <hr class="docutils" />
 <section id="summarise">
-<h2><code class="docutils literal notranslate"><span class="pre">summarise()</span></code><a class="headerlink" href="#summarise" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">summarise()</span></code><a class="headerlink" href="#summarise" title="Link to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">summarise()</span></code> function lets us calculate summary statistics for our dataframe. It can be coimbined with <code class="docutils literal notranslate"><span class="pre">group_by()</span></code> to calculate summary statistics for groups separately (e.g., factorial designs in an experiment).</p>
 <section id="overall-summaries">
-<h3>Overall Summaries<a class="headerlink" href="#overall-summaries" title="Permalink to this heading">#</a></h3>
+<h3>Overall Summaries<a class="headerlink" href="#overall-summaries" title="Link to this heading">#</a></h3>
 <p>On it’s own, <code class="docutils literal notranslate"><span class="pre">summarise()</span></code> gives us overall summary statistics for the dataframe. For example, we can calculate the average height (ignoring missing observations) like so:</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -1445,7 +1459,7 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 </section>
 </section>
 <section id="per-group-summaries">
-<h2>Per-Group Summaries<a class="headerlink" href="#per-group-summaries" title="Permalink to this heading">#</a></h2>
+<h2>Per-Group Summaries<a class="headerlink" href="#per-group-summaries" title="Link to this heading">#</a></h2>
 <p>If we call <code class="docutils literal notranslate"><span class="pre">group_by()</span></code> before <code class="docutils literal notranslate"><span class="pre">summarise()</span></code>, we can calculate summary statistics per group. For example, we could calculate the Mean and SD of height and mass for each category of sex.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -1509,7 +1523,7 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 <br>
 </section>
 <section id="counting-observations">
-<h2>Counting Observations<a class="headerlink" href="#counting-observations" title="Permalink to this heading">#</a></h2>
+<h2>Counting Observations<a class="headerlink" href="#counting-observations" title="Link to this heading">#</a></h2>
 <p>One common use of <code class="docutils literal notranslate"><span class="pre">group_by()</span></code> and <code class="docutils literal notranslate"><span class="pre">summarise()</span></code> is to count the number of observations. Here, we count the number of observations for each category of <code class="docutils literal notranslate"><span class="pre">sex</span></code>, via the <code class="docutils literal notranslate"><span class="pre">n()</span></code> function.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
@@ -1536,7 +1550,7 @@ We can also use selection helpers to select variables that <em>start</em> (<code
 </div>
 <br>
 <section id="id8">
-<h3>Check your Knowledge!<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<h3>Check your Knowledge!<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <p>Try coming up with code to solve the following:</p>
 <ol class="arabic simple">
 <li><p>Create a single summary that contains the mean height, SD of height, and number of observations, for each category of <code class="docutils literal notranslate"><span class="pre">sex</span></code>.</p></li>

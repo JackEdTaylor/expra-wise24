@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>The General Linear Model &#8212; ExPra Winter 2023</title>
   
@@ -29,47 +28,51 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=97eb33c9" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/tabs.js?v=3ee01567"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'introduction/glm';</script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Model Appropriateness" href="model_appropriateness.html" />
@@ -167,7 +170,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -508,14 +522,14 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="the-general-linear-model">
-<h1>The General Linear Model<a class="headerlink" href="#the-general-linear-model" title="Permalink to this heading">#</a></h1>
+<h1>The General Linear Model<a class="headerlink" href="#the-general-linear-model" title="Link to this heading">#</a></h1>
 <p>You’ve probably heard it said before that statistics is mostly linear models. At first, this probably sounds quite arcane! In this session, we’ll go through some examples to hopefully convince you that this is true.</p>
 <section id="recording">
-<h2>Recording<a class="headerlink" href="#recording" title="Permalink to this heading">#</a></h2>
+<h2>Recording<a class="headerlink" href="#recording" title="Link to this heading">#</a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yxDGUSegfp4?si=IY_yEwq4EZqm0_9v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </section>
 <section id="slides">
-<h2>Slides<a class="headerlink" href="#slides" title="Permalink to this heading">#</a></h2>
+<h2>Slides<a class="headerlink" href="#slides" title="Link to this heading">#</a></h2>
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQxbd7XEmUd9jmtIaHkvscRCc_1lL3XnYsnHIHqiyMITRqhpMta5l9dGJBoSkoAxs1_O-nzuDNdrNnm/embed?start=false&loop=true&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 <h5>
 <a href=https://docs.google.com/presentation/d/1B9BJ_vMpSVRV40pH0LQOgq9A4SSCSxbKWe59P4HK3v8/export/pdf><i class="fa-solid fa-file-pdf"></i> Download .pdf</a>
@@ -523,7 +537,7 @@ document.write(`
 <a href=https://docs.google.com/presentation/d/1B9BJ_vMpSVRV40pH0LQOgq9A4SSCSxbKWe59P4HK3v8/export/pptx><i class="fa-solid fa-file-powerpoint"></i> Download .pptx</a>
 </h5></section>
 <section id="try-it-out">
-<h2>Try it Out!<a class="headerlink" href="#try-it-out" title="Permalink to this heading">#</a></h2>
+<h2>Try it Out!<a class="headerlink" href="#try-it-out" title="Link to this heading">#</a></h2>
 <p>Here are some examples you can run interactively, showing that several kinds of model are just variants of the linear models.</p>
 <div class="cell tag_remove-input docutils container">
 </div>
@@ -544,7 +558,7 @@ document.write(`
 </div>
 </div>
 <section id="t-tests">
-<h3>1. t-tests<a class="headerlink" href="#t-tests" title="Permalink to this heading">#</a></h3>
+<h3>1. t-tests<a class="headerlink" href="#t-tests" title="Link to this heading">#</a></h3>
 <p>In this example, we generate distributions of heights for two groups. Each group has <span class="math notranslate nohighlight">\(N=30\)</span> observations.</p>
 <p>We’ve set the group averages to be <span class="math notranslate nohighlight">\(\mu_A = 180\)</span> and <span class="math notranslate nohighlight">\(\mu_B = 175\)</span>, with an equal standard deviation of <span class="math notranslate nohighlight">\(\sigma = 6.4\)</span></p>
 <div class="cell docutils container">
@@ -627,7 +641,7 @@ F-statistic: 10.78 on 1 and 58 DF,  p-value: 0.00174
 </div>
 </section>
 <section id="anovas">
-<h3>2. ANOVAs<a class="headerlink" href="#anovas" title="Permalink to this heading">#</a></h3>
+<h3>2. ANOVAs<a class="headerlink" href="#anovas" title="Link to this heading">#</a></h3>
 <p>We can apply the same linear-model logic to ANOVAs.</p>
 <p>Here we simulate reading scores for a 2 (age group) x 2 (reading ability group) design.</p>
 <div class="cell docutils container">
@@ -734,7 +748,7 @@ F-statistic: 277.3 on 3 and 116 DF,  p-value: &lt; 2.2e-16
 </div>
 </section>
 <section id="test-your-understanding">
-<h3>3. Test your Understanding!<a class="headerlink" href="#test-your-understanding" title="Permalink to this heading">#</a></h3>
+<h3>3. Test your Understanding!<a class="headerlink" href="#test-your-understanding" title="Link to this heading">#</a></h3>
 <p><strong>1)</strong> Change the first visualisation to show the linear model being fit to the two groups, A and B. (See slides 27-30 for an example plot).</p>
 <p><strong>2)</strong> Use the <code class="docutils literal notranslate"><span class="pre">pt()</span></code> function to replicate the <em>p</em> values in the <code class="docutils literal notranslate"><span class="pre">mod1</span></code> and <code class="docutils literal notranslate"><span class="pre">mod2</span></code> summaries. (See slide 40 for an example).</p>
 <p><strong>3) Possibly tricky:</strong> Try to calculate the simple effect of age in the high and low reading groups separately. Slides 60-65 may help you.</p>
