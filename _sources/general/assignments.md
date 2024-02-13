@@ -57,6 +57,8 @@ ExPra report submissions must:
 
 * Include an R script containing code of all analyses you carried out (this should be submitted as a separate file along with the EXPRA report and should also be uploaded to LIFOS)
 
+* Link to your preregistrations in your LIFOS repository.
+
 * Include a signed declaration of originality on the last page of the report (see below).
 
 The deadline for submitting ExPra reports is 4 weeks after the final session (see above).
@@ -74,3 +76,14 @@ The ExPra will be graded by me (Jack Taylor).
 
 You can download the grading criteria that I will be using as a guide here: [ExPra Grading Criteria](https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/static/ExPra_grading_criteria.pdf)
 
+### Submitting the ExPra Report
+
+Once you are ready to submit, you should submit your ExPra report to me by email: `Taylor(at)psych.uni-frankfurt.de`. The email should be sent from your student email account. Please set the Subject line to read: "`ExPra (your matrikelnummer) Group (your group letter)`". For example, "`ExPra 7914651 Group C`".
+
+When you send the email, please attach the following files:
+
+1. Your ExPra report, including cover sheet and declaration of originality. Instructions and examples of what these should include can be found above.
+
+2. An anonymised version of your ExPra report. Any sections of your report that reveal your name or identity should be removed. Usually, this will just mean removing the cover sheet and declaration of originality.
+
+3. The R Script you wrote to implement your analyses. This should be identical to the script you shared on LIFOS. 
