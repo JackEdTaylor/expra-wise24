@@ -19,9 +19,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    # - name: Update packages list
-    #   run: |
-    #      sudo apt-get update
+    - name: Update packages list
+      run: |
+         sudo apt-get update
 
     # Install dependencies
     - name: Install libcurl
