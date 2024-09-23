@@ -2,7 +2,7 @@
 
 In this ExPra (Empirisch-Experimentelles Praktikum), you will get hands-on experience in Psychological research. We will progress through the stages of a research project, from theoretical background and methodological understanding, to experiment design, data collection, analysis, and presentation of results in a poster, presentation, and report.
 
-[<h4><i class="fa-solid fa-file-pdf"></i> Download the ExPra Guide for Students</h4>](https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/static/EXPRA_Guide_for_students.pdf)
+[<h4><i class="fa-solid fa-file-pdf"></i> Download the ExPra Guide for Students</h4>](https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/static/EXPRA_Guide_for_students.pdf)
 
 ### How to reach the folks in the front
 
@@ -16,9 +16,9 @@ In this ExPra (Empirisch-Experimentelles Praktikum), you will get hands-on exper
 - E-mail: `Taylor(at)psych.uni-frankfurt.de`
 - Preferred mode of contact: via `Discord` or e-mail
 
-Leon Scholz
+Rasmus Sinn
 
-- Email: `l.scholz(at)psych.uni-frankfurt.de`
+- Email: `rasmus.sinn(at)stud.uni-frankfurt.de`
 - Preferred mode of contact: via `Discord` or e-mail
 
 
@@ -28,14 +28,14 @@ Below you will find important details regarding the course summarized in a compa
 
 ### When and where do we meet?
 
-The course will be held at 08:00 - 12:00 on Wednesdays, in Seminarhaus - SH 5.103. If it's useful, you can [download this `.ics` file](https://qis.server.uni-frankfurt.de/qisserver/rds?state=verpublish&status=transform&vmfile=no&publishid=843297&moduleCall=iCalendar&publishConfFile=reports&publishSubDir=veranstaltung) for your calendar app.
+The course will be held at 08:00 - 12:00 on Thursdays, in Seminarpavillon Westend - SP 1.04. If it's useful, you can [download this `.ics` file](https://qis.server.uni-frankfurt.de/qisserver/rds?state=verpublish&status=transform&vmfile=no&veranstaltung.veranstid=381510&veransttermin.parallelid=5&moduleCall=iCalendarGruppe&publishConfFile=reports&publishSubDir=veranstaltung) for your calendar app.
 
-<iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=8.667665719985964%2C50.12801377492662%2C8.668872714042665%2C50.1305929489814&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=19/50.12930/8.66827">View Larger Map</a></small>
+<iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=8.669369%2C50.130935%2C8.669369%2C50.130935&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/export#map=19/50.130935/8.669369">View Larger Map</a></small>
 
 
 #### How do I get all the software and do I have to apply for a loan to get it?
 
-Everything we will use is [open-source software](https://en.wikipedia.org/wiki/Open-source_software) or at minimum free of charge and publicly available. You can find details on how to set up software for the course in the [Setup](https://jackedtaylor.github.io/expra-wise23/introduction/setup.html) section of this book.
+Everything we will use is [open-source software](https://en.wikipedia.org/wiki/Open-source_software) or at minimum free of charge and publicly available. You can find details on how to set up software for the course in the [Setup](https://jackedtaylor.github.io/expra-wise24/introduction/setup.html) section of this book.
 
 #### Where is everything?
 
@@ -43,7 +43,7 @@ All course materials (lecture slides, lecture demo notebooks, lab notebooks, hom
 
 ##### Assignments
 
-Details on assignments are all provided in this section of the course book: [Assignments](https://jackedtaylor.github.io/expra-wise23/general/assignments.html)
+Details on assignments are all provided in this section of the course book: [Assignments](https://jackedtaylor.github.io/expra-wise24/general/assignments.html)
 
 ##### Late Homework & Extension Policy
 
