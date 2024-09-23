@@ -4,7 +4,7 @@ Here, you will find instructions on how to participate in the Demo experiment.
 
 ## **Step 1**: Ensure PsychoPy is installed
 
-First, as we'll be using psychopy, make sure you have correctly installed the standalone installation of PsychoPy, as explained in the [setup page](https://jackedtaylor.github.io/expra-wise23/introduction/setup.html).
+First, as we'll be using psychopy, make sure you have correctly installed the standalone installation of PsychoPy, as explained in the [setup page](https://jackedtaylor.github.io/expra-wise24/introduction/setup.html).
 
 ## **Step 2**: Download and Extract the Files
 
@@ -14,7 +14,7 @@ First, as we'll be using psychopy, make sure you have correctly installed the st
 
 **c**) Make sure that all the files are in the same folder. The files inside the demo experiment folder should look something like this:
 
-<img src="demo_experiment_screenshot.png" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/demo/demo_experiment_screenshot.png'">
+<img src="demo_experiment_screenshot.png" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/demo/demo_experiment_screenshot.png'">
 
 ## **Step 3**: Take Part!
 
@@ -22,13 +22,13 @@ In the experiment, you will be rating German words on "concreteness", on a scale
 
 To start the experiment, simply open `demo_experiment.psyexp` with PsychoPy. Once in the experiment, click the *Run experiment* button, circled below. The experiment should take around 10 minutes.
 
-<img src="demo_experiment_run.png" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/demo/demo_experiment_run.png'">
+<img src="demo_experiment_run.png" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/demo/demo_experiment_run.png'">
 
 ## **Step 4**: Check the Data
 
 Now that you've taken part, you want to check that the experiment has saved your responses. In the demo experiment folder, if you now enter the `data` folder, you should see 3 files: a `.csv` file, a `.log` file, and a `.psydat` file.
 
-<img src="demo_experiment_data_screenshot.png" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/demo/demo_experiment_data_screenshot.png'">
+<img src="demo_experiment_data_screenshot.png" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/demo/demo_experiment_data_screenshot.png'">
 
 Open the `.csv` file: you should have 100 rows (one for each trial), containing columns that store lots of relevant information about the stimuli and the experiment. Check that the first column, `word`, contains all of the words that you rated. The column `resp_scale.response` should contain your ratings, and the column `resp_scale.rt` should contain your response times (in seconds). If that's all there, then you're good to go!
 

@@ -288,7 +288,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/JackEdTaylor/expra-wise23/master?urlpath=tree/lecture/introduction/communication.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/JackEdTaylor/expra-wise24/master?urlpath=tree/lecture/introduction/communication.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -337,7 +337,7 @@
       
       
       
-      <li><a href="https://github.com/JackEdTaylor/expra-wise23" target="_blank"
+      <li><a href="https://github.com/JackEdTaylor/expra-wise24" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -354,7 +354,7 @@
       
       
       
-      <li><a href="https://github.com/JackEdTaylor/expra-wise23/edit/master/lecture/introduction/communication.ipynb" target="_blank"
+      <li><a href="https://github.com/JackEdTaylor/expra-wise24/edit/master/lecture/introduction/communication.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -371,7 +371,7 @@
       
       
       
-      <li><a href="https://github.com/JackEdTaylor/expra-wise23/issues/new?title=Issue%20on%20page%20%2Fintroduction/communication.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/JackEdTaylor/expra-wise24/issues/new?title=Issue%20on%20page%20%2Fintroduction/communication.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -522,13 +522,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="dGOsDDYDlNej" data-shufflequestions="False"
+<div class="output text_html"><div id="NQMltkdTPrwt" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#dGOsDDYDlNej {
+#NQMltkdTPrwt {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -698,7 +698,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsdGOsDDYDlNej=[
+</style></div><script type="application/javascript">var questionsNQMltkdTPrwt=[
     {
         "question": "Which of the following is often used by scientists communicating with scientists?",
         "type": "many_choice",
@@ -1510,8 +1510,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("dGOsDDYDlNej")) {
-            show_questions(questionsdGOsDDYDlNej,  dGOsDDYDlNej); 
+          if(document.getElementById("NQMltkdTPrwt")) {
+            show_questions(questionsNQMltkdTPrwt,  NQMltkdTPrwt); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1524,12 +1524,12 @@ if (typeof version == 'undefined') {
 
         setTimeout(() => jmscontroller.abort(), 5000);
 
-        fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/introduction/communication_quiz.json", {signal})
+        fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/communication_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, dGOsDDYDlNej))
+        .then(json => show_questions(json, NQMltkdTPrwt))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsdGOsDDYDlNej, dGOsDDYDlNej);
+        show_questions(questionsNQMltkdTPrwt, NQMltkdTPrwt);
         });
         }
         </script></div>
@@ -1541,7 +1541,7 @@ if (typeof version == 'undefined') {
     {
         requestKernel: true,
         binderOptions: {
-            repo: "JackEdTaylor/expra-wise23",
+            repo: "JackEdTaylor/expra-wise24",
             ref: "master",
         },
         codeMirrorConfig: {
