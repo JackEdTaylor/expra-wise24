@@ -8,7 +8,7 @@ The following course requirements have specific deadlines:
 
 | ExPra Requirement | Deadline (dd/mm/yyyy) 🗓 |
 |-------------------|--------------------------|
-| Present your assigned reading with your group | Varies by group: see [Reading](https://jackedtaylor.github.io/expra-wise23/general/reading.html) |
+| Present your assigned reading with your group | Varies by group: see [Reading](https://jackedtaylor.github.io/expra-wise24/general/reading.html) |
 | Submit the Demo Report as a group (not graded) | 22/11/2023 |
 | Preregister your experiment on LIFOS as a group | 06/12/2023 |
 | Present your research findings as a group | 24/01/2024 |
@@ -37,9 +37,9 @@ To receive course credits, you will also be expected to:
 
 ### What should the report look like?
 
-<b> <i class="fa-solid fa-file-pdf"></i> <a href="https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/static/EXPRA_example_report.pdf">Download the Example ExPra Report</a>  </b>
+<b> <i class="fa-solid fa-file-pdf"></i> <a href="https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/static/EXPRA_example_report.pdf">Download the Example ExPra Report</a>  </b>
 
-<b> <i class="fa-solid fa-file-pdf"></i> <a href="https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/static/EXPRA_Guide_for_students.pdf">Download the ExPra Guide for Students</a>  </b>
+<b> <i class="fa-solid fa-file-pdf"></i> <a href="https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/static/EXPRA_Guide_for_students.pdf">Download the ExPra Guide for Students</a>  </b>
 
 The ExPra report is the final exam for the research project. The report is graded, and determines your final mark for the course.
 
@@ -74,7 +74,7 @@ Note that the grading criteria sheet is only a guide! Your grade will not be cal
 
 The ExPra will be graded by me (Jack Taylor).
 
-You can download the grading criteria that I will be using as a guide here: [ExPra Grading Criteria](https://raw.githubusercontent.com/JackEdTaylor/expra-wise23/master/lecture/static/ExPra_grading_criteria.pdf)
+You can download the grading criteria that I will be using as a guide here: [ExPra Grading Criteria](https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/static/ExPra_grading_criteria.pdf)
 
 ### Submitting the ExPra Report
 
