@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Student projects &#8212; ExPra Winter 2024</title>
+    <title>AI Tools &#8212; ExPra Winter 2024</title>
   
   
   
@@ -61,10 +61,12 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'general/projects';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'general/gen_ai';</script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Code of Conduct" href="CoC.html" />
+    <link rel="prev" title="Assignments" href="assignments.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -126,8 +128,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -231,8 +231,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../cbi/mri.html">Introduction to (f)MRI</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="assignments.html">Assignments</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">AI Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CoC.html">Code of Conduct</a></li>
 </ul>
 
@@ -305,7 +306,7 @@
       
       
       
-      <li><a href="https://github.com/JackEdTaylor/expra-wise24/edit/master/lecture/general/projects.md" target="_blank"
+      <li><a href="https://github.com/JackEdTaylor/expra-wise24/edit/master/lecture/general/gen_ai.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -322,7 +323,7 @@
       
       
       
-      <li><a href="https://github.com/JackEdTaylor/expra-wise24/issues/new?title=Issue%20on%20page%20%2Fgeneral/projects.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/JackEdTaylor/expra-wise24/issues/new?title=Issue%20on%20page%20%2Fgeneral/gen_ai.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -352,7 +353,7 @@
       
       
       
-      <li><a href="../_sources/general/projects.md" target="_blank"
+      <li><a href="../_sources/general/gen_ai.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -423,7 +424,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -434,11 +437,26 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Student projects</h1>
+    <h1>AI Tools</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uses-of-ai-we-will-allow">Uses of AI we will allow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uses-of-ai-we-will-not-allow">Uses of AI we will not allow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-should-use-of-ai-tools-be-recorded">How should use of AI tools be recorded?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recommendations-in-case-we-get-it-wrong">Recommendations in case we get it wrong</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips-for-using-large-language-models-in-academia">Tips for Using Large Language Models in Academia</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acknmowledgements">Acknmowledgements</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -448,8 +466,76 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="student-projects">
-<h1>Student projects<a class="headerlink" href="#student-projects" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="ai-tools">
+<h1>AI Tools<a class="headerlink" href="#ai-tools" title="Link to this heading">#</a></h1>
+<p>Recent generative AI tools have reached an impressive level. In particular, large language models (e.g., GPT-4) show an impressive ability to generate text, and tools like ChatGPT make it easy to prompt and interact with such models. We are agnostic about the use of such tools during the ExPra. We believe such tools can be useful, but may also impede learning and assessment if not used responsibly.</p>
+<p>We are having to adapt the way that we design and evaluate assessments to ensure that we are assessing your knowledge and ability, and not participating in a Turing test.</p>
+<section id="uses-of-ai-we-will-allow">
+<h2>Uses of AI we will allow<a class="headerlink" href="#uses-of-ai-we-will-allow" title="Link to this heading">#</a></h2>
+<p>We will <strong>allow</strong> usage of AI tools in some cases, if you find it useful:</p>
+<ul class="simple">
+<li><p>Rephrasing text and spelling/grammar check (e.g., DeepL Write, Grammarly)</p></li>
+<li><p>Translating text (e.g., DeepL Translator)</p></li>
+<li><p>Literature search &amp; article summary (e.g., Elicit) alongside independent reading</p></li>
+<li><p>‘Brainstorming’ on a topic (e.g., using ChatGPT)</p></li>
+<li><p>Image generation (e.g., DALL-E)</p></li>
+</ul>
+</section>
+<section id="uses-of-ai-we-will-not-allow">
+<h2>Uses of AI we will not allow<a class="headerlink" href="#uses-of-ai-we-will-not-allow" title="Link to this heading">#</a></h2>
+<p>We will <strong>not allow</strong> usage of AI tools in the following cases:</p>
+<ul class="simple">
+<li><p>Generating/writing text/code that goes beyond just rephrasing content you have written yourself (“An independent examination performance no longer exists if the results are not based on one’s own knowledge, i.e. the knowledge required to solve the examination performance does not come from the students”)</p></li>
+<li><p>Using AI as a citable source, for example: “Priming is a psychological phenomenon where exposure to one stimulus influences a person’s response to a subsequent stimulus, often without conscious awareness (Output by ChatGPT, 02.08.2024)”.</p></li>
+</ul>
+</section>
+<section id="how-should-use-of-ai-tools-be-recorded">
+<h2>How should use of AI tools be recorded?<a class="headerlink" href="#how-should-use-of-ai-tools-be-recorded" title="Link to this heading">#</a></h2>
+<p>This year, you will be required to include a signed declaration of originality in your reports that includes the requirement to declare any aids used.</p>
+<p>Please add the following section to the standard Declaration of Originality (<em>Eigenständigkeitserklärung; for a template see <a class="reference external" href="https://www.psychologie.uni-frankfurt.de/126118252/BSc_MSc_FAQ_Okt_2022.pdf">FAQs by the examination office</a></em>):</p>
+<blockquote>
+<div><p>I am aware that the use of texts generated by AI tools does not guarantee the quality of content and text. I therefore declare that I have only used text-generating AI tools as an aid, but that the ideas and work are predominantly my own. Furthermore, I declare that I have marked all text passages that were written with the aid of AI-supported programs accordingly and provided a reference to the AI-supported program used. I declare that I have not used AI tools for purposes that the examiner has not explicitly allowed.</p>
+</div></blockquote>
+<p>You should also include a <strong>List of AI Tools Used</strong>, after the literature list:</p>
+<ul class="simple">
+<li><p><strong>Name, version and provider of the tool</strong> (company, organization or person that offers or programmed the tool)</p></li>
+<li><p><strong>Purpose of using the tool</strong> (e.g., translation, rephrasing, grammar/spelling check)</p></li>
+<li><p><strong>Affected text segments</strong> (e.g., Discussion section or p. 14)</p></li>
+<li><p><strong>Date of content generation</strong></p></li>
+<li><p><strong>URL of the tool</strong></p></li>
+<li><p><strong>Complete prompt and output</strong>: The complete prompt (user input) and output created by AI should be provided to make the exact use of AI and your own contribution transparent.</p></li>
+</ul>
+</section>
+<section id="recommendations-in-case-we-get-it-wrong">
+<h2>Recommendations in case we get it wrong<a class="headerlink" href="#recommendations-in-case-we-get-it-wrong" title="Link to this heading">#</a></h2>
+<p>There is no reliable method for detecting the use of AI, but we are required to report any suspicions of deception to the examination board. As a result, there is a chance we might get it wrong.</p>
+<p>To avoid this situation, we very highly recommend the following steps, so that you will be able to demonstrate that your report is your own work:</p>
+<ul class="simple">
+<li><p>Save separate versions of your report, with time stamps, ona  daily basis</p></li>
+<li><p>Save all input prompts and outputs created by any AI tools that you used.</p></li>
+</ul>
+</section>
+<section id="tips-for-using-large-language-models-in-academia">
+<h2>Tips for Using Large Language Models in Academia<a class="headerlink" href="#tips-for-using-large-language-models-in-academia" title="Link to this heading">#</a></h2>
+<p>One particular difficulty with tools like ChatGPT is that they can produce outputs that appear highly fluent and confident, even when the output is wrong. While tools like this can be useful for brainstorming, any suggestions they make should be checked thoroughly.</p>
+<p>These models are trained on large amounts of text available on the internet, and are trained to generate new text like that they have seen before. This will include some trustworthy academic sources, but also text from (e.g.,) forum interactions, blog posts, pop science articles, etc.. Just as you would not uncritically trust or cite such sources, you should not uncritically trust or cite the output from platforms like ChatGPT.</p>
+<p>Common issues with large language models:</p>
+<ul class="simple">
+<li><p>Citations that these models produce can be either “hallucinated” (made up) or misattributed (the source they cite didn’t really say what the output claims).</p></li>
+<li><p>Outputs can be wrong in more subtle ways, such as conflating concepts, failing to evaluate the consequences of some code, or just misunderstanding the purpose of a prompt.</p></li>
+</ul>
+<p>If you prompt a large language model, in addition to the info above, we recommend that you:</p>
+<ol class="arabic simple">
+<li><p>Check any citations or sources it provides - did those researchers really say or find what the output claims?</p></li>
+<li><p>Try to find original sources that discuss and evaluate research relevant to the output’s claims. The output will often provide key words that you can use in your literature searches.</p></li>
+<li><p>Do independent research into any topics or research you are not already familiar with, to make sure you understand it yourself, so that you avoid reproducing misunderstandings in the output.</p></li>
+<li><p>Reflect critically on the output, and relate it to your own knowledge.</p></li>
+</ol>
+<section id="acknmowledgements">
+<h3>Acknmowledgements<a class="headerlink" href="#acknmowledgements" title="Link to this heading">#</a></h3>
+<p>Parts of this text are adapted from text by Sandro Wiesmann, and based on a guide by <a class="reference external" href="https://lehre-virtuell.uni-frankfurt.de/knowhow/einsatz-von-generativer-ki-in-der-lehre-handlungsempfehlungen-fur-lehrende/#hinweise-zum-umgang-mit-verdachtsfaellen-zum-unzulaessigen-einsatz-von-ki-tools-in-schriftlichen-arbeiten">Goethe University Lehre virtuell</a>.</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -482,12 +568,52 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="assignments.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Assignments</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="CoC.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Code of Conduct</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uses-of-ai-we-will-allow">Uses of AI we will allow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uses-of-ai-we-will-not-allow">Uses of AI we will not allow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-should-use-of-ai-tools-be-recorded">How should use of AI tools be recorded?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recommendations-in-case-we-get-it-wrong">Recommendations in case we get it wrong</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips-for-using-large-language-models-in-academia">Tips for Using Large Language Models in Academia</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acknmowledgements">Acknmowledgements</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
