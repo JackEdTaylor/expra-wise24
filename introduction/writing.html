@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=97eb33c9" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css?v=a6c8a730" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -523,13 +523,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="xdDbshyqpvLT" data-shufflequestions="False"
+<div class="output text_html"><div id="dbtXUERSLRkA" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#xdDbshyqpvLT {
+#dbtXUERSLRkA {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -699,7 +699,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsxdDbshyqpvLT=[
+</style></div><script type="application/javascript">var questionsdbtXUERSLRkA=[
     {
         "question": "Which of the following fonts are recommended according to the APA guidelines?",
         "type": "many_choice",
@@ -1530,8 +1530,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("xdDbshyqpvLT")) {
-            show_questions(questionsxdDbshyqpvLT,  xdDbshyqpvLT); 
+          if(document.getElementById("dbtXUERSLRkA")) {
+            show_questions(questionsdbtXUERSLRkA,  dbtXUERSLRkA); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1546,10 +1546,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/writing_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, xdDbshyqpvLT))
+        .then(json => show_questions(json, dbtXUERSLRkA))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsxdDbshyqpvLT, xdDbshyqpvLT);
+        show_questions(questionsdbtXUERSLRkA, dbtXUERSLRkA);
         });
         }
         </script></div>
