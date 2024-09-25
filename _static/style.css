@@ -13,15 +13,11 @@
     flex-basis: 17%;
 }
 
-/* background colour for cells when hovered over by mouse */
+/* semantic colors used in the light and dark themes */
 html[data-theme="light"] {
-    :root{
-        --pst-color-table-row-hover-bg: #e0edff
-    }
+    --pst-color-table-row-hover-bg: #e0edff
 }
 html[data-theme="dark"] {
-    :root{
-        --pst-color-table-row-hover-bg: #281747
-    }
+    --pst-color-table-row-hover-bg: #281747
 }
 
