@@ -54,7 +54,7 @@ There is no reliable method for detecting the use of AI, but we are required to 
 
 To avoid this situation, we very highly recommend the following steps, so that you will be able to demonstrate that your report is your own work:
 
-* Save separate versions of your report, with time stamps, ona  daily basis
+* Save separate versions of your report, with time stamps, on a daily basis.
 
 * Save all input prompts and outputs created by any AI tools that you used.
 

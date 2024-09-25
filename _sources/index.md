@@ -16,7 +16,7 @@ These pages are currently under construction and will be updated continuously.
 Please visit these pages again in the next few weeks for further information.
 ````
 
-Welcome to the course page for Neurokognitive Psychologie of the PsyBSc 10 course: Empirisch-Experimentelles Praktikum (*ExPra*), for Winter Semester 2024!
+Welcome to the course page for the Neurokognitive Psychologie group of the PsyBSc 10 course: Empirisch-Experimentelles Praktikum (*ExPra*), for Winter Semester 2024!
 
 This course forms part of the [Psychologie BSc programme](https://www.psychologie.uni-frankfurt.de/49829433/Bachelorstudiengang?) at Goethe University Frankfurt. This site will contains all the content we will cover, and will hopefully serve as a useful reference point for the course. These pages aren't static, but will be updated as we move through the course together.
 
