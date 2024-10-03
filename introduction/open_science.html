@@ -512,7 +512,7 @@ document.write(`
 <h1>Open Science<a class="headerlink" href="#open-science" title="Link to this heading">#</a></h1>
 <section id="slides">
 <h2>Slides<a class="headerlink" href="#slides" title="Link to this heading">#</a></h2>
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRr_MQGdgbXAoGdhHKjDRwqrGCL5kwJaMENii5s692CbxVD0HvTUDO7N2tZ4Ut4lx4RzIjdCK9mdw29/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRF_G312qj5zu3h_o0s70k1_5UQeR2p8T5wFiaOAc3ZxFc_4zZVb5_se96e1HAXVFUswH2UwJkccrY6/embed?start=false&loop=false" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 <h5>
 <a href=https://docs.google.com/presentation/d/1AZWeDaxP7Ytlqrlbi--wReoEmv2IgNpd906rnb4fheg/export/pdf><i class="fa-solid fa-file-pdf"></i> Download .pdf</a>
 &nbsp;
@@ -524,13 +524,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="PYkHQNJxlJqo" data-shufflequestions="False"
+<div class="output text_html"><div id="imzuNKeZabPB" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#PYkHQNJxlJqo {
+#imzuNKeZabPB {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -700,7 +700,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsPYkHQNJxlJqo=[
+</style></div><script type="application/javascript">var questionsimzuNKeZabPB=[
     {
         "question": "Which of the following scientific outputs requires peer-review approval prior to *publication*?",
         "type": "many_choice",
@@ -1604,8 +1604,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("PYkHQNJxlJqo")) {
-            show_questions(questionsPYkHQNJxlJqo,  PYkHQNJxlJqo); 
+          if(document.getElementById("imzuNKeZabPB")) {
+            show_questions(questionsimzuNKeZabPB,  imzuNKeZabPB); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1620,10 +1620,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/open_science_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, PYkHQNJxlJqo))
+        .then(json => show_questions(json, imzuNKeZabPB))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsPYkHQNJxlJqo, PYkHQNJxlJqo);
+        show_questions(questionsimzuNKeZabPB, imzuNKeZabPB);
         });
         }
         </script></div>
