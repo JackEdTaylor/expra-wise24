@@ -1,6 +1,6 @@
 # AI Tools
 
-Recent generative AI tools have reached an impressive level of performance. In particular, large language models (e.g., GPT-4) show an impressive ability to generate text, and tools like ChatGPT make it easy to prompt and interact with such models. We are agnostic about the use of such tools during the ExPra. We believe such tools can be useful, but may also impede learning and assessment if not used responsibly.
+Recent generative AI tools have reached an impressive level of performance. In particular, large language models (e.g., GPT-4) show an impressive ability to generate text, and tools like ChatGPT make it easy to prompt and interact with such models. We are open minded about the use of such tools during the ExPra. We believe such tools can be useful, but may also impede learning and assessment if not used responsibly.
 
 We are having to adapt the way that we design and evaluate assessments to ensure that we are assessing your knowledge and ability, and not participating in a Turing test.
 
