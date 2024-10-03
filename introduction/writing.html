@@ -521,13 +521,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="QKgNsKgddJsr" data-shufflequestions="False"
+<div class="output text_html"><div id="yzFqJzqCFLmj" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#QKgNsKgddJsr {
+#yzFqJzqCFLmj {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -697,7 +697,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsQKgNsKgddJsr=[
+</style></div><script type="application/javascript">var questionsyzFqJzqCFLmj=[
     {
         "question": "Which of the following fonts are recommended according to the APA guidelines?",
         "type": "many_choice",
@@ -1528,8 +1528,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("QKgNsKgddJsr")) {
-            show_questions(questionsQKgNsKgddJsr,  QKgNsKgddJsr); 
+          if(document.getElementById("yzFqJzqCFLmj")) {
+            show_questions(questionsyzFqJzqCFLmj,  yzFqJzqCFLmj); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1544,10 +1544,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/writing_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, QKgNsKgddJsr))
+        .then(json => show_questions(json, yzFqJzqCFLmj))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsQKgNsKgddJsr, QKgNsKgddJsr);
+        show_questions(questionsyzFqJzqCFLmj, yzFqJzqCFLmj);
         });
         }
         </script></div>

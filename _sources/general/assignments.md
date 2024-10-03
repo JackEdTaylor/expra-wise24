@@ -9,17 +9,17 @@ The following course requirements have specific deadlines:
 | ExPra Requirement | Deadline (dd/mm/yyyy) 🗓 |
 |-------------------|--------------------------|
 | Present your assigned reading with your group | Varies by group: see [Reading](https://jackedtaylor.github.io/expra-wise24/general/reading.html) |
-| Submit the Demo Report as a group (not graded) | 22/11/2023 |
-| Preregister your experiment on LIFOS as a group | 06/12/2023 |
-| Present your research findings as a group | 24/01/2024 |
-| Submit your poster as a group (*to ensure we have time to print it!*) | 29/01/2024 |
-| Submit your ExPra Report individually (more details [below](#the-expra-report)) | 04/03/2024 | 
+| Submit the Demo Report as a group (not graded) | 20/11/2024 |
+| Preregister your experiment on LIFOS as a group | 04/12/2024 |
+| Present your research findings as a group | 27/01/2025 |
+| Submit your poster as a group (*to ensure we have time to print it!*) | 10/02/2025 |
+| Submit your ExPra Report individually (more details [below](#the-expra-report)) | 10/03/2025 |
 
 ## Requirements with no Specific Deadline
 
 To receive course credits, you will also be expected to:
 
-* Participate in at least 5 experiments of other ExPra groups (these will be marked with "*E*" on [SONA](https://uni-frankfurt.sona-systems.com/)). For participation recorded, you will need to provide your "E" code.
+* Collect 5 "E Credits" from experiments of other ExPra groups (these will be marked with "*E*" on [SONA](https://uni-frankfurt.sona-systems.com/)). For participation to be recorded, you will need to provide your "E" code.
 
 * Actively participate in sessions and meetings
 
