@@ -27,7 +27,6 @@ parts:
       - file: introduction/data_wrangling_2
       - file: introduction/data_vis_1
       - file: introduction/data_vis_2
-      - file: introduction/cocor
 
   - caption: Demo Experiment
     chapters:
