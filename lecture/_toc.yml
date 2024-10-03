@@ -15,7 +15,6 @@ parts:
       - file: introduction/setup
       - file: introduction/empirical_research
       - file: introduction/open_science
-      - file: introduction/ratings
       - file: introduction/reading
       - file: introduction/writing
       - file: introduction/communication
