@@ -497,10 +497,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-the-data">1: Generate the Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-a-simple-linear-model-pearson-correlation">2: Try a Simple Linear Model / Pearson Correlation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-a-more-appropriate-model">3: Fit a more Appropriate Model</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-understanding">4: Test your Understanding!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-heck-is-a-sine-wave">What the heck is a sine wave?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#our-example-analysis">Our example analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-the-data">1: Generate the Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#try-a-simple-linear-model-pearson-correlation">2: Try a Simple Linear Model / Pearson Correlation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-a-more-appropriate-model">3: Fit a more Appropriate Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-understanding">4: Test your Understanding!</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -514,7 +518,9 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="model-appropriateness">
 <h1>Model Appropriateness<a class="headerlink" href="#model-appropriateness" title="Link to this heading">#</a></h1>
-<p>One of the key themes of this ExPra will be the idea of <strong>model appropriateness</strong>. In this example, we briefly consider sine waves. Sine waves are very relevant to much of Psychology and Neuroscience - for example in describing <a class="reference external" href="https://en.wikipedia.org/wiki/Neural_oscillation">neural oscillations</a>.</p>
+<p>One of the key themes we want to encourage you to think about is <strong>model appropriateness</strong>. In this example, we will take a look at sine waves. Sine waves are very relevant to much of Psychology and Neuroscience - for example in describing <a class="reference external" href="https://en.wikipedia.org/wiki/Neural_oscillation">neural oscillations</a>.</p>
+<section id="what-the-heck-is-a-sine-wave">
+<h2>What the heck is a sine wave?<a class="headerlink" href="#what-the-heck-is-a-sine-wave" title="Link to this heading">#</a></h2>
 <p>Sine waves are described by three main parameters:</p>
 <ul class="simple">
 <li><p><em>Amplitude (or “Power”)</em> - you could think of this as “loudness”</p></li>
@@ -524,10 +530,17 @@ document.write(`
 <img src="power.gif" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/power.gif';" class=".float-right" width="250px">
 <img src="frequency.gif" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/frequency.gif';" class=".float-right" width="250px">
 <img src="phase.gif" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/phase.gif';" class=".float-right" width="250px">
-<p>Don’t worry if this is all new! We’re just using this as a working example. In fact, in this example we’ll just focus on amplitude (power).</p>
+<p>Don’t worry if this is all new! In fact, in this example, we’re going to simplify things a bit and <strong>focus on amplitude (power)</strong>…</p>
+</section>
+<section id="our-example-analysis">
+<h2>Our example analysis<a class="headerlink" href="#our-example-analysis" title="Link to this heading">#</a></h2>
+<p>Let’s use an example where we pretend we know the phase and frequency. Instead we’ll focus on <strong>amplitude (power)</strong> and <strong>offset from zero (an intercept)</strong>. To make things tricky, let’s pretend that our device is very noisy - every time we take a measurement, there will be some unknown <strong>noise</strong> that we want to try to account for.</p>
+<img src="model_appropriateness_amplitude.gif" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/model_appropriateness_amplitude.gif';" class=".float-right" width="250px">
+<img src="model_appropriateness_offset.gif" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/model_appropriateness_offset.gif';" class=".float-right" width="250px">
+<img src="model_appropriateness_noise.gif" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/model_appropriateness_offset.gif';" class=".float-right" width="250px">
 <p>We’ll show that a simple linear model is inappropriate for describing data that records an oscillation, but that a more appropriate model can describe these data much better.</p>
 <section id="generate-the-data">
-<h2>1: Generate the Data<a class="headerlink" href="#generate-the-data" title="Link to this heading">#</a></h2>
+<h3>1: Generate the Data<a class="headerlink" href="#generate-the-data" title="Link to this heading">#</a></h3>
 <p>First of all, we need to generate the data we will use. We will also be using the packages <code class="docutils literal notranslate"><span class="pre">tibble</span></code> and <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code>, so make sure these are loaded!</p>
 <div class="cell tag_remove-input docutils container">
 </div>
@@ -578,7 +591,7 @@ document.write(`
 <p>This shows that the pattern is clearly non-random - there is an obvious relationship between x and y.</p>
 </section>
 <section id="try-a-simple-linear-model-pearson-correlation">
-<h2>2: Try a Simple Linear Model / Pearson Correlation<a class="headerlink" href="#try-a-simple-linear-model-pearson-correlation" title="Link to this heading">#</a></h2>
+<h3>2: Try a Simple Linear Model / Pearson Correlation<a class="headerlink" href="#try-a-simple-linear-model-pearson-correlation" title="Link to this heading">#</a></h3>
 <p>Let’s get the Pearson correlation coefficient for our data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -629,7 +642,7 @@ Coefficients:
 <p><strong>However, a better approach may be to fit a more specific model</strong>, which allows us to incorporate our knowledge about how the data were generated - via a sine function.</p>
 </section>
 <section id="fit-a-more-appropriate-model">
-<h2>3: Fit a more Appropriate Model<a class="headerlink" href="#fit-a-more-appropriate-model" title="Link to this heading">#</a></h2>
+<h3>3: Fit a more Appropriate Model<a class="headerlink" href="#fit-a-more-appropriate-model" title="Link to this heading">#</a></h3>
 <p>If we happen know that a the data is generated from a sine function with a certain amplitude, we could fit a model that accounts for this. Here, instead of <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">~</span> <span class="pre">x</span></code>, our formula would be <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">~</span> <span class="pre">sin(x)</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -679,7 +692,7 @@ Coefficients:
 </div>
 </section>
 <section id="test-your-understanding">
-<h2>4: Test your Understanding!<a class="headerlink" href="#test-your-understanding" title="Link to this heading">#</a></h2>
+<h3>4: Test your Understanding!<a class="headerlink" href="#test-your-understanding" title="Link to this heading">#</a></h3>
 <p><strong>a</strong>) Try changing the <code class="docutils literal notranslate"><span class="pre">noise_sd</span></code> parameter - what happens to your estimates in the last section as you increase and decrease this parameter? What happens when you change the <code class="docutils literal notranslate"><span class="pre">amplitude</span></code> parameter?</p>
 <p><strong>b</strong>) Calculate the Akaike Information Criteria (AICs) for the two models using the <code class="docutils literal notranslate"><span class="pre">AIC()</span></code> or the <code class="docutils literal notranslate"><span class="pre">summary()</span></code> function. How do the AICs compare? How can you interpret this?</p>
 <p><strong>c</strong>) Would this work for a cosine too? Try to change the code above to simulate and estimate data from a cosine function.</p>
@@ -687,6 +700,7 @@ Coefficients:
 <p><strong>e</strong>) <strong>Tricky</strong>: Create a new variable in <em>Step 1.</em>, called <code class="docutils literal notranslate"><span class="pre">ls</span></code> (standing for linear slope), and set it to a value of your choice (I recommend picking a number between -2 and 2). Now, change the formula in the simulation in <em>Step 1.</em> from <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">s</span> <span class="pre">+</span> <span class="pre">e</span></code> to <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">s</span> <span class="pre">+</span> <span class="pre">ls</span> <span class="pre">*</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">e</span></code>. Try running the code in the later sections. Can you figure out a way to alter the code in <em>Step 3.</em> to estimate all the values for <code class="docutils literal notranslate"><span class="pre">offset</span></code>, <code class="docutils literal notranslate"><span class="pre">amplitude</span></code>, and <code class="docutils literal notranslate"><span class="pre">ls</span></code>?</p>
 <br>
 <img src="linearmodel.jpg" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/linearmodel.jpg';" width="350px"></section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -753,10 +767,14 @@ Coefficients:
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-the-data">1: Generate the Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-a-simple-linear-model-pearson-correlation">2: Try a Simple Linear Model / Pearson Correlation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-a-more-appropriate-model">3: Fit a more Appropriate Model</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-understanding">4: Test your Understanding!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-heck-is-a-sine-wave">What the heck is a sine wave?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#our-example-analysis">Our example analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-the-data">1: Generate the Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#try-a-simple-linear-model-pearson-correlation">2: Try a Simple Linear Model / Pearson Correlation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-a-more-appropriate-model">3: Fit a more Appropriate Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-your-understanding">4: Test your Understanding!</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
