@@ -25,7 +25,7 @@ gen_sw <- function(n=250, amplitude=3.7, offset=0, noise_sd=1, frame_id=NULL) {
 
 # animation settings
 n_frames <- 60  # should be divisible by 4
-fps <- 20
+fps <- 10
 point_size <- 0.5
 width_px <- 250
 height_px <- 250
