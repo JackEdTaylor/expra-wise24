@@ -68,6 +68,6 @@ If you prompt a large language model, in addition to the info above, we recommen
 
 4. Reflect critically on the output, and relate it to your own knowledge.
 
-##### Acknmowledgements
+##### Acknowledgements
 
 Parts of this text are adapted from text by Sandro Wiesmann, and informed by a guide by [Goethe University Lehre virtuell](https://lehre-virtuell.uni-frankfurt.de/knowhow/einsatz-von-generativer-ki-in-der-lehre-handlungsempfehlungen-fur-lehrende/).
