@@ -33,4 +33,4 @@ Here is where we will keep track of our schedule. Depending on our progress, pot
 | 29/01/2025 |  - Research Presentations<br> - Analysis Help<br> - Poster Help<br> | - Work on your Report<br>- Work on your Poster
 | 05/02/2025 |  - (Whatever is useful for you!)<br> - Analysis Help<br>  | - Submit your Poster<br> - Prepare for the Poster Session
 | 10/02/2025 |  - The Poster Session! <br>&nbsp;&nbsp;&nbsp;&nbsp;Location: Cas 1.801 (Casino)<br>&nbsp;&nbsp;&nbsp;&nbsp;Time: 15:00 - 17:00<br>&nbsp;&nbsp;&nbsp;&nbsp;Award Ceremony: 17:30
-| 12/02/2025 |  - Preparing your Report for Submission<br> - Rounding up the ExPra<br> - ExPra Party!
+| 12/02/2025 |  - Preparing your Report for Submission<br> - Rounding up the ExPra
