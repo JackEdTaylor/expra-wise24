@@ -564,7 +564,7 @@ document.write(`
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">250</span><span class="w">  </span><span class="c1"># number of observations</span>
 <span class="n">amplitude</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">3.7</span><span class="w">  </span><span class="c1"># amplitude of the sine wave</span>
 <span class="n">offset</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">2.3</span><span class="w">  </span><span class="c1"># offset from 0</span>
-<span class="n">noise_sd</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w">  </span><span class="c1"># SD of noise</span>
+<span class="n">noise_sd</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0.8</span><span class="w">  </span><span class="c1"># SD of noise</span>
 
 <span class="n">data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">tibble</span><span class="p">(</span>
 <span class="w">  </span><span class="c1"># randomly sample x values from 0 to 25</span>
@@ -584,7 +584,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/1f0f82cd7ec1a1caf5461d4d2b3f816164250c2391229ae3e71e2a270019ad12.png"><img alt="../_images/1f0f82cd7ec1a1caf5461d4d2b3f816164250c2391229ae3e71e2a270019ad12.png" src="../_images/1f0f82cd7ec1a1caf5461d4d2b3f816164250c2391229ae3e71e2a270019ad12.png" style="width: 210px; height: 180px;" /></a>
+<a class="reference internal image-reference" href="../_images/7bb32ede95bd3827fed045c308cd48ae2451dabc8d362175beb2b87c0f6b749b.png"><img alt="../_images/7bb32ede95bd3827fed045c308cd48ae2451dabc8d362175beb2b87c0f6b749b.png" src="../_images/7bb32ede95bd3827fed045c308cd48ae2451dabc8d362175beb2b87c0f6b749b.png" style="width: 210px; height: 180px;" /></a>
 </div>
 </div>
 <p>This shows that the pattern is clearly non-random - there is an obvious relationship between x and y.</p>
@@ -600,13 +600,13 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">-0.0921077194806694</div></div>
+<div class="output text_html">-0.0930638273852953</div></div>
 </div>
 <p>The Pearson’s correlation is very close to zero - why do you think that is?</p>
 <p>The Pearson’s correlation is based on a linear model. Here is what that looks like using the <code class="docutils literal notranslate"><span class="pre">lm()</span></code> function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">lm</span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -614,9 +614,20 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Call:
 lm(formula = y ~ x, data = data)
 
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-5.5523 -2.3956  0.3638  2.3431  4.9769 
+
 Coefficients:
-(Intercept)            x  
-    2.99752     -0.03492  
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  2.99708    0.32973   9.090   &lt;2e-16 ***
+x           -0.03453    0.02346  -1.472    0.142    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.722 on 248 degrees of freedom
+Multiple R-squared:  0.008661,	Adjusted R-squared:  0.004664 
+F-statistic: 2.167 on 1 and 248 DF,  p-value: 0.1423
 </pre></div>
 </div>
 </div>
@@ -633,7 +644,7 @@ Coefficients:
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/f309348d568afadd80d791c3c595f09e9229553d1e012cc5fbac3e21eaaa0175.png"><img alt="../_images/f309348d568afadd80d791c3c595f09e9229553d1e012cc5fbac3e21eaaa0175.png" src="../_images/f309348d568afadd80d791c3c595f09e9229553d1e012cc5fbac3e21eaaa0175.png" style="width: 210px; height: 180px;" /></a>
+<a class="reference internal image-reference" href="../_images/5fb1ef9aac8024094c505b28b95825f244ecde603583a428674f45d1ac467f9f.png"><img alt="../_images/5fb1ef9aac8024094c505b28b95825f244ecde603583a428674f45d1ac467f9f.png" src="../_images/5fb1ef9aac8024094c505b28b95825f244ecde603583a428674f45d1ac467f9f.png" style="width: 210px; height: 180px;" /></a>
 </div>
 </div>
 <p>Clearly, a simple Pearson’s correlation, and the associated simple linear model, are completely inappropriate in this case! It’s missing important information that we know about the data.</p>
@@ -652,7 +663,7 @@ Coefficients:
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/919d69a86b43437fe35b172aecf8901cb23dfaa8b97277c322f1e6ae2f920824.png"><img alt="../_images/919d69a86b43437fe35b172aecf8901cb23dfaa8b97277c322f1e6ae2f920824.png" src="../_images/919d69a86b43437fe35b172aecf8901cb23dfaa8b97277c322f1e6ae2f920824.png" style="width: 210px; height: 180px;" /></a>
+<a class="reference internal image-reference" href="../_images/f881a0c349580952bece1c4c9bd8a3f6b94adab7657df8909b6e118cb6f9d0f5.png"><img alt="../_images/f881a0c349580952bece1c4c9bd8a3f6b94adab7657df8909b6e118cb6f9d0f5.png" src="../_images/f881a0c349580952bece1c4c9bd8a3f6b94adab7657df8909b6e118cb6f9d0f5.png" style="width: 210px; height: 180px;" /></a>
 </div>
 </div>
 <p>This is looking like a much better description of the data!</p>
@@ -669,7 +680,7 @@ lm(formula = y ~ sin(x), data = data)
 
 Coefficients:
 (Intercept)       sin(x)  
-      2.278        3.711  
+      2.282        3.709  
 </pre></div>
 </div>
 </div>
@@ -679,7 +690,19 @@ Coefficients:
 <li><p>The <code class="docutils literal notranslate"><span class="pre">Intercept</span></code> estimates our offset parameter of 2.3</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">sin(x)</span></code> part estimates our amplitude of 3.7</p></li>
 </ul>
-<p>If we wanted to, we could also calculate an equivalent of the Pearson’s correlation for this more appropriate model, which is much better at capturing the strength of the clear relationship that we can see in the data.</p>
+<p>But what about the noise? The <code class="docutils literal notranslate"><span class="pre">noise_sd</span></code> parameter represents the standard deviation of noise (<em>residuals</em>) in the data. The <code class="docutils literal notranslate"><span class="pre">resid()</span></code> function lets us calculate our residuals. For each observation in the data this gives us a value for the difference between our model predictions and original observations. If we use <code class="docutils literal notranslate"><span class="pre">sd()</span></code> to calculate the standard deviation of these, we can even approximate our <code class="docutils literal notranslate"><span class="pre">noise_sd</span></code> parameter of 0.8.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">mod</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="nf">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span><span class="w">  </span><span class="c1"># store model in an object</span>
+<span class="n">residuals</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">resid</span><span class="p">(</span><span class="n">mod</span><span class="p">)</span><span class="w">  </span><span class="c1"># calculate residuals</span>
+<span class="nf">sd</span><span class="p">(</span><span class="n">residuals</span><span class="p">)</span><span class="w">  </span><span class="c1"># get the SD of residuals</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">0.756948807773045</div></div>
+</div>
+<p>Finally, if we wanted to, we could calculate an equivalent of the Pearson’s correlation for this more appropriate model, which is much better at capturing the strength of the clear relationship that we can see in the data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">cor</span><span class="p">(</span><span class="nf">sin</span><span class="p">(</span><span class="n">data</span><span class="o">$</span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="n">data</span><span class="o">$</span><span class="n">y</span><span class="p">)</span>
@@ -687,7 +710,7 @@ Coefficients:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">0.940673515786082</div></div>
+<div class="output text_html">0.960751416773456</div></div>
 </div>
 </section>
 <section id="test-your-understanding">
