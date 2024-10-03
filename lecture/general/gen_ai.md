@@ -70,4 +70,4 @@ If you prompt a large language model, in addition to the info above, we recommen
 
 ##### Acknmowledgements
 
-Parts of this text are adapted from text by Sandro Wiesmann, and informed by a guide by [Goethe University Lehre virtuell](https://lehre-virtuell.uni-frankfurt.de/knowhow/einsatz-von-generativer-ki-in-der-lehre-handlungsempfehlungen-fur-lehrende/#hinweise-zum-umgang-mit-verdachtsfaellen-zum-unzulaessigen-einsatz-von-ki-tools-in-schriftlichen-arbeiten).
+Parts of this text are adapted from text by Sandro Wiesmann, and informed by a guide by [Goethe University Lehre virtuell](https://lehre-virtuell.uni-frankfurt.de/knowhow/einsatz-von-generativer-ki-in-der-lehre-handlungsempfehlungen-fur-lehrende/).
