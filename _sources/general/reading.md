@@ -11,6 +11,7 @@ Some of the assigned reading is specific to the projects you will be designing a
 | Date of Presentation (dd/mm/yyyy) | Group | Title | Authors | Year of Publication | Link |
 |-----------------------------------| ----- |-------| ------- | ------------------- | ---- |
 | XX/XX/2024 | A | Estimating the reproducibility of psychological science | Open Science Collaboration | 2015 | [*Science*, *349*(6251)](https://doi.org/10.1126/science.aac4716) |
+| XX/XX/2024 | B | Ten simple rules for structuring papers | Mensch & Kording | 2017 | [*PLOS Computational Biology*, *13*(11): e1005830](https://doi.org/10.1371/journal.pcbi.1005619) |
 
 
 ## Suggested Reading Specific to Each Project
