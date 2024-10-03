@@ -196,7 +196,6 @@
 <li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Empirical Research</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_science.html">Open Science</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ratings.html">Rating Norms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reading.html">Scientific Reading</a></li>
 <li class="toctree-l1"><a class="reference internal" href="writing.html">Scientific Writing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="communication.html">Scientific Communication</a></li>
@@ -525,13 +524,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="tDkDQgpouDBV" data-shufflequestions="False"
+<div class="output text_html"><div id="PMIldbENpOrR" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#tDkDQgpouDBV {
+#PMIldbENpOrR {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -701,7 +700,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionstDkDQgpouDBV=[
+</style></div><script type="application/javascript">var questionsPMIldbENpOrR=[
     {
         "question": "Which type of study generally has the most stringent control of variables?",
         "type": "multiple_choice",
@@ -1546,8 +1545,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("tDkDQgpouDBV")) {
-            show_questions(questionstDkDQgpouDBV,  tDkDQgpouDBV); 
+          if(document.getElementById("PMIldbENpOrR")) {
+            show_questions(questionsPMIldbENpOrR,  PMIldbENpOrR); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1562,10 +1561,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/empirical_research_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, tDkDQgpouDBV))
+        .then(json => show_questions(json, PMIldbENpOrR))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionstDkDQgpouDBV, tDkDQgpouDBV);
+        show_questions(questionsPMIldbENpOrR, PMIldbENpOrR);
         });
         }
         </script></div>
