@@ -195,6 +195,7 @@
 <li class="toctree-l1"><a class="reference internal" href="intro.html">General Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="empirical_research.html">Empirical Research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cogneuro_lang.html">Scientific Communication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_science.html">Open Science</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reading.html">Scientific Reading</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Scientific Writing</a></li>
@@ -520,13 +521,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="undVvYxusRHl" data-shufflequestions="False"
+<div class="output text_html"><div id="qpQCnENazEsI" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#undVvYxusRHl {
+#qpQCnENazEsI {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -696,7 +697,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsundVvYxusRHl=[
+</style></div><script type="application/javascript">var questionsqpQCnENazEsI=[
     {
         "question": "Which of the following fonts are recommended according to the APA guidelines?",
         "type": "many_choice",
@@ -1527,8 +1528,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("undVvYxusRHl")) {
-            show_questions(questionsundVvYxusRHl,  undVvYxusRHl); 
+          if(document.getElementById("qpQCnENazEsI")) {
+            show_questions(questionsqpQCnENazEsI,  qpQCnENazEsI); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1543,10 +1544,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/writing_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, undVvYxusRHl))
+        .then(json => show_questions(json, qpQCnENazEsI))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsundVvYxusRHl, undVvYxusRHl);
+        show_questions(questionsqpQCnENazEsI, qpQCnENazEsI);
         });
         }
         </script></div>
