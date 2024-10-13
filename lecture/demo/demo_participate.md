@@ -1,3 +1,9 @@
+<h1><b>Ignore for now!</b></h1>
+
+<b>This page needs updating. Please ignore it for now...</b>
+
+&nbsp;
+
 # Participate
 
 Here, you will find instructions on how to participate in the Demo experiment.
