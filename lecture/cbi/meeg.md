@@ -4,10 +4,12 @@ EEG and MEG offer excellent temporal resolution, and poor spatial resolution. Th
 
 ## Slides
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ0pLOg53igMs4it_EK04GVVk5yOr89Qkt53BD2xso34pWe4ffoltjd8N-feWIZz6aW58d2XRfi5wNx/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQdfqwV3rWesLTGaoP7MOBPVLtNOH8YvtVDM_xDyYNCDTMQCa-m11h1WC80YPlI11kw_J5e_CuQCanP/embed?start=false&loop=false" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 <h5>
-<a href=https://docs.google.com/presentation/d/1bj80vBDtFji5_qHSWz0vRLnqZ3VYgrOIaoICCUpqGHg/export/pdf><i class="fa-solid fa-file-pdf"></i> Download .pdf</a>
+<a href=https://docs.google.com/presentation/d/1tju69sBAfXWXpZQ9h8JoQOVPl9Nqr4ocsYFBkeiMvKo/export/pdf><i class="fa-solid fa-file-pdf"></i> Download .pdf</a>
 &nbsp;
-<a href=https://docs.google.com/presentation/d/1bj80vBDtFji5_qHSWz0vRLnqZ3VYgrOIaoICCUpqGHg/export/pptx><i class="fa-solid fa-file-powerpoint"></i> Download .pptx</a>
+<a href=https://docs.google.com/presentation/d/1tju69sBAfXWXpZQ9h8JoQOVPl9Nqr4ocsYFBkeiMvKo/export/pptx><i class="fa-solid fa-file-powerpoint"></i> Download .pptx</a>
+&nbsp;
+<a href=https://docs.google.com/presentation/d/1tju69sBAfXWXpZQ9h8JoQOVPl9Nqr4ocsYFBkeiMvKo/export/odp><i class="fa-solid fa-file"></i> Download .odp</a>
 </h5>
