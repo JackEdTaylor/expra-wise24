@@ -94,7 +94,8 @@
             },
             {
                 "answer": "The sound-based representation of language",
-                "correct": false
+                "correct": false,
+                "feedback": "This is closer to a definition of 'phonology'"
             },
             {
                 "answer": "The study of orthodontics.",
