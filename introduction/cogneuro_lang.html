@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Scientific Communication &#8212; ExPra Winter 2024</title>
+    <title>Cognitive Neuroscience of Language &#8212; ExPra Winter 2024</title>
   
   
   
@@ -195,7 +195,7 @@
 <li class="toctree-l1"><a class="reference internal" href="intro.html">General Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setup.html">Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="empirical_research.html">Empirical Research</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Scientific Communication</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Cognitive Neuroscience of Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="open_science.html">Open Science</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reading.html">Scientific Reading</a></li>
 <li class="toctree-l1"><a class="reference internal" href="writing.html">Scientific Writing</a></li>
@@ -482,7 +482,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Scientific Communication</h1>
+    <h1>Cognitive Neuroscience of Language</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -505,8 +505,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="scientific-communication">
-<h1>Scientific Communication<a class="headerlink" href="#scientific-communication" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="cognitive-neuroscience-of-language">
+<h1>Cognitive Neuroscience of Language<a class="headerlink" href="#cognitive-neuroscience-of-language" title="Link to this heading">#</a></h1>
 <section id="slides">
 <h2>Slides<a class="headerlink" href="#slides" title="Link to this heading">#</a></h2>
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQFrh2HmF_tI1SV-X1zGdRIjjwvUU68Zolhp_omaCLcY957gJRIco7X7QYQJAzghLsi7_ifsyGd-7lD/embed?start=false&loop=false" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
@@ -521,13 +521,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="bVsBGswKTUlo" data-shufflequestions="False"
+<div class="output text_html"><div id="pfRHtwUslnRh" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#bVsBGswKTUlo {
+#pfRHtwUslnRh {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -697,7 +697,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsbVsBGswKTUlo=[
+</style></div><script type="application/javascript">var questionspfRHtwUslnRh=[
     {
         "question": "Which psychological approach focuses on observable relationships between the participant and their environment?",
         "type": "multiple_choice",
@@ -743,7 +743,7 @@ document.write(`
                 "feedback": "Most left-handed people have a left-lateralised language network."
             },
             {
-                "answer": "Regardless of handedness, most people have a right-lateralised language network",
+                "answer": "Regardless of handedness, most people have a left-lateralised language network",
                 "correct": true
             },
             {
@@ -793,7 +793,8 @@ document.write(`
             },
             {
                 "answer": "The sound-based representation of language",
-                "correct": false
+                "correct": false,
+                "feedback": "This is closer to a definition of 'phonology'"
             },
             {
                 "answer": "The study of orthodontics.",
@@ -1550,8 +1551,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("bVsBGswKTUlo")) {
-            show_questions(questionsbVsBGswKTUlo,  bVsBGswKTUlo); 
+          if(document.getElementById("pfRHtwUslnRh")) {
+            show_questions(questionspfRHtwUslnRh,  pfRHtwUslnRh); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1566,10 +1567,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/cogneuro_lang_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, bVsBGswKTUlo))
+        .then(json => show_questions(json, pfRHtwUslnRh))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsbVsBGswKTUlo, bVsBGswKTUlo);
+        show_questions(questionspfRHtwUslnRh, pfRHtwUslnRh);
         });
         }
         </script></div>
