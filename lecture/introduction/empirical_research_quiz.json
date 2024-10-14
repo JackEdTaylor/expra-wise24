@@ -64,34 +64,5 @@
                 "feedback": "this describes deduction"
             }
         ]
-    },
-    {
-        "question": "Which 2 of the following estimators help modellers deal with the complexity-versus-likelihood trade-off?",
-        "type": "many_choice",
-        "answers": [
-            {
-                "answer": "Mutual Information",
-                "correct": false,
-                "feedback": "Mutual Information is an information-theoretic measure that allows us to quantify how much the values of *x* tell us about the values of *y*"
-            },
-            {
-                "answer": "Akaike Information Criterion",
-                "correct": true
-            },
-            {
-                "answer": "The number of predictor variables",
-                "correct": false,
-                "feedback": "This could tell us about model complexity, but not model likelihood"
-            },
-            {
-                "answer": "Bayesian Information Criterion",
-                "correct": true
-            },
-            {
-                "answer": "Log-Likelihood",
-                "correct": false,
-                "feedback": "Log-Likelihood can tell us about model likelihood, but not model complexity"
-            }
-        ]
     }
 ]
