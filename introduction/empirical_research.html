@@ -521,13 +521,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="rLNLcuAbKbVc" data-shufflequestions="False"
+<div class="output text_html"><div id="qefXRZsUQDta" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#rLNLcuAbKbVc {
+#qefXRZsUQDta {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -697,7 +697,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsrLNLcuAbKbVc=[
+</style></div><script type="application/javascript">var questionsqefXRZsUQDta=[
     {
         "question": "Which type of study generally has the most stringent control of variables?",
         "type": "multiple_choice",
@@ -761,35 +761,6 @@ document.write(`
                 "answer": "A form of knowledge generation where you use logic and reason to reach conclusions",
                 "correct": false,
                 "feedback": "this describes deduction"
-            }
-        ]
-    },
-    {
-        "question": "Which 2 of the following estimators help modellers deal with the complexity-versus-likelihood trade-off?",
-        "type": "many_choice",
-        "answers": [
-            {
-                "answer": "Mutual Information",
-                "correct": false,
-                "feedback": "Mutual Information is an information-theoretic measure that allows us to quantify how much the values of *x* tell us about the values of *y*"
-            },
-            {
-                "answer": "Akaike Information Criterion",
-                "correct": true
-            },
-            {
-                "answer": "The number of predictor variables",
-                "correct": false,
-                "feedback": "This could tell us about model complexity, but not model likelihood"
-            },
-            {
-                "answer": "Bayesian Information Criterion",
-                "correct": true
-            },
-            {
-                "answer": "Log-Likelihood",
-                "correct": false,
-                "feedback": "Log-Likelihood can tell us about model likelihood, but not model complexity"
             }
         ]
     }
@@ -1542,8 +1513,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("rLNLcuAbKbVc")) {
-            show_questions(questionsrLNLcuAbKbVc,  rLNLcuAbKbVc); 
+          if(document.getElementById("qefXRZsUQDta")) {
+            show_questions(questionsqefXRZsUQDta,  qefXRZsUQDta); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1558,10 +1529,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/empirical_research_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, rLNLcuAbKbVc))
+        .then(json => show_questions(json, qefXRZsUQDta))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsrLNLcuAbKbVc, rLNLcuAbKbVc);
+        show_questions(questionsqefXRZsUQDta, qefXRZsUQDta);
         });
         }
         </script></div>
