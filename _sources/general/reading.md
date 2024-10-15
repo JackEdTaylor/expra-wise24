@@ -28,6 +28,8 @@ In addition to the reading above, here you can find some example literature, whi
 
 * Goldstein, A., Zada, Z., Buchnik, E. et al. (2022). Shared computational principles for language processing in humans and deep language models. *Nature Neuroscience*, *25*, 369–380. https://doi.org/10.1038/s41593-022-01026-4
 
+* Molinaro, N., Vespignani, F., Canal, P., Fonda, S., & Cacciari, C. (2008). Cloze probability does not only affect N400 amplitude: the case of complex prepositions. *Psychophysiology*, *45*(6), 1008-1012. https://doi.org/10.1111/j.1469-8986.2008.00694.x
+
 ### Project 2: Change Detection
 
 * Haenschel, C., Vernon, D. J., Dwivedi, P., Gruzelier, J. H., & Baldeweg, T. (2005). Event-related brain potential correlates of human auditory sensory memory-trace formation. *Journal of Neuroscience*, *25*(45). 10494-10501 https://doi.org/10.1523/JNEUROSCI.1227-05.2005
