@@ -44,6 +44,8 @@ In addition to the reading above, here you can find some example literature, whi
 
 ### Project 4: Words and Faces
 
+* Babkoff, H., Faust, M., & Lavidor, M. (1997). Lexical decision, visual hemifield and angle of orientation. *Neuropsychologia*, *35*(4), 487-495. https://doi.org/10.1016/S0028-3932(96)00072-3
+
 * Carlei, C., Framorando, D., Burra, N., & Kerzel, D. (2017). Face processing is enhanced in the left and upper visual hemi-fields. *Visual Cognition*, *25*(7-8), 749-761. https://doi.org/10.1080/13506285.2017.1327466
 
 * Harrsion, M. T., & Strother, L. (2021). Does face-selective cortex show a left visual field bias for centrally-viewed faces? *Neuropsychologia*, *159*, 107956. https://doi.org/10.1016/j.neuropsychologia.2021.107956
