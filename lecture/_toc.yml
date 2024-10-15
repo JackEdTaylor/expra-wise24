@@ -35,6 +35,7 @@ parts:
 
   - caption: Research Projects
     chapters:
+      - file: projects/projects
       - file: projects/preregistration
       - file: projects/lifos
       - file: projects/presentations
