@@ -40,7 +40,7 @@ In addition to the reading above, here you can find some example literature, whi
 
 * Perea, M., Labusch, M., Fernández-López, M., Marcet, A., Gutierrez-Sigut, E. & Gómez, P. (2024). One more trip to Barcetona: on the special status of visual similarity effects in city names. *Psychological Research*, *88*, 271-283. https://doi.org/10.1007/s00426-023-01839-3
 
-### Project 4
+### Project 4: Words and Faces
 
 * Carlei, C., Framorando, D., Burra, N., & Kerzel, D. (2017). Face processing is enhanced in the left and upper visual hemi-fields. *Visual Cognition*, *25*(7-8), 749-761. https://doi.org/10.1080/13506285.2017.1327466
 
