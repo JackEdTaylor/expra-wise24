@@ -13,7 +13,7 @@ Some of the assigned reading is specific to the projects you will be designing a
 | 23/10/2024 | A | Estimating the reproducibility of psychological science | Open Science Collaboration | 2015 | [*Science*, *349*(6251)](https://doi.org/10.1126/science.aac4716) |
 | 30/10/2024 | B | Ten simple rules for structuring papers | Mensch & Kording | 2017 | [*PLOS Computational Biology*, *13*(11): e1005830](https://doi.org/10.1371/journal.pcbi.1005619) |
 | 06/11/2024 | C | Eleven strategies for making reproducible research and open science training the norm at research institutions. | Kohrs et al. | 2023 | [*eLife*, *12*: e89736](https://doi.org/10.7554/eLife.89736) |
-| 13/11/2024 | D | Best Laid Plans: A Guide to Reporting Preregistration Deviations. | Wilroth & Atherton | 2024 | [*Advances in Methods and Practices in Psychological Science*, *7*(1), 1-14](https://doi.org/10.1007/s00429-021-02370-0) |
+| 13/11/2024 | D | Best Laid Plans: A Guide to Reporting Preregistration Deviations. | Wilroth & Atherton | 2024 | [*Advances in Methods and Practices in Psychological Science*, *7*(1), 1-14](https://doi.org/10.1177/25152459231213802) |
 | 20/11/2024 | ? | Is human face recognition lateralized to the right hemisphere due to neural competition with left-lateralized visual word recognition? A critical review. | Rossion & Lochy | 2021 | [*Brain Structure and Function*, *227*, 559-629](https://doi.org/10.1007/s00429-021-02370-0) |
 | 27/11/2024 | ? | ? | ? | ? | ? |
 | 04/12/2024 | ? | ? | ? | ? | ? |
@@ -27,6 +27,8 @@ In addition to the reading above, here you can find some example literature, whi
 ### Project 1: Predictability in Reading
 
 * Goldstein, A., Zada, Z., Buchnik, E. et al. (2022). Shared computational principles for language processing in humans and deep language models. *Nature Neuroscience*, *25*, 369–380. https://doi.org/10.1038/s41593-022-01026-4
+
+* Luke, S. G., & Christianson, K. (2016). Limits on lexical prediction during reading. *Cognitive Psychology*, *88*, 22-60. http://doi.org/10.1016/j.cogpsych.2016.06.002
 
 * Molinaro, N., Vespignani, F., Canal, P., Fonda, S., & Cacciari, C. (2008). Cloze probability does not only affect N400 amplitude: the case of complex prepositions. *Psychophysiology*, *45*(6), 1008-1012. https://doi.org/10.1111/j.1469-8986.2008.00694.x
 
