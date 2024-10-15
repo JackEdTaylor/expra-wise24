@@ -6,7 +6,7 @@ On this page, you can find both the assigned reading, and the suggested reading.
 
 To help us navigate the ExPra, some papers will be assigned to groups. Once you know which paper you are preparing, the idea is that each group will lead us through their paper in a ~30 minute presentation.
 
-Some of the assigned reading is specific to the projects you will be designing and collecting data for, and some of the papers are more general. These more general papers provide background on Psychology and Open Science.
+Some of the assigned reading is specific to the projects you will be designing and collecting data for, and some of the papers are more general. These more general papers provide background on Psychology as a field.
 
 | Date of Presentation (dd/mm/yyyy) | Group | Title | Authors | Year of Publication | Link |
 |-----------------------------------| ----- |-------| ------- | ------------------- | ---- |
@@ -16,8 +16,8 @@ Some of the assigned reading is specific to the projects you will be designing a
 | 13/11/2024 | D | Best Laid Plans: A Guide to Reporting Preregistration Deviations. | Wilroth & Atherton | 2024 | [*Advances in Methods and Practices in Psychological Science*, *7*(1), 1-14](https://doi.org/10.1007/s00429-021-02370-0) |
 | 20/11/2024 | ? | Is human face recognition lateralized to the right hemisphere due to neural competition with left-lateralized visual word recognition? A critical review. | Rossion & Lochy | 2021 | [*Brain Structure and Function*, *227*, 559-629](https://doi.org/10.1007/s00429-021-02370-0) |
 | 27/11/2024 | ? | ? | ? | ? | ? |
-| 11/12/2024 | ? | ? | ? | ? | ? |
-| 18/12/2024 | ? | ? | ? | ? | ? |
+| 04/12/2024 | ? | ? | ? | ? | ? |
+| 11/12/2024 | ? | Thirty years and counting: Finding meaning in the N400 component of the event related brain potential (ERP). | Kutas & Federmeier | 2011 | [*Annual Review of Psychology*, *62*, 621-647](https://doi.org/10.1146%2Fannurev.psych.093008.131123) |
 
 
 ## Suggested Reading Specific to Each Project
@@ -40,7 +40,7 @@ In addition to the reading above, here you can find some example literature, whi
 
 * Perea, M., Labusch, M., Fernández-López, M., Marcet, A., Gutierrez-Sigut, E. & Gómez, P. (2024). One more trip to Barcetona: on the special status of visual similarity effects in city names. *Psychological Research*, *88*, 271-283. https://doi.org/10.1007/s00426-023-01839-3
 
-### Project 4
+### Project 4: Words and Faces
 
 * Carlei, C., Framorando, D., Burra, N., & Kerzel, D. (2017). Face processing is enhanced in the left and upper visual hemi-fields. *Visual Cognition*, *25*(7-8), 749-761. https://doi.org/10.1080/13506285.2017.1327466
 
