@@ -6,7 +6,7 @@ On this page, you can find both the assigned reading, and the suggested reading.
 
 To help us navigate the ExPra, some papers will be assigned to groups. Once you know which paper you are preparing, the idea is that each group will lead us through their paper in a ~30 minute presentation.
 
-Some of the assigned reading is specific to the projects you will be designing and collecting data for, and some of the papers are more general. These more general papers provide background on Psychology and Open Science.
+Some of the assigned reading is specific to the projects you will be designing and collecting data for, and some of the papers are more general. These more general papers provide background on Psychology as a field.
 
 | Date of Presentation (dd/mm/yyyy) | Group | Title | Authors | Year of Publication | Link |
 |-----------------------------------| ----- |-------| ------- | ------------------- | ---- |
