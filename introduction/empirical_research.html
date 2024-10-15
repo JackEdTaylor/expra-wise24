@@ -216,6 +216,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Research Projects</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../projects/projects.html">Projects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../projects/preregistration.html">Preregistration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../projects/lifos.html">LIFOS Walkthrough</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../projects/presentations.html">Presentations</a></li>
@@ -521,13 +522,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="qefXRZsUQDta" data-shufflequestions="False"
+<div class="output text_html"><div id="jMSEDYnVCQtO" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#qefXRZsUQDta {
+#jMSEDYnVCQtO {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -697,7 +698,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsqefXRZsUQDta=[
+</style></div><script type="application/javascript">var questionsjMSEDYnVCQtO=[
     {
         "question": "Which type of study generally has the most stringent control of variables?",
         "type": "multiple_choice",
@@ -1513,8 +1514,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("qefXRZsUQDta")) {
-            show_questions(questionsqefXRZsUQDta,  qefXRZsUQDta); 
+          if(document.getElementById("jMSEDYnVCQtO")) {
+            show_questions(questionsjMSEDYnVCQtO,  jMSEDYnVCQtO); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1529,10 +1530,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/empirical_research_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, qefXRZsUQDta))
+        .then(json => show_questions(json, jMSEDYnVCQtO))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsqefXRZsUQDta, qefXRZsUQDta);
+        show_questions(questionsjMSEDYnVCQtO, jMSEDYnVCQtO);
         });
         }
         </script></div>

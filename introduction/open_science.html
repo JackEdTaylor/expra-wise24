@@ -216,6 +216,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Research Projects</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../projects/projects.html">Projects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../projects/preregistration.html">Preregistration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../projects/lifos.html">LIFOS Walkthrough</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../projects/presentations.html">Presentations</a></li>
@@ -521,13 +522,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="FjHUvBkBReie" data-shufflequestions="False"
+<div class="output text_html"><div id="ZIgjkfUeoZIZ" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#FjHUvBkBReie {
+#ZIgjkfUeoZIZ {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -697,7 +698,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsFjHUvBkBReie=[
+</style></div><script type="application/javascript">var questionsZIgjkfUeoZIZ=[
     {
         "question": "Which of the following scientific outputs requires peer-review approval prior to *publication*?",
         "type": "many_choice",
@@ -1601,8 +1602,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("FjHUvBkBReie")) {
-            show_questions(questionsFjHUvBkBReie,  FjHUvBkBReie); 
+          if(document.getElementById("ZIgjkfUeoZIZ")) {
+            show_questions(questionsZIgjkfUeoZIZ,  ZIgjkfUeoZIZ); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1617,10 +1618,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/open_science_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, FjHUvBkBReie))
+        .then(json => show_questions(json, ZIgjkfUeoZIZ))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsFjHUvBkBReie, FjHUvBkBReie);
+        show_questions(questionsZIgjkfUeoZIZ, ZIgjkfUeoZIZ);
         });
         }
         </script></div>
