@@ -1,9 +1,3 @@
-<h1><b>Ignore for now!</b></h1>
-
-<b>This page needs updating. Please ignore it for now...</b>
-
-&nbsp;
-
 # Participate
 
 Here, you will find instructions on how to participate in the Demo experiment.
@@ -24,9 +18,9 @@ First, as we'll be using psychopy, make sure you have correctly installed the st
 
 ## **Step 3**: Take Part!
 
-In the experiment, you will be rating German words on "concreteness", on a scale from *1* (abstrakt) to *5* (konkret). These terms will be explained fully at the start of the experiment, but if you still have any questions then just ask.
+In the experiment, you will have to identify which words are real, and which words are fake. These terms will be explained fully at the start of the experiment, but if you still If you have any questions about the task, then please ask!
 
-To start the experiment, simply open `demo_experiment.psyexp` with PsychoPy. Once in the experiment, click the *Run experiment* button, circled below. The experiment should take around 10 minutes.
+To start the experiment, simply open `demo_experiment.psyexp` with PsychoPy. Once in the experiment, click the *Run experiment* button, circled below. The experiment should take around 20 minutes.
 
 <img src="demo_experiment_run.png" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/demo/demo_experiment_run.png'">
 
@@ -36,7 +30,7 @@ Now that you've taken part, you want to check that the experiment has saved your
 
 <img src="demo_experiment_data_screenshot.png" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/demo/demo_experiment_data_screenshot.png'">
 
-Open the `.csv` file: you should have 100 rows (one for each trial), containing columns that store lots of relevant information about the stimuli and the experiment. Check that the first column, `word`, contains all of the words that you rated. The column `resp_scale.response` should contain your ratings, and the column `resp_scale.rt` should contain your response times (in seconds). If that's all there, then you're good to go!
+Open the `.csv` file: you should have 313 rows, containing columns that store lots of relevant information about the stimuli and the experiment. Usually, each row is a single trial, but sometimes we also store other useful information during the experiment. The column, `text`, should contain all of the words and pseudowords that you saw. The column `stim_resp.corr` should contain your accuracies, and the column `stim_resp.rt` should contain your response times (in seconds). If that's all there, then you're good to go!
 
 ## **Step 5**: Send the Data
 
