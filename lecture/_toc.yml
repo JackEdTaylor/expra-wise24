@@ -24,6 +24,7 @@ parts:
     chapters:
       - file: introduction/glm
       - file: introduction/model_appropriateness
+      - file: introduction/ai
       - file: introduction/data_wrangling_1
       - file: introduction/data_wrangling_2
       - file: introduction/data_vis_1
