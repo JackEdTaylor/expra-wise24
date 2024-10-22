@@ -205,6 +205,7 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="glm.html">The General Linear Model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="model_appropriateness.html">Model Appropriateness</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ai.html">Artificial Intelligence</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_wrangling_1.html">Data Wrangling 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_wrangling_2.html">Data Wrangling 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_vis_1.html">Data Visualisation 1</a></li>
@@ -522,13 +523,13 @@ document.write(`
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="pOlumjizOTtx" data-shufflequestions="False"
+<div class="output text_html"><div id="OjnofRBZmesc" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#pOlumjizOTtx {
+#OjnofRBZmesc {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -698,7 +699,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionspOlumjizOTtx=[
+</style></div><script type="application/javascript">var questionsOjnofRBZmesc=[
     {
         "question": "Which psychological approach focuses on observable relationships between the participant and their environment?",
         "type": "multiple_choice",
@@ -1552,8 +1553,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("pOlumjizOTtx")) {
-            show_questions(questionspOlumjizOTtx,  pOlumjizOTtx); 
+          if(document.getElementById("OjnofRBZmesc")) {
+            show_questions(questionsOjnofRBZmesc,  OjnofRBZmesc); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1568,10 +1569,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/cogneuro_lang_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, pOlumjizOTtx))
+        .then(json => show_questions(json, OjnofRBZmesc))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionspOlumjizOTtx, pOlumjizOTtx);
+        show_questions(questionsOjnofRBZmesc, OjnofRBZmesc);
         });
         }
         </script></div>
