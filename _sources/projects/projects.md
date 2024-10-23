@@ -6,8 +6,8 @@ Now that the groups are assigned, here is the project for each group:
 
 **Group A**: Letter Similarities in Words
 **Group B**: Words and Faces
-**Group C**: Change Detection
-**Group D**: Letter Similarities in Words
+**Group C**: Predictability in Reading
+**Group D**: Change Detection
 
 ## Slides
 
