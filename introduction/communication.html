@@ -504,13 +504,13 @@
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="GKwEwFDdmDSS" data-shufflequestions="False"
+<div class="output text_html"><div id="dHJhxNjbUbPD" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#GKwEwFDdmDSS {
+#dHJhxNjbUbPD {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -680,7 +680,7 @@
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsGKwEwFDdmDSS=[
+</style></div><script type="application/javascript">var questionsdHJhxNjbUbPD=[
     {
         "question": "Which of the following is often used by scientists communicating with scientists?",
         "type": "many_choice",
@@ -1492,8 +1492,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("GKwEwFDdmDSS")) {
-            show_questions(questionsGKwEwFDdmDSS,  GKwEwFDdmDSS); 
+          if(document.getElementById("dHJhxNjbUbPD")) {
+            show_questions(questionsdHJhxNjbUbPD,  dHJhxNjbUbPD); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1508,10 +1508,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/communication_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, GKwEwFDdmDSS))
+        .then(json => show_questions(json, dHJhxNjbUbPD))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsGKwEwFDdmDSS, GKwEwFDdmDSS);
+        show_questions(questionsdHJhxNjbUbPD, dHJhxNjbUbPD);
         });
         }
         </script></div>
