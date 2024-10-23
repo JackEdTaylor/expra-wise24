@@ -24,13 +24,13 @@ Some of the assigned reading is specific to the projects you will be designing a
 
 In addition to the reading above, here you can find some example literature, which can provide a starting place for research in your projects.
 
-### Project A: Letter Similarities in Words
+### Group A: Letter Similarities in Words
 
 * Perea, M., Baciero, A., Labusch, M., Fernández-López, M., Marcet, A. (2022). Are brand names special words? Letter visual-similarity affects the identification of brand names, but not common words. *British Journal of Psychology*, *113*(2), 551-874. https://doi.org/10.1111/bjop.12557
 
 * Perea, M., Labusch, M., Fernández-López, M., Marcet, A., Gutierrez-Sigut, E. & Gómez, P. (2024). One more trip to Barcetona: on the special status of visual similarity effects in city names. *Psychological Research*, *88*, 271-283. https://doi.org/10.1007/s00426-023-01839-3
 
-### Project B: Words and Faces
+### Group B: Words and Faces
 
 * Babkoff, H., Faust, M., & Lavidor, M. (1997). Lexical decision, visual hemifield and angle of orientation. *Neuropsychologia*, *35*(4), 487-495. https://doi.org/10.1016/S0028-3932(96)00072-3
 
