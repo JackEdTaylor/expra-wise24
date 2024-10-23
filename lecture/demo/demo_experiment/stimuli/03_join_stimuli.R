@@ -33,7 +33,7 @@ stim_long <- stim_wide |>
   select(item_nr, word, pseudoword) |>
   pivot_longer(c("word", "pseudoword"), names_to="condition", values_to="text") |>
   mutate(
-    corr_ans = ifelse(condition=="word", "rshift", "lshift"),
+    corr_ans = ifelse(condition=="word", "ralt", "lalt"),
     is_practice_trial = FALSE
   )
 
@@ -65,7 +65,7 @@ prac_stim_long <- prac_stim_wide |>
   select(item_nr, word, pseudoword) |>
   pivot_longer(c("word", "pseudoword"), names_to="condition", values_to="text") |>
   mutate(
-    corr_ans = ifelse(condition=="word", "rshift", "lshift"),
+    corr_ans = ifelse(condition=="word", "ralt", "lalt"),
     is_practice_trial = TRUE
   )
 
