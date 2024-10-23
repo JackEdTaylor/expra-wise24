@@ -1,8 +1,17 @@
 # Projects
 
-There are 4 groups in this ExPra, and each group will have a different topic. Slides for the brief intro to the topics can be found below.
+There are 4 groups in this ExPra, and each group has a different topic. 
+
+Now that the groups are assigned, here is the project for each group:
+
+**Group A**: Letter Similarities in Words
+**Group B**: Words and Faces
+**Group C**: Change Detection
+**Group D**: Letter Similarities in Words
 
 ## Slides
+
+Here are some brief slides introducing the four topics:
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQtrBPkNbltbtESfMjbQmt2dQg9Dk4C-jkfsQxcVA1IoooCWIj8bN_LRouRpHy0dbe5dS91GU-xvNez/embed?start=false&loop=false" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
