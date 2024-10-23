@@ -16,7 +16,15 @@ First, as we'll be using psychopy, make sure you have correctly installed the st
 
 <img src="demo_experiment_screenshot.png" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/demo/demo_experiment_screenshot.png'">
 
-## **Step 3**: Take Part!
+## **Step 3**: Check you are in "Run" Mode
+
+Make sure that "Run" is selected in the toggle button at the top, and not "Pilot".
+
+If set to "Run" mode, the play button will be green. If the play button is orange, you are probably in "Pilot" mode.
+
+<img src="demo_experiment_runmode.png" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/demo/demo_experiment_runmode.png'">
+
+## **Step 4**: Take Part!
 
 In the experiment, you will have to identify which words are real, and which words are fake. These terms will be explained fully at the start of the experiment, but if you still If you have any questions about the task, then please ask!
 
@@ -24,7 +32,7 @@ To start the experiment, simply open `demo_experiment.psyexp` with PsychoPy. Onc
 
 <img src="demo_experiment_run.png" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/demo/demo_experiment_run.png'">
 
-## **Step 4**: Check the Data
+## **Step 5**: Check the Data
 
 Now that you've taken part, you want to check that the experiment has saved your responses. In the demo experiment folder, if you now enter the `data` folder, you should see 3 files: a `.csv` file, a `.log` file, and a `.psydat` file.
 
@@ -32,7 +40,7 @@ Now that you've taken part, you want to check that the experiment has saved your
 
 Open the `.csv` file: you should have 313 rows, containing columns that store lots of relevant information about the stimuli and the experiment. Usually, each row is a single trial, but sometimes we also store other useful information during the experiment. The column, `text`, should contain all of the words and pseudowords that you saw. The column `stim_resp.corr` should contain your accuracies, and the column `stim_resp.rt` should contain your response times (in seconds). If that's all there, then you're good to go!
 
-## **Step 5**: Send the Data
+## **Step 6**: Send the Data
 
 If the data all look to be there, you can upload and send the `.csv` containing your data to the `demo-data` channel in the Discord server.
 
