@@ -1,0 +1,1691 @@
+7.2038 	INFO 	Loaded monitor calibration from ['2023_06_22 15:32']
+7.5216 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001628B98F550>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001628B98F4F0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=True, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001628BA3B2B0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1200]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+7.5216 	EXP 	window1: backgroundImage = ''
+7.5217 	EXP 	window1: backgroundFit = 'none'
+7.5901 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+7.5902 	EXP 	window1: recordFrameIntervals = False
+7.8313 	EXP 	window1: recordFrameIntervals = True
+8.0323 	EXP 	Screen (0) actual frame rate measured at 60.21Hz
+8.0323 	EXP 	window1: recordFrameIntervals = False
+11.4299 	INFO 	keyboard.Keyboard is using iohub backend.
+11.4299 	INFO 	keyboard.Keyboard is using iohub backend.
+11.4299 	INFO 	keyboard.Keyboard is using iohub backend.
+11.4299 	INFO 	keyboard.Keyboard is using iohub backend.
+11.4300 	INFO 	keyboard.Keyboard is using iohub backend.
+11.4300 	INFO 	keyboard.Keyboard is using iohub backend.
+11.4300 	EXP 	demo_experiment: status = STARTED
+11.5283 	EXP 	Created intro_welcome = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='intro_welcome', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+11.5364 	EXP 	Created feedback_prep_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='feedback_prep_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+11.5380 	EXP 	Created fix = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='fix', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+11.5384 	EXP 	Created stimulus = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='stimulus', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+11.5457 	EXP 	Created proper_trials_prep_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='proper_trials_prep_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+11.5468 	EXP 	Created fix = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='fix', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+11.5474 	EXP 	Created stimulus = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='stimulus', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+11.5531 	EXP 	Created end_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='end_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+0.0150 	EXP 	intro_welcome: autoDraw = True
+1.5428 	DATA 	Keypress: space
+2.4881 	DATA 	Keypress: space
+3.0034 	INFO 	Keyboard events cleared
+3.5227 	DATA 	Keypress: space
+3.5373 	INFO 	Keyboard events cleared
+3.5370 	EXP 	intro_welcome: autoDraw = False
+3.5370 	EXP 	feedback_prep_text: autoDraw = True
+7.6678 	EXP 	Imported stimuli/practice_stim_long.csv as conditions, 10 conditions, 5 params
+7.6680 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'item_nr': 2, 'condition': 'word', 'text': 'Mannes', 'corr_ans': 'ralt', 'is_practice_trial': True, 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+7.6709 	DATA 	Keypress: space
+7.6762 	EXP 	feedback_prep_text: autoDraw = False
+7.6762 	EXP 	stimulus: height = 0.05
+7.6762 	EXP 	stimulus: height = 0.05
+7.6762 	EXP 	stimulus: height = 0.05
+7.6762 	EXP 	stimulus: text = 'Mannes'
+7.9110 	EXP 	fix: autoDraw = True
+8.4113 	EXP 	fix: autoDraw = False
+8.6615 	INFO 	Keyboard events cleared
+8.6613 	EXP 	stimulus: autoDraw = True
+9.1970 	DATA 	Keypress: lctrl
+9.1971 	DATA 	Keypress: ralt
+9.2178 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-0.00392157,  1.        , -1.        ]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Correct!', units='height', win=Window(...), wrapWidth=1)
+9.2287 	EXP 	fix: autoDraw = False
+9.2287 	EXP 	stimulus: autoDraw = False
+9.7476 	EXP 	New trial (rep=0, index=1): <Trial 1 (1 in rep 0) data={'item_nr': 5, 'condition': 'word', 'text': 'sicheren', 'corr_ans': 'ralt', 'is_practice_trial': True, 'thisN': 1, 'thisTrialN': 1, 'thisRepN': 0}>
+9.7522 	EXP 	stimulus: height = 0.05
+9.7522 	EXP 	stimulus: height = 0.05
+9.7522 	EXP 	stimulus: height = 0.05
+9.7522 	EXP 	stimulus: text = 'sicheren'
+10.0052 	EXP 	fix: autoDraw = True
+10.5062 	EXP 	fix: autoDraw = False
+10.7566 	INFO 	Keyboard events cleared
+10.7563 	EXP 	stimulus: autoDraw = True
+11.5771 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-0.00392157,  1.        , -1.        ]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Correct!', units='height', win=Window(...), wrapWidth=1)
+11.5775 	DATA 	Keypress: lctrl
+11.5776 	DATA 	Keypress: ralt
+11.5907 	EXP 	fix: autoDraw = False
+11.5907 	EXP 	stimulus: autoDraw = False
+12.1088 	EXP 	New trial (rep=0, index=2): <Trial 2 (2 in rep 0) data={'item_nr': 5, 'condition': 'pseudoword', 'text': 'tobreren', 'corr_ans': 'lalt', 'is_practice_trial': True, 'thisN': 2, 'thisTrialN': 2, 'thisRepN': 0}>
+12.1138 	EXP 	stimulus: height = 0.05
+12.1138 	EXP 	stimulus: height = 0.05
+12.1138 	EXP 	stimulus: height = 0.05
+12.1138 	EXP 	stimulus: text = 'tobreren'
+12.3670 	EXP 	fix: autoDraw = True
+12.8677 	EXP 	fix: autoDraw = False
+13.1184 	INFO 	Keyboard events cleared
+13.1181 	EXP 	stimulus: autoDraw = True
+13.7389 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-0.00392157,  1.        , -1.        ]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Correct!', units='height', win=Window(...), wrapWidth=1)
+13.7395 	DATA 	Keypress: lalt
+13.7521 	EXP 	fix: autoDraw = False
+13.7521 	EXP 	stimulus: autoDraw = False
+14.2707 	EXP 	New trial (rep=0, index=3): <Trial 3 (3 in rep 0) data={'item_nr': 3, 'condition': 'pseudoword', 'text': 'Torrerk', 'corr_ans': 'lalt', 'is_practice_trial': True, 'thisN': 3, 'thisTrialN': 3, 'thisRepN': 0}>
+14.2753 	EXP 	stimulus: height = 0.05
+14.2753 	EXP 	stimulus: height = 0.05
+14.2753 	EXP 	stimulus: height = 0.05
+14.2753 	EXP 	stimulus: text = 'Torrerk'
+14.5283 	EXP 	fix: autoDraw = True
+15.0290 	EXP 	fix: autoDraw = False
+15.2799 	INFO 	Keyboard events cleared
+15.2796 	EXP 	stimulus: autoDraw = True
+16.0500 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-0.00392157,  1.        , -1.        ]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Correct!', units='height', win=Window(...), wrapWidth=1)
+16.0504 	DATA 	Keypress: lalt
+16.0644 	EXP 	fix: autoDraw = False
+16.0644 	EXP 	stimulus: autoDraw = False
+16.5827 	EXP 	New trial (rep=0, index=4): <Trial 4 (4 in rep 0) data={'item_nr': 2, 'condition': 'pseudoword', 'text': 'sanzes', 'corr_ans': 'lalt', 'is_practice_trial': True, 'thisN': 4, 'thisTrialN': 4, 'thisRepN': 0}>
+16.5874 	EXP 	stimulus: height = 0.05
+16.5874 	EXP 	stimulus: height = 0.05
+16.5874 	EXP 	stimulus: height = 0.05
+16.5874 	EXP 	stimulus: text = 'sanzes'
+16.8400 	EXP 	fix: autoDraw = True
+17.3411 	EXP 	fix: autoDraw = False
+17.5912 	INFO 	Keyboard events cleared
+17.5910 	EXP 	stimulus: autoDraw = True
+17.9947 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([ 1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Incorrect!', units='height', win=Window(...), wrapWidth=1)
+17.9950 	DATA 	Keypress: lctrl
+17.9951 	DATA 	Keypress: ralt
+18.0095 	EXP 	fix: autoDraw = False
+18.0095 	EXP 	stimulus: autoDraw = False
+18.5266 	EXP 	New trial (rep=0, index=5): <Trial 5 (5 in rep 0) data={'item_nr': 1, 'condition': 'pseudoword', 'text': 'Bage', 'corr_ans': 'lalt', 'is_practice_trial': True, 'thisN': 5, 'thisTrialN': 5, 'thisRepN': 0}>
+18.5317 	EXP 	stimulus: height = 0.05
+18.5317 	EXP 	stimulus: height = 0.05
+18.5317 	EXP 	stimulus: height = 0.05
+18.5317 	EXP 	stimulus: text = 'Bage'
+18.7849 	EXP 	fix: autoDraw = True
+19.1027 	DATA 	Keypress: lalt
+19.2856 	EXP 	fix: autoDraw = False
+19.5364 	INFO 	Keyboard events cleared
+19.5361 	EXP 	stimulus: autoDraw = True
+20.0564 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([ 1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Incorrect!', units='height', win=Window(...), wrapWidth=1)
+20.0566 	DATA 	Keypress: lctrl
+20.0567 	DATA 	Keypress: ralt
+20.0701 	EXP 	fix: autoDraw = False
+20.0701 	EXP 	stimulus: autoDraw = False
+20.1082 	DATA 	Keypress: lalt
+20.5888 	EXP 	New trial (rep=0, index=6): <Trial 6 (6 in rep 0) data={'item_nr': 1, 'condition': 'word', 'text': 'Haie', 'corr_ans': 'ralt', 'is_practice_trial': True, 'thisN': 6, 'thisTrialN': 6, 'thisRepN': 0}>
+20.5936 	EXP 	stimulus: height = 0.05
+20.5936 	EXP 	stimulus: height = 0.05
+20.5936 	EXP 	stimulus: height = 0.05
+20.5936 	EXP 	stimulus: text = 'Haie'
+20.8458 	EXP 	fix: autoDraw = True
+21.3469 	EXP 	fix: autoDraw = False
+21.5974 	INFO 	Keyboard events cleared
+21.5972 	EXP 	stimulus: autoDraw = True
+22.0684 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-0.00392157,  1.        , -1.        ]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Correct!', units='height', win=Window(...), wrapWidth=1)
+22.0687 	DATA 	Keypress: lctrl
+22.0687 	DATA 	Keypress: ralt
+22.0813 	EXP 	fix: autoDraw = False
+22.0813 	EXP 	stimulus: autoDraw = False
+22.3929 	DATA 	Keypress: lctrl
+22.3930 	DATA 	Keypress: ralt
+22.5883 	DATA 	Keypress: lctrl
+22.5884 	DATA 	Keypress: ralt
+22.6011 	EXP 	New trial (rep=0, index=7): <Trial 7 (7 in rep 0) data={'item_nr': 4, 'condition': 'word', 'text': 'sagt', 'corr_ans': 'ralt', 'is_practice_trial': True, 'thisN': 7, 'thisTrialN': 7, 'thisRepN': 0}>
+22.6061 	EXP 	stimulus: height = 0.05
+22.6061 	EXP 	stimulus: height = 0.05
+22.6061 	EXP 	stimulus: height = 0.05
+22.6061 	EXP 	stimulus: text = 'sagt'
+22.8582 	EXP 	fix: autoDraw = True
+22.9767 	DATA 	Keypress: lctrl
+22.9768 	DATA 	Keypress: ralt
+23.3584 	EXP 	fix: autoDraw = False
+23.6095 	INFO 	Keyboard events cleared
+23.6090 	EXP 	stimulus: autoDraw = True
+24.1292 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-0.00392157,  1.        , -1.        ]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Correct!', units='height', win=Window(...), wrapWidth=1)
+24.1295 	DATA 	Keypress: lctrl
+24.1296 	DATA 	Keypress: ralt
+24.1432 	EXP 	fix: autoDraw = False
+24.1432 	EXP 	stimulus: autoDraw = False
+24.6613 	EXP 	New trial (rep=0, index=8): <Trial 8 (8 in rep 0) data={'item_nr': 4, 'condition': 'pseudoword', 'text': 'segt', 'corr_ans': 'lalt', 'is_practice_trial': True, 'thisN': 8, 'thisTrialN': 8, 'thisRepN': 0}>
+24.6657 	EXP 	stimulus: height = 0.05
+24.6657 	EXP 	stimulus: height = 0.05
+24.6657 	EXP 	stimulus: height = 0.05
+24.6657 	EXP 	stimulus: text = 'segt'
+24.9196 	EXP 	fix: autoDraw = True
+25.4203 	EXP 	fix: autoDraw = False
+25.6710 	INFO 	Keyboard events cleared
+25.6708 	EXP 	stimulus: autoDraw = True
+26.3417 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-0.00392157,  1.        , -1.        ]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Correct!', units='height', win=Window(...), wrapWidth=1)
+26.3420 	DATA 	Keypress: lalt
+26.3550 	EXP 	fix: autoDraw = False
+26.3550 	EXP 	stimulus: autoDraw = False
+26.8732 	EXP 	New trial (rep=0, index=9): <Trial 9 (9 in rep 0) data={'item_nr': 3, 'condition': 'word', 'text': 'korrekt', 'corr_ans': 'ralt', 'is_practice_trial': True, 'thisN': 9, 'thisTrialN': 9, 'thisRepN': 0}>
+26.8782 	EXP 	stimulus: height = 0.05
+26.8782 	EXP 	stimulus: height = 0.05
+26.8782 	EXP 	stimulus: height = 0.05
+26.8782 	EXP 	stimulus: text = 'korrekt'
+27.1314 	EXP 	fix: autoDraw = True
+27.6320 	EXP 	fix: autoDraw = False
+27.8831 	INFO 	Keyboard events cleared
+27.8828 	EXP 	stimulus: autoDraw = True
+28.5532 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-0.00392157,  1.        , -1.        ]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Correct!', units='height', win=Window(...), wrapWidth=1)
+28.5536 	DATA 	Keypress: lctrl
+28.5537 	DATA 	Keypress: ralt
+28.5666 	EXP 	fix: autoDraw = False
+28.5666 	EXP 	stimulus: autoDraw = False
+29.0891 	EXP 	proper_trials_prep_text: autoDraw = True
+30.0940 	INFO 	Keyboard events cleared
+30.1212 	EXP 	Imported stimuli/stim_long.csv as conditions, 300 conditions, 5 params
+30.1227 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'item_nr': 125, 'condition': 'word', 'text': 'telepathischen', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+30.1251 	DATA 	Keypress: space
+30.1280 	EXP 	proper_trials_prep_text: autoDraw = False
+30.1280 	EXP 	stimulus: height = 0.05
+30.1280 	EXP 	stimulus: height = 0.05
+30.1280 	EXP 	stimulus: height = 0.05
+30.1280 	EXP 	stimulus: text = 'telepathischen'
+30.3775 	EXP 	fix: autoDraw = True
+30.8780 	EXP 	fix: autoDraw = False
+31.1125 	INFO 	Keyboard events cleared
+31.1122 	EXP 	stimulus: autoDraw = True
+31.6972 	EXP 	New trial (rep=0, index=1): <Trial 1 (1 in rep 0) data={'item_nr': 130, 'condition': 'pseudoword', 'text': 'vertolzen', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 1, 'thisTrialN': 1, 'thisRepN': 0}>
+31.6994 	DATA 	Keypress: lctrl
+31.6995 	DATA 	Keypress: ralt
+31.7131 	EXP 	fix: autoDraw = False
+31.7131 	EXP 	stimulus: autoDraw = False
+31.7131 	EXP 	stimulus: height = 0.05
+31.7131 	EXP 	stimulus: height = 0.05
+31.7131 	EXP 	stimulus: height = 0.05
+31.7131 	EXP 	stimulus: text = 'vertolzen'
+31.9463 	EXP 	fix: autoDraw = True
+32.4480 	EXP 	fix: autoDraw = False
+32.6985 	INFO 	Keyboard events cleared
+32.6980 	EXP 	stimulus: autoDraw = True
+33.2328 	EXP 	New trial (rep=0, index=2): <Trial 2 (2 in rep 0) data={'item_nr': 118, 'condition': 'word', 'text': 'schönste', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 2, 'thisTrialN': 2, 'thisRepN': 0}>
+33.2355 	DATA 	Keypress: lalt
+33.2479 	EXP 	fix: autoDraw = False
+33.2479 	EXP 	stimulus: autoDraw = False
+33.2479 	EXP 	stimulus: height = 0.05
+33.2479 	EXP 	stimulus: height = 0.05
+33.2479 	EXP 	stimulus: height = 0.05
+33.2479 	EXP 	stimulus: text = 'schönste'
+33.3159 	DATA 	Keypress: lalt
+33.4821 	EXP 	fix: autoDraw = True
+33.9829 	EXP 	fix: autoDraw = False
+34.2333 	INFO 	Keyboard events cleared
+34.2330 	EXP 	stimulus: autoDraw = True
+34.8023 	EXP 	New trial (rep=0, index=3): <Trial 3 (3 in rep 0) data={'item_nr': 50, 'condition': 'pseudoword', 'text': 'Bünktchen', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 3, 'thisTrialN': 3, 'thisRepN': 0}>
+34.8062 	DATA 	Keypress: lalt
+34.8166 	EXP 	fix: autoDraw = False
+34.8166 	EXP 	stimulus: autoDraw = False
+34.8166 	EXP 	stimulus: height = 0.05
+34.8166 	EXP 	stimulus: height = 0.05
+34.8166 	EXP 	stimulus: height = 0.05
+34.8166 	EXP 	stimulus: text = 'Bünktchen'
+35.0678 	EXP 	fix: autoDraw = True
+35.5690 	EXP 	fix: autoDraw = False
+35.8022 	INFO 	Keyboard events cleared
+35.8019 	EXP 	stimulus: autoDraw = True
+37.1233 	EXP 	New trial (rep=0, index=4): <Trial 4 (4 in rep 0) data={'item_nr': 136, 'condition': 'pseudoword', 'text': 'wondrinnig', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 4, 'thisTrialN': 4, 'thisRepN': 0}>
+37.1257 	DATA 	Keypress: lalt
+37.1385 	EXP 	fix: autoDraw = False
+37.1385 	EXP 	stimulus: autoDraw = False
+37.1385 	EXP 	stimulus: height = 0.05
+37.1385 	EXP 	stimulus: height = 0.05
+37.1385 	EXP 	stimulus: height = 0.05
+37.1385 	EXP 	stimulus: text = 'wondrinnig'
+37.3884 	EXP 	fix: autoDraw = True
+37.8888 	EXP 	fix: autoDraw = False
+38.1232 	INFO 	Keyboard events cleared
+38.1228 	EXP 	stimulus: autoDraw = True
+39.1083 	EXP 	New trial (rep=0, index=5): <Trial 5 (5 in rep 0) data={'item_nr': 47, 'condition': 'word', 'text': 'Vorbereitungen', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 5, 'thisTrialN': 5, 'thisRepN': 0}>
+39.1114 	DATA 	Keypress: lalt
+39.1232 	EXP 	fix: autoDraw = False
+39.1232 	EXP 	stimulus: autoDraw = False
+39.1232 	EXP 	stimulus: height = 0.05
+39.1232 	EXP 	stimulus: height = 0.05
+39.1232 	EXP 	stimulus: height = 0.05
+39.1232 	EXP 	stimulus: text = 'Vorbereitungen'
+39.3576 	EXP 	fix: autoDraw = True
+39.8584 	EXP 	fix: autoDraw = False
+40.1091 	INFO 	Keyboard events cleared
+40.1088 	EXP 	stimulus: autoDraw = True
+40.7277 	EXP 	New trial (rep=0, index=6): <Trial 6 (6 in rep 0) data={'item_nr': 93, 'condition': 'pseudoword', 'text': 'wafspiges', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 6, 'thisTrialN': 6, 'thisRepN': 0}>
+40.7298 	DATA 	Keypress: lctrl
+40.7299 	DATA 	Keypress: ralt
+40.7427 	EXP 	fix: autoDraw = False
+40.7427 	EXP 	stimulus: autoDraw = False
+40.7427 	EXP 	stimulus: height = 0.05
+40.7427 	EXP 	stimulus: height = 0.05
+40.7427 	EXP 	stimulus: height = 0.05
+40.7427 	EXP 	stimulus: text = 'wafspiges'
+40.9936 	EXP 	fix: autoDraw = True
+41.4940 	EXP 	fix: autoDraw = False
+41.7287 	INFO 	Keyboard events cleared
+41.7282 	EXP 	stimulus: autoDraw = True
+42.2297 	EXP 	New trial (rep=0, index=7): <Trial 7 (7 in rep 0) data={'item_nr': 54, 'condition': 'word', 'text': 'allwissend', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 7, 'thisTrialN': 7, 'thisRepN': 0}>
+42.2319 	DATA 	Keypress: lctrl
+42.2319 	DATA 	Keypress: ralt
+42.2453 	EXP 	fix: autoDraw = False
+42.2453 	EXP 	stimulus: autoDraw = False
+42.2453 	EXP 	stimulus: height = 0.05
+42.2453 	EXP 	stimulus: height = 0.05
+42.2453 	EXP 	stimulus: height = 0.05
+42.2453 	EXP 	stimulus: text = 'allwissend'
+42.4790 	EXP 	fix: autoDraw = True
+42.9794 	EXP 	fix: autoDraw = False
+43.2306 	INFO 	Keyboard events cleared
+43.2302 	EXP 	stimulus: autoDraw = True
+43.9492 	EXP 	New trial (rep=0, index=8): <Trial 8 (8 in rep 0) data={'item_nr': 81, 'condition': 'word', 'text': 'endgültig', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 8, 'thisTrialN': 8, 'thisRepN': 0}>
+43.9516 	DATA 	Keypress: lctrl
+43.9517 	DATA 	Keypress: ralt
+43.9644 	EXP 	fix: autoDraw = False
+43.9644 	EXP 	stimulus: autoDraw = False
+43.9644 	EXP 	stimulus: height = 0.05
+43.9644 	EXP 	stimulus: height = 0.05
+43.9644 	EXP 	stimulus: height = 0.05
+43.9644 	EXP 	stimulus: text = 'endgültig'
+44.1988 	EXP 	fix: autoDraw = True
+44.6992 	EXP 	fix: autoDraw = False
+44.9502 	INFO 	Keyboard events cleared
+44.9499 	EXP 	stimulus: autoDraw = True
+45.4851 	EXP 	New trial (rep=0, index=9): <Trial 9 (9 in rep 0) data={'item_nr': 77, 'condition': 'word', 'text': 'dunkle', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 9, 'thisTrialN': 9, 'thisRepN': 0}>
+45.4870 	DATA 	Keypress: lctrl
+45.4871 	DATA 	Keypress: ralt
+45.5009 	EXP 	fix: autoDraw = False
+45.5009 	EXP 	stimulus: autoDraw = False
+45.5009 	EXP 	stimulus: height = 0.05
+45.5009 	EXP 	stimulus: height = 0.05
+45.5009 	EXP 	stimulus: height = 0.05
+45.5009 	EXP 	stimulus: text = 'dunkle'
+45.7506 	EXP 	fix: autoDraw = True
+46.2510 	EXP 	fix: autoDraw = False
+46.4855 	INFO 	Keyboard events cleared
+46.4852 	EXP 	stimulus: autoDraw = True
+47.0206 	EXP 	New trial (rep=0, index=10): <Trial 10 (10 in rep 0) data={'item_nr': 10, 'condition': 'pseudoword', 'text': 'pändel', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 10, 'thisTrialN': 10, 'thisRepN': 0}>
+47.0237 	DATA 	Keypress: lalt
+47.0356 	EXP 	fix: autoDraw = False
+47.0356 	EXP 	stimulus: autoDraw = False
+47.0356 	EXP 	stimulus: height = 0.05
+47.0356 	EXP 	stimulus: height = 0.05
+47.0356 	EXP 	stimulus: height = 0.05
+47.0356 	EXP 	stimulus: text = 'pändel'
+47.2698 	EXP 	fix: autoDraw = True
+47.7703 	EXP 	fix: autoDraw = False
+48.0212 	INFO 	Keyboard events cleared
+48.0209 	EXP 	stimulus: autoDraw = True
+49.3575 	DATA 	Keypress: lctrl
+49.3737 	EXP 	New trial (rep=0, index=11): <Trial 11 (11 in rep 0) data={'item_nr': 15, 'condition': 'word', 'text': 'Kollegium', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 11, 'thisTrialN': 11, 'thisRepN': 0}>
+49.3764 	DATA 	Keypress: ralt
+49.3893 	EXP 	fix: autoDraw = False
+49.3893 	EXP 	stimulus: autoDraw = False
+49.3893 	EXP 	stimulus: height = 0.05
+49.3893 	EXP 	stimulus: height = 0.05
+49.3893 	EXP 	stimulus: height = 0.05
+49.3893 	EXP 	stimulus: text = 'Kollegium'
+49.6233 	EXP 	fix: autoDraw = True
+50.1236 	EXP 	fix: autoDraw = False
+50.3746 	INFO 	Keyboard events cleared
+50.3744 	EXP 	stimulus: autoDraw = True
+50.9432 	EXP 	New trial (rep=0, index=12): <Trial 12 (12 in rep 0) data={'item_nr': 58, 'condition': 'pseudoword', 'text': 'abhiten', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 12, 'thisTrialN': 12, 'thisRepN': 0}>
+50.9449 	DATA 	Keypress: lctrl
+50.9449 	DATA 	Keypress: ralt
+50.9587 	EXP 	fix: autoDraw = False
+50.9587 	EXP 	stimulus: autoDraw = False
+50.9587 	EXP 	stimulus: height = 0.05
+50.9587 	EXP 	stimulus: height = 0.05
+50.9587 	EXP 	stimulus: height = 0.05
+50.9587 	EXP 	stimulus: text = 'abhiten'
+51.1931 	EXP 	fix: autoDraw = True
+51.6933 	EXP 	fix: autoDraw = False
+51.9437 	INFO 	Keyboard events cleared
+51.9434 	EXP 	stimulus: autoDraw = True
+52.5793 	EXP 	New trial (rep=0, index=13): <Trial 13 (13 in rep 0) data={'item_nr': 69, 'condition': 'pseudoword', 'text': 'benäugen', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 13, 'thisTrialN': 13, 'thisRepN': 0}>
+52.5818 	DATA 	Keypress: lalt
+52.5945 	EXP 	fix: autoDraw = False
+52.5945 	EXP 	stimulus: autoDraw = False
+52.5945 	EXP 	stimulus: height = 0.05
+52.5945 	EXP 	stimulus: height = 0.05
+52.5945 	EXP 	stimulus: height = 0.05
+52.5945 	EXP 	stimulus: text = 'benäugen'
+52.8277 	EXP 	fix: autoDraw = True
+53.3289 	EXP 	fix: autoDraw = False
+53.5796 	INFO 	Keyboard events cleared
+53.5793 	EXP 	stimulus: autoDraw = True
+54.6320 	EXP 	New trial (rep=0, index=14): <Trial 14 (14 in rep 0) data={'item_nr': 146, 'condition': 'pseudoword', 'text': 'zunandsgewägen', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 14, 'thisTrialN': 14, 'thisRepN': 0}>
+54.6341 	DATA 	Keypress: lalt
+54.6477 	EXP 	fix: autoDraw = False
+54.6477 	EXP 	stimulus: autoDraw = False
+54.6477 	EXP 	stimulus: height = 0.05
+54.6477 	EXP 	stimulus: height = 0.05
+54.6477 	EXP 	stimulus: height = 0.05
+54.6477 	EXP 	stimulus: text = 'zunandsgewägen'
+54.8977 	EXP 	fix: autoDraw = True
+55.3989 	EXP 	fix: autoDraw = False
+55.6325 	INFO 	Keyboard events cleared
+55.6322 	EXP 	stimulus: autoDraw = True
+56.2847 	EXP 	New trial (rep=0, index=15): <Trial 15 (15 in rep 0) data={'item_nr': 85, 'condition': 'pseudoword', 'text': 'erschwillt', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 15, 'thisTrialN': 15, 'thisRepN': 0}>
+56.2866 	DATA 	Keypress: lctrl
+56.2867 	DATA 	Keypress: ralt
+56.3004 	EXP 	fix: autoDraw = False
+56.3004 	EXP 	stimulus: autoDraw = False
+56.3004 	EXP 	stimulus: height = 0.05
+56.3004 	EXP 	stimulus: height = 0.05
+56.3004 	EXP 	stimulus: height = 0.05
+56.3004 	EXP 	stimulus: text = 'erschwillt'
+56.5337 	EXP 	fix: autoDraw = True
+57.0352 	EXP 	fix: autoDraw = False
+57.2849 	INFO 	Keyboard events cleared
+57.2846 	EXP 	stimulus: autoDraw = True
+57.8707 	EXP 	New trial (rep=0, index=16): <Trial 16 (16 in rep 0) data={'item_nr': 22, 'condition': 'pseudoword', 'text': 'Tieme', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 16, 'thisTrialN': 16, 'thisRepN': 0}>
+57.8729 	DATA 	Keypress: lctrl
+57.8730 	DATA 	Keypress: ralt
+57.8856 	EXP 	fix: autoDraw = False
+57.8856 	EXP 	stimulus: autoDraw = False
+57.8856 	EXP 	stimulus: height = 0.05
+57.8856 	EXP 	stimulus: height = 0.05
+57.8856 	EXP 	stimulus: height = 0.05
+57.8856 	EXP 	stimulus: text = 'Tieme'
+58.1364 	EXP 	fix: autoDraw = True
+58.6369 	EXP 	fix: autoDraw = False
+58.8711 	INFO 	Keyboard events cleared
+58.8709 	EXP 	stimulus: autoDraw = True
+59.5728 	EXP 	New trial (rep=0, index=17): <Trial 17 (17 in rep 0) data={'item_nr': 111, 'condition': 'pseudoword', 'text': 'beiderzubinten', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 17, 'thisTrialN': 17, 'thisRepN': 0}>
+59.5752 	DATA 	Keypress: lctrl
+59.5752 	DATA 	Keypress: ralt
+59.5889 	EXP 	fix: autoDraw = False
+59.5889 	EXP 	stimulus: autoDraw = False
+59.5889 	EXP 	stimulus: height = 0.05
+59.5889 	EXP 	stimulus: height = 0.05
+59.5889 	EXP 	stimulus: height = 0.05
+59.5889 	EXP 	stimulus: text = 'beiderzubinten'
+59.8226 	EXP 	fix: autoDraw = True
+60.3230 	EXP 	fix: autoDraw = False
+60.5732 	INFO 	Keyboard events cleared
+60.5729 	EXP 	stimulus: autoDraw = True
+61.1253 	EXP 	New trial (rep=0, index=18): <Trial 18 (18 in rep 0) data={'item_nr': 43, 'condition': 'pseudoword', 'text': 'Abgegöbe', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 18, 'thisTrialN': 18, 'thisRepN': 0}>
+61.1277 	DATA 	Keypress: lalt
+61.1407 	EXP 	fix: autoDraw = False
+61.1407 	EXP 	stimulus: autoDraw = False
+61.1407 	EXP 	stimulus: height = 0.05
+61.1407 	EXP 	stimulus: height = 0.05
+61.1407 	EXP 	stimulus: height = 0.05
+61.1407 	EXP 	stimulus: text = 'Abgegöbe'
+61.3916 	EXP 	fix: autoDraw = True
+61.8918 	EXP 	fix: autoDraw = False
+62.1260 	INFO 	Keyboard events cleared
+62.1256 	EXP 	stimulus: autoDraw = True
+62.6956 	EXP 	New trial (rep=0, index=19): <Trial 19 (19 in rep 0) data={'item_nr': 94, 'condition': 'pseudoword', 'text': 'werillen', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 19, 'thisTrialN': 19, 'thisRepN': 0}>
+62.6974 	DATA 	Keypress: lalt
+62.7101 	EXP 	fix: autoDraw = False
+62.7101 	EXP 	stimulus: autoDraw = False
+62.7101 	EXP 	stimulus: height = 0.05
+62.7101 	EXP 	stimulus: height = 0.05
+62.7101 	EXP 	stimulus: height = 0.05
+62.7101 	EXP 	stimulus: text = 'werillen'
+62.9598 	EXP 	fix: autoDraw = True
+63.4611 	EXP 	fix: autoDraw = False
+63.7114 	INFO 	Keyboard events cleared
+63.7110 	EXP 	stimulus: autoDraw = True
+64.4303 	EXP 	New trial (rep=0, index=20): <Trial 20 (20 in rep 0) data={'item_nr': 102, 'condition': 'pseudoword', 'text': 'Sauste', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 20, 'thisTrialN': 20, 'thisRepN': 0}>
+64.4329 	DATA 	Keypress: lalt
+64.4457 	EXP 	fix: autoDraw = False
+64.4457 	EXP 	stimulus: autoDraw = False
+64.4457 	EXP 	stimulus: height = 0.05
+64.4457 	EXP 	stimulus: height = 0.05
+64.4457 	EXP 	stimulus: height = 0.05
+64.4457 	EXP 	stimulus: text = 'Sauste'
+64.6794 	EXP 	fix: autoDraw = True
+65.1801 	EXP 	fix: autoDraw = False
+65.4314 	INFO 	Keyboard events cleared
+65.4308 	EXP 	stimulus: autoDraw = True
+66.0161 	EXP 	New trial (rep=0, index=21): <Trial 21 (21 in rep 0) data={'item_nr': 37, 'condition': 'pseudoword', 'text': 'spraxenwäschen', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 21, 'thisTrialN': 21, 'thisRepN': 0}>
+66.0189 	DATA 	Keypress: lctrl
+66.0191 	DATA 	Keypress: ralt
+66.0316 	EXP 	fix: autoDraw = False
+66.0316 	EXP 	stimulus: autoDraw = False
+66.0316 	EXP 	stimulus: height = 0.05
+66.0316 	EXP 	stimulus: height = 0.05
+66.0316 	EXP 	stimulus: height = 0.05
+66.0316 	EXP 	stimulus: text = 'spraxenwäschen'
+66.2819 	EXP 	fix: autoDraw = True
+66.7828 	EXP 	fix: autoDraw = False
+67.0163 	INFO 	Keyboard events cleared
+67.0161 	EXP 	stimulus: autoDraw = True
+68.2862 	EXP 	New trial (rep=0, index=22): <Trial 22 (22 in rep 0) data={'item_nr': 15, 'condition': 'pseudoword', 'text': 'Toffegizu', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 22, 'thisTrialN': 22, 'thisRepN': 0}>
+68.2886 	DATA 	Keypress: lctrl
+68.2887 	DATA 	Keypress: ralt
+68.3014 	EXP 	fix: autoDraw = False
+68.3014 	EXP 	stimulus: autoDraw = False
+68.3014 	EXP 	stimulus: height = 0.05
+68.3014 	EXP 	stimulus: height = 0.05
+68.3014 	EXP 	stimulus: height = 0.05
+68.3014 	EXP 	stimulus: text = 'Toffegizu'
+68.5353 	EXP 	fix: autoDraw = True
+69.0359 	EXP 	fix: autoDraw = False
+69.2867 	INFO 	Keyboard events cleared
+69.2864 	EXP 	stimulus: autoDraw = True
+69.9376 	EXP 	New trial (rep=0, index=23): <Trial 23 (23 in rep 0) data={'item_nr': 110, 'condition': 'word', 'text': 'niedergezwungen', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 23, 'thisTrialN': 23, 'thisRepN': 0}>
+69.9402 	DATA 	Keypress: lalt
+69.9533 	EXP 	fix: autoDraw = False
+69.9533 	EXP 	stimulus: autoDraw = False
+69.9533 	EXP 	stimulus: height = 0.05
+69.9533 	EXP 	stimulus: height = 0.05
+69.9533 	EXP 	stimulus: height = 0.05
+69.9533 	EXP 	stimulus: text = 'niedergezwungen'
+70.1876 	EXP 	fix: autoDraw = True
+70.6885 	EXP 	fix: autoDraw = False
+70.9394 	INFO 	Keyboard events cleared
+70.9391 	EXP 	stimulus: autoDraw = True
+71.4747 	EXP 	New trial (rep=0, index=24): <Trial 24 (24 in rep 0) data={'item_nr': 80, 'condition': 'word', 'text': 'eintreffe', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 24, 'thisTrialN': 24, 'thisRepN': 0}>
+71.4765 	DATA 	Keypress: lalt
+71.4897 	EXP 	fix: autoDraw = False
+71.4897 	EXP 	stimulus: autoDraw = False
+71.4897 	EXP 	stimulus: height = 0.05
+71.4897 	EXP 	stimulus: height = 0.05
+71.4897 	EXP 	stimulus: height = 0.05
+71.4897 	EXP 	stimulus: text = 'eintreffe'
+71.7237 	EXP 	fix: autoDraw = True
+72.2241 	EXP 	fix: autoDraw = False
+72.4751 	INFO 	Keyboard events cleared
+72.4748 	EXP 	stimulus: autoDraw = True
+73.0591 	EXP 	New trial (rep=0, index=25): <Trial 25 (25 in rep 0) data={'item_nr': 35, 'condition': 'word', 'text': 'Sowjetbürger', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 25, 'thisTrialN': 25, 'thisRepN': 0}>
+73.0622 	DATA 	Keypress: lalt
+73.0757 	EXP 	fix: autoDraw = False
+73.0757 	EXP 	stimulus: autoDraw = False
+73.0757 	EXP 	stimulus: height = 0.05
+73.0757 	EXP 	stimulus: height = 0.05
+73.0757 	EXP 	stimulus: height = 0.05
+73.0757 	EXP 	stimulus: text = 'Sowjetbürger'
+73.3092 	EXP 	fix: autoDraw = True
+73.8093 	EXP 	fix: autoDraw = False
+74.0604 	INFO 	Keyboard events cleared
+74.0602 	EXP 	stimulus: autoDraw = True
+74.5955 	EXP 	New trial (rep=0, index=26): <Trial 26 (26 in rep 0) data={'item_nr': 17, 'condition': 'pseudoword', 'text': 'pontoaantut', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 26, 'thisTrialN': 26, 'thisRepN': 0}>
+74.5978 	DATA 	Keypress: lalt
+74.6112 	EXP 	fix: autoDraw = False
+74.6112 	EXP 	stimulus: autoDraw = False
+74.6112 	EXP 	stimulus: height = 0.05
+74.6112 	EXP 	stimulus: height = 0.05
+74.6112 	EXP 	stimulus: height = 0.05
+74.6112 	EXP 	stimulus: text = 'pontoaantut'
+74.8441 	EXP 	fix: autoDraw = True
+75.3457 	EXP 	fix: autoDraw = False
+75.5966 	INFO 	Keyboard events cleared
+75.5963 	EXP 	stimulus: autoDraw = True
+76.3148 	EXP 	New trial (rep=0, index=27): <Trial 27 (27 in rep 0) data={'item_nr': 47, 'condition': 'pseudoword', 'text': 'Monbetierungen', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 27, 'thisTrialN': 27, 'thisRepN': 0}>
+76.3173 	DATA 	Keypress: lalt
+76.3306 	EXP 	fix: autoDraw = False
+76.3306 	EXP 	stimulus: autoDraw = False
+76.3306 	EXP 	stimulus: height = 0.05
+76.3306 	EXP 	stimulus: height = 0.05
+76.3306 	EXP 	stimulus: height = 0.05
+76.3306 	EXP 	stimulus: text = 'Monbetierungen'
+76.5641 	EXP 	fix: autoDraw = True
+77.0652 	EXP 	fix: autoDraw = False
+77.3155 	INFO 	Keyboard events cleared
+77.3152 	EXP 	stimulus: autoDraw = True
+78.0505 	EXP 	New trial (rep=0, index=28): <Trial 28 (28 in rep 0) data={'item_nr': 135, 'condition': 'pseudoword', 'text': 'vorschrenntgadrig', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 28, 'thisTrialN': 28, 'thisRepN': 0}>
+78.0531 	DATA 	Keypress: lalt
+78.0665 	EXP 	fix: autoDraw = False
+78.0665 	EXP 	stimulus: autoDraw = False
+78.0665 	EXP 	stimulus: height = 0.05
+78.0665 	EXP 	stimulus: height = 0.05
+78.0665 	EXP 	stimulus: height = 0.05
+78.0665 	EXP 	stimulus: text = 'vorschrenntgadrig'
+78.3001 	EXP 	fix: autoDraw = True
+78.8012 	EXP 	fix: autoDraw = False
+79.0518 	INFO 	Keyboard events cleared
+79.0515 	EXP 	stimulus: autoDraw = True
+79.9199 	EXP 	New trial (rep=0, index=29): <Trial 29 (29 in rep 0) data={'item_nr': 105, 'condition': 'word', 'text': 'lateinamerikanischer', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 29, 'thisTrialN': 29, 'thisRepN': 0}>
+79.9228 	DATA 	Keypress: lalt
+79.9359 	EXP 	fix: autoDraw = False
+79.9359 	EXP 	stimulus: autoDraw = False
+79.9359 	EXP 	stimulus: height = 0.05
+79.9359 	EXP 	stimulus: height = 0.05
+79.9359 	EXP 	stimulus: height = 0.05
+79.9359 	EXP 	stimulus: text = 'lateinamerikanischer'
+80.1697 	EXP 	fix: autoDraw = True
+80.6703 	EXP 	fix: autoDraw = False
+80.9213 	INFO 	Keyboard events cleared
+80.9210 	EXP 	stimulus: autoDraw = True
+81.4888 	EXP 	New trial (rep=0, index=30): <Trial 30 (30 in rep 0) data={'item_nr': 39, 'condition': 'word', 'text': 'Sägewerk', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 30, 'thisTrialN': 30, 'thisRepN': 0}>
+81.4907 	DATA 	Keypress: lctrl
+81.4907 	DATA 	Keypress: ralt
+81.5044 	EXP 	fix: autoDraw = False
+81.5044 	EXP 	stimulus: autoDraw = False
+81.5044 	EXP 	stimulus: height = 0.05
+81.5044 	EXP 	stimulus: height = 0.05
+81.5044 	EXP 	stimulus: height = 0.05
+81.5044 	EXP 	stimulus: text = 'Sägewerk'
+81.7383 	EXP 	fix: autoDraw = True
+82.2387 	EXP 	fix: autoDraw = False
+82.4901 	INFO 	Keyboard events cleared
+82.4898 	EXP 	stimulus: autoDraw = True
+83.2259 	DATA 	Keypress: lctrl
+83.2261 	DATA 	Keypress: ralt
+83.2420 	EXP 	New trial (rep=0, index=31): <Trial 31 (31 in rep 0) data={'item_nr': 59, 'condition': 'word', 'text': 'armes', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 31, 'thisTrialN': 31, 'thisRepN': 0}>
+83.2575 	EXP 	fix: autoDraw = False
+83.2575 	EXP 	stimulus: autoDraw = False
+83.2575 	EXP 	stimulus: height = 0.05
+83.2575 	EXP 	stimulus: height = 0.05
+83.2575 	EXP 	stimulus: height = 0.05
+83.2575 	EXP 	stimulus: text = 'armes'
+83.4918 	EXP 	fix: autoDraw = True
+83.9927 	EXP 	fix: autoDraw = False
+84.2425 	INFO 	Keyboard events cleared
+84.2422 	EXP 	stimulus: autoDraw = True
+84.8946 	EXP 	New trial (rep=0, index=32): <Trial 32 (32 in rep 0) data={'item_nr': 32, 'condition': 'pseudoword', 'text': 'schreigerlächter', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 32, 'thisTrialN': 32, 'thisRepN': 0}>
+84.8971 	DATA 	Keypress: lctrl
+84.8972 	DATA 	Keypress: ralt
+84.9102 	EXP 	fix: autoDraw = False
+84.9102 	EXP 	stimulus: autoDraw = False
+84.9102 	EXP 	stimulus: height = 0.05
+84.9102 	EXP 	stimulus: height = 0.05
+84.9102 	EXP 	stimulus: height = 0.05
+84.9102 	EXP 	stimulus: text = 'schreigerlächter'
+85.1442 	EXP 	fix: autoDraw = True
+85.6444 	EXP 	fix: autoDraw = False
+85.8949 	INFO 	Keyboard events cleared
+85.8947 	EXP 	stimulus: autoDraw = True
+86.6462 	EXP 	New trial (rep=0, index=33): <Trial 33 (33 in rep 0) data={'item_nr': 41, 'condition': 'word', 'text': 'Touristen', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 33, 'thisTrialN': 33, 'thisRepN': 0}>
+86.6479 	DATA 	Keypress: lalt
+86.6626 	EXP 	fix: autoDraw = False
+86.6626 	EXP 	stimulus: autoDraw = False
+86.6626 	EXP 	stimulus: height = 0.05
+86.6626 	EXP 	stimulus: height = 0.05
+86.6626 	EXP 	stimulus: height = 0.05
+86.6626 	EXP 	stimulus: text = 'Touristen'
+86.8963 	EXP 	fix: autoDraw = True
+87.3969 	EXP 	fix: autoDraw = False
+87.6476 	INFO 	Keyboard events cleared
+87.6474 	EXP 	stimulus: autoDraw = True
+88.2498 	DATA 	Keypress: lctrl
+88.2501 	DATA 	Keypress: ralt
+88.2665 	EXP 	New trial (rep=0, index=34): <Trial 34 (34 in rep 0) data={'item_nr': 3, 'condition': 'word', 'text': 'Erwachsener', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 34, 'thisTrialN': 34, 'thisRepN': 0}>
+88.2812 	EXP 	fix: autoDraw = False
+88.2812 	EXP 	stimulus: autoDraw = False
+88.2812 	EXP 	stimulus: height = 0.05
+88.2812 	EXP 	stimulus: height = 0.05
+88.2812 	EXP 	stimulus: height = 0.05
+88.2812 	EXP 	stimulus: text = 'Erwachsener'
+88.5321 	EXP 	fix: autoDraw = True
+89.0326 	EXP 	fix: autoDraw = False
+89.2671 	INFO 	Keyboard events cleared
+89.2668 	EXP 	stimulus: autoDraw = True
+90.0020 	EXP 	New trial (rep=0, index=35): <Trial 35 (35 in rep 0) data={'item_nr': 147, 'condition': 'word', 'text': 'zurückgeschreckt', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 35, 'thisTrialN': 35, 'thisRepN': 0}>
+90.0047 	DATA 	Keypress: lctrl
+90.0048 	DATA 	Keypress: ralt
+90.0177 	EXP 	fix: autoDraw = False
+90.0177 	EXP 	stimulus: autoDraw = False
+90.0177 	EXP 	stimulus: height = 0.05
+90.0177 	EXP 	stimulus: height = 0.05
+90.0177 	EXP 	stimulus: height = 0.05
+90.0177 	EXP 	stimulus: text = 'zurückgeschreckt'
+90.2517 	EXP 	fix: autoDraw = True
+90.7524 	EXP 	fix: autoDraw = False
+91.0028 	INFO 	Keyboard events cleared
+91.0025 	EXP 	stimulus: autoDraw = True
+91.5211 	EXP 	New trial (rep=0, index=36): <Trial 36 (36 in rep 0) data={'item_nr': 70, 'condition': 'pseudoword', 'text': 'vezönlerten', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 36, 'thisTrialN': 36, 'thisRepN': 0}>
+91.5234 	DATA 	Keypress: lalt
+91.5369 	EXP 	fix: autoDraw = False
+91.5369 	EXP 	stimulus: autoDraw = False
+91.5369 	EXP 	stimulus: height = 0.05
+91.5369 	EXP 	stimulus: height = 0.05
+91.5369 	EXP 	stimulus: height = 0.05
+91.5369 	EXP 	stimulus: text = 'vezönlerten'
+91.7704 	EXP 	fix: autoDraw = True
+92.2713 	EXP 	fix: autoDraw = False
+92.5215 	INFO 	Keyboard events cleared
+92.5212 	EXP 	stimulus: autoDraw = True
+93.0401 	EXP 	New trial (rep=0, index=37): <Trial 37 (37 in rep 0) data={'item_nr': 145, 'condition': 'word', 'text': 'zuflüstern', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 37, 'thisTrialN': 37, 'thisRepN': 0}>
+93.0427 	DATA 	Keypress: lalt
+93.0554 	EXP 	fix: autoDraw = False
+93.0554 	EXP 	stimulus: autoDraw = False
+93.0554 	EXP 	stimulus: height = 0.05
+93.0554 	EXP 	stimulus: height = 0.05
+93.0554 	EXP 	stimulus: height = 0.05
+93.0554 	EXP 	stimulus: text = 'zuflüstern'
+93.2894 	EXP 	fix: autoDraw = True
+93.7900 	EXP 	fix: autoDraw = False
+94.0407 	INFO 	Keyboard events cleared
+94.0404 	EXP 	stimulus: autoDraw = True
+94.7589 	EXP 	New trial (rep=0, index=38): <Trial 38 (38 in rep 0) data={'item_nr': 73, 'condition': 'word', 'text': 'beschämen', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 38, 'thisTrialN': 38, 'thisRepN': 0}>
+94.7616 	DATA 	Keypress: lalt
+94.7750 	EXP 	fix: autoDraw = False
+94.7750 	EXP 	stimulus: autoDraw = False
+94.7750 	EXP 	stimulus: height = 0.05
+94.7750 	EXP 	stimulus: height = 0.05
+94.7750 	EXP 	stimulus: height = 0.05
+94.7750 	EXP 	stimulus: text = 'beschämen'
+95.0087 	EXP 	fix: autoDraw = True
+95.5093 	EXP 	fix: autoDraw = False
+95.7603 	INFO 	Keyboard events cleared
+95.7600 	EXP 	stimulus: autoDraw = True
+96.3118 	EXP 	New trial (rep=0, index=39): <Trial 39 (39 in rep 0) data={'item_nr': 76, 'condition': 'pseudoword', 'text': 'dogt', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 39, 'thisTrialN': 39, 'thisRepN': 0}>
+96.3139 	DATA 	Keypress: lalt
+96.3269 	EXP 	fix: autoDraw = False
+96.3269 	EXP 	stimulus: autoDraw = False
+96.3269 	EXP 	stimulus: height = 0.05
+96.3269 	EXP 	stimulus: height = 0.05
+96.3269 	EXP 	stimulus: height = 0.05
+96.3269 	EXP 	stimulus: text = 'dogt'
+96.5617 	EXP 	fix: autoDraw = True
+96.7787 	DATA 	Keypress: lctrl
+96.7788 	DATA 	Keypress: ralt
+96.9458 	DATA 	Keypress: lalt
+97.0619 	EXP 	fix: autoDraw = False
+97.2130 	DATA 	Keypress: lalt
+97.2292 	DATA 	Keypress: lctrl
+97.3122 	INFO 	Keyboard events cleared
+97.3118 	EXP 	stimulus: autoDraw = True
+97.4137 	EXP 	New trial (rep=0, index=40): <Trial 40 (40 in rep 0) data={'item_nr': 13, 'condition': 'word', 'text': 'Kanaille', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 40, 'thisTrialN': 40, 'thisRepN': 0}>
+97.4155 	DATA 	Keypress: lctrl
+97.4156 	DATA 	Keypress: ralt
+97.4292 	EXP 	fix: autoDraw = False
+97.4292 	EXP 	stimulus: autoDraw = False
+97.4292 	EXP 	stimulus: height = 0.05
+97.4292 	EXP 	stimulus: height = 0.05
+97.4292 	EXP 	stimulus: height = 0.05
+97.4292 	EXP 	stimulus: text = 'Kanaille'
+97.6632 	DATA 	Keypress: lctrl
+97.6633 	DATA 	Keypress: ralt
+97.6791 	EXP 	fix: autoDraw = True
+97.7804 	DATA 	Keypress: lalt
+97.8812 	DATA 	Keypress: lctrl
+97.9977 	DATA 	Keypress: lalt
+98.0972 	DATA 	Keypress: lctrl
+98.1809 	EXP 	fix: autoDraw = False
+98.2470 	DATA 	Keypress: lalt
+98.3312 	DATA 	Keypress: lctrl
+98.4140 	INFO 	Keyboard events cleared
+98.4137 	EXP 	stimulus: autoDraw = True
+98.4483 	EXP 	New trial (rep=0, index=41): <Trial 41 (41 in rep 0) data={'item_nr': 129, 'condition': 'pseudoword', 'text': 'verligtet', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 41, 'thisTrialN': 41, 'thisRepN': 0}>
+98.4503 	DATA 	Keypress: lalt
+98.4638 	EXP 	fix: autoDraw = False
+98.4638 	EXP 	stimulus: autoDraw = False
+98.4638 	EXP 	stimulus: height = 0.05
+98.4638 	EXP 	stimulus: height = 0.05
+98.4638 	EXP 	stimulus: height = 0.05
+98.4638 	EXP 	stimulus: text = 'verligtet'
+98.5314 	DATA 	Keypress: lctrl
+98.6649 	DATA 	Keypress: lalt
+98.6976 	EXP 	fix: autoDraw = True
+98.7481 	DATA 	Keypress: lctrl
+98.8658 	DATA 	Keypress: lalt
+98.9652 	DATA 	Keypress: lctrl
+99.0822 	DATA 	Keypress: lalt
+99.1647 	DATA 	Keypress: lctrl
+99.1983 	EXP 	fix: autoDraw = False
+99.4164 	DATA 	Keypress: lctrl
+99.4165 	DATA 	Keypress: ralt
+99.4493 	INFO 	Keyboard events cleared
+99.4490 	EXP 	stimulus: autoDraw = True
+99.5167 	EXP 	New trial (rep=0, index=42): <Trial 42 (42 in rep 0) data={'item_nr': 126, 'condition': 'pseudoword', 'text': 'untrunkspahmbar', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 42, 'thisTrialN': 42, 'thisRepN': 0}>
+99.5319 	EXP 	fix: autoDraw = False
+99.5319 	EXP 	stimulus: autoDraw = False
+99.5319 	EXP 	stimulus: height = 0.05
+99.5319 	EXP 	stimulus: height = 0.05
+99.5319 	EXP 	stimulus: height = 0.05
+99.5319 	EXP 	stimulus: text = 'untrunkspahmbar'
+99.6168 	DATA 	Keypress: lctrl
+99.6168 	DATA 	Keypress: ralt
+99.7329 	DATA 	Keypress: lalt
+99.7659 	EXP 	fix: autoDraw = True
+99.8342 	DATA 	Keypress: lctrl
+99.9504 	DATA 	Keypress: lalt
+100.0670 	DATA 	Keypress: lctrl
+100.0671 	DATA 	Keypress: ralt
+100.1842 	DATA 	Keypress: lalt
+100.2662 	EXP 	fix: autoDraw = False
+100.2669 	DATA 	Keypress: lctrl
+100.3846 	DATA 	Keypress: lalt
+100.4842 	DATA 	Keypress: lctrl
+100.4843 	DATA 	Keypress: ralt
+100.5173 	INFO 	Keyboard events cleared
+100.5170 	EXP 	stimulus: autoDraw = True
+100.6018 	EXP 	New trial (rep=0, index=43): <Trial 43 (43 in rep 0) data={'item_nr': 67, 'condition': 'pseudoword', 'text': 'aufdergt', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 43, 'thisTrialN': 43, 'thisRepN': 0}>
+100.6170 	EXP 	fix: autoDraw = False
+100.6170 	EXP 	stimulus: autoDraw = False
+100.6170 	EXP 	stimulus: height = 0.05
+100.6170 	EXP 	stimulus: height = 0.05
+100.6170 	EXP 	stimulus: height = 0.05
+100.6170 	EXP 	stimulus: text = 'aufdergt'
+100.7013 	DATA 	Keypress: lctrl
+100.7014 	DATA 	Keypress: ralt
+100.8508 	EXP 	fix: autoDraw = True
+100.9357 	DATA 	Keypress: lctrl
+100.9358 	DATA 	Keypress: ralt
+101.1517 	DATA 	Keypress: lctrl
+101.1518 	DATA 	Keypress: ralt
+101.2524 	DATA 	Keypress: lalt
+101.3517 	EXP 	fix: autoDraw = False
+101.3683 	DATA 	Keypress: lctrl
+101.3684 	DATA 	Keypress: ralt
+101.4861 	DATA 	Keypress: lalt
+101.5690 	DATA 	Keypress: lctrl
+101.6020 	INFO 	Keyboard events cleared
+101.6017 	EXP 	stimulus: autoDraw = True
+101.7028 	EXP 	New trial (rep=0, index=44): <Trial 44 (44 in rep 0) data={'item_nr': 136, 'condition': 'word', 'text': 'wahnsinnig', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 44, 'thisTrialN': 44, 'thisRepN': 0}>
+101.7045 	DATA 	Keypress: lalt
+101.7183 	EXP 	fix: autoDraw = False
+101.7183 	EXP 	stimulus: autoDraw = False
+101.7183 	EXP 	stimulus: height = 0.05
+101.7183 	EXP 	stimulus: height = 0.05
+101.7183 	EXP 	stimulus: height = 0.05
+101.7183 	EXP 	stimulus: text = 'wahnsinnig'
+101.8032 	DATA 	Keypress: lctrl
+101.9192 	DATA 	Keypress: lalt
+101.9526 	EXP 	fix: autoDraw = True
+102.0035 	DATA 	Keypress: lctrl
+102.1367 	DATA 	Keypress: lalt
+102.2372 	DATA 	Keypress: lctrl
+102.3709 	DATA 	Keypress: lalt
+102.4541 	EXP 	fix: autoDraw = False
+102.4709 	DATA 	Keypress: lctrl
+102.6038 	DATA 	Keypress: lalt
+102.6876 	DATA 	Keypress: lctrl
+102.7040 	INFO 	Keyboard events cleared
+102.7037 	EXP 	stimulus: autoDraw = True
+102.8045 	EXP 	New trial (rep=0, index=45): <Trial 45 (45 in rep 0) data={'item_nr': 107, 'condition': 'pseudoword', 'text': 'ledighens', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 45, 'thisTrialN': 45, 'thisRepN': 0}>
+102.8069 	DATA 	Keypress: lalt
+102.8201 	EXP 	fix: autoDraw = False
+102.8201 	EXP 	stimulus: autoDraw = False
+102.8201 	EXP 	stimulus: height = 0.05
+102.8201 	EXP 	stimulus: height = 0.05
+102.8201 	EXP 	stimulus: height = 0.05
+102.8201 	EXP 	stimulus: text = 'ledighens'
+102.9050 	DATA 	Keypress: lctrl
+103.0216 	DATA 	Keypress: lalt
+103.0541 	EXP 	fix: autoDraw = True
+103.1393 	DATA 	Keypress: lctrl
+103.1393 	DATA 	Keypress: ralt
+103.3567 	DATA 	Keypress: lctrl
+103.3568 	DATA 	Keypress: ralt
+103.5558 	EXP 	fix: autoDraw = False
+103.6059 	DATA 	Keypress: lctrl
+103.6060 	DATA 	Keypress: ralt
+103.8055 	INFO 	Keyboard events cleared
+103.8053 	EXP 	stimulus: autoDraw = True
+103.8399 	EXP 	New trial (rep=0, index=46): <Trial 46 (46 in rep 0) data={'item_nr': 49, 'condition': 'pseudoword', 'text': 'gäschephirmer', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 46, 'thisTrialN': 46, 'thisRepN': 0}>
+103.8426 	DATA 	Keypress: lctrl
+103.8427 	DATA 	Keypress: ralt
+103.8557 	EXP 	fix: autoDraw = False
+103.8557 	EXP 	stimulus: autoDraw = False
+103.8557 	EXP 	stimulus: height = 0.05
+103.8557 	EXP 	stimulus: height = 0.05
+103.8557 	EXP 	stimulus: height = 0.05
+103.8557 	EXP 	stimulus: text = 'gäschephirmer'
+104.0566 	DATA 	Keypress: lctrl
+104.0566 	DATA 	Keypress: ralt
+104.1057 	EXP 	fix: autoDraw = True
+104.2731 	DATA 	Keypress: lctrl
+104.2732 	DATA 	Keypress: ralt
+104.4732 	DATA 	Keypress: lctrl
+104.4733 	DATA 	Keypress: ralt
+104.6052 	EXP 	fix: autoDraw = False
+104.7079 	DATA 	Keypress: lctrl
+104.7240 	DATA 	Keypress: ralt
+104.8404 	INFO 	Keyboard events cleared
+104.8400 	EXP 	stimulus: autoDraw = True
+104.8416 	DATA 	Keypress: lalt
+104.9584 	EXP 	New trial (rep=0, index=47): <Trial 47 (47 in rep 0) data={'item_nr': 78, 'condition': 'pseudoword', 'text': 'Durchszelten', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 47, 'thisTrialN': 47, 'thisRepN': 0}>
+104.9604 	DATA 	Keypress: lctrl
+104.9605 	DATA 	Keypress: ralt
+104.9741 	EXP 	fix: autoDraw = False
+104.9741 	EXP 	stimulus: autoDraw = False
+104.9741 	EXP 	stimulus: height = 0.05
+104.9741 	EXP 	stimulus: height = 0.05
+104.9741 	EXP 	stimulus: height = 0.05
+104.9741 	EXP 	stimulus: text = 'Durchszelten'
+105.1909 	DATA 	Keypress: lctrl
+105.1910 	DATA 	Keypress: ralt
+105.2238 	EXP 	fix: autoDraw = True
+105.4249 	DATA 	Keypress: lctrl
+105.4250 	DATA 	Keypress: ralt
+105.5590 	DATA 	Keypress: lalt
+105.6591 	DATA 	Keypress: lctrl
+105.7257 	EXP 	fix: autoDraw = False
+105.9091 	DATA 	Keypress: lctrl
+105.9092 	DATA 	Keypress: ralt
+105.9586 	INFO 	Keyboard events cleared
+105.9582 	EXP 	stimulus: autoDraw = True
+106.0433 	EXP 	New trial (rep=0, index=48): <Trial 48 (48 in rep 0) data={'item_nr': 82, 'condition': 'pseudoword', 'text': 'itzgegerfonwende', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 48, 'thisTrialN': 48, 'thisRepN': 0}>
+106.0588 	EXP 	fix: autoDraw = False
+106.0588 	EXP 	stimulus: autoDraw = False
+106.0588 	EXP 	stimulus: height = 0.05
+106.0588 	EXP 	stimulus: height = 0.05
+106.0588 	EXP 	stimulus: height = 0.05
+106.0588 	EXP 	stimulus: text = 'itzgegerfonwende'
+106.1762 	DATA 	Keypress: lctrl
+106.1764 	DATA 	Keypress: ralt
+106.2932 	DATA 	Keypress: lalt
+106.3087 	EXP 	fix: autoDraw = True
+106.4100 	DATA 	Keypress: lctrl
+106.4100 	DATA 	Keypress: ralt
+106.5268 	DATA 	Keypress: lalt
+106.6434 	DATA 	Keypress: lctrl
+106.6435 	DATA 	Keypress: ralt
+106.7604 	DATA 	Keypress: lalt
+106.8101 	EXP 	fix: autoDraw = False
+106.8773 	DATA 	Keypress: lctrl
+106.8774 	DATA 	Keypress: ralt
+106.9944 	DATA 	Keypress: lalt
+107.0438 	INFO 	Keyboard events cleared
+107.0435 	EXP 	stimulus: autoDraw = True
+107.0947 	EXP 	New trial (rep=0, index=49): <Trial 49 (49 in rep 0) data={'item_nr': 23, 'condition': 'word', 'text': 'Modepuppe', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 49, 'thisTrialN': 49, 'thisRepN': 0}>
+107.0987 	DATA 	Keypress: lctrl
+107.1103 	EXP 	fix: autoDraw = False
+107.1103 	EXP 	stimulus: autoDraw = False
+107.1103 	EXP 	stimulus: height = 0.05
+107.1103 	EXP 	stimulus: height = 0.05
+107.1103 	EXP 	stimulus: height = 0.05
+107.1103 	EXP 	stimulus: text = 'Modepuppe'
+107.2277 	DATA 	Keypress: lalt
+107.3111 	DATA 	Keypress: lctrl
+107.3441 	EXP 	fix: autoDraw = True
+107.4450 	DATA 	Keypress: lalt
+107.5616 	DATA 	Keypress: lctrl
+107.5617 	DATA 	Keypress: ralt
+107.7784 	DATA 	Keypress: lctrl
+107.8448 	EXP 	fix: autoDraw = False
+107.9287 	DATA 	Keypress: lalt
+108.0290 	DATA 	Keypress: lctrl
+108.0957 	INFO 	Keyboard events cleared
+108.0954 	EXP 	stimulus: autoDraw = True
+108.1457 	EXP 	New trial (rep=0, index=50): <Trial 50 (50 in rep 0) data={'item_nr': 99, 'condition': 'pseudoword', 'text': 'hößt', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 50, 'thisTrialN': 50, 'thisRepN': 0}>
+108.1480 	DATA 	Keypress: lalt
+108.1622 	EXP 	fix: autoDraw = False
+108.1622 	EXP 	stimulus: autoDraw = False
+108.1622 	EXP 	stimulus: height = 0.05
+108.1622 	EXP 	stimulus: height = 0.05
+108.1622 	EXP 	stimulus: height = 0.05
+108.1622 	EXP 	stimulus: text = 'hößt'
+108.2462 	DATA 	Keypress: lctrl
+108.3956 	EXP 	fix: autoDraw = True
+108.3965 	DATA 	Keypress: lalt
+108.4965 	DATA 	Keypress: lctrl
+108.6301 	DATA 	Keypress: lalt
+108.7472 	DATA 	Keypress: lctrl
+108.7472 	DATA 	Keypress: ralt
+108.8961 	EXP 	fix: autoDraw = False
+108.9808 	DATA 	Keypress: lctrl
+108.9971 	DATA 	Keypress: ralt
+109.0971 	DATA 	Keypress: lalt
+109.1470 	INFO 	Keyboard events cleared
+109.1467 	EXP 	stimulus: autoDraw = True
+109.2219 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, draggable=False, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+109.2225 	DATA 	Keypress: lctrl
+109.2247 	EXP 	fix: autoDraw = False
+109.2247 	EXP 	stimulus: autoDraw = False
+109.3126 	DATA 	Keypress: lalt
+109.4179 	DATA 	Keypress: lctrl
+114.3756 	DATA 	Keypress: space
+114.3767 	EXP 	New trial (rep=0, index=51): <Trial 51 (51 in rep 0) data={'item_nr': 31, 'condition': 'word', 'text': 'Satz', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 51, 'thisTrialN': 51, 'thisRepN': 0}>
+114.3814 	EXP 	stimulus: height = 0.05
+114.3814 	EXP 	stimulus: height = 0.05
+114.3814 	EXP 	stimulus: height = 0.05
+114.3814 	EXP 	stimulus: text = 'Satz'
+114.6287 	EXP 	fix: autoDraw = True
+115.1292 	EXP 	fix: autoDraw = False
+115.3802 	INFO 	Keyboard events cleared
+115.3799 	EXP 	stimulus: autoDraw = True
+115.9655 	EXP 	New trial (rep=0, index=52): <Trial 52 (52 in rep 0) data={'item_nr': 132, 'condition': 'pseudoword', 'text': 'berfrietere', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 52, 'thisTrialN': 52, 'thisRepN': 0}>
+115.9681 	DATA 	Keypress: lctrl
+115.9682 	DATA 	Keypress: ralt
+115.9801 	EXP 	fix: autoDraw = False
+115.9801 	EXP 	stimulus: autoDraw = False
+115.9801 	EXP 	stimulus: height = 0.05
+115.9801 	EXP 	stimulus: height = 0.05
+115.9801 	EXP 	stimulus: height = 0.05
+115.9801 	EXP 	stimulus: text = 'berfrietere'
+116.2312 	EXP 	fix: autoDraw = True
+116.7318 	EXP 	fix: autoDraw = False
+116.9657 	INFO 	Keyboard events cleared
+116.9654 	EXP 	stimulus: autoDraw = True
+117.8846 	EXP 	New trial (rep=0, index=53): <Trial 53 (53 in rep 0) data={'item_nr': 91, 'condition': 'pseudoword', 'text': 'lollspeiben', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 53, 'thisTrialN': 53, 'thisRepN': 0}>
+117.8866 	DATA 	Keypress: lctrl
+117.8866 	DATA 	Keypress: ralt
+117.9005 	EXP 	fix: autoDraw = False
+117.9005 	EXP 	stimulus: autoDraw = False
+117.9005 	EXP 	stimulus: height = 0.05
+117.9005 	EXP 	stimulus: height = 0.05
+117.9005 	EXP 	stimulus: height = 0.05
+117.9005 	EXP 	stimulus: text = 'lollspeiben'
+118.1341 	EXP 	fix: autoDraw = True
+118.6338 	EXP 	fix: autoDraw = False
+118.8854 	INFO 	Keyboard events cleared
+118.8852 	EXP 	stimulus: autoDraw = True
+119.7708 	EXP 	New trial (rep=0, index=54): <Trial 54 (54 in rep 0) data={'item_nr': 101, 'condition': 'pseudoword', 'text': 'Jespelanges', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 54, 'thisTrialN': 54, 'thisRepN': 0}>
+119.7745 	DATA 	Keypress: lalt
+119.7862 	EXP 	fix: autoDraw = False
+119.7862 	EXP 	stimulus: autoDraw = False
+119.7862 	EXP 	stimulus: height = 0.05
+119.7862 	EXP 	stimulus: height = 0.05
+119.7862 	EXP 	stimulus: height = 0.05
+119.7862 	EXP 	stimulus: text = 'Jespelanges'
+120.0198 	EXP 	fix: autoDraw = True
+120.5209 	EXP 	fix: autoDraw = False
+120.7714 	INFO 	Keyboard events cleared
+120.7711 	EXP 	stimulus: autoDraw = True
+121.5402 	EXP 	New trial (rep=0, index=55): <Trial 55 (55 in rep 0) data={'item_nr': 68, 'condition': 'word', 'text': 'baufälliges', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 55, 'thisTrialN': 55, 'thisRepN': 0}>
+121.5425 	DATA 	Keypress: lctrl
+121.5426 	DATA 	Keypress: ralt
+121.5559 	EXP 	fix: autoDraw = False
+121.5559 	EXP 	stimulus: autoDraw = False
+121.5559 	EXP 	stimulus: height = 0.05
+121.5559 	EXP 	stimulus: height = 0.05
+121.5559 	EXP 	stimulus: height = 0.05
+121.5559 	EXP 	stimulus: text = 'baufälliges'
+121.7894 	EXP 	fix: autoDraw = True
+122.2900 	EXP 	fix: autoDraw = False
+122.5413 	INFO 	Keyboard events cleared
+122.5409 	EXP 	stimulus: autoDraw = True
+123.0425 	EXP 	New trial (rep=0, index=56): <Trial 56 (56 in rep 0) data={'item_nr': 81, 'condition': 'pseudoword', 'text': 'emptöltig', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 56, 'thisTrialN': 56, 'thisRepN': 0}>
+123.0448 	DATA 	Keypress: lctrl
+123.0449 	DATA 	Keypress: ralt
+123.0579 	EXP 	fix: autoDraw = False
+123.0579 	EXP 	stimulus: autoDraw = False
+123.0579 	EXP 	stimulus: height = 0.05
+123.0579 	EXP 	stimulus: height = 0.05
+123.0579 	EXP 	stimulus: height = 0.05
+123.0579 	EXP 	stimulus: text = 'emptöltig'
+123.2914 	EXP 	fix: autoDraw = True
+123.7925 	EXP 	fix: autoDraw = False
+124.0440 	INFO 	Keyboard events cleared
+124.0436 	EXP 	stimulus: autoDraw = True
+124.9121 	EXP 	New trial (rep=0, index=57): <Trial 57 (57 in rep 0) data={'item_nr': 79, 'condition': 'word', 'text': 'einfachsten', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 57, 'thisTrialN': 57, 'thisRepN': 0}>
+124.9140 	DATA 	Keypress: lalt
+124.9277 	EXP 	fix: autoDraw = False
+124.9277 	EXP 	stimulus: autoDraw = False
+124.9277 	EXP 	stimulus: height = 0.05
+124.9277 	EXP 	stimulus: height = 0.05
+124.9277 	EXP 	stimulus: height = 0.05
+124.9277 	EXP 	stimulus: text = 'einfachsten'
+125.1610 	EXP 	fix: autoDraw = True
+125.6622 	EXP 	fix: autoDraw = False
+125.9124 	INFO 	Keyboard events cleared
+125.9121 	EXP 	stimulus: autoDraw = True
+126.5148 	EXP 	New trial (rep=0, index=58): <Trial 58 (58 in rep 0) data={'item_nr': 20, 'condition': 'word', 'text': 'Maulwurf', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 58, 'thisTrialN': 58, 'thisRepN': 0}>
+126.5179 	DATA 	Keypress: lctrl
+126.5180 	DATA 	Keypress: ralt
+126.5298 	EXP 	fix: autoDraw = False
+126.5298 	EXP 	stimulus: autoDraw = False
+126.5298 	EXP 	stimulus: height = 0.05
+126.5298 	EXP 	stimulus: height = 0.05
+126.5298 	EXP 	stimulus: height = 0.05
+126.5298 	EXP 	stimulus: text = 'Maulwurf'
+126.7807 	EXP 	fix: autoDraw = True
+127.2812 	EXP 	fix: autoDraw = False
+127.5149 	INFO 	Keyboard events cleared
+127.5147 	EXP 	stimulus: autoDraw = True
+128.3001 	EXP 	New trial (rep=0, index=59): <Trial 59 (59 in rep 0) data={'item_nr': 127, 'condition': 'word', 'text': 'ungesetzlich', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 59, 'thisTrialN': 59, 'thisRepN': 0}>
+128.3031 	DATA 	Keypress: lalt
+128.3158 	EXP 	fix: autoDraw = False
+128.3158 	EXP 	stimulus: autoDraw = False
+128.3158 	EXP 	stimulus: height = 0.05
+128.3158 	EXP 	stimulus: height = 0.05
+128.3158 	EXP 	stimulus: height = 0.05
+128.3158 	EXP 	stimulus: text = 'ungesetzlich'
+128.5495 	EXP 	fix: autoDraw = True
+129.0507 	EXP 	fix: autoDraw = False
+129.3013 	INFO 	Keyboard events cleared
+129.3010 	EXP 	stimulus: autoDraw = True
+129.8863 	EXP 	New trial (rep=0, index=60): <Trial 60 (60 in rep 0) data={'item_nr': 90, 'condition': 'word', 'text': 'fixiert', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 60, 'thisTrialN': 60, 'thisRepN': 0}>
+129.8880 	DATA 	Keypress: lctrl
+129.8881 	DATA 	Keypress: ralt
+129.9018 	EXP 	fix: autoDraw = False
+129.9018 	EXP 	stimulus: autoDraw = False
+129.9018 	EXP 	stimulus: height = 0.05
+129.9018 	EXP 	stimulus: height = 0.05
+129.9018 	EXP 	stimulus: height = 0.05
+129.9018 	EXP 	stimulus: text = 'fixiert'
+130.1351 	EXP 	fix: autoDraw = True
+130.6364 	EXP 	fix: autoDraw = False
+130.8871 	INFO 	Keyboard events cleared
+130.8866 	EXP 	stimulus: autoDraw = True
+131.4214 	EXP 	New trial (rep=0, index=61): <Trial 61 (61 in rep 0) data={'item_nr': 34, 'condition': 'pseudoword', 'text': 'Horke', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 61, 'thisTrialN': 61, 'thisRepN': 0}>
+131.4232 	DATA 	Keypress: lctrl
+131.4233 	DATA 	Keypress: ralt
+131.4373 	EXP 	fix: autoDraw = False
+131.4373 	EXP 	stimulus: autoDraw = False
+131.4373 	EXP 	stimulus: height = 0.05
+131.4373 	EXP 	stimulus: height = 0.05
+131.4373 	EXP 	stimulus: height = 0.05
+131.4373 	EXP 	stimulus: text = 'Horke'
+131.6712 	EXP 	fix: autoDraw = True
+132.1716 	EXP 	fix: autoDraw = False
+132.4223 	INFO 	Keyboard events cleared
+132.4221 	EXP 	stimulus: autoDraw = True
+132.9240 	EXP 	New trial (rep=0, index=62): <Trial 62 (62 in rep 0) data={'item_nr': 6, 'condition': 'word', 'text': 'Faulpelze', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 62, 'thisTrialN': 62, 'thisRepN': 0}>
+132.9270 	DATA 	Keypress: lctrl
+132.9272 	DATA 	Keypress: ralt
+132.9395 	EXP 	fix: autoDraw = False
+132.9395 	EXP 	stimulus: autoDraw = False
+132.9395 	EXP 	stimulus: height = 0.05
+132.9395 	EXP 	stimulus: height = 0.05
+132.9395 	EXP 	stimulus: height = 0.05
+132.9395 	EXP 	stimulus: text = 'Faulpelze'
+133.1735 	EXP 	fix: autoDraw = True
+133.6741 	EXP 	fix: autoDraw = False
+133.9248 	INFO 	Keyboard events cleared
+133.9246 	EXP 	stimulus: autoDraw = True
+134.4773 	DATA 	Keypress: lctrl
+134.4774 	DATA 	Keypress: ralt
+134.4934 	EXP 	New trial (rep=0, index=63): <Trial 63 (63 in rep 0) data={'item_nr': 64, 'condition': 'pseudoword', 'text': 'ausschwikken', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 63, 'thisTrialN': 63, 'thisRepN': 0}>
+134.5083 	EXP 	fix: autoDraw = False
+134.5083 	EXP 	stimulus: autoDraw = False
+134.5083 	EXP 	stimulus: height = 0.05
+134.5083 	EXP 	stimulus: height = 0.05
+134.5083 	EXP 	stimulus: height = 0.05
+134.5083 	EXP 	stimulus: text = 'ausschwikken'
+134.7589 	EXP 	fix: autoDraw = True
+135.2614 	EXP 	fix: autoDraw = False
+135.4947 	INFO 	Keyboard events cleared
+135.4944 	EXP 	stimulus: autoDraw = True
+136.4629 	EXP 	New trial (rep=0, index=64): <Trial 64 (64 in rep 0) data={'item_nr': 123, 'condition': 'word', 'text': 'strammen', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 64, 'thisTrialN': 64, 'thisRepN': 0}>
+136.4654 	DATA 	Keypress: lalt
+136.4785 	EXP 	fix: autoDraw = False
+136.4785 	EXP 	stimulus: autoDraw = False
+136.4785 	EXP 	stimulus: height = 0.05
+136.4785 	EXP 	stimulus: height = 0.05
+136.4785 	EXP 	stimulus: height = 0.05
+136.4785 	EXP 	stimulus: text = 'strammen'
+136.7118 	EXP 	fix: autoDraw = True
+137.2128 	EXP 	fix: autoDraw = False
+137.4630 	INFO 	Keyboard events cleared
+137.4628 	EXP 	stimulus: autoDraw = True
+137.9485 	EXP 	New trial (rep=0, index=65): <Trial 65 (65 in rep 0) data={'item_nr': 12, 'condition': 'pseudoword', 'text': 'Kugendfrophs', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 65, 'thisTrialN': 65, 'thisRepN': 0}>
+137.9507 	DATA 	Keypress: lctrl
+137.9508 	DATA 	Keypress: ralt
+137.9644 	EXP 	fix: autoDraw = False
+137.9644 	EXP 	stimulus: autoDraw = False
+137.9644 	EXP 	stimulus: height = 0.05
+137.9644 	EXP 	stimulus: height = 0.05
+137.9644 	EXP 	stimulus: height = 0.05
+137.9644 	EXP 	stimulus: text = 'Kugendfrophs'
+138.1974 	EXP 	fix: autoDraw = True
+138.6984 	EXP 	fix: autoDraw = False
+138.9484 	INFO 	Keyboard events cleared
+138.9481 	EXP 	stimulus: autoDraw = True
+139.4172 	EXP 	New trial (rep=0, index=66): <Trial 66 (66 in rep 0) data={'item_nr': 85, 'condition': 'word', 'text': 'erschrickt', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 66, 'thisTrialN': 66, 'thisRepN': 0}>
+139.4189 	DATA 	Keypress: lctrl
+139.4190 	DATA 	Keypress: ralt
+139.4330 	EXP 	fix: autoDraw = False
+139.4330 	EXP 	stimulus: autoDraw = False
+139.4330 	EXP 	stimulus: height = 0.05
+139.4330 	EXP 	stimulus: height = 0.05
+139.4330 	EXP 	stimulus: height = 0.05
+139.4330 	EXP 	stimulus: text = 'erschrickt'
+139.6669 	EXP 	fix: autoDraw = True
+140.1675 	EXP 	fix: autoDraw = False
+140.4177 	INFO 	Keyboard events cleared
+140.4174 	EXP 	stimulus: autoDraw = True
+141.0030 	EXP 	New trial (rep=0, index=67): <Trial 67 (67 in rep 0) data={'item_nr': 21, 'condition': 'pseudoword', 'text': 'Tebio', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 67, 'thisTrialN': 67, 'thisRepN': 0}>
+141.0058 	DATA 	Keypress: lctrl
+141.0060 	DATA 	Keypress: ralt
+141.0184 	EXP 	fix: autoDraw = False
+141.0184 	EXP 	stimulus: autoDraw = False
+141.0184 	EXP 	stimulus: height = 0.05
+141.0184 	EXP 	stimulus: height = 0.05
+141.0184 	EXP 	stimulus: height = 0.05
+141.0184 	EXP 	stimulus: text = 'Tebio'
+141.2522 	EXP 	fix: autoDraw = True
+141.7529 	EXP 	fix: autoDraw = False
+142.0040 	INFO 	Keyboard events cleared
+142.0037 	EXP 	stimulus: autoDraw = True
+142.4885 	EXP 	New trial (rep=0, index=68): <Trial 68 (68 in rep 0) data={'item_nr': 30, 'condition': 'pseudoword', 'text': 'Räckgen', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 68, 'thisTrialN': 68, 'thisRepN': 0}>
+142.4905 	DATA 	Keypress: lctrl
+142.4906 	DATA 	Keypress: ralt
+142.5043 	EXP 	fix: autoDraw = False
+142.5043 	EXP 	stimulus: autoDraw = False
+142.5043 	EXP 	stimulus: height = 0.05
+142.5043 	EXP 	stimulus: height = 0.05
+142.5043 	EXP 	stimulus: height = 0.05
+142.5043 	EXP 	stimulus: text = 'Räckgen'
+142.7375 	EXP 	fix: autoDraw = True
+143.2386 	EXP 	fix: autoDraw = False
+143.4896 	INFO 	Keyboard events cleared
+143.4893 	EXP 	stimulus: autoDraw = True
+144.1412 	DATA 	Keypress: lctrl
+144.1581 	EXP 	New trial (rep=0, index=69): <Trial 69 (69 in rep 0) data={'item_nr': 43, 'condition': 'word', 'text': 'Ungetüme', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 69, 'thisTrialN': 69, 'thisRepN': 0}>
+144.1617 	DATA 	Keypress: ralt
+144.1726 	EXP 	fix: autoDraw = False
+144.1726 	EXP 	stimulus: autoDraw = False
+144.1726 	EXP 	stimulus: height = 0.05
+144.1726 	EXP 	stimulus: height = 0.05
+144.1726 	EXP 	stimulus: height = 0.05
+144.1726 	EXP 	stimulus: text = 'Ungetüme'
+144.4072 	EXP 	fix: autoDraw = True
+144.9079 	EXP 	fix: autoDraw = False
+145.1590 	INFO 	Keyboard events cleared
+145.1587 	EXP 	stimulus: autoDraw = True
+145.7098 	EXP 	New trial (rep=0, index=70): <Trial 70 (70 in rep 0) data={'item_nr': 28, 'condition': 'word', 'text': 'Rasters', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 70, 'thisTrialN': 70, 'thisRepN': 0}>
+145.7116 	DATA 	Keypress: lalt
+145.7251 	EXP 	fix: autoDraw = False
+145.7251 	EXP 	stimulus: autoDraw = False
+145.7251 	EXP 	stimulus: height = 0.05
+145.7251 	EXP 	stimulus: height = 0.05
+145.7251 	EXP 	stimulus: height = 0.05
+145.7251 	EXP 	stimulus: text = 'Rasters'
+145.9591 	EXP 	fix: autoDraw = True
+146.4596 	EXP 	fix: autoDraw = False
+146.7107 	INFO 	Keyboard events cleared
+146.7104 	EXP 	stimulus: autoDraw = True
+147.1968 	EXP 	New trial (rep=0, index=71): <Trial 71 (71 in rep 0) data={'item_nr': 50, 'condition': 'word', 'text': 'Würstchen', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 71, 'thisTrialN': 71, 'thisRepN': 0}>
+147.1988 	DATA 	Keypress: lctrl
+147.1989 	DATA 	Keypress: ralt
+147.2110 	EXP 	fix: autoDraw = False
+147.2110 	EXP 	stimulus: autoDraw = False
+147.2110 	EXP 	stimulus: height = 0.05
+147.2110 	EXP 	stimulus: height = 0.05
+147.2110 	EXP 	stimulus: height = 0.05
+147.2110 	EXP 	stimulus: text = 'Würstchen'
+147.4618 	EXP 	fix: autoDraw = True
+147.9618 	EXP 	fix: autoDraw = False
+148.1965 	INFO 	Keyboard events cleared
+148.1961 	EXP 	stimulus: autoDraw = True
+148.6978 	EXP 	New trial (rep=0, index=72): <Trial 72 (72 in rep 0) data={'item_nr': 109, 'condition': 'word', 'text': 'naturalistischen', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 72, 'thisTrialN': 72, 'thisRepN': 0}>
+148.7000 	DATA 	Keypress: lctrl
+148.7001 	DATA 	Keypress: ralt
+148.7134 	EXP 	fix: autoDraw = False
+148.7134 	EXP 	stimulus: autoDraw = False
+148.7134 	EXP 	stimulus: height = 0.05
+148.7134 	EXP 	stimulus: height = 0.05
+148.7134 	EXP 	stimulus: height = 0.05
+148.7134 	EXP 	stimulus: text = 'naturalistischen'
+148.9473 	EXP 	fix: autoDraw = True
+149.4479 	EXP 	fix: autoDraw = False
+149.6987 	INFO 	Keyboard events cleared
+149.6984 	EXP 	stimulus: autoDraw = True
+150.3008 	EXP 	New trial (rep=0, index=73): <Trial 73 (73 in rep 0) data={'item_nr': 110, 'condition': 'pseudoword', 'text': 'quaserbesprugen', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 73, 'thisTrialN': 73, 'thisRepN': 0}>
+150.3044 	DATA 	Keypress: lctrl
+150.3046 	DATA 	Keypress: ralt
+150.3153 	EXP 	fix: autoDraw = False
+150.3153 	EXP 	stimulus: autoDraw = False
+150.3153 	EXP 	stimulus: height = 0.05
+150.3153 	EXP 	stimulus: height = 0.05
+150.3153 	EXP 	stimulus: height = 0.05
+150.3153 	EXP 	stimulus: text = 'quaserbesprugen'
+150.5664 	EXP 	fix: autoDraw = True
+151.0669 	EXP 	fix: autoDraw = False
+151.3009 	INFO 	Keyboard events cleared
+151.3006 	EXP 	stimulus: autoDraw = True
+151.7857 	EXP 	New trial (rep=0, index=74): <Trial 74 (74 in rep 0) data={'item_nr': 119, 'condition': 'word', 'text': 'schüchternste', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 74, 'thisTrialN': 74, 'thisRepN': 0}>
+151.7876 	DATA 	Keypress: lalt
+151.8013 	EXP 	fix: autoDraw = False
+151.8013 	EXP 	stimulus: autoDraw = False
+151.8013 	EXP 	stimulus: height = 0.05
+151.8013 	EXP 	stimulus: height = 0.05
+151.8013 	EXP 	stimulus: height = 0.05
+151.8013 	EXP 	stimulus: text = 'schüchternste'
+152.0349 	EXP 	fix: autoDraw = True
+152.5358 	EXP 	fix: autoDraw = False
+152.7867 	INFO 	Keyboard events cleared
+152.7864 	EXP 	stimulus: autoDraw = True
+153.4715 	EXP 	New trial (rep=0, index=75): <Trial 75 (75 in rep 0) data={'item_nr': 100, 'condition': 'pseudoword', 'text': 'indergnetauts', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 75, 'thisTrialN': 75, 'thisRepN': 0}>
+153.4742 	DATA 	Keypress: lalt
+153.4873 	EXP 	fix: autoDraw = False
+153.4873 	EXP 	stimulus: autoDraw = False
+153.4873 	EXP 	stimulus: height = 0.05
+153.4873 	EXP 	stimulus: height = 0.05
+153.4873 	EXP 	stimulus: height = 0.05
+153.4873 	EXP 	stimulus: text = 'indergnetauts'
+153.7210 	EXP 	fix: autoDraw = True
+154.2219 	EXP 	fix: autoDraw = False
+154.4726 	INFO 	Keyboard events cleared
+154.4724 	EXP 	stimulus: autoDraw = True
+155.0242 	EXP 	New trial (rep=0, index=76): <Trial 76 (76 in rep 0) data={'item_nr': 51, 'condition': 'pseudoword', 'text': 'Perrsoldat', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 76, 'thisTrialN': 76, 'thisRepN': 0}>
+155.0261 	DATA 	Keypress: lctrl
+155.0262 	DATA 	Keypress: ralt
+155.0398 	EXP 	fix: autoDraw = False
+155.0398 	EXP 	stimulus: autoDraw = False
+155.0398 	EXP 	stimulus: height = 0.05
+155.0398 	EXP 	stimulus: height = 0.05
+155.0398 	EXP 	stimulus: height = 0.05
+155.0398 	EXP 	stimulus: text = 'Perrsoldat'
+155.2729 	EXP 	fix: autoDraw = True
+155.7745 	EXP 	fix: autoDraw = False
+156.0248 	INFO 	Keyboard events cleared
+156.0245 	EXP 	stimulus: autoDraw = True
+156.6938 	EXP 	New trial (rep=0, index=77): <Trial 77 (77 in rep 0) data={'item_nr': 144, 'condition': 'word', 'text': 'zeugt', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 77, 'thisTrialN': 77, 'thisRepN': 0}>
+156.6959 	DATA 	Keypress: lctrl
+156.6960 	DATA 	Keypress: ralt
+156.7091 	EXP 	fix: autoDraw = False
+156.7091 	EXP 	stimulus: autoDraw = False
+156.7091 	EXP 	stimulus: height = 0.05
+156.7091 	EXP 	stimulus: height = 0.05
+156.7091 	EXP 	stimulus: height = 0.05
+156.7091 	EXP 	stimulus: text = 'zeugt'
+156.9593 	EXP 	fix: autoDraw = True
+157.4596 	EXP 	fix: autoDraw = False
+157.6943 	INFO 	Keyboard events cleared
+157.6940 	EXP 	stimulus: autoDraw = True
+157.9954 	EXP 	New trial (rep=0, index=78): <Trial 78 (78 in rep 0) data={'item_nr': 91, 'condition': 'word', 'text': 'fortbleiben', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 78, 'thisTrialN': 78, 'thisRepN': 0}>
+157.9973 	DATA 	Keypress: lctrl
+157.9974 	DATA 	Keypress: ralt
+158.0112 	EXP 	fix: autoDraw = False
+158.0112 	EXP 	stimulus: autoDraw = False
+158.0112 	EXP 	stimulus: height = 0.05
+158.0112 	EXP 	stimulus: height = 0.05
+158.0112 	EXP 	stimulus: height = 0.05
+158.0112 	EXP 	stimulus: text = 'fortbleiben'
+158.2611 	EXP 	fix: autoDraw = True
+158.7625 	EXP 	fix: autoDraw = False
+158.8133 	DATA 	Keypress: lalt
+158.9960 	INFO 	Keyboard events cleared
+158.9957 	EXP 	stimulus: autoDraw = True
+159.0637 	EXP 	New trial (rep=0, index=79): <Trial 79 (79 in rep 0) data={'item_nr': 148, 'condition': 'pseudoword', 'text': 'iberfenerb', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 79, 'thisTrialN': 79, 'thisRepN': 0}>
+159.0661 	DATA 	Keypress: lctrl
+159.0662 	DATA 	Keypress: ralt
+159.0793 	EXP 	fix: autoDraw = False
+159.0793 	EXP 	stimulus: autoDraw = False
+159.0793 	EXP 	stimulus: height = 0.05
+159.0793 	EXP 	stimulus: height = 0.05
+159.0793 	EXP 	stimulus: height = 0.05
+159.0793 	EXP 	stimulus: text = 'iberfenerb'
+159.2302 	DATA 	Keypress: lalt
+159.3130 	EXP 	fix: autoDraw = True
+159.3976 	DATA 	Keypress: lctrl
+159.3977 	DATA 	Keypress: ralt
+159.6637 	DATA 	Keypress: lalt
+159.8139 	EXP 	fix: autoDraw = False
+160.0639 	INFO 	Keyboard events cleared
+160.0636 	EXP 	stimulus: autoDraw = True
+160.0816 	EXP 	New trial (rep=0, index=80): <Trial 80 (80 in rep 0) data={'item_nr': 9, 'condition': 'word', 'text': 'Geschicke', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 80, 'thisTrialN': 80, 'thisRepN': 0}>
+160.0837 	DATA 	Keypress: lctrl
+160.0839 	DATA 	Keypress: ralt
+160.0976 	EXP 	fix: autoDraw = False
+160.0976 	EXP 	stimulus: autoDraw = False
+160.0976 	EXP 	stimulus: height = 0.05
+160.0976 	EXP 	stimulus: height = 0.05
+160.0976 	EXP 	stimulus: height = 0.05
+160.0976 	EXP 	stimulus: text = 'Geschicke'
+160.3312 	EXP 	fix: autoDraw = True
+160.8317 	EXP 	fix: autoDraw = False
+160.8326 	DATA 	Keypress: lctrl
+160.8327 	DATA 	Keypress: ralt
+161.0827 	INFO 	Keyboard events cleared
+161.0824 	EXP 	stimulus: autoDraw = True
+161.3174 	EXP 	New trial (rep=0, index=81): <Trial 81 (81 in rep 0) data={'item_nr': 83, 'condition': 'pseudoword', 'text': 'entschühmt', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 81, 'thisTrialN': 81, 'thisRepN': 0}>
+161.3195 	DATA 	Keypress: lalt
+161.3324 	EXP 	fix: autoDraw = False
+161.3324 	EXP 	stimulus: autoDraw = False
+161.3324 	EXP 	stimulus: height = 0.05
+161.3324 	EXP 	stimulus: height = 0.05
+161.3324 	EXP 	stimulus: height = 0.05
+161.3324 	EXP 	stimulus: text = 'entschühmt'
+161.5832 	EXP 	fix: autoDraw = True
+161.6004 	DATA 	Keypress: lctrl
+161.6005 	DATA 	Keypress: ralt
+162.0010 	DATA 	Keypress: lalt
+162.0835 	EXP 	fix: autoDraw = False
+162.3177 	INFO 	Keyboard events cleared
+162.3174 	EXP 	stimulus: autoDraw = True
+162.3356 	EXP 	New trial (rep=0, index=82): <Trial 82 (82 in rep 0) data={'item_nr': 53, 'condition': 'word', 'text': 'addierst', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 82, 'thisTrialN': 82, 'thisRepN': 0}>
+162.3373 	DATA 	Keypress: lctrl
+162.3375 	DATA 	Keypress: ralt
+162.3509 	EXP 	fix: autoDraw = False
+162.3509 	EXP 	stimulus: autoDraw = False
+162.3509 	EXP 	stimulus: height = 0.05
+162.3509 	EXP 	stimulus: height = 0.05
+162.3509 	EXP 	stimulus: height = 0.05
+162.3509 	EXP 	stimulus: text = 'addierst'
+162.5839 	EXP 	fix: autoDraw = True
+163.0853 	EXP 	fix: autoDraw = False
+163.3031 	DATA 	Keypress: lctrl
+163.3032 	DATA 	Keypress: ralt
+163.3363 	INFO 	Keyboard events cleared
+163.3360 	EXP 	stimulus: autoDraw = True
+163.6539 	EXP 	New trial (rep=0, index=83): <Trial 83 (83 in rep 0) data={'item_nr': 139, 'condition': 'pseudoword', 'text': 'Vuljerwagen', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 83, 'thisTrialN': 83, 'thisRepN': 0}>
+163.6560 	DATA 	Keypress: lctrl
+163.6561 	DATA 	Keypress: ralt
+163.6699 	EXP 	fix: autoDraw = False
+163.6699 	EXP 	stimulus: autoDraw = False
+163.6699 	EXP 	stimulus: height = 0.05
+163.6699 	EXP 	stimulus: height = 0.05
+163.6699 	EXP 	stimulus: height = 0.05
+163.6699 	EXP 	stimulus: text = 'Vuljerwagen'
+163.9040 	EXP 	fix: autoDraw = True
+164.2045 	DATA 	Keypress: lctrl
+164.2045 	DATA 	Keypress: ralt
+164.4042 	EXP 	fix: autoDraw = False
+164.4541 	DATA 	Keypress: lctrl
+164.4542 	DATA 	Keypress: ralt
+164.6544 	INFO 	Keyboard events cleared
+164.6541 	EXP 	stimulus: autoDraw = True
+164.6721 	EXP 	New trial (rep=0, index=84): <Trial 84 (84 in rep 0) data={'item_nr': 53, 'condition': 'pseudoword', 'text': 'aifierst', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 84, 'thisTrialN': 84, 'thisRepN': 0}>
+164.6745 	DATA 	Keypress: lctrl
+164.6746 	DATA 	Keypress: ralt
+164.6875 	EXP 	fix: autoDraw = False
+164.6875 	EXP 	stimulus: autoDraw = False
+164.6875 	EXP 	stimulus: height = 0.05
+164.6875 	EXP 	stimulus: height = 0.05
+164.6875 	EXP 	stimulus: height = 0.05
+164.6875 	EXP 	stimulus: text = 'aifierst'
+164.8884 	DATA 	Keypress: lctrl
+164.8885 	DATA 	Keypress: ralt
+164.9214 	EXP 	fix: autoDraw = True
+165.1394 	DATA 	Keypress: lctrl
+165.1395 	DATA 	Keypress: ralt
+165.3895 	DATA 	Keypress: lctrl
+165.3896 	DATA 	Keypress: ralt
+165.4221 	EXP 	fix: autoDraw = False
+165.6726 	INFO 	Keyboard events cleared
+165.6723 	EXP 	stimulus: autoDraw = True
+165.8906 	EXP 	New trial (rep=0, index=85): <Trial 85 (85 in rep 0) data={'item_nr': 37, 'condition': 'word', 'text': 'Straßenmädchen', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 85, 'thisTrialN': 85, 'thisRepN': 0}>
+165.8935 	DATA 	Keypress: lctrl
+165.8938 	DATA 	Keypress: ralt
+165.9058 	EXP 	fix: autoDraw = False
+165.9058 	EXP 	stimulus: autoDraw = False
+165.9058 	EXP 	stimulus: height = 0.05
+165.9058 	EXP 	stimulus: height = 0.05
+165.9058 	EXP 	stimulus: height = 0.05
+165.9058 	EXP 	stimulus: text = 'Straßenmädchen'
+166.1399 	EXP 	fix: autoDraw = True
+166.3074 	DATA 	Keypress: lctrl
+166.3075 	DATA 	Keypress: ralt
+166.5418 	DATA 	Keypress: lctrl
+166.5420 	DATA 	Keypress: ralt
+166.6403 	EXP 	fix: autoDraw = False
+166.8915 	INFO 	Keyboard events cleared
+166.8911 	EXP 	stimulus: autoDraw = True
+166.9759 	EXP 	New trial (rep=0, index=86): <Trial 86 (86 in rep 0) data={'item_nr': 33, 'condition': 'word', 'text': 'Skonto', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 86, 'thisTrialN': 86, 'thisRepN': 0}>
+166.9783 	DATA 	Keypress: lctrl
+166.9784 	DATA 	Keypress: ralt
+166.9909 	EXP 	fix: autoDraw = False
+166.9909 	EXP 	stimulus: autoDraw = False
+166.9909 	EXP 	stimulus: height = 0.05
+166.9909 	EXP 	stimulus: height = 0.05
+166.9909 	EXP 	stimulus: height = 0.05
+166.9909 	EXP 	stimulus: text = 'Skonto'
+167.2414 	EXP 	fix: autoDraw = True
+167.2424 	DATA 	Keypress: lctrl
+167.2425 	DATA 	Keypress: ralt
+167.4594 	DATA 	Keypress: lctrl
+167.4594 	DATA 	Keypress: ralt
+167.6598 	DATA 	Keypress: lctrl
+167.6599 	DATA 	Keypress: ralt
+167.7429 	EXP 	fix: autoDraw = False
+167.8600 	DATA 	Keypress: lctrl
+167.8601 	DATA 	Keypress: ralt
+167.9764 	INFO 	Keyboard events cleared
+167.9761 	EXP 	stimulus: autoDraw = True
+168.0436 	EXP 	New trial (rep=0, index=87): <Trial 87 (87 in rep 0) data={'item_nr': 66, 'condition': 'pseudoword', 'text': 'aufnendöl', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 87, 'thisTrialN': 87, 'thisRepN': 0}>
+168.0457 	DATA 	Keypress: lctrl
+168.0458 	DATA 	Keypress: ralt
+168.0594 	EXP 	fix: autoDraw = False
+168.0594 	EXP 	stimulus: autoDraw = False
+168.0594 	EXP 	stimulus: height = 0.05
+168.0594 	EXP 	stimulus: height = 0.05
+168.0594 	EXP 	stimulus: height = 0.05
+168.0594 	EXP 	stimulus: text = 'aufnendöl'
+168.2110 	DATA 	Keypress: lctrl
+168.2111 	DATA 	Keypress: ralt
+168.2935 	EXP 	fix: autoDraw = True
+168.4110 	DATA 	Keypress: lctrl
+168.4112 	DATA 	Keypress: ralt
+168.6114 	DATA 	Keypress: lctrl
+168.6115 	DATA 	Keypress: ralt
+168.7941 	EXP 	fix: autoDraw = False
+169.0445 	INFO 	Keyboard events cleared
+169.0443 	EXP 	stimulus: autoDraw = True
+169.2126 	EXP 	New trial (rep=0, index=88): <Trial 88 (88 in rep 0) data={'item_nr': 87, 'condition': 'word', 'text': 'ferneren', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 88, 'thisTrialN': 88, 'thisRepN': 0}>
+169.2151 	DATA 	Keypress: lctrl
+169.2152 	DATA 	Keypress: ralt
+169.2275 	EXP 	fix: autoDraw = False
+169.2275 	EXP 	stimulus: autoDraw = False
+169.2275 	EXP 	stimulus: height = 0.05
+169.2275 	EXP 	stimulus: height = 0.05
+169.2275 	EXP 	stimulus: height = 0.05
+169.2275 	EXP 	stimulus: text = 'ferneren'
+169.4123 	DATA 	Keypress: lctrl
+169.4124 	DATA 	Keypress: ralt
+169.4782 	EXP 	fix: autoDraw = True
+169.6134 	DATA 	Keypress: lctrl
+169.6135 	DATA 	Keypress: ralt
+169.8129 	DATA 	Keypress: lctrl
+169.8131 	DATA 	Keypress: ralt
+169.9786 	EXP 	fix: autoDraw = False
+170.0130 	DATA 	Keypress: lctrl
+170.0131 	DATA 	Keypress: ralt
+170.2129 	INFO 	Keyboard events cleared
+170.2126 	EXP 	stimulus: autoDraw = True
+170.2307 	EXP 	New trial (rep=0, index=89): <Trial 89 (89 in rep 0) data={'item_nr': 108, 'condition': 'word', 'text': 'letzten', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 89, 'thisTrialN': 89, 'thisRepN': 0}>
+170.2336 	DATA 	Keypress: lctrl
+170.2337 	DATA 	Keypress: ralt
+170.2460 	EXP 	fix: autoDraw = False
+170.2460 	EXP 	stimulus: autoDraw = False
+170.2460 	EXP 	stimulus: height = 0.05
+170.2460 	EXP 	stimulus: height = 0.05
+170.2460 	EXP 	stimulus: height = 0.05
+170.2460 	EXP 	stimulus: text = 'letzten'
+170.4642 	DATA 	Keypress: lctrl
+170.4643 	DATA 	Keypress: ralt
+170.4801 	EXP 	fix: autoDraw = True
+170.6972 	DATA 	Keypress: lctrl
+170.6973 	DATA 	Keypress: ralt
+170.9806 	EXP 	fix: autoDraw = False
+171.2314 	INFO 	Keyboard events cleared
+171.2312 	EXP 	stimulus: autoDraw = True
+171.2817 	EXP 	New trial (rep=0, index=90): <Trial 90 (90 in rep 0) data={'item_nr': 6, 'condition': 'pseudoword', 'text': 'peigpelze', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 90, 'thisTrialN': 90, 'thisRepN': 0}>
+171.2844 	DATA 	Keypress: lctrl
+171.2845 	DATA 	Keypress: ralt
+171.2975 	EXP 	fix: autoDraw = False
+171.2975 	EXP 	stimulus: autoDraw = False
+171.2975 	EXP 	stimulus: height = 0.05
+171.2975 	EXP 	stimulus: height = 0.05
+171.2975 	EXP 	stimulus: height = 0.05
+171.2975 	EXP 	stimulus: text = 'peigpelze'
+171.5314 	EXP 	fix: autoDraw = True
+171.5493 	DATA 	Keypress: lctrl
+171.5494 	DATA 	Keypress: ralt
+171.8154 	DATA 	Keypress: lctrl
+171.8155 	DATA 	Keypress: ralt
+172.0322 	EXP 	fix: autoDraw = False
+172.0330 	DATA 	Keypress: lctrl
+172.0331 	DATA 	Keypress: ralt
+172.2329 	DATA 	Keypress: lctrl
+172.2330 	DATA 	Keypress: ralt
+172.2828 	INFO 	Keyboard events cleared
+172.2825 	EXP 	stimulus: autoDraw = True
+172.5180 	EXP 	New trial (rep=0, index=91): <Trial 91 (91 in rep 0) data={'item_nr': 77, 'condition': 'pseudoword', 'text': 'bumsge', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 91, 'thisTrialN': 91, 'thisRepN': 0}>
+172.5206 	DATA 	Keypress: lalt
+172.5324 	EXP 	fix: autoDraw = False
+172.5324 	EXP 	stimulus: autoDraw = False
+172.5324 	EXP 	stimulus: height = 0.05
+172.5324 	EXP 	stimulus: height = 0.05
+172.5324 	EXP 	stimulus: height = 0.05
+172.5324 	EXP 	stimulus: text = 'bumsge'
+172.7170 	DATA 	Keypress: lalt
+172.7832 	EXP 	fix: autoDraw = True
+172.9675 	DATA 	Keypress: lalt
+173.1514 	DATA 	Keypress: lalt
+173.2840 	EXP 	fix: autoDraw = False
+173.3516 	DATA 	Keypress: lalt
+173.5179 	INFO 	Keyboard events cleared
+173.5176 	EXP 	stimulus: autoDraw = True
+173.5861 	EXP 	New trial (rep=0, index=92): <Trial 92 (92 in rep 0) data={'item_nr': 7, 'condition': 'word', 'text': 'Figuren', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 92, 'thisTrialN': 92, 'thisRepN': 0}>
+173.5879 	DATA 	Keypress: lalt
+173.6015 	EXP 	fix: autoDraw = False
+173.6015 	EXP 	stimulus: autoDraw = False
+173.6015 	EXP 	stimulus: height = 0.05
+173.6015 	EXP 	stimulus: height = 0.05
+173.6015 	EXP 	stimulus: height = 0.05
+173.6015 	EXP 	stimulus: text = 'Figuren'
+173.8353 	DATA 	Keypress: lalt
+173.8516 	EXP 	fix: autoDraw = True
+174.0357 	DATA 	Keypress: lctrl
+174.0358 	DATA 	Keypress: ralt
+174.2026 	DATA 	Keypress: lalt
+174.3529 	EXP 	fix: autoDraw = False
+174.3537 	DATA 	Keypress: lctrl
+174.3543 	DATA 	Keypress: ralt
+174.5039 	DATA 	Keypress: lalt
+174.5859 	INFO 	Keyboard events cleared
+174.5855 	EXP 	stimulus: autoDraw = True
+174.6542 	EXP 	New trial (rep=0, index=93): <Trial 93 (93 in rep 0) data={'item_nr': 71, 'condition': 'pseudoword', 'text': 'beseimgeren', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 93, 'thisTrialN': 93, 'thisRepN': 0}>
+174.6567 	DATA 	Keypress: lctrl
+174.6568 	DATA 	Keypress: ralt
+174.6693 	EXP 	fix: autoDraw = False
+174.6693 	EXP 	stimulus: autoDraw = False
+174.6693 	EXP 	stimulus: height = 0.05
+174.6693 	EXP 	stimulus: height = 0.05
+174.6693 	EXP 	stimulus: height = 0.05
+174.6693 	EXP 	stimulus: text = 'beseimgeren'
+174.8539 	DATA 	Keypress: lalt
+174.9029 	EXP 	fix: autoDraw = True
+174.9875 	DATA 	Keypress: lctrl
+174.9876 	DATA 	Keypress: ralt
+175.1539 	DATA 	Keypress: lalt
+175.3214 	DATA 	Keypress: lctrl
+175.3216 	DATA 	Keypress: ralt
+175.4036 	EXP 	fix: autoDraw = False
+175.5047 	DATA 	Keypress: lalt
+175.6544 	INFO 	Keyboard events cleared
+175.6540 	EXP 	stimulus: autoDraw = True
+175.6553 	DATA 	Keypress: lctrl
+175.6714 	EXP 	New trial (rep=0, index=94): <Trial 94 (94 in rep 0) data={'item_nr': 62, 'condition': 'pseudoword', 'text': 'aushürliges', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 94, 'thisTrialN': 94, 'thisRepN': 0}>
+175.6736 	DATA 	Keypress: ralt
+175.6870 	EXP 	fix: autoDraw = False
+175.6870 	EXP 	stimulus: autoDraw = False
+175.6870 	EXP 	stimulus: height = 0.05
+175.6870 	EXP 	stimulus: height = 0.05
+175.6870 	EXP 	stimulus: height = 0.05
+175.6870 	EXP 	stimulus: text = 'aushürliges'
+175.8546 	DATA 	Keypress: lalt
+175.9211 	EXP 	fix: autoDraw = True
+176.0230 	DATA 	Keypress: lctrl
+176.0231 	DATA 	Keypress: ralt
+176.2050 	DATA 	Keypress: lalt
+176.3892 	DATA 	Keypress: lctrl
+176.3894 	DATA 	Keypress: ralt
+176.4220 	EXP 	fix: autoDraw = False
+176.6564 	DATA 	Keypress: lalt
+176.6728 	INFO 	Keyboard events cleared
+176.6725 	EXP 	stimulus: autoDraw = True
+176.7412 	EXP 	New trial (rep=0, index=95): <Trial 95 (95 in rep 0) data={'item_nr': 114, 'condition': 'word', 'text': 'rasselt', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 95, 'thisTrialN': 95, 'thisRepN': 0}>
+176.7434 	DATA 	Keypress: lctrl
+176.7557 	EXP 	fix: autoDraw = False
+176.7557 	EXP 	stimulus: autoDraw = False
+176.7557 	EXP 	stimulus: height = 0.05
+176.7557 	EXP 	stimulus: height = 0.05
+176.7557 	EXP 	stimulus: height = 0.05
+176.7557 	EXP 	stimulus: text = 'rasselt'
+176.9908 	DATA 	Keypress: lalt
+177.0065 	EXP 	fix: autoDraw = True
+177.2408 	DATA 	Keypress: lctrl
+177.2409 	DATA 	Keypress: ralt
+177.3745 	DATA 	Keypress: lalt
+177.5066 	EXP 	fix: autoDraw = False
+177.5244 	DATA 	Keypress: lctrl
+177.5245 	DATA 	Keypress: ralt
+177.6912 	DATA 	Keypress: lalt
+177.7412 	INFO 	Keyboard events cleared
+177.7409 	EXP 	stimulus: autoDraw = True
+177.8256 	EXP 	New trial (rep=0, index=96): <Trial 96 (96 in rep 0) data={'item_nr': 56, 'condition': 'word', 'text': 'angezogen', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 96, 'thisTrialN': 96, 'thisRepN': 0}>
+177.8284 	DATA 	Keypress: lctrl
+177.8285 	DATA 	Keypress: ralt
+177.8412 	EXP 	fix: autoDraw = False
+177.8412 	EXP 	stimulus: autoDraw = False
+177.8412 	EXP 	stimulus: height = 0.05
+177.8412 	EXP 	stimulus: height = 0.05
+177.8412 	EXP 	stimulus: height = 0.05
+177.8412 	EXP 	stimulus: text = 'angezogen'
+177.9582 	DATA 	Keypress: lalt
+178.0913 	EXP 	fix: autoDraw = True
+178.1090 	DATA 	Keypress: lctrl
+178.1090 	DATA 	Keypress: ralt
+178.2586 	DATA 	Keypress: lalt
+178.4089 	DATA 	Keypress: lctrl
+178.4090 	DATA 	Keypress: ralt
+178.5918 	EXP 	fix: autoDraw = False
+178.7265 	DATA 	Keypress: lctrl
+178.7265 	DATA 	Keypress: ralt
+178.8262 	INFO 	Keyboard events cleared
+178.8260 	EXP 	stimulus: autoDraw = True
+178.9434 	EXP 	New trial (rep=0, index=97): <Trial 97 (97 in rep 0) data={'item_nr': 97, 'condition': 'pseudoword', 'text': 'höfflachen', 'corr_ans': 'lalt', 'is_practice_trial': False, 'thisN': 97, 'thisTrialN': 97, 'thisRepN': 0}>
+178.9462 	DATA 	Keypress: lalt
+178.9587 	EXP 	fix: autoDraw = False
+178.9587 	EXP 	stimulus: autoDraw = False
+178.9587 	EXP 	stimulus: height = 0.05
+178.9587 	EXP 	stimulus: height = 0.05
+178.9587 	EXP 	stimulus: height = 0.05
+178.9587 	EXP 	stimulus: text = 'höfflachen'
+179.0931 	DATA 	Keypress: lctrl
+179.0932 	DATA 	Keypress: ralt
+179.1929 	EXP 	fix: autoDraw = True
+179.2435 	DATA 	Keypress: lalt
+179.3940 	DATA 	Keypress: lctrl
+179.3942 	DATA 	Keypress: ralt
+179.5275 	DATA 	Keypress: lalt
+179.6935 	EXP 	fix: autoDraw = False
+179.6945 	DATA 	Keypress: lctrl
+179.6946 	DATA 	Keypress: ralt
+179.9288 	DATA 	Keypress: lalt
+179.9443 	INFO 	Keyboard events cleared
+179.9439 	EXP 	stimulus: autoDraw = True
+180.0459 	EXP 	New trial (rep=0, index=98): <Trial 98 (98 in rep 0) data={'item_nr': 131, 'condition': 'word', 'text': 'verschmutzen', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 98, 'thisTrialN': 98, 'thisRepN': 0}>
+180.0485 	DATA 	Keypress: lctrl
+180.0486 	DATA 	Keypress: ralt
+180.0606 	EXP 	fix: autoDraw = False
+180.0606 	EXP 	stimulus: autoDraw = False
+180.0606 	EXP 	stimulus: height = 0.05
+180.0606 	EXP 	stimulus: height = 0.05
+180.0606 	EXP 	stimulus: height = 0.05
+180.0606 	EXP 	stimulus: text = 'verschmutzen'
+180.2449 	DATA 	Keypress: lalt
+180.3112 	EXP 	fix: autoDraw = True
+180.4132 	DATA 	Keypress: lctrl
+180.4133 	DATA 	Keypress: ralt
+180.7634 	DATA 	Keypress: lctrl
+180.7635 	DATA 	Keypress: ralt
+180.8120 	EXP 	fix: autoDraw = False
+181.0451 	INFO 	Keyboard events cleared
+181.0449 	EXP 	stimulus: autoDraw = True
+181.1137 	EXP 	New trial (rep=0, index=99): <Trial 99 (99 in rep 0) data={'item_nr': 97, 'condition': 'word', 'text': 'haltmachen', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 99, 'thisTrialN': 99, 'thisRepN': 0}>
+181.1159 	DATA 	Keypress: lctrl
+181.1160 	DATA 	Keypress: ralt
+181.1294 	EXP 	fix: autoDraw = False
+181.1294 	EXP 	stimulus: autoDraw = False
+181.1294 	EXP 	stimulus: height = 0.05
+181.1294 	EXP 	stimulus: height = 0.05
+181.1294 	EXP 	stimulus: height = 0.05
+181.1294 	EXP 	stimulus: text = 'haltmachen'
+181.3790 	EXP 	fix: autoDraw = True
+181.4471 	DATA 	Keypress: lctrl
+181.4471 	DATA 	Keypress: ralt
+181.6143 	DATA 	Keypress: lalt
+181.7643 	DATA 	Keypress: lctrl
+181.7644 	DATA 	Keypress: ralt
+181.8807 	EXP 	fix: autoDraw = False
+181.9317 	DATA 	Keypress: lalt
+182.0814 	DATA 	Keypress: lctrl
+182.0814 	DATA 	Keypress: ralt
+182.1143 	INFO 	Keyboard events cleared
+182.1139 	EXP 	stimulus: autoDraw = True
+182.2322 	EXP 	New trial (rep=0, index=100): <Trial 100 (100 in rep 0) data={'item_nr': 51, 'condition': 'word', 'text': 'Zinnsoldat', 'corr_ans': 'ralt', 'is_practice_trial': False, 'thisN': 100, 'thisTrialN': 100, 'thisRepN': 0}>
+182.2469 	EXP 	fix: autoDraw = False
+182.2469 	EXP 	stimulus: autoDraw = False
+182.2469 	EXP 	stimulus: height = 0.05
+182.2469 	EXP 	stimulus: height = 0.05
+182.2469 	EXP 	stimulus: height = 0.05
+182.2469 	EXP 	stimulus: text = 'Zinnsoldat'
+182.3822 	DATA 	Keypress: lctrl
+182.3823 	DATA 	Keypress: ralt
+182.4979 	EXP 	fix: autoDraw = True
+182.6665 	DATA 	Keypress: lctrl
+182.6667 	DATA 	Keypress: ralt
+182.9500 	DATA 	Keypress: lctrl
+182.9501 	DATA 	Keypress: ralt
+182.9985 	EXP 	fix: autoDraw = False
+183.2327 	INFO 	Keyboard events cleared
+183.2324 	EXP 	stimulus: autoDraw = True
+183.2341 	DATA 	Keypress: lctrl
+183.2342 	DATA 	Keypress: ralt
+183.5613 	INFO 	saved data to C:\Users\Jack\Documents\Misc Repositories\expra-wise24\lecture\demo\demo_experiment\data/509507_demo_experiment_2024-10-23_13h49.16.280.psydat
+183.5704 	INFO 	saved data to 'C:\\Users\\Jack\\Documents\\Misc Repositories\\expra-wise24\\lecture\\demo\\demo_experiment\\data/509507_demo_experiment_2024-10-23_13h49.16.280.csv'
