@@ -5,8 +5,11 @@ There are 4 groups in this ExPra, and each group has a different topic.
 Now that the groups are assigned, here is the project for each group:
 
 **Group A**: Letter Similarities in Words
+
 **Group B**: Words and Faces
+
 **Group C**: Predictability in Reading
+
 **Group D**: Change Detection
 
 ## Slides
