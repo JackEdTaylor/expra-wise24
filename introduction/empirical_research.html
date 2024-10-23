@@ -504,13 +504,13 @@
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="EYoJCSBpgbyR" data-shufflequestions="False"
+<div class="output text_html"><div id="AyVvDMvUtmQd" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#EYoJCSBpgbyR {
+#AyVvDMvUtmQd {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -680,7 +680,7 @@
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsEYoJCSBpgbyR=[
+</style></div><script type="application/javascript">var questionsAyVvDMvUtmQd=[
     {
         "question": "Which type of study generally has the most stringent control of variables?",
         "type": "multiple_choice",
@@ -1496,8 +1496,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("EYoJCSBpgbyR")) {
-            show_questions(questionsEYoJCSBpgbyR,  EYoJCSBpgbyR); 
+          if(document.getElementById("AyVvDMvUtmQd")) {
+            show_questions(questionsAyVvDMvUtmQd,  AyVvDMvUtmQd); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1512,10 +1512,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/empirical_research_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, EYoJCSBpgbyR))
+        .then(json => show_questions(json, AyVvDMvUtmQd))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsEYoJCSBpgbyR, EYoJCSBpgbyR);
+        show_questions(questionsAyVvDMvUtmQd, AyVvDMvUtmQd);
         });
         }
         </script></div>
