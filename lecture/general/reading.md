@@ -15,9 +15,9 @@ Some of the assigned reading is specific to the projects you will be designing a
 | 06/11/2024 | C | Eleven strategies for making reproducible research and open science training the norm at research institutions. | Kohrs et al. | 2023 | [*eLife*, *12*: e89736](https://doi.org/10.7554/eLife.89736) |
 | 13/11/2024 | D | Best Laid Plans: A Guide to Reporting Preregistration Deviations. | Wilroth & Atherton | 2024 | [*Advances in Methods and Practices in Psychological Science*, *7*(1), 1-14](https://doi.org/10.1177/25152459231213802) |
 | 20/11/2024 | B | Is human face recognition lateralized to the right hemisphere due to neural competition with left-lateralized visual word recognition? A critical review. | Rossion & Lochy | 2021 | [*Brain Structure and Function*, *227*, 559-629](https://doi.org/10.1007/s00429-021-02370-0) |
-| 27/11/2024 | A | ? | ? | ? | ? |
+| 27/11/2024 | A | Are brand names special words? Letter visual-similarity affects the identification of brand names, but not common words. | Perea et al. | 2022 | [*British Journal of Psychology*, *113*(2), 551-874](https://doi.org/10.1111/bjop.12557) |
 | 04/12/2024 | D | ? | ? | ? | ? |
-| 11/12/2024 | C | Thirty years and counting: Finding meaning in the N400 component of the event related brain potential (ERP). | Kutas & Federmeier | 2011 | [*Annual Review of Psychology*, *62*, 621-647](https://doi.org/10.1146%2Fannurev.psych.093008.131123) |
+| 11/12/2024 | C | Thirty years and counting: Finding meaning in the N400 component of the event related brain potential (ERP). | Kutas & Federmeier | 2011 | [*Annual Review of Psychology*, *62*, 621-647](https://doi.org/10.1146/annurev.psych.093008.131123) |
 
 
 ## Suggested Reading Specific to Each Project
@@ -38,11 +38,15 @@ In addition to the reading above, here you can find some example literature, whi
 
 * Harrsion, M. T., & Strother, L. (2021). Does face-selective cortex show a left visual field bias for centrally-viewed faces? *Neuropsychologia*, *159*, 107956. https://doi.org/10.1016/j.neuropsychologia.2021.107956
 
+* Rossion, B., & Lochy, A. (2021). Is human face recognition lateralized to the right hemisphere due to neural competition with left-lateralized visual word recognition? A critical review. *Brain Structure and Function*, *227*, 559-629. https://doi.org/10.1007/s00429-021-02370-0
+
 * Schweinberger, S. R., Sommer, W., & Stiller, R. M. (1994). Event-related potentials and models of performance asymmetries in face and word recognition. *Neuropsychologia*, *32*(2), 175-191. https://doi.org/10.1016/0028-3932(94)90004-3
 
 ### Group C: Predictability in Reading
 
 * Goldstein, A., Zada, Z., Buchnik, E. et al. (2022). Shared computational principles for language processing in humans and deep language models. *Nature Neuroscience*, *25*, 369–380. https://doi.org/10.1038/s41593-022-01026-4
+
+* Kutas, M., & Federmeier, K. D. (2011). Thirty years and counting: Finding meaning in the N400 component of the event related brain potential (ERP). *Annual Review of Psychology*, *62*, 621-647. https://doi.org/10.1146/annurev.psych.093008.131123
 
 * Luke, S. G., & Christianson, K. (2016). Limits on lexical prediction during reading. *Cognitive Psychology*, *88*, 22-60. http://doi.org/10.1016/j.cogpsych.2016.06.002
 
