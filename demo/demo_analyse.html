@@ -63,13 +63,13 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'demo/demo_analyse';</script>
     <link rel="canonical" href="https://jackedtaylor.github.io/expra-wise24/demo/demo_analyse.html" />
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Projects" href="../projects/projects.html" />
+    <link rel="prev" title="Background" href="demo_background.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -120,8 +120,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
@@ -203,9 +201,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../introduction/data_vis_2.html">Data Visualisation 2</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Demo Experiment</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="demo_participate.html">Participate</a></li>
 <li class="toctree-l1"><a class="reference internal" href="demo_background.html">Background</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Analysis</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Research Projects</span></p>
 <ul class="nav bd-sidenav">
@@ -479,19 +478,10 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-relevant-libraries">1: Load the Relevant Libraries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-data">2: Import the Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#format-the-data">3: Format the Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clean-the-data">4: Clean the Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-the-models">5: Fit the Models!</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lm">LM</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lmm">LMM</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clmm">CLMM</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-aics">6: Compare the AICs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#join-the-estimates-together">7: Join the Estimates Together</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examine-correlations">8: Examine Correlations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-1-recreate-the-plot-in-pollock-2018">Bonus 1: Recreate the Plot in Pollock (2018)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-demographic-data">2. Import the Demographic Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-stimuli">3: Import the Stimuli</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-trials">3: Import the Trials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#join-the-data-together">4: Join the Data Together</a></li>
 </ul>
             </nav>
         </div>
@@ -505,11 +495,24 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="analysis">
 <h1>Analysis<a class="headerlink" href="#analysis" title="Link to this heading">#</a></h1>
-<p>The main thing we’ll go through today is analysis of the Demo Experiment data. We have data from 14 participants who completed the German version of the experiment.</p>
+<p>The main thing we’ll go through today is analysis of the Demo Experiment data. We have data from 8 participants who completed the experiment.</p>
 <p><strong>Before we can start:</strong></p>
-<p><strong>a</strong>) <a class="reference download internal" download="" href="../_downloads/7ede810df4318e8d509dd065b4ba2e7c/demo_data.zip"><span class="xref download myst">Download the data</span></a> as a <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file.</p>
-<p><strong>b</strong>) Extract the data from the <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file to a folder that makes sense for you. The data should be stored in that location in a folder called <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
-<p><strong>c</strong>) Start a new R script in RStudio.</p>
+<p><strong>a</strong>) <a class="reference internal" href="#demog.csv"><span class="xref myst">Download the demographics data</span></a> as a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file, and place it in a directory that makes sense for you (e.g., called “demo_analysis”).</p>
+<p><strong>b</strong>) <a class="reference download internal" download="" href="../_downloads/38255c4f3ff55b6c29ebf1cd323d8eab/stimuli.csv"><span class="xref download myst">Download the stimuli</span></a> as a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file, and place it in the same demo analysis folder.</p>
+<p><strong>c</strong>) <a class="reference download internal" download="" href="../_downloads/7ede810df4318e8d509dd065b4ba2e7c/demo_data.zip"><span class="xref download myst">Download the trials data</span></a> as a <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file.</p>
+<p><strong>d</strong>) Extract the <code class="docutils literal notranslate"><span class="pre">trials</span></code> folder from the <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file and put it in your demo analysis folder.</p>
+<p><strong>e</strong>) Start a new R script in RStudio, and save the <code class="docutils literal notranslate"><span class="pre">.R</span></code> file to the demo analysis folder.</p>
+<p>After following these instructions, you should have a directory structure that looks something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>demo_analysis
+├─ trials
+│  ├─ trials_p171220.csv
+│  ├─ trials_p203530.csv
+│  └─ ...
+├─ analysis.R
+└─ demog.csv
+└─ stimuli.csv
+</pre></div>
+</div>
 <p>Once everyone has completed these steps, we’ll begin…</p>
 <section id="load-the-relevant-libraries">
 <h2>1: Load the Relevant Libraries<a class="headerlink" href="#load-the-relevant-libraries" title="Link to this heading">#</a></h2>
@@ -521,596 +524,160 @@
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span><span class="w">    </span><span class="c1"># for reading the data into R</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">purrr</span><span class="p">)</span><span class="w">    </span><span class="c1"># for easily importing multiple files</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span><span class="w">    </span><span class="c1"># for wrangling data (e.g., adding/renaming columns)</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">)</span><span class="w">    </span><span class="c1"># for switching between long and wide formats of data</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">ordinal</span><span class="p">)</span><span class="w">  </span><span class="c1"># for fitting CLMMs</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">lme4</span><span class="p">)</span><span class="w">     </span><span class="c1"># for fitting LMMs</span>
 
 <span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">  </span><span class="c1"># for visualising data</span>
-<span class="nf">theme_set</span><span class="p">(</span><span class="nf">theme_bw</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="import-the-data">
-<h2>2: Import the Data<a class="headerlink" href="#import-the-data" title="Link to this heading">#</a></h2>
-<p>Let’s import the data extracted from the <code class="docutils literal notranslate"><span class="pre">.zip</span></code> folder:</p>
+<section id="import-the-demographic-data">
+<h2>2. Import the Demographic Data<a class="headerlink" href="#import-the-demographic-data" title="Link to this heading">#</a></h2>
+<p>First, we import the demographics data. This gives us some details about the participants who took part.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">demog</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;demo_demog.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">9</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">7</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">────────────────────────────────────────────────────────</span>
+<span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
+<span class=" -Color -Color-Red">chr</span> (4): participant_id, gender, dominant_hand, first_language
+<span class=" -Color -Color-Green">dbl</span> (3): age, frame_rate_Hz, total_time_secs
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">ℹ</span> Use `spec()` to retrieve the full column specification for this data.
+<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre></div>
+</div>
+</div>
+</div>
+<p>This will print some details about the columns imported. Let’s have a look at the data we imported.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># first, get a list of paths to all .csv data files</span>
-<span class="n">data_paths</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list.files</span><span class="p">(</span><span class="s">&quot;data&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="o">=</span><span class="s">&quot;.*\\.csv$&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-
-<span class="c1"># now, iterate over these with `read_csv()` to import them</span>
-<span class="c1"># (note: col_types just says that we want these two columns to be stored as text, not numbers)</span>
-<span class="n">raw_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">map_df</span><span class="p">(</span><span class="n">data_paths</span><span class="p">,</span><span class="w"> </span><span class="n">read_csv</span><span class="p">,</span><span class="w"> </span><span class="n">col_types</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="n">participant</span><span class="o">=</span><span class="s">&quot;c&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">frameRate</span><span class="o">=</span><span class="s">&quot;c&quot;</span><span class="p">))</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">demog</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Let’s have a look at the first few rows of the data:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># print first 5 rows</span>
-<span class="nf">head</span><span class="p">(</span><span class="n">raw_data</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><table class="dataframe">
-<caption>A tibble: 5 × 27</caption>
-<thead>
-	<tr><th scope=col>word</th><th scope=col>kk_valence_mean</th><th scope=col>kk_valence_sd</th><th scope=col>kk_arousal_mean</th><th scope=col>kk_arousal_sd</th><th scope=col>kk_concreteness_mean</th><th scope=col>kk_concreteness_sd</th><th scope=col>number_of_letters</th><th scope=col>number_of_syllables</th><th scope=col>trials.thisRepN</th><th scope=col>⋯</th><th scope=col>participant</th><th scope=col>session</th><th scope=col>date</th><th scope=col>expName</th><th scope=col>psychopyVersion</th><th scope=col>frameRate</th><th scope=col>expStart</th><th scope=col>...25</th><th scope=col>word_english</th><th scope=col>...26</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>⋯</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;lgl&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td>Lager  </td><td>5.171875</td><td>1.189300</td><td>2.338710</td><td>2.032067</td><td>3.096774</td><td>2.434113</td><td>5</td><td>2</td><td>0</td><td>⋯</td><td>059528</td><td>001</td><td>2023-10-25_15h09.04.828</td><td>demo_experiment</td><td>2023.2.3</td><td>60.18958515547771</td><td>2023-10-25 15h09.11.961086 +0200</td><td>NA</td><td>NA</td><td>NA</td></tr>
-	<tr><td>Irrsinn</td><td>3.937500</td><td>1.934441</td><td>5.539683</td><td>2.354306</td><td>7.419355</td><td>1.815673</td><td>7</td><td>2</td><td>0</td><td>⋯</td><td>059528</td><td>001</td><td>2023-10-25_15h09.04.828</td><td>demo_experiment</td><td>2023.2.3</td><td>60.18958515547771</td><td>2023-10-25 15h09.11.961086 +0200</td><td>NA</td><td>NA</td><td>NA</td></tr>
-	<tr><td>Opfer  </td><td>3.000000</td><td>2.469165</td><td>6.428571</td><td>2.298066</td><td>4.968254</td><td>2.614897</td><td>5</td><td>2</td><td>0</td><td>⋯</td><td>059528</td><td>001</td><td>2023-10-25_15h09.04.828</td><td>demo_experiment</td><td>2023.2.3</td><td>60.18958515547771</td><td>2023-10-25 15h09.11.961086 +0200</td><td>NA</td><td>NA</td><td>NA</td></tr>
-	<tr><td>Pest   </td><td>2.904762</td><td>2.860827</td><td>6.841270</td><td>2.171712</td><td>4.612903</td><td>2.932882</td><td>4</td><td>1</td><td>0</td><td>⋯</td><td>059528</td><td>001</td><td>2023-10-25_15h09.04.828</td><td>demo_experiment</td><td>2023.2.3</td><td>60.18958515547771</td><td>2023-10-25 15h09.11.961086 +0200</td><td>NA</td><td>NA</td><td>NA</td></tr>
-	<tr><td>Felsen </td><td>5.390625</td><td>1.304658</td><td>3.274194</td><td>2.166582</td><td>1.258065</td><td>0.541264</td><td>6</td><td>2</td><td>0</td><td>⋯</td><td>059528</td><td>001</td><td>2023-10-25_15h09.04.828</td><td>demo_experiment</td><td>2023.2.3</td><td>60.18958515547771</td><td>2023-10-25 15h09.11.961086 +0200</td><td>NA</td><td>NA</td><td>NA</td></tr>
-</tbody>
-</table>
-</div></div>
-</div>
-</section>
-<section id="format-the-data">
-<h2>3: Format the Data<a class="headerlink" href="#format-the-data" title="Link to this heading">#</a></h2>
-<p>Here we make two quick changes:</p>
-<ol class="arabic simple">
-<li><p>We rename the column containing response variable to a short name: <code class="docutils literal notranslate"><span class="pre">resp</span></code></p></li>
-<li><p>We create a new column, which will be the same variable but with the order of the responses hardcoded as a factor</p></li>
-</ol>
-<p>We store the resulting data frame in a new variable with a handy short name, <code class="docutils literal notranslate"><span class="pre">d</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">raw_data</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="c1"># 1) rename to a shorter name</span>
-<span class="w">  </span><span class="nf">rename</span><span class="p">(</span><span class="n">resp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">resp_scale.response</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="c1"># 2) set the factor levels explicitly</span>
-<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="w"> </span><span class="n">resp_fct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">resp</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="o">=</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="n">ordered</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 9 × 7
+  participant_id   age gender dominant_hand first_language frame_rate_Hz
+  &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;         &lt;chr&gt;                  &lt;dbl&gt;
+1 p171220           18 female right         german                  60.9
+2 p203530           23 female right         german                  60.1
+3 p209846           23 male   right         german                  59.9
+4 p215942           27 female right         other                   59.9
+5 p233174           22 male   left          german                  <span class=" -Color -Color-Red">NA</span>  
+6 p331426           20 female right         german                  59.2
+7 p498198           22 female left          german                  59.9
+8 p699576           20 male   right         german                  60.0
+9 p908815           19 male   right         german                  <span class=" -Color -Color-Red">NA</span>  
+# ℹ 1 more variable: total_time_secs &lt;dbl&gt;
 </pre></div>
 </div>
 </div>
 </div>
-<p>Coding the variable as a factor in this last step is useful for the CLMM approach. It ensures that R knows the order of our Likert responses.</p>
 </section>
-<section id="clean-the-data">
-<h2>4: Clean the Data<a class="headerlink" href="#clean-the-data" title="Link to this heading">#</a></h2>
-<p>To remove outliers, we may want to filter by response times, or exclude participants who only provided one response for the whole experiment.</p>
-<p>Here are the rules we’ll use:</p>
+<section id="import-the-stimuli">
+<h2>3: Import the Stimuli<a class="headerlink" href="#import-the-stimuli" title="Link to this heading">#</a></h2>
+<p>Next we import the list of stimuli:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">stim</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;stimuli.csv&quot;</span><span class="p">)</span>
+
+<span class="n">stim</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 300 × 7
+   item_nr condition  text        corr_ans   snd ZipfSUBTLEX word_len
+     &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt;    &lt;dbl&gt;       &lt;dbl&gt;    &lt;dbl&gt;
+ 1       1 word       Akzente     ralt     0.716        2.71        7
+ 2       1 pseudoword Unwante     lalt     0.534       <span class=" -Color -Color-Red">NA</span>           7
+ 3       2 word       Drücker     ralt     0.573        3.01        7
+ 4       2 pseudoword quokker     lalt     0.551       <span class=" -Color -Color-Red">NA</span>           7
+ 5       3 word       Erwachsener ralt     0.681        3.95       11
+ 6       3 pseudoword Exzingsener lalt     0.532       <span class=" -Color -Color-Red">NA</span>          11
+ 7       4 word       Exorzisten  ralt     0.624        2.64       10
+ 8       4 pseudoword ucinzisten  lalt     0.417       <span class=" -Color -Color-Red">NA</span>          10
+ 9       5 word       Fabel       ralt     0.634        2.6         5
+10       5 pseudoword Pafel       lalt     0.552       <span class=" -Color -Color-Red">NA</span>           5
+# ℹ 290 more rows
+</pre></div>
+</div>
+</div>
+</div>
+<p>This has 8 columns:</p>
 <ul class="simple">
-<li><p><em>Rule a)</em> We will exclude participants who only pressed one button for the whole experiment</p></li>
-<li><p><em>Rule b)</em> We will exclude trials where participants were too fast to be paying attention (faster than 500 ms).</p></li>
-<li><p><em>Rule c)</em> We will exclude trials where participants were too slow to be paying attention (slower than 15 seconds).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">item_nr</span></code> - an ID for each matched pair of words and pseudowords</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> - whether each item is a <code class="docutils literal notranslate"><span class="pre">&quot;word&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;pseudoword&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> - the text shown to the participant</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">corr_ans</span></code> - whether the correct answer was to press the left alt key (<code class="docutils literal notranslate"><span class="pre">&quot;lalt&quot;</span></code>) or the right alt key (<code class="docutils literal notranslate"><span class="pre">&quot;ralt&quot;</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snd</span></code> - semantic neighbourhood diversity, calculated using the fastText model, using the method described by Hendrix &amp; Sun (<a class="reference external" href="https://doi.org/10.1037/xlm0000819">2020</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ZipfSUBTLEX</span></code> - a measure of word frequency from a german subtitle corpus: SUBTLEX-DE (Bysbaert et al., <a class="reference external" href="https://doi.org/10.1027/1618-3169/a000123">2011</a>). For more info on the “Zipf” measure, see Brysbaert et al. (<a class="reference external" href="https://doi.org/10.1177/096372141772752">2017</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">word_len</span></code> - number of letters in the word / pseudoword</p></li>
 </ul>
-<p>Remember that for your actual experiment, you will need to preregister these criteria.</p>
-<br>
-We'll start by excluding participants who gave too few unique responses. To do this we first count the number of unique responses given by each participant. Then we can take from this a list of participants who only pressed one button.<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># get the number of unique responses from each participant</span>
-<span class="n">participant_variety</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="c1"># select the relevant columns</span>
-<span class="w">  </span><span class="nf">select</span><span class="p">(</span><span class="n">participant</span><span class="p">,</span><span class="w"> </span><span class="n">resp_fct</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="c1"># get unique responses</span>
-<span class="w">  </span><span class="nf">distinct</span><span class="p">()</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="c1"># count unique responses per participant</span>
-<span class="w">  </span><span class="nf">count</span><span class="p">(</span><span class="n">participant</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="c1"># sort ascendingly</span>
-<span class="w">  </span><span class="nf">arrange</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-
-<span class="c1"># get IDs of participants who only ever pressed one button</span>
-<span class="n">bad_participants</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">participant_variety</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">n</span><span class="o">==</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">pull</span><span class="p">(</span><span class="n">participant</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Then we can filter our data to not include these bad participants. This code says that we should only keep participants who are not (<code class="docutils literal notranslate"><span class="pre">!</span></code>) in (<code class="docutils literal notranslate"><span class="pre">%in%</span></code>) the vector containing bad participant IDs (<code class="docutils literal notranslate"><span class="pre">bad_participants</span></code>).</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># a) exclude participants who only ever pressed one button</span>
-<span class="n">d_clean_a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="o">!</span><span class="w"> </span><span class="n">participant</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">bad_participants</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Excluding participants by Response Times (RTs) is much easier. We can say we want to keep trials where participants were under the maximum RT, and above the minimum RT.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># b) exclude trials that were too slow</span>
-<span class="n">d_clean_b</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">d_clean_a</span><span class="p">,</span><span class="w"> </span><span class="n">resp_scale.rt</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">15</span><span class="p">)</span>
-
-<span class="c1"># c) exclude trials that were too fast</span>
-<span class="n">d_clean_c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">d_clean_b</span><span class="p">,</span><span class="w"> </span><span class="n">resp_scale.rt</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>The last step is to calculate the number of participants/trials lost at each step. We can do this with the <code class="docutils literal notranslate"><span class="pre">nrow()</span></code> function to count the number of rows (i.e., trials) in the dataframe. To count the number of bad participants, we can use <code class="docutils literal notranslate"><span class="pre">length()</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># there were 0 participants excluded on the basis of only ever pressing one button</span>
-<span class="nf">length</span><span class="p">(</span><span class="n">bad_participants</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html">0</div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># there were 14 trials excluded on the basis of slow responses</span>
-<span class="nf">nrow</span><span class="p">(</span><span class="n">d_clean_a</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">nrow</span><span class="p">(</span><span class="n">d_clean_b</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html">14</div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># there were 0 trials excluded on the basis of fast responses</span>
-<span class="nf">nrow</span><span class="p">(</span><span class="n">d_clean_b</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">nrow</span><span class="p">(</span><span class="n">d_clean_c</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html">0</div></div>
-</div>
-<p>It looks like the data was quite good quality overall! 💪</p>
 </section>
-<section id="fit-the-models">
-<h2>5: Fit the Models!<a class="headerlink" href="#fit-the-models" title="Link to this heading">#</a></h2>
-<p>Now that the data are formatted and cleaned we can fit three models to estimate our norms:</p>
-<ol class="arabic simple">
-<li><p>The traditional model (LM; <code class="docutils literal notranslate"><span class="pre">lm()</span></code>), where each item’s ratings are averaged.</p></li>
-<li><p>A linear mixed-effects model (LMM; <code class="docutils literal notranslate"><span class="pre">lmer()</span></code>), where we norm via random effects, but still treat the ratings as continuous.</p></li>
-<li><p>A cumulative-link mixed-effects model (CLMM; <code class="docutils literal notranslate"><span class="pre">clmm()</span></code>), where we norm via random effects, on a latent normal distribution.</p></li>
-</ol>
-<section id="lm">
-<h3>LM<a class="headerlink" href="#lm" title="Link to this heading">#</a></h3>
-<p>First, the traditional approach is to take a raw average of all ratings for each item (a simple linear model). A simple way of estimating this is:</p>
-<div class="cell docutils container">
+<section id="import-the-trials">
+<h2>3: Import the Trials<a class="headerlink" href="#import-the-trials" title="Link to this heading">#</a></h2>
+<p>Let’s import the experiment data from the <code class="docutils literal notranslate"><span class="pre">trials</span></code> folder:</p>
+<div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># estimate a raw average for each item</span>
-<span class="n">est_lm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">d_clean_c</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">word</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">summarise</span><span class="p">(</span><span class="n">M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">resp</span><span class="p">))</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="c1"># store the model type as a variable (we&#39;ll use this later)</span>
-<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;LM&quot;</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># first, get a list of all .csv data files</span>
+<span class="n">data_paths</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list.files</span><span class="p">(</span><span class="s">&quot;trials&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="o">=</span><span class="s">&quot;.*\\.csv$&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">full.names</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
 
-<span class="c1"># print first 5 rows</span>
-<span class="nf">head</span><span class="p">(</span><span class="n">est_lm</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><table class="dataframe">
-<caption>A tibble: 5 × 3</caption>
-<thead>
-	<tr><th scope=col>word</th><th scope=col>M</th><th scope=col>model</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td>Abfahrt</td><td>2.785714</td><td>LM</td></tr>
-	<tr><td>Advent </td><td>2.928571</td><td>LM</td></tr>
-	<tr><td>Album  </td><td>4.000000</td><td>LM</td></tr>
-	<tr><td>Anhang </td><td>2.571429</td><td>LM</td></tr>
-	<tr><td>Anreiz </td><td>1.857143</td><td>LM</td></tr>
-</tbody>
-</table>
-</div></div>
-</div>
-<p>It might not feel like it, but this is already a model (albeit a very simple one). A way of fitting this with the <code class="docutils literal notranslate"><span class="pre">lm()</span></code> function would be:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">m_lm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">resp</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">word</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d_clean_c</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>If you want to convince yourself that this is the same thing, then compare the output of <code class="docutils literal notranslate"><span class="pre">m_lm</span></code> with the estimates in <code class="docutils literal notranslate"><span class="pre">est_lm</span></code>. You should see exactly the same numbers!</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">m_lm</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Call:
-lm(formula = resp ~ 0 + word, data = d_clean_c)
+<span class="c1"># now, iterate over these with `read_csv()` to import each</span>
+<span class="n">trials</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">map_df</span><span class="p">(</span><span class="n">data_paths</span><span class="p">,</span><span class="w"> </span><span class="n">read_csv</span><span class="p">)</span>
 
-Coefficients:
- wordAbfahrt    wordAdvent     wordAlbum    wordAnhang    wordAnreiz  
-       2.786         2.929         4.000         2.571         1.857  
-  wordAnzahl       wordBad      wordBahn  wordBankrott    wordBecken  
-       2.571         4.571         4.714         2.143         4.643  
-   wordBeruf   wordBestand    wordBetrug     wordBohne    wordBonbon  
-       2.929         2.786         2.143         4.929         5.000  
-  wordBündel    wordButter      wordDach     wordDampf   wordDenkmal  
-       3.857         5.000         4.714         4.429         4.071  
-wordEinfahrt     wordFaden     wordFeind    wordFelsen    wordFleiss  
-       4.214         4.357         3.500         4.786         1.929  
-   wordFluch   wordFreibad    wordFreund    wordGebäck   wordGedicht  
-       1.929         4.929         4.000         4.714         3.286  
-  wordGeheul     wordGeier  wordGeilheit    wordGeisel    wordGemahl  
-       2.643         4.692         2.286         3.923         3.500  
-  wordGetier    wordGezänk      wordGift    wordGlaube     wordGunst  
-       3.385         2.071         3.923         1.786         1.571  
-wordHandlung     wordHarem     wordHärte      wordHast    wordHelfer  
-       2.571         3.214         2.143         1.923         3.692  
-  wordHengst     wordHölle     wordHymne   wordInfarkt    wordInhalt  
-       4.385         2.571         2.429         2.929         2.143  
- wordIrrsinn     wordKotze    wordKreide    wordKummer     wordLager  
-       1.714         4.615         4.714         1.643         4.077  
-   wordLampe  wordLiebchen      wordLüge      wordMama      wordMeer  
-       4.786         2.500         2.071         4.429         4.643  
-  wordMystik     wordOpfer    wordOrdner      wordPaar     wordPaket  
-       1.500         3.429         4.643         3.286         4.786  
-  wordParfüm      wordPest    wordPhobie  wordPicknick   wordProdukt  
-       4.286         3.286         2.357         4.357         3.714  
-  wordReptil    wordSäufer     wordSchal    wordSchale    wordSchnur  
-       4.357         3.500         4.786         4.500         4.714  
-   wordSchuh   wordStachel    wordStapel    wordStress     wordStunk  
-       4.786         4.538         4.071         1.857         2.786  
-   wordSucht     wordTango    wordTänzer    wordTasche    wordTragik  
-       2.231         3.714         4.286         4.857         1.786  
- wordTripper   wordTriumph    wordTugend      wordUrin      wordUrne  
-       2.786         2.000         1.286         4.714         4.615  
- wordVortrag    wordWissen      wordWohl    wordWunsch     wordWürde  
-       3.000         1.429         1.500         1.571         1.462  
- wordZeitung      wordZelt    wordZimmer    wordZufuhr       wordZug  
-       4.857         4.929         4.571         2.357         5.000  
+<span class="c1"># print the contents</span>
+<span class="n">trials</span>
 </pre></div>
 </div>
 </div>
 </div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 2,480 × 8
+   participant_id item_nr condition  text     is_practice_trial resp  rt_ms
+   &lt;chr&gt;            &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;    &lt;lgl&gt;             &lt;chr&gt; &lt;dbl&gt;
+ 1 p171220              4 pseudoword segt     TRUE              lalt   887.
+ 2 p171220              4 word       sagt     TRUE              ralt   683.
+ 3 p171220              5 pseudoword tobreren TRUE              lalt   751.
+ 4 p171220              1 pseudoword Bage     TRUE              lalt   530.
+ 5 p171220              3 pseudoword Torrerk  TRUE              lalt   551.
+ 6 p171220              3 word       korrekt  TRUE              ralt   489.
+ 7 p171220              2 pseudoword sanzes   TRUE              lalt   456.
+ 8 p171220              2 word       Mannes   TRUE              lalt   565.
+ 9 p171220              1 word       Haie     TRUE              ralt   633.
+10 p171220              5 word       sicheren TRUE              ralt   589.
+# ℹ 2,470 more rows
+# ℹ 1 more variable: time_so_far_secs &lt;dbl&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>This gives us one data frame with all trials in the experiment.</p>
+<p>There are 9 columns of data:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">participant_id</span></code> - a unique ID for each paricipant</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">item_nr</span></code>- the same item ID as in <code class="docutils literal notranslate"><span class="pre">stim</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code> - whether the trial showed a <code class="docutils literal notranslate"><span class="pre">&quot;word&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;pseudoword&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> - the text that the participant saw</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">is_practice_trial</span></code> - whether each trial was a practice trial. The first 10 trials for each participant will be practice trials.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resp</span></code> - left alt key (<code class="docutils literal notranslate"><span class="pre">&quot;lalt&quot;</span></code>) or the right alt key (<code class="docutils literal notranslate"><span class="pre">&quot;ralt&quot;</span></code>)</p></li>
+</ul>
 </section>
-<section id="lmm">
-<h3>LMM<a class="headerlink" href="#lmm" title="Link to this heading">#</a></h3>
-<p>To norm via random effects in an LMM, we can use the <code class="docutils literal notranslate"><span class="pre">lmer()</span></code> function. We include random (varying) intercepts for participants (<code class="docutils literal notranslate"><span class="pre">(1</span> <span class="pre">|</span> <span class="pre">participant)</span></code>) and items (<code class="docutils literal notranslate"><span class="pre">(1</span> <span class="pre">|</span> <span class="pre">item)</span></code>). We will only extract estimates for items, but we also include random intercepts for participants because it usually improves the accuracy of the estimates for items.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fit LMM</span>
-<span class="n">m_lmm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lmer</span><span class="p">(</span>
-<span class="w">  </span><span class="n">resp</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">word</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">participant</span><span class="p">),</span>
-<span class="w">  </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d_clean_c</span>
-<span class="p">)</span>
-
-<span class="c1"># print result</span>
-<span class="n">m_lmm</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Linear mixed model fit by REML [&#39;lmerMod&#39;]
-Formula: resp ~ 1 + (1 | word) + (1 | participant)
-   Data: d_clean_c
-REML criterion at convergence: 3990.271
-Random effects:
- Groups      Name        Std.Dev.
- word        (Intercept) 1.1517  
- participant (Intercept) 0.2165  
- Residual                0.9022  
-Number of obs: 1386, groups:  word, 100; participant, 14
-Fixed Effects:
-(Intercept)  
-       3.42  
-</pre></div>
-</div>
-</div>
-</div>
-<p>This tells us that the average rating overall (the <code class="docutils literal notranslate"><span class="pre">Intercept</span></code>) was 3.42. The standard deviations of the random effects tell us that words (<code class="docutils literal notranslate"><span class="pre">1.1517</span></code>) were more variable than participants (<code class="docutils literal notranslate"><span class="pre">0.2165</span></code>).</p>
-<p>We can now extract the estimated norms for each word.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># extract estimates (item random effects)</span>
-<span class="n">est_lmm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ranef</span><span class="p">(</span><span class="n">m_lmm</span><span class="p">)</span><span class="o">$</span><span class="n">word</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="c1"># put into a tidy dataframe</span>
-<span class="w">  </span><span class="nf">as_tibble</span><span class="p">(</span><span class="n">rownames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;word&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="c1"># M, standing for mean</span>
-<span class="w">  </span><span class="nf">rename</span><span class="p">(</span><span class="n">M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">`(Intercept)`</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="c1"># store the model type as a variable (we&#39;ll use this later)</span>
-<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;LMM&quot;</span><span class="p">)</span>
-
-<span class="c1"># print first 5 rows</span>
-<span class="nf">head</span><span class="p">(</span><span class="n">est_lmm</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><table class="dataframe">
-<caption>A tibble: 5 × 3</caption>
-<thead>
-	<tr><th scope=col>word</th><th scope=col>M</th><th scope=col>model</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td>Abfahrt</td><td>-0.6071870</td><td>LMM</td></tr>
-	<tr><td>Advent </td><td>-0.4703289</td><td>LMM</td></tr>
-	<tr><td>Album  </td><td> 0.5561065</td><td>LMM</td></tr>
-	<tr><td>Anhang </td><td>-0.8124741</td><td>LMM</td></tr>
-	<tr><td>Anreiz </td><td>-1.4967644</td><td>LMM</td></tr>
-</tbody>
-</table>
-</div></div>
-</div>
-</section>
-<section id="clmm">
-<h3>CLMM<a class="headerlink" href="#clmm" title="Link to this heading">#</a></h3>
-<p>To norm via random effects in a CLMM, we can use the <code class="docutils literal notranslate"><span class="pre">clmm()</span></code> function. We include the same random effects structure as above. The key difference is that now we are using a model more appropriate for ordinal ratings.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fit CLMM (probit-link for comparability)</span>
-<span class="n">m_clmm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">clmm</span><span class="p">(</span>
-<span class="w">  </span><span class="n">resp_fct</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">word</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">participant</span><span class="p">),</span>
-<span class="w">  </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d_clean_c</span><span class="p">,</span>
-<span class="w">  </span><span class="n">link</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;probit&quot;</span>
-<span class="p">)</span>
-
-<span class="c1"># print result</span>
-<span class="n">m_clmm</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cumulative Link Mixed Model fitted with the Laplace approximation
-
-formula: resp_fct ~ 1 + (1 | word) + (1 | participant)
-data:    d_clean_c
-
- link   threshold nobs logLik   AIC     niter     max.grad
- probit flexible  1386 -1685.71 3383.42 530(2641) 5.02e-03
-
-Random effects:
- Groups      Name        Variance Std.Dev.
- word        (Intercept) 1.77613  1.3327  
- participant (Intercept) 0.06122  0.2474  
-Number of groups:  word 100,  participant 14 
-
-No Coefficients
-
-Thresholds:
-    1|2     2|3     3|4     4|5 
--1.8926 -0.8370 -0.1341  0.6749 
-</pre></div>
-</div>
-</div>
-</div>
-<p>This gives us similar information to that seen above, but also gives us the locations of the thresholds on the latent distribution. For example, the threshold between the Likert responses of <em>3</em> and <em>4</em> (or, <code class="docutils literal notranslate"><span class="pre">3|4</span></code>) is at <code class="docutils literal notranslate"><span class="pre">-0.1341</span></code>.</p>
-<p>As with the LMM, we can extract norms for words from the CLMM like so:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># extract estimates (item random effects)</span>
-<span class="n">est_clmm</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ranef</span><span class="p">(</span><span class="n">m_clmm</span><span class="p">)</span><span class="o">$</span><span class="n">word</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="c1"># put into a tidy dataframe</span>
-<span class="w">  </span><span class="nf">as_tibble</span><span class="p">(</span><span class="n">rownames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;word&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="c1"># M, standing for mean</span>
-<span class="w">  </span><span class="nf">rename</span><span class="p">(</span><span class="n">M</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">`(Intercept)`</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="c1"># store the model type as a variable</span>
-<span class="w">  </span><span class="nf">mutate</span><span class="p">(</span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;CLMM&quot;</span><span class="p">)</span>
-
-<span class="c1"># print first 5 rows</span>
-<span class="nf">head</span><span class="p">(</span><span class="n">est_clmm</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><table class="dataframe">
-<caption>A tibble: 5 × 3</caption>
-<thead>
-	<tr><th scope=col>word</th><th scope=col>M</th><th scope=col>model</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td>Abfahrt</td><td>-0.6861249</td><td>CLMM</td></tr>
-	<tr><td>Advent </td><td>-0.5786367</td><td>CLMM</td></tr>
-	<tr><td>Album  </td><td> 0.4372291</td><td>CLMM</td></tr>
-	<tr><td>Anhang </td><td>-0.8738686</td><td>CLMM</td></tr>
-	<tr><td>Anreiz </td><td>-1.5365513</td><td>CLMM</td></tr>
-</tbody>
-</table>
-</div></div>
-</div>
-</section>
-</section>
-<section id="compare-the-aics">
-<h2>6: Compare the AICs<a class="headerlink" href="#compare-the-aics" title="Link to this heading">#</a></h2>
-<p>One nice comparison we can do is on the Akaike Information Criteria (AIC). This is something we touched on in the session on <a class="reference external" href="https://jackedtaylor.github.io/expra-wise24/introduction/empirical_research.html">Empirical Research</a>. The AIC, and estimators like it, can help us decide which model is most appropriate for the trade-off between model complexity and model likelihood.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">AIC</span><span class="p">(</span><span class="n">m_lm</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html">3823.08072290725</div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">AIC</span><span class="p">(</span><span class="n">m_lmm</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html">3998.27149252134</div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">AIC</span><span class="p">(</span><span class="n">m_clmm</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html">3383.42242435056</div></div>
-</div>
-<p>This shows that the CLMM has the lowest AIC of the three models, and so is likely to be the most appropriate for the data.</p>
-</section>
-<section id="join-the-estimates-together">
-<h2>7: Join the Estimates Together<a class="headerlink" href="#join-the-estimates-together" title="Link to this heading">#</a></h2>
-<p>Now that we have the estimates, we can join these rows together into one big dataframe, <code class="docutils literal notranslate"><span class="pre">norms</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Stick the dataframes together, end-to-end</span>
-<span class="n">norms</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">bind_rows</span><span class="p">(</span><span class="n">est_lm</span><span class="p">,</span><span class="w"> </span><span class="n">est_lmm</span><span class="p">,</span><span class="w"> </span><span class="n">est_clmm</span><span class="p">)</span>
-
-<span class="c1"># print first 5 rows</span>
-<span class="nf">head</span><span class="p">(</span><span class="n">norms</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><table class="dataframe">
-<caption>A tibble: 5 × 3</caption>
-<thead>
-	<tr><th scope=col>word</th><th scope=col>M</th><th scope=col>model</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td>Abfahrt</td><td>2.785714</td><td>LM</td></tr>
-	<tr><td>Advent </td><td>2.928571</td><td>LM</td></tr>
-	<tr><td>Album  </td><td>4.000000</td><td>LM</td></tr>
-	<tr><td>Anhang </td><td>2.571429</td><td>LM</td></tr>
-	<tr><td>Anreiz </td><td>1.857143</td><td>LM</td></tr>
-</tbody>
-</table>
-</div></div>
-</div>
-<p>We may also want the data in wide format (different model estimates are in different columns). This is possible with the <code class="docutils literal notranslate"><span class="pre">pivot_wider()</span></code> function. This lets us compare the estimates for each word from the three approaches.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># pivot the data into wide format</span>
-<span class="n">norms_wide</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">pivot_wider</span><span class="p">(</span><span class="n">norms</span><span class="p">,</span><span class="w"> </span><span class="n">names_from</span><span class="o">=</span><span class="n">model</span><span class="p">,</span><span class="w"> </span><span class="n">values_from</span><span class="o">=</span><span class="n">M</span><span class="p">)</span>
-
-<span class="c1"># print first 5 rows</span>
-<span class="nf">head</span><span class="p">(</span><span class="n">norms_wide</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><table class="dataframe">
-<caption>A tibble: 5 × 4</caption>
-<thead>
-	<tr><th scope=col>word</th><th scope=col>LM</th><th scope=col>LMM</th><th scope=col>CLMM</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td>Abfahrt</td><td>2.785714</td><td>-0.6071870</td><td>-0.6861249</td></tr>
-	<tr><td>Advent </td><td>2.928571</td><td>-0.4703289</td><td>-0.5786367</td></tr>
-	<tr><td>Album  </td><td>4.000000</td><td> 0.5561065</td><td> 0.4372291</td></tr>
-	<tr><td>Anhang </td><td>2.571429</td><td>-0.8124741</td><td>-0.8738686</td></tr>
-	<tr><td>Anreiz </td><td>1.857143</td><td>-1.4967644</td><td>-1.5365513</td></tr>
-</tbody>
-</table>
-</div></div>
-</div>
-</section>
-<section id="examine-correlations">
-<h2>8: Examine Correlations<a class="headerlink" href="#examine-correlations" title="Link to this heading">#</a></h2>
-<p>We may be interested in how similar our estimates are from our three approaches. The variables are all very highly correlated because they are all trying to capture very similar information. However, the CLMM approach is least like the other two (lower Pearson’s r values in the matrix).</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">norms_wide</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="c1"># remove non-numeric column</span>
-<span class="w">  </span><span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="n">word</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="c1"># get correlation matrix</span>
-<span class="w">  </span><span class="nf">cor</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><table class="dataframe">
-<caption>A matrix: 3 × 3 of type dbl</caption>
-<thead>
-	<tr><th></th><th scope=col>LM</th><th scope=col>LMM</th><th scope=col>CLMM</th></tr>
-</thead>
-<tbody>
-	<tr><th scope=row>LM</th><td>1.0000000</td><td>0.9999768</td><td>0.9895898</td></tr>
-	<tr><th scope=row>LMM</th><td>0.9999768</td><td>1.0000000</td><td>0.9895235</td></tr>
-	<tr><th scope=row>CLMM</th><td>0.9895898</td><td>0.9895235</td><td>1.0000000</td></tr>
-</tbody>
-</table>
-</div></div>
-</div>
-<p>We can also visualise these correlations with <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code></p>
-<p>First, the correlations between the LM and LMM approach are very linear.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">norms_wide</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">LMM</span><span class="p">,</span><span class="w"> </span><span class="n">LM</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">&quot;lm&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = &#39;y ~ x&#39;
-</pre></div>
-</div>
-<a class="reference internal image-reference" href="../_images/17ca3bf9ffa6d656c662227d8d75e77117eb01372500c28d904acf9a70bb4203.png"><img alt="../_images/17ca3bf9ffa6d656c662227d8d75e77117eb01372500c28d904acf9a70bb4203.png" src="../_images/17ca3bf9ffa6d656c662227d8d75e77117eb01372500c28d904acf9a70bb4203.png" style="width: 210px; height: 180px;" /></a>
-</div>
-</div>
-<p>However, the correlation between the CLMM and LMM estimates is very nonlinear. This reflects that the LM estimates are distorted by the LM method incorrectly treating the ordinal scale as though it is an interval scale.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">norms_wide</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">CLMM</span><span class="p">,</span><span class="w"> </span><span class="n">LM</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">&quot;lm&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = &#39;y ~ x&#39;
-</pre></div>
-</div>
-<a class="reference internal image-reference" href="../_images/41517cc50b66a9d0fd762dfe0e77de5268f8b0624fd47adff9cd795743fb201a.png"><img alt="../_images/41517cc50b66a9d0fd762dfe0e77de5268f8b0624fd47adff9cd795743fb201a.png" src="../_images/41517cc50b66a9d0fd762dfe0e77de5268f8b0624fd47adff9cd795743fb201a.png" style="width: 210px; height: 180px;" /></a>
-</div>
-</div>
-</section>
-<section id="bonus-1-recreate-the-plot-in-pollock-2018">
-<h2>Bonus 1: Recreate the Plot in Pollock (2018)<a class="headerlink" href="#bonus-1-recreate-the-plot-in-pollock-2018" title="Link to this heading">#</a></h2>
-<p>Let’s see whether we can recreate the plot that Pollock (<a class="reference external" href="https://doi.org/10.3758/s13428-017-0938-y">2018</a>) made of the data from Brysbaert et al. (<a class="reference external" href="https://doi.org/10.3758/s13428-013-0403-5">2014</a>).</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># first, calculate the means and SDs of raw ratings</span>
-<span class="n">raw_summ</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">d_clean_c</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">group_by</span><span class="p">(</span><span class="n">word</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">summarise</span><span class="p">(</span><span class="n">M</span><span class="o">=</span><span class="nf">mean</span><span class="p">(</span><span class="n">resp</span><span class="p">),</span><span class="w"> </span><span class="n">SD</span><span class="o">=</span><span class="nf">sd</span><span class="p">(</span><span class="n">resp</span><span class="p">))</span>
-
-<span class="c1"># then, show the Ms and SDs in a scatter plot</span>
-<span class="n">raw_summ</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">SD</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="w">  </span><span class="nf">geom_point</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/ca1722847a40d39b350dff8c5fececb663d7d19571c414c0c1cd688fe3381f5a.png"><img alt="../_images/ca1722847a40d39b350dff8c5fececb663d7d19571c414c0c1cd688fe3381f5a.png" src="../_images/ca1722847a40d39b350dff8c5fececb663d7d19571c414c0c1cd688fe3381f5a.png" style="width: 210px; height: 180px;" /></a>
-</div>
-</div>
-<p>Even our small sample size shows a very similar pattern to that described by Pollock.</p>
+<section id="join-the-data-together">
+<h2>4: Join the Data Together<a class="headerlink" href="#join-the-data-together" title="Link to this heading">#</a></h2>
 </section>
 </section>
 
@@ -1144,6 +711,24 @@ Thresholds:
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="demo_background.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Background</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../projects/projects.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Projects</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -1162,19 +747,10 @@ Thresholds:
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-relevant-libraries">1: Load the Relevant Libraries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-data">2: Import the Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#format-the-data">3: Format the Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clean-the-data">4: Clean the Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-the-models">5: Fit the Models!</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lm">LM</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lmm">LMM</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clmm">CLMM</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-aics">6: Compare the AICs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#join-the-estimates-together">7: Join the Estimates Together</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examine-correlations">8: Examine Correlations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-1-recreate-the-plot-in-pollock-2018">Bonus 1: Recreate the Plot in Pollock (2018)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-demographic-data">2. Import the Demographic Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-stimuli">3: Import the Stimuli</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-trials">3: Import the Trials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#join-the-data-together">4: Join the Data Together</a></li>
 </ul>
   </nav></div>
 
