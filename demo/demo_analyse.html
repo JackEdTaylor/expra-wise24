@@ -624,19 +624,19 @@
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 300 × 7
-   item_nr condition  text        corr_ans   snd ZipfSUBTLEX word_len
-     &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt;    &lt;dbl&gt;       &lt;dbl&gt;    &lt;dbl&gt;
- 1       1 word       Akzente     ralt     0.716        2.71        7
- 2       1 pseudoword Unwante     lalt     0.534       <span class=" -Color -Color-Red">NA</span>           7
- 3       2 word       Drücker     ralt     0.573        3.01        7
- 4       2 pseudoword quokker     lalt     0.551       <span class=" -Color -Color-Red">NA</span>           7
- 5       3 word       Erwachsener ralt     0.681        3.95       11
- 6       3 pseudoword Exzingsener lalt     0.532       <span class=" -Color -Color-Red">NA</span>          11
- 7       4 word       Exorzisten  ralt     0.624        2.64       10
- 8       4 pseudoword ucinzisten  lalt     0.417       <span class=" -Color -Color-Red">NA</span>          10
- 9       5 word       Fabel       ralt     0.634        2.6         5
-10       5 pseudoword Pafel       lalt     0.552       <span class=" -Color -Color-Red">NA</span>           5
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 300 × 8
+   item_nr condition text  corr_ans is_practice_trial   snd ZipfSUBTLEX word_len
+     &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;    &lt;lgl&gt;             &lt;dbl&gt;       &lt;dbl&gt;    &lt;dbl&gt;
+ 1       1 word      Akze… ralt     FALSE             0.716        2.71        7
+ 2       1 pseudowo… Unwa… lalt     FALSE             0.534       <span class=" -Color -Color-Red">NA</span>           7
+ 3       2 word      Drüc… ralt     FALSE             0.573        3.01        7
+ 4       2 pseudowo… quok… lalt     FALSE             0.551       <span class=" -Color -Color-Red">NA</span>           7
+ 5       3 word      Erwa… ralt     FALSE             0.681        3.95       11
+ 6       3 pseudowo… Exzi… lalt     FALSE             0.532       <span class=" -Color -Color-Red">NA</span>          11
+ 7       4 word      Exor… ralt     FALSE             0.624        2.64       10
+ 8       4 pseudowo… ucin… lalt     FALSE             0.417       <span class=" -Color -Color-Red">NA</span>          10
+ 9       5 word      Fabel ralt     FALSE             0.634        2.6         5
+10       5 pseudowo… Pafel lalt     FALSE             0.552       <span class=" -Color -Color-Red">NA</span>           5
 # ℹ 290 more rows
 </pre></div>
 </div>
@@ -672,7 +672,7 @@
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 2,790 × 8
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 2,480 × 8
    participant_id item_nr condition  text     is_practice_trial resp  rt_ms
    &lt;chr&gt;            &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;    &lt;lgl&gt;             &lt;chr&gt; &lt;dbl&gt;
  1 p171220              4 pseudoword segt     TRUE              lalt   887.
@@ -685,7 +685,7 @@
  8 p171220              2 word       Mannes   TRUE              lalt   565.
  9 p171220              1 word       Haie     TRUE              ralt   633.
 10 p171220              5 word       sicheren TRUE              ralt   589.
-# ℹ 2,780 more rows
+# ℹ 2,470 more rows
 # ℹ 1 more variable: time_so_far_secs &lt;dbl&gt;
 </pre></div>
 </div>
@@ -718,7 +718,7 @@
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Joining with `by = join_by(participant_id)`
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Joining with `by = join_by(item_nr, condition, text)`
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Joining with `by = join_by(item_nr, condition, text, is_practice_trial)`
 </pre></div>
 </div>
 </div>
@@ -732,7 +732,7 @@
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 2,790 × 18
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 2,480 × 18
    participant_id item_nr condition  text     is_practice_trial resp  rt_ms
    &lt;chr&gt;            &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;    &lt;lgl&gt;             &lt;chr&gt; &lt;dbl&gt;
  1 p171220              4 pseudoword segt     TRUE              lalt   887.
@@ -745,7 +745,7 @@
  8 p171220              2 word       Mannes   TRUE              lalt   565.
  9 p171220              1 word       Haie     TRUE              ralt   633.
 10 p171220              5 word       sicheren TRUE              ralt   589.
-# ℹ 2,780 more rows
+# ℹ 2,470 more rows
 # ℹ 11 more variables: time_so_far_secs &lt;dbl&gt;, age &lt;dbl&gt;, gender &lt;chr&gt;,
 #   dominant_hand &lt;chr&gt;, first_language &lt;chr&gt;, frame_rate_Hz &lt;dbl&gt;,
 #   total_time_secs &lt;dbl&gt;, corr_ans &lt;chr&gt;, snd &lt;dbl&gt;, ZipfSUBTLEX &lt;dbl&gt;,
@@ -807,7 +807,7 @@
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 9 × 4
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 8 × 4
   participant_id first_language median_rt mean_acc
   &lt;chr&gt;          &lt;chr&gt;              &lt;dbl&gt;    &lt;dbl&gt;
 1 p171220        german              742.    0.957
@@ -818,7 +818,6 @@
 6 p331426        german              762.    0.94 
 7 p498198        german              792.    0.957
 8 p699576        german              624.    0.9  
-9 p908815        german              580.    0.903
 </pre></div>
 </div>
 </div>
@@ -838,7 +837,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">okay_participants</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">participant_avg</span><span class="w"> </span><span class="o">|&gt;</span>
-<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">mean_acc</span><span class="o">&gt;</span><span class="m">0.75</span><span class="p">,</span><span class="w"> </span><span class="n">median_rt</span><span class="o">&gt;</span><span class="m">250</span><span class="p">,</span><span class="w"> </span><span class="n">median_rt</span><span class="o">&lt;</span><span class="m">1500</span><span class="p">,</span><span class="w"> </span><span class="n">first_language</span><span class="o">==</span><span class="s">&quot;german&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">  </span><span class="nf">filter</span><span class="p">(</span><span class="n">mean_acc</span><span class="o">&gt;</span><span class="m">0.75</span><span class="p">,</span><span class="w"> </span><span class="n">median_rt</span><span class="o">&gt;=</span><span class="m">250</span><span class="p">,</span><span class="w"> </span><span class="n">median_rt</span><span class="o">&lt;</span><span class="m">1500</span><span class="p">,</span><span class="w"> </span><span class="n">first_language</span><span class="o">==</span><span class="s">&quot;german&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
 <span class="w">  </span><span class="nf">pull</span><span class="p">(</span><span class="n">participant_id</span><span class="p">)</span>
 
 <span class="n">okay_participants</span>
@@ -851,7 +850,7 @@
 .list-inline>li {display: inline-block}
 .list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
 </style>
-<ol class=list-inline><li>'p171220'</li><li>'p203530'</li><li>'p209846'</li><li>'p233174'</li><li>'p331426'</li><li>'p498198'</li><li>'p699576'</li><li>'p908815'</li></ol>
+<ol class=list-inline><li>'p171220'</li><li>'p203530'</li><li>'p209846'</li><li>'p233174'</li><li>'p331426'</li><li>'p498198'</li><li>'p699576'</li></ol>
 </div></div>
 </div>
 </section>
@@ -909,16 +908,16 @@
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 150 × 4
    text        ZipfSUBTLEX median_rt mean_acc
    &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
- 1 Akzente            2.71      592.        1
- 2 Drücker            3.01      605.        1
- 3 Erwachsener        3.95      628.        1
- 4 Exorzisten         2.64      740.        1
+ 1 Akzente            2.71      628.        1
+ 2 Drücker            3.01      599.        1
+ 3 Erwachsener        3.95      636.        1
+ 4 Exorzisten         2.64      745.        1
  5 Fabel              2.6       641.        1
- 6 Faulpelze          2.74      634.        1
- 7 Figuren            4.38      546.        1
- 8 Filigrane          1.9       885.        1
+ 6 Faulpelze          2.74      603.        1
+ 7 Figuren            4.38      525.        1
+ 8 Filigrane          1.9       971.        1
  9 Geschicke          2.07      717.        1
-10 Gondel             3.11      652.        1
+10 Gondel             3.11      698.        1
 # ℹ 140 more rows
 </pre></div>
 </div>
@@ -956,25 +955,25 @@ lm(formula = median_rt ~ ZipfSUBTLEX_cent, data = word_averages)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--213.88  -80.94  -18.61   46.30  496.62 
+-237.96  -92.19  -15.80   52.61  476.65 
 
 Coefficients:
                  Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)       665.018      9.620  69.128  &lt; 2e-16 ***
-ZipfSUBTLEX_cent  -62.566      9.717  -6.439 1.58e-09 ***
+(Intercept)        682.95      10.35  66.007  &lt; 2e-16 ***
+ZipfSUBTLEX_cent   -71.20      10.45  -6.813 2.24e-10 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 117.8 on 148 degrees of freedom
-Multiple R-squared:  0.2188,	Adjusted R-squared:  0.2136 
-F-statistic: 41.46 on 1 and 148 DF,  p-value: 1.583e-09
+Residual standard error: 126.7 on 148 degrees of freedom
+Multiple R-squared:  0.2388,	Adjusted R-squared:  0.2336 
+F-statistic: 46.42 on 1 and 148 DF,  p-value: 2.243e-10
 </pre></div>
 </div>
 </div>
 </div>
-<p>This tells us that the average RT overall was 665.02 ms (<em>SE</em> = 9.62). The <em>t</em> value of &gt;69 just reflects that this number is much larger than zero. We would report the overall average RT, but we probably wouldn’t report the <em>t</em> and <em>p</em> values for this, since RT is almost by definition larger than zero.</p>
-<p>The second coefficient is more interesting. The <span class="math notranslate nohighlight">\(\Beta\)</span> = -62.57 (<em>SE</em> = 9.72) tells us that for every one unit of Zipf, RT becomes 62.57 ms faster on average. This effect is significantly different from zero (<em>t</em>(148) = -6.44, <em>p</em> &lt; .001).</p>
-<p>We might also want to report the R<span class="math notranslate nohighlight">\(^2\)</span> value of .22, which means that our model is accounting for an estimated 22% of variance in the data.</p>
+<p>This tells us that the average RT overall was 682.95 ms (<em>SE</em> = 10.35). The <em>t</em> value of &gt;66 just reflects that this number is much larger than zero. We would report the overall average RT, but we probably wouldn’t report the <em>t</em> and <em>p</em> values for this, since RT is almost by definition larger than zero.</p>
+<p>The second coefficient is more interesting. The <span class="math notranslate nohighlight">\(\Beta\)</span> = -71.2 (<em>SE</em> = 10.45) tells us that for every one unit of Zipf, RT becomes 71.2 ms faster on average. This effect is significantly different from zero (<em>t</em>(148) = -6.81, <em>p</em> &lt; .001).</p>
+<p>We might also want to report the R<span class="math notranslate nohighlight">\(^2\)</span> value of .24, which means that our model is accounting for an estimated 24% of variance in the data.</p>
 <p>Finally, we might want to make a nice plot of the effect. We will be spending more time on this in a future session, but here is an example, showing the effect of frequency on response time.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -990,7 +989,7 @@ F-statistic: 41.46 on 1 and 148 DF,  p-value: 1.583e-09
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/f1a19c63d1067d8668b622fdc4db66f3a0bc278a6bd530343639a981d336afc7.png"><img alt="../_images/f1a19c63d1067d8668b622fdc4db66f3a0bc278a6bd530343639a981d336afc7.png" src="../_images/f1a19c63d1067d8668b622fdc4db66f3a0bc278a6bd530343639a981d336afc7.png" style="width: 210px; height: 180px;" /></a>
+<a class="reference internal image-reference" href="../_images/320816d8ac9e4685df233534269bbe8e3cf46cd5707fe3890709db30561caf0d.png"><img alt="../_images/320816d8ac9e4685df233534269bbe8e3cf46cd5707fe3890709db30561caf0d.png" src="../_images/320816d8ac9e4685df233534269bbe8e3cf46cd5707fe3890709db30561caf0d.png" style="width: 210px; height: 180px;" /></a>
 </div>
 </div>
 </section>
@@ -1043,16 +1042,16 @@ F-statistic: 41.46 on 1 and 148 DF,  p-value: 1.583e-09
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 300 × 8
    text         condition    snd median_rt mean_acc snd_cent dum_lex dev_lex
    &lt;chr&gt;        &lt;chr&gt;      &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
- 1 Abgegöbe     pseudoword 0.614      892.        1   0.0104       0    -<span class=" -Color -Color-Red">0.5</span>
- 2 Akzente      word       0.716      592.        1   0.113        1     0.5
- 3 Austerbafer  pseudoword 0.616      672.        1   0.0129       0    -<span class=" -Color -Color-Red">0.5</span>
- 4 Bünktchen    pseudoword 0.585      769.        1  -<span class=" -Color -Color-Red">0.0180</span>       0    -<span class=" -Color -Color-Red">0.5</span>
- 5 Cermelen     pseudoword 0.548      701.        1  -<span class=" -Color -Color-Red">0.0556</span>       0    -<span class=" -Color -Color-Red">0.5</span>
- 6 Drücker      word       0.573      605.        1  -<span class=" -Color -Color-Red">0.0303</span>       1     0.5
+ 1 Abgegöbe     pseudoword 0.614      942.        1   0.0104       0    -<span class=" -Color -Color-Red">0.5</span>
+ 2 Akzente      word       0.716      628.        1   0.113        1     0.5
+ 3 Austerbafer  pseudoword 0.616      700.        1   0.0129       0    -<span class=" -Color -Color-Red">0.5</span>
+ 4 Bünktchen    pseudoword 0.585      761.        1  -<span class=" -Color -Color-Red">0.0180</span>       0    -<span class=" -Color -Color-Red">0.5</span>
+ 5 Cermelen     pseudoword 0.548      767.        1  -<span class=" -Color -Color-Red">0.0556</span>       0    -<span class=" -Color -Color-Red">0.5</span>
+ 6 Drücker      word       0.573      599.        1  -<span class=" -Color -Color-Red">0.0303</span>       1     0.5
  7 Durchszelten pseudoword 0.567     2088.        1  -<span class=" -Color -Color-Red">0.0362</span>       0    -<span class=" -Color -Color-Red">0.5</span>
- 8 Erwachsener  word       0.681      628.        1   0.0776       1     0.5
- 9 Exorzisten   word       0.624      740.        1   0.0201       1     0.5
-10 Exzingsener  pseudoword 0.532      875.        1  -<span class=" -Color -Color-Red">0.0709</span>       0    -<span class=" -Color -Color-Red">0.5</span>
+ 8 Erwachsener  word       0.681      636.        1   0.0776       1     0.5
+ 9 Exorzisten   word       0.624      745.        1   0.0201       1     0.5
+10 Exzingsener  pseudoword 0.532      922.        1  -<span class=" -Color -Color-Red">0.0709</span>       0    -<span class=" -Color -Color-Red">0.5</span>
 # ℹ 290 more rows
 </pre></div>
 </div>
@@ -1065,7 +1064,7 @@ F-statistic: 41.46 on 1 and 148 DF,  p-value: 1.583e-09
 <p>Here we fit the model. Note that, unlike with frequency, it’s up to you to interpret this one!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">main_mod</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">median_rt</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">dev_lex</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">snd</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stim_averages</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">main_mod</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">median_rt</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">dev_lex</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">snd_cent</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stim_averages</span><span class="p">)</span>
 
 <span class="nf">summary</span><span class="p">(</span><span class="n">main_mod</span><span class="p">)</span>
 </pre></div>
@@ -1073,24 +1072,24 @@ F-statistic: 41.46 on 1 and 148 DF,  p-value: 1.583e-09
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Call:
-lm(formula = median_rt ~ dev_lex * snd, data = stim_averages)
+lm(formula = median_rt ~ dev_lex * snd_cent, data = stim_averages)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--315.00 -123.15  -52.54   58.34 1944.79 
+-311.88 -135.11  -57.73   65.41 1909.51 
 
 Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)   739.50     127.23   5.812 1.59e-08 ***
-dev_lex       289.40     254.46   1.137   0.2563    
-snd            54.39     213.17   0.255   0.7988    
-dev_lex:snd  -752.38     426.35  -1.765   0.0786 .  
+                 Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)        800.53      21.98  36.414  &lt; 2e-16 ***
+dev_lex           -178.73      43.97  -4.065 6.16e-05 ***
+snd_cent            33.55     221.68   0.151   0.8798    
+dev_lex:snd_cent  -792.94     443.35  -1.789   0.0747 .  
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 227.4 on 296 degrees of freedom
-Multiple R-squared:  0.115,	Adjusted R-squared:  0.106 
-F-statistic: 12.82 on 3 and 296 DF,  p-value: 6.735e-08
+Residual standard error: 236.5 on 296 degrees of freedom
+Multiple R-squared:  0.1284,	Adjusted R-squared:  0.1196 
+F-statistic: 14.53 on 3 and 296 DF,  p-value: 7.421e-09
 </pre></div>
 </div>
 </div>
@@ -1111,7 +1110,7 @@ F-statistic: 12.82 on 3 and 296 DF,  p-value: 6.735e-08
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/ec44be82c04645188df8654c7d4649e736fc4bbd9700ae34289fc22802219865.png"><img alt="../_images/ec44be82c04645188df8654c7d4649e736fc4bbd9700ae34289fc22802219865.png" src="../_images/ec44be82c04645188df8654c7d4649e736fc4bbd9700ae34289fc22802219865.png" style="width: 210px; height: 180px;" /></a>
+<a class="reference internal image-reference" href="../_images/1b022d9292e7f756bfe9d6aff3d23ddf0ed4a010c8706bb97f203412e6a24d5a.png"><img alt="../_images/1b022d9292e7f756bfe9d6aff3d23ddf0ed4a010c8706bb97f203412e6a24d5a.png" src="../_images/1b022d9292e7f756bfe9d6aff3d23ddf0ed4a010c8706bb97f203412e6a24d5a.png" style="width: 210px; height: 180px;" /></a>
 </div>
 </div>
 </section>
