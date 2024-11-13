@@ -54,6 +54,8 @@ In addition to the reading above, here you can find some example literature, whi
 
 ### Group D: Change Detection
 
+* Costa-Faidella, J., Baldeweg, T., Grimm, S., & Escera. C. (2011). Interactions between "What" and "When" in the Auditory System: Temporal Predictability Enhances Repetition Suppression. *Journal of Neuroscience*, *31*(50) 18590-18597. https://doi.org/10.1523/JNEUROSCI.2599-11.2011
+
 * Haenschel, C., Vernon, D. J., Dwivedi, P., Gruzelier, J. H., & Baldeweg, T. (2005). Event-related brain potential correlates of human auditory sensory memory-trace formation. *Journal of Neuroscience*, *25*(45). 10494-10501 https://doi.org/10.1523/JNEUROSCI.1227-05.2005
 
 * Stefanics, G., Heinzle, J., Horváth, A. A., & Stephan, K. E. (2018). Visual mismatch and predictive coding: A computational single-trial ERP study. *Journal of Neuroscience*, *38*(16), 4020-4030. https://doi.org/10.1523/JNEUROSCI.3365-17.2018
