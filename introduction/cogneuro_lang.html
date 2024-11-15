@@ -506,13 +506,13 @@
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="NvuNOtlRBwWK" data-shufflequestions="False"
+<div class="output text_html"><div id="fIcnLGxxrgfU" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#NvuNOtlRBwWK {
+#fIcnLGxxrgfU {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -713,7 +713,7 @@
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsNvuNOtlRBwWK=[
+</style></div><script type="application/javascript">var questionsfIcnLGxxrgfU=[
     {
         "question": "Which psychological approach focuses on observable relationships between the participant and their environment?",
         "type": "multiple_choice",
@@ -1625,8 +1625,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("NvuNOtlRBwWK")) {
-            show_questions(questionsNvuNOtlRBwWK,  NvuNOtlRBwWK); 
+          if(document.getElementById("fIcnLGxxrgfU")) {
+            show_questions(questionsfIcnLGxxrgfU,  fIcnLGxxrgfU); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1641,10 +1641,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/cogneuro_lang_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, NvuNOtlRBwWK))
+        .then(json => show_questions(json, fIcnLGxxrgfU))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsNvuNOtlRBwWK, NvuNOtlRBwWK);
+        show_questions(questionsfIcnLGxxrgfU, fIcnLGxxrgfU);
         });
         }
         </script></div>
