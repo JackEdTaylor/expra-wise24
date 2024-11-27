@@ -16,8 +16,8 @@ Some of the assigned reading is specific to the projects you will be designing a
 | 13/11/2024 | D | Best Laid Plans: A Guide to Reporting Preregistration Deviations. | Wilroth & Atherton | 2024 | [*Advances in Methods and Practices in Psychological Science*, *7*(1), 1-14](https://doi.org/10.1177/25152459231213802) |
 | 20/11/2024 | B | Is human face recognition lateralized to the right hemisphere due to neural competition with left-lateralized visual word recognition? A critical review. | Rossion & Lochy | 2021 | [*Brain Structure and Function*, *227*, 559-629](https://doi.org/10.1007/s00429-021-02370-0) |
 | 27/11/2024 | A | Are brand names special words? Letter visual-similarity affects the identification of brand names, but not common words. | Perea et al. | 2022 | [*British Journal of Psychology*, *113*(2), 551-874](https://doi.org/10.1111/bjop.12557) |
-| 04/12/2024 | D | Interactions between “What” and “When” in the Auditory System: Temporal Predictability Enhances Repetition Suppression | Costa-Faidella et al. | 2011 | [*Journal of Neuroscience*, *31*(50) 18590-18597](https://doi.org/10.1523/JNEUROSCI.2599-11.2011) |
-| 11/12/2024 | C | Thirty years and counting: Finding meaning in the N400 component of the event related brain potential (ERP). | Kutas & Federmeier | 2011 | [*Annual Review of Psychology*, *62*, 621-647](https://doi.org/10.1146/annurev.psych.093008.131123) |
+| 18/12/2024 | D | Interactions between “What” and “When” in the Auditory System: Temporal Predictability Enhances Repetition Suppression | Costa-Faidella et al. | 2011 | [*Journal of Neuroscience*, *31*(50) 18590-18597](https://doi.org/10.1523/JNEUROSCI.2599-11.2011) |
+| 15/01/2025 | C | Thirty years and counting: Finding meaning in the N400 component of the event related brain potential (ERP). | Kutas & Federmeier | 2011 | [*Annual Review of Psychology*, *62*, 621-647](https://doi.org/10.1146/annurev.psych.093008.131123) |
 
 
 ## Suggested Reading Specific to Each Project
