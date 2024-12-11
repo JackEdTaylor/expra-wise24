@@ -507,13 +507,13 @@
 <h2>Test your Knowledge!<a class="headerlink" href="#test-your-knowledge" title="Link to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="bCcBEFIsYSRP" data-shufflequestions="False"
+<div class="output text_html"><div id="WmcMXORkeHpm" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#bCcBEFIsYSRP {
+#WmcMXORkeHpm {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -714,7 +714,7 @@
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsbCcBEFIsYSRP=[
+</style></div><script type="application/javascript">var questionsWmcMXORkeHpm=[
     {
         "question": "Which of the following fonts are recommended according to the APA guidelines?",
         "type": "many_choice",
@@ -1603,8 +1603,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("bCcBEFIsYSRP")) {
-            show_questions(questionsbCcBEFIsYSRP,  bCcBEFIsYSRP); 
+          if(document.getElementById("WmcMXORkeHpm")) {
+            show_questions(questionsWmcMXORkeHpm,  WmcMXORkeHpm); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1619,10 +1619,10 @@ if (typeof version == 'undefined') {
 
         fetch("https://raw.githubusercontent.com/JackEdTaylor/expra-wise24/master/lecture/introduction/writing_quiz.json", {signal})
         .then(response => response.json())
-        .then(json => show_questions(json, bCcBEFIsYSRP))
+        .then(json => show_questions(json, WmcMXORkeHpm))
         .catch(err => {
         console.log("Fetch error or timeout");
-        show_questions(questionsbCcBEFIsYSRP, bCcBEFIsYSRP);
+        show_questions(questionsWmcMXORkeHpm, WmcMXORkeHpm);
         });
         }
         </script></div>
