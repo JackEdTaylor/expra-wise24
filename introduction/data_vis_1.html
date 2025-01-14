@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,10 +27,10 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -41,10 +41,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/style.css?v=bb6542e3" />
   
   <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -233,9 +233,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -594,7 +599,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/2569347150d2b014cda0898ea734a792dca3edc10723792bf3577c9a11ad249c.png"><img alt="../_images/2569347150d2b014cda0898ea734a792dca3edc10723792bf3577c9a11ad249c.png" src="../_images/2569347150d2b014cda0898ea734a792dca3edc10723792bf3577c9a11ad249c.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/6be9799747393cabae2b556f45bf65a3fc6892c1b51819dd80abf2a5bd6a245a.png"><img alt="../_images/6be9799747393cabae2b556f45bf65a3fc6892c1b51819dd80abf2a5bd6a245a.png" src="../_images/6be9799747393cabae2b556f45bf65a3fc6892c1b51819dd80abf2a5bd6a245a.png" style="width: 240px; height: 210px;" /></a>
 </div>
 </div>
 <p>What gives - where is our plot?</p>
@@ -615,7 +620,7 @@
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../_images/41d5cc573c28768e9ddda74d3f743d6497e02426a2f82dd0ce9d98ad1f689cfd.png"><img alt="../_images/41d5cc573c28768e9ddda74d3f743d6497e02426a2f82dd0ce9d98ad1f689cfd.png" src="../_images/41d5cc573c28768e9ddda74d3f743d6497e02426a2f82dd0ce9d98ad1f689cfd.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/89ad0fa8fb27b5aa91838426286f7277126dc8b7bd2fb0cc0e8bd45f6ba9e9d9.png"><img alt="../_images/89ad0fa8fb27b5aa91838426286f7277126dc8b7bd2fb0cc0e8bd45f6ba9e9d9.png" src="../_images/89ad0fa8fb27b5aa91838426286f7277126dc8b7bd2fb0cc0e8bd45f6ba9e9d9.png" style="width: 240px; height: 210px;" /></a>
 </div>
 </div>
 <p>Notice that we get a warning from <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> that it is using the default of <code class="docutils literal notranslate"><span class="pre">bins</span> <span class="pre">=</span> <span class="pre">30</span></code> for the <code class="docutils literal notranslate"><span class="pre">geom_histogram()</span></code> function, which means there are a total of 30 bins. It is recommended to pick a number of bins, or a bin width, that makes sense for your data. For example, if we want each bin to have a width of 10, we could write:</p>
@@ -627,7 +632,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/8d1df0f474cd6fa6e356e8ea19f818378011931e6da499e073c9dfcfad5bf88d.png"><img alt="../_images/8d1df0f474cd6fa6e356e8ea19f818378011931e6da499e073c9dfcfad5bf88d.png" src="../_images/8d1df0f474cd6fa6e356e8ea19f818378011931e6da499e073c9dfcfad5bf88d.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/89344f2965dec6f7ad1b354a8a71f746c30f8a80c805ebcd37ca7dedaeb6df4c.png"><img alt="../_images/89344f2965dec6f7ad1b354a8a71f746c30f8a80c805ebcd37ca7dedaeb6df4c.png" src="../_images/89344f2965dec6f7ad1b354a8a71f746c30f8a80c805ebcd37ca7dedaeb6df4c.png" style="width: 240px; height: 210px;" /></a>
 </div>
 </div>
 <p>Similarly, we can plot the empirical probability density with the <code class="docutils literal notranslate"><span class="pre">geom_density()</span></code> function.</p>
@@ -639,7 +644,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/077d3b1427e038a823cfa8f93d0581dd49871be5e3ff2509a47ef7ae9217a124.png"><img alt="../_images/077d3b1427e038a823cfa8f93d0581dd49871be5e3ff2509a47ef7ae9217a124.png" src="../_images/077d3b1427e038a823cfa8f93d0581dd49871be5e3ff2509a47ef7ae9217a124.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/00d0c164e2a723f3e68ab30acc51e5ad838fb0176f4500a679cfdcf714bb7d39.png"><img alt="../_images/00d0c164e2a723f3e68ab30acc51e5ad838fb0176f4500a679cfdcf714bb7d39.png" src="../_images/00d0c164e2a723f3e68ab30acc51e5ad838fb0176f4500a679cfdcf714bb7d39.png" style="width: 240px; height: 210px;" /></a>
 </div>
 </div>
 <section id="check-your-knowledge">
@@ -672,9 +677,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/7f4e225dc06d4f089b0e8c6f5a52e35d182e42d427e05fdcd10ea4706fd3e712.png"><img alt="../_images/7f4e225dc06d4f089b0e8c6f5a52e35d182e42d427e05fdcd10ea4706fd3e712.png" src="../_images/7f4e225dc06d4f089b0e8c6f5a52e35d182e42d427e05fdcd10ea4706fd3e712.png" style="width: 240px; height: 210px;" /></a>
-<a class="reference internal image-reference" href="../_images/8f3665e8c62744376ccff809c83ac010f3f8e428653264ddc9b9222e331e28c7.png"><img alt="../_images/8f3665e8c62744376ccff809c83ac010f3f8e428653264ddc9b9222e331e28c7.png" src="../_images/8f3665e8c62744376ccff809c83ac010f3f8e428653264ddc9b9222e331e28c7.png" style="width: 240px; height: 210px;" /></a>
-<a class="reference internal image-reference" href="../_images/e8f6ac7683c3eb6a5304389205749942fb3effafd91745a665715caaea00c885.png"><img alt="../_images/e8f6ac7683c3eb6a5304389205749942fb3effafd91745a665715caaea00c885.png" src="../_images/e8f6ac7683c3eb6a5304389205749942fb3effafd91745a665715caaea00c885.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/ab0f9ae3101810f32bcd38005f944e9bd16e972807b49601ae1edefcd9b932c9.png"><img alt="../_images/ab0f9ae3101810f32bcd38005f944e9bd16e972807b49601ae1edefcd9b932c9.png" src="../_images/ab0f9ae3101810f32bcd38005f944e9bd16e972807b49601ae1edefcd9b932c9.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/a977b883b4f083bb1b3cabdd33e8e9ddffb7f5d94960ce1816d4e4c7f6b058b4.png"><img alt="../_images/a977b883b4f083bb1b3cabdd33e8e9ddffb7f5d94960ce1816d4e4c7f6b058b4.png" src="../_images/a977b883b4f083bb1b3cabdd33e8e9ddffb7f5d94960ce1816d4e4c7f6b058b4.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/6a14046f880b41c2f391d087144efac24773bad61d65057e998ed6ad738213cc.png"><img alt="../_images/6a14046f880b41c2f391d087144efac24773bad61d65057e998ed6ad738213cc.png" src="../_images/6a14046f880b41c2f391d087144efac24773bad61d65057e998ed6ad738213cc.png" style="width: 240px; height: 210px;" /></a>
 </div>
 </details>
 </div>
@@ -691,7 +696,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/ca3e32ee96f83aa479d66a404724e11bd6a45bd26de132159b58a9d2b36543ac.png"><img alt="../_images/ca3e32ee96f83aa479d66a404724e11bd6a45bd26de132159b58a9d2b36543ac.png" src="../_images/ca3e32ee96f83aa479d66a404724e11bd6a45bd26de132159b58a9d2b36543ac.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/8e1887e8ec76c3193745be591da66e7b01c896a0c4e7206636dec2eff3f8ae6c.png"><img alt="../_images/8e1887e8ec76c3193745be591da66e7b01c896a0c4e7206636dec2eff3f8ae6c.png" src="../_images/8e1887e8ec76c3193745be591da66e7b01c896a0c4e7206636dec2eff3f8ae6c.png" style="width: 240px; height: 210px;" /></a>
 </div>
 </div>
 <p>This shows us that reading scores were poorest in the morning, and best at midday. Other useful ways to compare distributions include the violin plot. A violin plot is a density plot mirrored across zero.</p>
@@ -704,7 +709,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/3641e4f93557c33674ab79bcebfe787951412949a12586eda3504ad95fd98325.png"><img alt="../_images/3641e4f93557c33674ab79bcebfe787951412949a12586eda3504ad95fd98325.png" src="../_images/3641e4f93557c33674ab79bcebfe787951412949a12586eda3504ad95fd98325.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/7dc8828c8e09275fd637105b9494ca7181b848cce924f3dea35dc22efec07576.png"><img alt="../_images/7dc8828c8e09275fd637105b9494ca7181b848cce924f3dea35dc22efec07576.png" src="../_images/7dc8828c8e09275fd637105b9494ca7181b848cce924f3dea35dc22efec07576.png" style="width: 240px; height: 210px;" /></a>
 </div>
 </div>
 <p>One of the nice things about <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> is that the <code class="docutils literal notranslate"><span class="pre">geom_*</span></code> functions are additive. We can just add geom objects on top of one another. For example, you may want to place a <a class="reference external" href="https://en.wikipedia.org/wiki/Box_plot">boxplot</a> on top of a violin plot. You can see the <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> documentation for details on <a class="reference external" href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html#summary-statistics">how to interpret the boxplot</a>.</p>
@@ -717,7 +722,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/35ac6430f290997f1f0117bfea3c8971e10810735f763e6b4c4642c25d9a8f55.png"><img alt="../_images/35ac6430f290997f1f0117bfea3c8971e10810735f763e6b4c4642c25d9a8f55.png" src="../_images/35ac6430f290997f1f0117bfea3c8971e10810735f763e6b4c4642c25d9a8f55.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/497ad85b872255fedc99be1452970fb8beaa925b04bc1a74a6141a4afa779ed8.png"><img alt="../_images/497ad85b872255fedc99be1452970fb8beaa925b04bc1a74a6141a4afa779ed8.png" src="../_images/497ad85b872255fedc99be1452970fb8beaa925b04bc1a74a6141a4afa779ed8.png" style="width: 240px; height: 210px;" /></a>
 </div>
 </div>
 <p>Finally, we can also just create a categorical scatter plot, plotting individual points in the data with <code class="docutils literal notranslate"><span class="pre">geom_point()</span></code>.</p>
@@ -729,7 +734,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/b86bf1c92ac66d13623e0c6cccbffdf0154fb68c846bb126fc995b910553f321.png"><img alt="../_images/b86bf1c92ac66d13623e0c6cccbffdf0154fb68c846bb126fc995b910553f321.png" src="../_images/b86bf1c92ac66d13623e0c6cccbffdf0154fb68c846bb126fc995b910553f321.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/5408cb3117f633549f67c7b207533aa623d719b3166451a45ce6ae7b8d99d7b7.png"><img alt="../_images/5408cb3117f633549f67c7b207533aa623d719b3166451a45ce6ae7b8d99d7b7.png" src="../_images/5408cb3117f633549f67c7b207533aa623d719b3166451a45ce6ae7b8d99d7b7.png" style="width: 240px; height: 210px;" /></a>
 </div>
 </div>
 <p>This is sometimes easier to read if we add “jitter” (random noise) to the x axis, rather than plotting all points in a line. We can do this with the <code class="docutils literal notranslate"><span class="pre">position_jitter()</span></code> function. The <code class="docutils literal notranslate"><span class="pre">width</span></code> argument tells <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> how wide we want the jittered points to be. <strong>Note that we have to add <code class="docutils literal notranslate"><span class="pre">height=0</span></code> to avoid the function from also jittering our y values!</strong></p>
@@ -741,7 +746,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/3aa75ee18d3c0dd4cf6e6cc8514fe592aa93bb2c7b86edf4042eea6bac823555.png"><img alt="../_images/3aa75ee18d3c0dd4cf6e6cc8514fe592aa93bb2c7b86edf4042eea6bac823555.png" src="../_images/3aa75ee18d3c0dd4cf6e6cc8514fe592aa93bb2c7b86edf4042eea6bac823555.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/3490139d0034ed3ec788e95aba1740bd6a4c8df98d221cc3e21afaad75da64d1.png"><img alt="../_images/3490139d0034ed3ec788e95aba1740bd6a4c8df98d221cc3e21afaad75da64d1.png" src="../_images/3490139d0034ed3ec788e95aba1740bd6a4c8df98d221cc3e21afaad75da64d1.png" style="width: 240px; height: 210px;" /></a>
 </div>
 </div>
 <section id="id1">
@@ -770,8 +775,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/589cba6b12295589fafb5b325fca1f5442ef72ea4b1d68bb0882a5774d42105c.png"><img alt="../_images/589cba6b12295589fafb5b325fca1f5442ef72ea4b1d68bb0882a5774d42105c.png" src="../_images/589cba6b12295589fafb5b325fca1f5442ef72ea4b1d68bb0882a5774d42105c.png" style="width: 240px; height: 210px;" /></a>
-<a class="reference internal image-reference" href="../_images/a290ef11e0a834dfc42e09d7c8980992d86e2520ebfdca5d3dca2ed919bcdbe4.png"><img alt="../_images/a290ef11e0a834dfc42e09d7c8980992d86e2520ebfdca5d3dca2ed919bcdbe4.png" src="../_images/a290ef11e0a834dfc42e09d7c8980992d86e2520ebfdca5d3dca2ed919bcdbe4.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/72e9ce6f8ae8d7abbc24f12ebea1341f13c683e4fb7bd269a7696a5e4c2dd90b.png"><img alt="../_images/72e9ce6f8ae8d7abbc24f12ebea1341f13c683e4fb7bd269a7696a5e4c2dd90b.png" src="../_images/72e9ce6f8ae8d7abbc24f12ebea1341f13c683e4fb7bd269a7696a5e4c2dd90b.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/59488a3331187e06774fedd033fe2aff4e39593afcd16dd7b350121c311faf96.png"><img alt="../_images/59488a3331187e06774fedd033fe2aff4e39593afcd16dd7b350121c311faf96.png" src="../_images/59488a3331187e06774fedd033fe2aff4e39593afcd16dd7b350121c311faf96.png" style="width: 240px; height: 210px;" /></a>
 </div>
 </details>
 </div>
@@ -788,7 +793,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<a class="reference internal image-reference" href="../_images/8f70edee8c3e1258b8ecc242c19484d1e5bbbe836e0be9541c87b690dfd104ed.png"><img alt="../_images/8f70edee8c3e1258b8ecc242c19484d1e5bbbe836e0be9541c87b690dfd104ed.png" src="../_images/8f70edee8c3e1258b8ecc242c19484d1e5bbbe836e0be9541c87b690dfd104ed.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/a7ca6788749e354eade48fb9eec2c2bc862b9126a49c3a6bf7960651192dc368.png"><img alt="../_images/a7ca6788749e354eade48fb9eec2c2bc862b9126a49c3a6bf7960651192dc368.png" src="../_images/a7ca6788749e354eade48fb9eec2c2bc862b9126a49c3a6bf7960651192dc368.png" style="width: 240px; height: 210px;" /></a>
 </div>
 </div>
 <p>This looks like a positive correlation! It seems to say that participants’ reading scores and memory scores are correlated. We can plot this relationship with the <code class="docutils literal notranslate"><span class="pre">geom_smooth()</span></code> function.</p>
@@ -803,7 +808,7 @@
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using method = &#39;loess&#39; and formula = &#39;y ~ x&#39;
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../_images/7fa211312afe06d9565942ff7c8567dac7bddb525ae054c033cd5a65c64f054e.png"><img alt="../_images/7fa211312afe06d9565942ff7c8567dac7bddb525ae054c033cd5a65c64f054e.png" src="../_images/7fa211312afe06d9565942ff7c8567dac7bddb525ae054c033cd5a65c64f054e.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/1e2339379aa273b714f3cef0d9e03bb54571bb76f035b86be3f8b2154c565da2.png"><img alt="../_images/1e2339379aa273b714f3cef0d9e03bb54571bb76f035b86be3f8b2154c565da2.png" src="../_images/1e2339379aa273b714f3cef0d9e03bb54571bb76f035b86be3f8b2154c565da2.png" style="width: 240px; height: 210px;" /></a>
 </div>
 </div>
 <p>This plots a <a class="reference external" href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/loess">LOESS model</a> to predict memory score as a function of reading score - this is a non-linear estimate of the local relationship. The middle blue line shows the estimated relationship, and the 95% confidence interval.</p>
@@ -819,7 +824,7 @@
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = &#39;y ~ x&#39;
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../_images/c3adef97e8eb103103dd3f66734149de1da2cb764670c3b02512b36fab578399.png"><img alt="../_images/c3adef97e8eb103103dd3f66734149de1da2cb764670c3b02512b36fab578399.png" src="../_images/c3adef97e8eb103103dd3f66734149de1da2cb764670c3b02512b36fab578399.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/65dff757430e6aab7665b4772a50f2c790dddf2ed822cffd7cb68718459c7fcf.png"><img alt="../_images/65dff757430e6aab7665b4772a50f2c790dddf2ed822cffd7cb68718459c7fcf.png" src="../_images/65dff757430e6aab7665b4772a50f2c790dddf2ed822cffd7cb68718459c7fcf.png" style="width: 240px; height: 210px;" /></a>
 </div>
 </div>
 <section id="id3">
@@ -861,12 +866,12 @@
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = &#39;y ~ x&#39;
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../_images/742fb5131f3ebedb1e7586b2f5ed802c44d69b6d8a1beeedca116cff0846f16f.png"><img alt="../_images/742fb5131f3ebedb1e7586b2f5ed802c44d69b6d8a1beeedca116cff0846f16f.png" src="../_images/742fb5131f3ebedb1e7586b2f5ed802c44d69b6d8a1beeedca116cff0846f16f.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/92b6af7f0dd5f4e3497fea102b06a47623889354a7d9d030d205978e6e2ed15c.png"><img alt="../_images/92b6af7f0dd5f4e3497fea102b06a47623889354a7d9d030d205978e6e2ed15c.png" src="../_images/92b6af7f0dd5f4e3497fea102b06a47623889354a7d9d030d205978e6e2ed15c.png" style="width: 240px; height: 210px;" /></a>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = &#39;y ~ x&#39;
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../_images/900fdf5127f7866a7837dd62f533f6ec9dd8ac4403934f2d0216e58a7c90cecc.png"><img alt="../_images/900fdf5127f7866a7837dd62f533f6ec9dd8ac4403934f2d0216e58a7c90cecc.png" src="../_images/900fdf5127f7866a7837dd62f533f6ec9dd8ac4403934f2d0216e58a7c90cecc.png" style="width: 240px; height: 210px;" /></a>
-<a class="reference internal image-reference" href="../_images/393c9eb77d9a8a17c2c75856fce9375a3e484c39bb52a1a746449649da1ee7d9.png"><img alt="../_images/393c9eb77d9a8a17c2c75856fce9375a3e484c39bb52a1a746449649da1ee7d9.png" src="../_images/393c9eb77d9a8a17c2c75856fce9375a3e484c39bb52a1a746449649da1ee7d9.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/ea3f55e44ce8f193b25c048e1dfb0b53d410f16de9292f8f26bf7121e027e60f.png"><img alt="../_images/ea3f55e44ce8f193b25c048e1dfb0b53d410f16de9292f8f26bf7121e027e60f.png" src="../_images/ea3f55e44ce8f193b25c048e1dfb0b53d410f16de9292f8f26bf7121e027e60f.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/f14d3728771005a59116a5a383631086387bf44d4e8ac677dbfb45c2ab5d9764.png"><img alt="../_images/f14d3728771005a59116a5a383631086387bf44d4e8ac677dbfb45c2ab5d9764.png" src="../_images/f14d3728771005a59116a5a383631086387bf44d4e8ac677dbfb45c2ab5d9764.png" style="width: 240px; height: 210px;" /></a>
 </div>
 </details>
 </div>
@@ -944,7 +949,7 @@
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = &#39;y ~ x&#39;
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../_images/04b2170f5f008dea451a7227ae07b120924bdef57dc33ac643a3235f82dfe0ca.png"><img alt="../_images/04b2170f5f008dea451a7227ae07b120924bdef57dc33ac643a3235f82dfe0ca.png" src="../_images/04b2170f5f008dea451a7227ae07b120924bdef57dc33ac643a3235f82dfe0ca.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/b06b1c5f54721b6e841af9f25f7a4ff6b57627dc7f59d588a39cb934f4367af2.png"><img alt="../_images/b06b1c5f54721b6e841af9f25f7a4ff6b57627dc7f59d588a39cb934f4367af2.png" src="../_images/b06b1c5f54721b6e841af9f25f7a4ff6b57627dc7f59d588a39cb934f4367af2.png" style="width: 240px; height: 210px;" /></a>
 </div>
 </div>
 <p>This shows that participants’ scores are somewhat correlated. This is related to the idea of test-retest reliability.</p>
@@ -986,8 +991,8 @@
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`geom_smooth()` using formula = &#39;y ~ x&#39;
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../_images/51f97804d7ec87f0198e84ecba9c01431d7555fb116f0c88e3cc07e3dc2e5520.png"><img alt="../_images/51f97804d7ec87f0198e84ecba9c01431d7555fb116f0c88e3cc07e3dc2e5520.png" src="../_images/51f97804d7ec87f0198e84ecba9c01431d7555fb116f0c88e3cc07e3dc2e5520.png" style="width: 240px; height: 210px;" /></a>
-<a class="reference internal image-reference" href="../_images/98067ccfcb9804df66c628bcafbca1b190b275102c012b9c2efcd8514e59885e.png"><img alt="../_images/98067ccfcb9804df66c628bcafbca1b190b275102c012b9c2efcd8514e59885e.png" src="../_images/98067ccfcb9804df66c628bcafbca1b190b275102c012b9c2efcd8514e59885e.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/569a82177619b17efae7edb5389e2a57c066fc06dd5200f904026788e90d30c2.png"><img alt="../_images/569a82177619b17efae7edb5389e2a57c066fc06dd5200f904026788e90d30c2.png" src="../_images/569a82177619b17efae7edb5389e2a57c066fc06dd5200f904026788e90d30c2.png" style="width: 240px; height: 210px;" /></a>
+<a class="reference internal image-reference" href="../_images/4faf0edaa2f4c7031b1599853fd2609a48427b2dc834fdbb30e5dfe114bd0498.png"><img alt="../_images/4faf0edaa2f4c7031b1599853fd2609a48427b2dc834fdbb30e5dfe114bd0498.png" src="../_images/4faf0edaa2f4c7031b1599853fd2609a48427b2dc834fdbb30e5dfe114bd0498.png" style="width: 240px; height: 210px;" /></a>
 </div>
 </details>
 </div>
@@ -1135,8 +1140,8 @@ By Jack Taylor
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>
