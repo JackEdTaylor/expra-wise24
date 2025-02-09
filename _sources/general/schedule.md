@@ -32,5 +32,5 @@ Here is where we will keep track of our schedule. Depending on our progress, pot
 | 22/01/2025 |  - Progress Check<br> - [Scientific Poster Workshop](https://jackedtaylor.github.io/expra-wise24/projects/posters)<br> - Analysis, Posters, Presentation, & Visualisation Help<br> | - Work on your Report <br>- Finalise Research Presentation Slides <br>- Draft Poster
 | 29/01/2025 |  - Research Presentations<br> - Analysis Help<br> - Poster Help<br> | - Work on your Report<br>- Work on your Poster<br>- Submit your Poster (by 3/2/25 latest)
 | 05/02/2025 |  - (Whatever is useful for you!)<br> - Analysis Help<br>  | - Prepare for the Poster Session
-| 10/02/2025 |  - The Poster Session! <br>&nbsp;&nbsp;&nbsp;&nbsp;Location: Cas 1.801 (Casino)<br>&nbsp;&nbsp;&nbsp;&nbsp;Time: 15:00 - 17:00<br>&nbsp;&nbsp;&nbsp;&nbsp;Award Ceremony: 17:30
+| 10/02/2025 |  - The Poster Session! <br>&nbsp;&nbsp;&nbsp;&nbsp;Location: Cas 1.801 (Casino)<br>&nbsp;&nbsp;&nbsp;&nbsp;Time: 14:00 - 17:00<br>&nbsp;&nbsp;&nbsp;&nbsp;Award Ceremony: 17:15
 | 12/02/2025 |  - Preparing your Report for Submission<br> - Rounding up the ExPra
